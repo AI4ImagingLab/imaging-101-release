@@ -1,0 +1,8 @@
+numpy
+matplotlib
+scipy
+scikit-image
+brighteyes-ism
+torch
+tqdm
+pytest

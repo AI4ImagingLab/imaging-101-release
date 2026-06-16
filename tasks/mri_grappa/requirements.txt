@@ -1,0 +1,8 @@
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-image>=0.19.0
+matplotlib>=3.7.0
+phantominator>=0.6.0
+pytest>=7.0.0
+jupyter>=1.0.0
+nbconvert>=7.0.0

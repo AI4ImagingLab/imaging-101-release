@@ -1,0 +1,7 @@
+numpy>=1.22
+scipy>=1.8
+matplotlib>=3.5
+tifffile>=2022.0
+scikit-image>=0.19
+EMD-signal>=1.4
+jupyter>=1.0

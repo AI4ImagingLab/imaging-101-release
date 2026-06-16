@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# Logs and eval runs
+logs/eval_runs/
+*.log
+*.pid
+
+# Results (JSON outputs from eval runs)
+results/
+
+# Archive (old/obsolete files)
+archive/
+
+# Task data and outputs
+tasks/**/evaluation/fixtures/
+tasks/**/evaluation/reference_outputs/
+tasks/**/data/*.npz
+tasks/**/data/*.fits
+tasks/**/data/*.uvfits
+tasks/**/output/
+
+# IDE / OS
+.vscode/
+.DS_Store

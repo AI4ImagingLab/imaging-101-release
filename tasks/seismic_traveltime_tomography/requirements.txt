@@ -1,0 +1,4 @@
+scikit-fmm
+numpy
+scipy
+matplotlib

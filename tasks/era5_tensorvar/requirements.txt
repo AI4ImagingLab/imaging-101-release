@@ -1,0 +1,9 @@
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+torch>=2.0
+einops>=0.7
+cvxpy>=1.4
+tensorly>=0.8
+tensorly-torch>=0.5
+gdown>=5.0

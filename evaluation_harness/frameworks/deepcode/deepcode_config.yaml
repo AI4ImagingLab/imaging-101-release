@@ -1,0 +1,24 @@
+# DeepCode configuration for imaging-101 evaluation
+# This file is used by the DeepCode runner to configure the framework.
+# Copy mcp_agent.secrets.yaml from DeepCode repo and fill in API keys.
+
+deepcode:
+  # Mode: "cli" (headless), "web" (launches UI), "docker"
+  mode: cli
+
+  # LLM provider: "google", "anthropic", "openai"
+  llm_provider: google
+  model: gemini-2.5-pro
+
+  # Timeout per task (seconds) — DeepCode can take 30-60 min per task
+  timeout_seconds: 3600
+
+  # MCP features
+  enable_brave_search: false
+  enable_github_downloader: false
+  enable_code_reference_indexer: true
+
+  # Document segmentation (useful for long README.md)
+  document_segmentation:
+    enabled: true
+    size_threshold_chars: 50000

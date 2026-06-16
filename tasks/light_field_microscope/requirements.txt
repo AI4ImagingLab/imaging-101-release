@@ -1,0 +1,5 @@
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.4
+scikit-image>=0.18
+PyYAML>=6.0

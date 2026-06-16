@@ -1,0 +1,7 @@
+numpy<2
+svmbir>=0.4.0
+matplotlib>=3.5
+scikit-image>=0.19
+pytest>=7.0
+jupyter>=1.0.0
+nbconvert>=7.0.0

@@ -1,0 +1,2 @@
+# Large reference output files (>100 MB, exceed GitHub file size limit)
+evaluation/reference_outputs/reconstruction.npy

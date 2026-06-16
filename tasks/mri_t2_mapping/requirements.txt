@@ -1,0 +1,6 @@
+numpy>=1.24
+matplotlib>=3.7
+scikit-image>=0.20
+pytest>=7.0
+jupyter
+nbconvert

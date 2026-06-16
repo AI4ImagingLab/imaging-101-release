@@ -1,0 +1,5 @@
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.4
+opencv-python>=4.5
+tqdm>=4.60

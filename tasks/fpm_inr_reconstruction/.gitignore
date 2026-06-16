@@ -1,0 +1,11 @@
+# Large data files (download separately)
+data/BloodSmearTilt/*.mat
+
+# Large model weights
+evaluation/reference_outputs/model_weights.pth
+
+# Runtime outputs
+output/
+__pycache__/
+.pytest_cache/
+*.pyc
