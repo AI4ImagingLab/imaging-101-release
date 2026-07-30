@@ -1,0 +1,462 @@
+{
+  "confocal-nlos-fk": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/baseline_reference.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/fk_reference.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    },
+    "baseline": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    }
+  },
+  "ct_fan_beam": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "phantom",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/recon_fbp_full.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.638,
+      "nrmse": 0.1854
+    },
+    "baseline": {
+      "ncc": 0.6518,
+      "nrmse": 0.1929
+    }
+  },
+  "ct_sparse_view": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "phantom",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/reconstructions.npz",
+      "key": "fbp_sparse",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.8043,
+      "nrmse": 0.173
+    },
+    "baseline": {
+      "ncc": 0.8139,
+      "nrmse": 0.1829
+    }
+  },
+  "eht_black_hole_UQ": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "image",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/posterior_mean.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.6565,
+      "nrmse": 0.1345
+    },
+    "baseline": {
+      "ncc": 0.657,
+      "nrmse": 0.135
+    }
+  },
+  "eht_black_hole_dynamic": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "images",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/starwarps_reconstruction.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.881,
+      "nrmse": 0.0631
+    },
+    "baseline": {
+      "ncc": 0.882,
+      "nrmse": 0.0638
+    }
+  },
+  "eht_black_hole_tomography": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "images",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/pred_images.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9999,
+      "nrmse": 0.0008
+    },
+    "baseline": {
+      "ncc": 0.9998,
+      "nrmse": 0.00055
+    }
+  },
+  "electron_ptychography": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/baseline_reference.npz",
+      "key": "ptycho_phase",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/ptycho_phase.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    },
+    "baseline": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    }
+  },
+  "light_field_microscope": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "evaluation/reference_outputs/baseline_reference.npz",
+      "key": "rl_reconstructions",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/cases.npz",
+      "key": "conventional_images",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.8021,
+      "nrmse": 0.0979
+    },
+    "baseline": {
+      "ncc": 0.8021,
+      "nrmse": 0.098
+    }
+  },
+  "mcr_hyperspectral": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "concentrations_ravel",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/reconstruction.npz",
+      "key": "C_opt",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9773,
+      "nrmse": 0.1141
+    },
+    "baseline": {
+      "ncc": 0.9773,
+      "nrmse": 0.1141
+    }
+  },
+  "microscope_denoising": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/baseline_reference.npz",
+      "key": "denoised",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/denoised_mt.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 1.0,
+      "nrmse": 0.0055
+    },
+    "baseline": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    }
+  },
+  "mri_dynamic_dce": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "dynamic_images",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/tv_reconstruction.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9752,
+      "nrmse": 0.0606
+    },
+    "baseline": {
+      "ncc": 0.9752,
+      "nrmse": 0.0606
+    }
+  },
+  "mri_grappa": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "evaluation/reference_outputs/ground_truth.npy",
+      "key": null,
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/grappa_reconstruction.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9999,
+      "nrmse": 0.0041
+    },
+    "baseline": {
+      "ncc": 0.9999,
+      "nrmse": 0.0041
+    }
+  },
+  "mri_noncartesian_cs": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "phantom",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/l1wav_reconstruction.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9892,
+      "nrmse": 0.0361
+    },
+    "baseline": {
+      "ncc": 0.9887,
+      "nrmse": 0.037
+    }
+  },
+  "mri_pnp_admm": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "image",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/pnp_admm_reconstruction.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9949,
+      "nrmse": 0.0332
+    },
+    "baseline": {
+      "ncc": 0.9949,
+      "nrmse": 0.0332
+    }
+  },
+  "mri_varnet": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "image",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/varnet_reconstruction.npz",
+      "key": "reconstruction",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.9994,
+      "nrmse": 0.0127
+    },
+    "baseline": {
+      "ncc": 0.9994,
+      "nrmse": 0.0127
+    }
+  },
+  "reflection_ODT": {
+    "recipe": "generic",
+    "metric": "task",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "delta_n",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/reconstruction.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.872,
+      "nrmse": 0.3262
+    },
+    "baseline": {
+      "ncc": 0.872,
+      "nrmse": 0.326
+    }
+  },
+  "seismic_traveltime_tomography": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "evaluation/reference_outputs/baseline_reference.npz",
+      "key": "velocity",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/baseline_reference.npz",
+      "key": "velocity",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    },
+    "baseline": {
+      "ncc": 1.0,
+      "nrmse": 0.0
+    }
+  },
+  "ultrasound_sos_tomography": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "slowness_perturbation",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/reconstructions.npz",
+      "key": "delta_s_fbp",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.966,
+      "nrmse": 0.016
+    },
+    "baseline": {
+      "ncc": 0.97,
+      "nrmse": 0.0189
+    }
+  },
+  "usct_FWI": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/baseline_reference.npz",
+      "key": "vp_reconstructed",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/vp_freq_1.05.npy",
+      "key": null,
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 1.0,
+      "nrmse": 0.0287
+    },
+    "baseline": {
+      "ncc": 1.0,
+      "nrmse": 0.0287
+    }
+  },
+  "weather_radar_data_assimilation": {
+    "recipe": "generic",
+    "metric": "standard",
+    "gt": {
+      "file": "data/ground_truth.npz",
+      "key": "target_frames",
+      "transform": null
+    },
+    "recon": {
+      "file": "evaluation/reference_outputs/reconstruction.npz",
+      "key": "reconstructed_frames",
+      "transform": null
+    },
+    "arg_order": "est_ref",
+    "computed": {
+      "ncc": 0.8706,
+      "nrmse": 0.0514
+    },
+    "baseline": {
+      "ncc": 0.8706,
+      "nrmse": 0.0514
+    }
+  }
+}

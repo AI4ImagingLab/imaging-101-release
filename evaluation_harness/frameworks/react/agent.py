@@ -44,6 +44,10 @@ class Agent:
         self.max_context_messages = max_context_messages
         self.mode = mode
         self.log_file = log_file
+        # Reasoning models (e.g. kimi-k3) sometimes emit a bare "Thought:" and
+        # stop, never producing an "Action:". When that happens we re-request
+        # with an assistant prefill ending in "Action:" to force continuation.
+        self.prefill_retries = 3
 
         if self.log_file:
             try:
@@ -164,6 +168,30 @@ class Agent:
             # Apply sliding window to keep conversation within context limits
             windowed = self._apply_sliding_window(messages)
             response_text, _ = self.client.chat(windowed)
+
+            # Parse actions from the response.
+            actions = self._parse_all_actions(response_text)
+
+            # -- Prefill recovery for "Thought:-only" responses --
+            # Some reasoning models state their intent in a Thought and then
+            # stop, never emitting an Action. A stronger text nudge does not
+            # fix this, but prefilling an assistant turn ending in "Action:"
+            # forces the model to continue into the action block.
+            if not actions and "Thought:" in response_text:
+                for _ in range(self.prefill_retries):
+                    prefill = response_text.rstrip() + "\nAction:"
+                    cont, _ = self.client.chat(windowed, prefill=prefill)
+                    # The gateway may echo a fresh full response (already
+                    # containing "Action:") or just the continuation.
+                    combined = cont if "Action:" in cont else ("Action:" + cont)
+                    parsed = self._parse_all_actions(combined)
+                    good = [a for a in parsed if a[0] != "FORMAT_ERROR"]
+                    if good:
+                        log.info("Recovered action via prefill continuation")
+                        response_text = combined
+                        actions = parsed
+                        break
+
             messages.append({"role": "assistant", "content": response_text})
 
             # Log first 500 chars and last 500 chars of response for debugging
@@ -173,8 +201,6 @@ class Agent:
             else:
                 log.debug("Response: %s", response_text)
 
-            # Parse and execute actions from the response.
-            actions = self._parse_all_actions(response_text)
             if not actions:
                 log.info("Action: FORMAT_ERROR (no actions found)")
                 observation = (

@@ -192,7 +192,59 @@ class Scorer:
 
     # ------------------------------------------------------------------
     def _compute_quality_metrics(self) -> dict | None:
-        """Compare reconstruction output against ground truth.
+        """Compute end-to-end quality metrics (canonical generic design).
+
+        The agent emits a single ``output/reconstruction.npy``; the scorer
+        auto-discovers the task's reference array (``.npy`` or ``.npz``, with
+        the right ``.npz`` key chosen by shape + canonical name), reduces both
+        to comparable numeric arrays (squeeze / magnitude), and computes one
+        metric set (range-normalized NRMSE, cosine NCC, MSE, PSNR, SSIM) plus
+        the pass/fail verdict from ``evaluation/metrics.json`` boundaries. No
+        per-task recipes or task-native output formats are required of the agent.
+        """
+        from . import reference_scoring
+
+        workspace = Path(self.runner.container) if getattr(self.runner, "container", None) else None
+        if workspace and workspace.is_dir():
+            metrics = reference_scoring.score_reconstruction(self.config.task.task_dir, workspace)
+            if isinstance(metrics, dict):
+                metrics.setdefault("scorer", "generic")
+            return metrics
+        # No filesystem workspace (e.g. Docker runner) — fall back to the
+        # in-sandbox metric script in _compute_quality_metrics_generic.
+        metrics = self._compute_quality_metrics_generic()
+        if isinstance(metrics, dict):
+            metrics.setdefault("scorer", "generic")
+        return metrics
+
+    # ------------------------------------------------------------------
+    def _score_task_aware(self, task_name: str, workspace: Path) -> dict | None:
+        """Score with the registered task-aware recipe, in-process.
+
+        The harness environment carries every dependency the recipes need
+        (numpy/scipy/scikit-image/h5py/opencv), and each recipe loads the
+        task's own ``data/*.npz`` + ``src`` helpers directly, so we call the
+        scorer in-process rather than shelling into the task venv. Reads the
+        agent's reconstruction from the sandbox ``workspace`` (and
+        ``workspace/output``). Returns the metrics dict (which may contain
+        ``{"error": ...}`` if the agent produced no usable output), or ``None``
+        on an unexpected failure so the caller falls back to the generic scorer.
+        """
+        from . import task_scoring
+
+        try:
+            metrics = task_scoring.score_task(task_name, self.config.task.task_dir, workspace)
+        except Exception as exc:
+            log.warning("Task-aware scoring raised for %s: %s", task_name, exc)
+            return None
+        if isinstance(metrics, dict):
+            metrics.setdefault("scorer", "task_aware")
+            log.info("Task-aware metrics for %s: %s", task_name, metrics)
+        return metrics
+
+    # ------------------------------------------------------------------
+    def _compute_quality_metrics_generic(self) -> dict | None:
+        """Compare reconstruction output against ground truth (generic 2-D).
 
         In end-to-end mode the evaluation/ directory is NOT copied into the
         sandbox, so we copy the ground truth file from the host task directory

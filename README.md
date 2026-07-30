@@ -167,7 +167,21 @@ End-to-end levels:
 
 ## Data And Fixtures
 
-The repository keeps code, task definitions, and lightweight metadata in GitHub. Large task arrays and fixtures are stored on Hugging Face at [AI4Imaging/imaging-101-release](https://huggingface.co/datasets/AI4Imaging/imaging-101-release).
+The repository keeps code, task definitions, and lightweight metadata in GitHub. Large task arrays, fixtures, and reference outputs are stored on Hugging Face at [starpacker52/imaging-101](https://huggingface.co/datasets/starpacker52/imaging-101/tree/main/tasks) and tracked by `assets_manifest.json`.
+
+Download assets for one task:
+
+```bash
+python scripts/download_assets.py --task ct_fan_beam
+```
+
+Download the full benchmark asset set:
+
+```bash
+python scripts/download_assets.py --all
+```
+
+The downloader restores files into the matching `tasks/<task_name>/data/`, `tasks/<task_name>/evaluation/fixtures/`, and `tasks/<task_name>/evaluation/reference_outputs/` paths, then verifies SHA-256 hashes from the manifest.
 
 ## Repository Layout
 

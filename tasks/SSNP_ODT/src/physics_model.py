@@ -69,9 +69,19 @@ class SSNPConfig:
         where ``xyz`` is the physical voxel size.  If metadata stores voxel
         size in micrometres, it must therefore be converted before use.
         """
-        n0 = metadata["n0"]
+        # Support both metadata schemas:
+        #  - legacy:  explicit n0, res_um, n_angles
+        #  - current: n_medium, camera_pixel_size/magnification, angle_num
         wavelength = metadata["wavelength_um"]
-        res_um = tuple(metadata["res_um"])
+        if "n0" in metadata:
+            n0 = metadata["n0"]
+            res_um = tuple(metadata["res_um"])
+            n_angles = metadata["n_angles"]
+        else:
+            n0 = metadata["n_medium"]
+            px = metadata["camera_pixel_size"] / metadata["magnification"]
+            res_um = (px, px, px)
+            n_angles = metadata["angle_num"]
         res = tuple(size * n0 / wavelength for size in res_um)
         return cls(
             volume_shape=tuple(metadata["volume_shape"]),
@@ -80,7 +90,7 @@ class SSNPConfig:
             NA=metadata["NA"],
             wavelength_um=wavelength,
             res_um=res_um,
-            n_angles=metadata["n_angles"],
+            n_angles=n_angles,
         )
 
 

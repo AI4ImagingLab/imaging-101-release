@@ -63,6 +63,8 @@ def main(argv: list[str] | None = None) -> None:
         help="For function mode: module.function_name, e.g. preprocessing.load_observation",
     )
     run_p.add_argument("--max-iterations", type=int, default=20)
+    run_p.add_argument("--max-tokens", type=int, default=32768,
+                       help="Max completion tokens per LLM call (lower = faster for verbose reasoning models)")
     run_p.add_argument("--docker-image", default="imaging101-sandbox")
     run_p.add_argument("--timeout", type=int, default=600)
     run_p.add_argument("--output", default="results", help="Output directory")
@@ -259,6 +261,7 @@ def _handle_run(args) -> None:
             model=args.model,
             base_url=args.base_url,
             api_key=api_key,
+            max_tokens=args.max_tokens,
         ),
         task=TaskConfig(
             task_name=args.task,

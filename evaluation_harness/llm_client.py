@@ -26,8 +26,17 @@ class LLMClient:
         self,
         messages: list[dict[str, str]],
         stop: list[str] | None = None,
+        prefill: str | None = None,
     ) -> tuple[str, dict[str, int]]:
         """Send a chat completion request.
+
+        Parameters
+        ----------
+        prefill : str, optional
+            If given, an assistant turn with this content is appended to the
+            request so the model must *continue* from it. Used to force
+            reasoning models (e.g. kimi-k3) that stop after a bare ``Thought:``
+            past the stopping point and into the ``Action:`` block.
 
         Returns
         -------
@@ -39,9 +48,12 @@ class LLMClient:
             "Content-Type": "application/json",
             "Authorization": f"Bearer {self.config.api_key}",
         }
+        send_messages = messages
+        if prefill is not None:
+            send_messages = list(messages) + [{"role": "assistant", "content": prefill}]
         body: dict[str, Any] = {
             "model": self.config.model,
-            "messages": messages,
+            "messages": send_messages,
             "max_tokens": self.config.max_tokens,
         }
         # kimi-k2.5 only accepts temperature=1; omit it entirely for that model
