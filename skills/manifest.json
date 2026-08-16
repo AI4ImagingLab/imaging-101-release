@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "generated_by": "codex",
+  "output_dir": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills",
+  "tasks": {
+    "SSNP_ODT": {
+      "source": "ablation/manual-example",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skills\\SSNP_ODT-gpugeek-opus",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-ablation\\SSNP_ODT-manual-two-thread-20260618_165509\\variants\\manual_keep_070_drop_050_060_090\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-ablation\\SSNP_ODT-manual-two-thread-20260618_165509\\metadata\\variants\\manual_keep_070_drop_050_060_090.json",
+      "enabled_ops": [
+        "op_010_public_contract",
+        "op_030_params_config",
+        "op_040_frequency_grids",
+        "op_045_evanescent_mask",
+        "op_048_pupil",
+        "op_070_q_operator"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\SSNP_ODT\\oracle\\oracle-ssnp_odt"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\SSNP_ODT\\pruned\\oracle-ssnp_odt"
+      ]
+    },
+    "cars_spectroscopy": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\cars_spectroscopy\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\cars_spectroscopy\\prune\\variants\\v_59f54032beef\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\cars_spectroscopy\\prune\\candidates\\op_060_relaxation_matrix\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_040_constants_tables",
+        "op_070_susceptibility",
+        "op_090_convolutions_downsample",
+        "op_100_inversion_solver",
+        "op_110_output_writing"
+      ],
+      "deleted_ops": [
+        "op_010_public_contract",
+        "op_020_data_loading",
+        "op_030_preprocess_normalize",
+        "op_050_line_structure",
+        "op_060_relaxation_matrix",
+        "op_080_nonresonant_intensity",
+        "op_120_metrics_diagnostics",
+        "op_130_smoke_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\cars_spectroscopy\\oracle\\oracle-cars-spectroscopy"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\cars_spectroscopy\\pruned\\oracle-cars-spectroscopy"
+      ]
+    },
+    "ct_fan_beam": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\ct_fan_beam\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\ct_fan_beam\\prune\\variants\\v_7647d1b8521a\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\ct_fan_beam\\prune\\candidates\\op_080_fan_beam_fbp\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_010_output_contract",
+        "op_050_backprojection"
+      ],
+      "deleted_ops": [
+        "op_020_load_inputs",
+        "op_030_fan_beam_geometry",
+        "op_040_forward_projection",
+        "op_060_ramp_filter",
+        "op_070_parker_weights",
+        "op_080_fan_beam_fbp",
+        "op_090_tv_pdhg",
+        "op_100_write_output",
+        "op_110_validate_submission",
+        "op_120_geometry_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\ct_fan_beam\\oracle\\oracle-ct-fan-beam"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\ct_fan_beam\\pruned\\oracle-ct-fan-beam"
+      ]
+    },
+    "differentiable_deflectometry": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\differentiable_deflectometry\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\differentiable_deflectometry\\prune\\variants\\v_ca595f1b723e\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\differentiable_deflectometry\\prune\\candidates\\op_010_contract\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_130_lm_solver"
+      ],
+      "deleted_ops": [
+        "op_010_contract",
+        "op_020_data_loading",
+        "op_030_camera_screen_geometry",
+        "op_040_material_ior",
+        "op_050_lens_prescription",
+        "op_060_aspheric_sag",
+        "op_070_newton_intersection",
+        "op_080_snell_refraction",
+        "op_090_lensgroup_trace",
+        "op_100_fringe_phase",
+        "op_110_validity_mask",
+        "op_120_measured_points",
+        "op_140_output_writing"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\differentiable_deflectometry\\oracle\\oracle-differentiable-deflectometry"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\differentiable_deflectometry\\pruned\\oracle-differentiable-deflectometry"
+      ]
+    },
+    "eht_black_hole_feature_extraction_dynamic": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\eht_black_hole_feature_extraction_dynamic\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\eht_black_hole_feature_extraction_dynamic\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\eht_black_hole_feature_extraction_dynamic\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_010_contract",
+        "op_020_load_raw_frames",
+        "op_030_closure_extraction",
+        "op_040_nufft_params",
+        "op_050_crescent_model",
+        "op_060_nufft_forward",
+        "op_070_fidelity_losses",
+        "op_080_realnvp_flow",
+        "op_090_alphadpi_train",
+        "op_100_importance_resample",
+        "op_110_pa_aggregation",
+        "op_120_runtime_probe",
+        "op_130_output_validation"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\eht_black_hole_feature_extraction_dynamic\\oracle\\oracle-eht-black-hole-feature-extraction-dynamic"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\eht_black_hole_feature_extraction_dynamic\\pruned\\oracle-eht-black-hole-feature-extraction-dynamic"
+      ]
+    },
+    "electron_ptychography": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\electron_ptychography\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\electron_ptychography\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\electron_ptychography\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_001_output_contract",
+        "op_002_case_io",
+        "op_003_probe_calibration",
+        "op_004_coord_convention",
+        "op_005_wavelength_probe_build",
+        "op_006_forward_model",
+        "op_007_object_grid_positions",
+        "op_008_ptycho_solver",
+        "op_009_phase_extract_crop",
+        "op_010_shape_force_write",
+        "op_011_dpc_baseline",
+        "op_012_parallax_baseline",
+        "op_013_smoke_probe"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\electron_ptychography\\oracle\\oracle-electron-ptychography"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\electron_ptychography\\pruned\\oracle-electron-ptychography"
+      ]
+    },
+    "era5_tensorvar": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\era5_tensorvar\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\era5_tensorvar\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\era5_tensorvar\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_001_public_contract",
+        "op_002_load_batch_first_arrays",
+        "op_003_checkpoint_loading",
+        "op_004_inverse_observation_network",
+        "op_005_state_encoder",
+        "op_006_state_decoder_skips",
+        "op_007_latent_dynamics_covariances",
+        "op_008_window_feature_sequence",
+        "op_009_quadratic_program",
+        "op_010_assimilation_execution",
+        "op_011_output_packaging",
+        "op_012_optional_metric_sanity"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\era5_tensorvar\\oracle\\oracle-era5-tensorvar"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\era5_tensorvar\\pruned\\oracle-era5-tensorvar"
+      ]
+    },
+    "exoplanet_imaging": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\exoplanet_imaging\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\exoplanet_imaging\\prune\\variants\\v_024c460f8dbb\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\exoplanet_imaging\\prune\\candidates\\op_010_public_contract\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_070_psf_residuals"
+      ],
+      "deleted_ops": [
+        "op_010_public_contract",
+        "op_020_data_loading",
+        "op_030_coordinate_conventions",
+        "op_040_iwa_masking",
+        "op_050_mean_subtraction",
+        "op_060_kl_basis",
+        "op_080_derotation",
+        "op_090_combination",
+        "op_100_output_writing",
+        "op_110_snr_diagnostic",
+        "op_120_smoke_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\exoplanet_imaging\\oracle\\oracle-exoplanet-imaging"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\exoplanet_imaging\\pruned\\oracle-exoplanet-imaging"
+      ]
+    },
+    "fourier_ptychography": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\fourier_ptychography\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\fourier_ptychography\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\fourier_ptychography\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_010_output_contract",
+        "op_020_case_and_input_loading",
+        "op_030_fft_conventions",
+        "op_040_kspace_led_positions",
+        "op_050_pupil_definition",
+        "op_060_state_initialization",
+        "op_070_forward_exit_wave",
+        "op_080_intensity_projection",
+        "op_090_qnewton_updates",
+        "op_100_led_na_ordering",
+        "op_110_constraints_and_denoising",
+        "op_120_reference_defaults",
+        "op_130_output_write",
+        "op_140_submission_validation"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\fourier_ptychography\\oracle\\oracle-fourier-ptychography"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\fourier_ptychography\\pruned\\oracle-fourier-ptychography"
+      ]
+    },
+    "fpm_inr_reconstruction": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\fpm_inr_reconstruction\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\fpm_inr_reconstruction\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\fpm_inr_reconstruction\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_010_public_contract",
+        "op_020_data_loading",
+        "op_030_optical_params",
+        "op_040_pupil_propagation",
+        "op_050_z_params",
+        "op_060_forward_model",
+        "op_070_inr_architecture",
+        "op_080_training_loop",
+        "op_085_z_sampling_strategy",
+        "op_090_inference_stack",
+        "op_100_output_writing",
+        "op_110_all_in_focus",
+        "op_120_submission_validation",
+        "op_130_smoke_probe"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\fpm_inr_reconstruction\\oracle\\oracle-fpm-inr-reconstruction"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\fpm_inr_reconstruction\\pruned\\oracle-fpm-inr-reconstruction"
+      ]
+    },
+    "hessian_sim": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\hessian_sim\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\hessian_sim\\prune\\variants\\v_13e504f9c875\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\hessian_sim\\prune\\candidates\\op_010_public_contract\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_020_case_loading",
+        "op_030_otf_model",
+        "op_050_band_separation",
+        "op_060_freq_estimation",
+        "op_070_modulation_phase",
+        "op_080_wiener_reconstruct",
+        "op_090_hessian_denoise",
+        "op_110_output_writing"
+      ],
+      "deleted_ops": [
+        "op_010_public_contract",
+        "op_040_fourier_conventions",
+        "op_100_running_average",
+        "op_120_output_validation",
+        "op_130_smoke_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\hessian_sim\\oracle\\oracle-hessian-sim"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\hessian_sim\\pruned\\oracle-hessian-sim"
+      ]
+    },
+    "lensless_imaging": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\lensless_imaging\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\lensless_imaging\\prune\\variants\\v_fd0deb311302\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\lensless_imaging\\prune\\candidates\\op_009_admm_updates\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_004_fft_forward_operator",
+        "op_011_postprocess_output"
+      ],
+      "deleted_ops": [
+        "op_001_public_contract",
+        "op_002_load_npz",
+        "op_003_pad_crop_geometry",
+        "op_005_finite_diff",
+        "op_006_finite_diff_gram",
+        "op_007_precompute_divmats",
+        "op_008_admm_init",
+        "op_009_admm_updates",
+        "op_010_hyperparameters",
+        "op_012_reprojection_probe",
+        "op_013_output_validation"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\lensless_imaging\\oracle\\oracle-lensless-imaging"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\lensless_imaging\\pruned\\oracle-lensless-imaging"
+      ]
+    },
+    "light_field_microscope": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\light_field_microscope\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\light_field_microscope\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\light_field_microscope\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_001_output_contract",
+        "op_002_load_inputs",
+        "op_003_camera_constants",
+        "op_004_resolution_geometry",
+        "op_005_debye_psf",
+        "op_006_mla_transmittance",
+        "op_007_rs_propagation",
+        "op_008_kernel_bank",
+        "op_009_projectors",
+        "op_010_richardson_lucy",
+        "op_011_assemble_output",
+        "op_012_conventional_baseline",
+        "op_013_smoke_probe"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\light_field_microscope\\oracle\\oracle-light-field-microscope"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\light_field_microscope\\pruned\\oracle-light-field-microscope"
+      ]
+    },
+    "microscope_denoising": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\microscope_denoising\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\microscope_denoising\\prune\\variants\\v_f57c2c634a9a\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\microscope_denoising\\prune\\candidates\\op_100_joint_training\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_050_recorruption",
+        "op_110_sliding_window_inference"
+      ],
+      "deleted_ops": [
+        "op_010_public_contract",
+        "op_020_data_loading",
+        "op_030_noise_model",
+        "op_040_noise_param_estimation",
+        "op_060_patch_extraction",
+        "op_070_unet_architecture",
+        "op_080_hessian_regularizer",
+        "op_090_psf_conv_layer",
+        "op_100_joint_training",
+        "op_120_output_writing",
+        "op_130_psf_residual_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\microscope_denoising\\oracle\\oracle-microscope-denoising"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\microscope_denoising\\pruned\\oracle-microscope-denoising"
+      ]
+    },
+    "raman_cell_phenotyping": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\raman_cell_phenotyping\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\raman_cell_phenotyping\\prune\\variants\\v_420e3807697e\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\raman_cell_phenotyping\\prune\\candidates\\op_001_public_contract\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_002_case_loading",
+        "op_003_spectral_crop",
+        "op_004_despike_whitaker_hayes",
+        "op_006_asls_baseline",
+        "op_007_global_minmax_norm",
+        "op_009_nfindr_endmembers",
+        "op_010_fcls_abundances",
+        "op_011_reproducibility_seed",
+        "op_012_canonical_output_mapping"
+      ],
+      "deleted_ops": [
+        "op_001_public_contract",
+        "op_005_savgol_denoise",
+        "op_008_linear_mixing_model",
+        "op_013_submission_validation",
+        "op_014_input_smoke_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\raman_cell_phenotyping\\oracle\\oracle-raman-cell-phenotyping"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\raman_cell_phenotyping\\pruned\\oracle-raman-cell-phenotyping"
+      ]
+    },
+    "reflection_ODT": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\reflection_ODT\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\reflection_ODT\\prune\\variants\\v_bff1b3642817\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\reflection_ODT\\prune\\candidates\\op_006_bpm_operators\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_003_config_units_and_dtypes",
+        "op_004_illumination_order_and_tilts",
+        "op_007_reflection_round_trip"
+      ],
+      "deleted_ops": [
+        "op_001_public_contract",
+        "op_002_load_public_inputs",
+        "op_005_frequency_pupil_masks",
+        "op_006_bpm_operators",
+        "op_008_amplitude_loss",
+        "op_009_fista_update",
+        "op_010_tv_proximal",
+        "op_011_output_packaging",
+        "op_012_submission_validation",
+        "op_013_fast_smoke_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\reflection_ODT\\oracle\\oracle-reflection-ODT"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\reflection_ODT\\pruned\\oracle-reflection-ODT"
+      ]
+    },
+    "s2ism": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\s2ism\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\s2ism\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\s2ism\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_001_public_contract",
+        "op_002_case_loading",
+        "op_003_geometry_and_forward_model",
+        "op_004_psf_padding_normalization",
+        "op_005_flat_initialization",
+        "op_006_fft_partial_convolution",
+        "op_007_poisson_mlem_update",
+        "op_008_fixed_iteration_schedule",
+        "op_009_device_and_dtype_runtime",
+        "op_010_plane_intensity_interpretation",
+        "op_011_output_postprocess",
+        "op_012_smoke_test_and_diagnostics"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\s2ism\\oracle\\oracle-s2ism"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\s2ism\\pruned\\oracle-s2ism"
+      ]
+    },
+    "shapelet_source_reconstruction": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\shapelet_source_reconstruction\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\shapelet_source_reconstruction\\prune\\variants\\v_425afadd620f\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\shapelet_source_reconstruction\\prune\\candidates\\op_010_public_contract\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_040_shapelet_basis",
+        "op_070_forward_simulation",
+        "op_110_source_image_output"
+      ],
+      "deleted_ops": [
+        "op_010_public_contract",
+        "op_020_case_loading",
+        "op_030_grid_array_conventions",
+        "op_050_lens_deflection",
+        "op_060_psf_convolution",
+        "op_080_noise_observation",
+        "op_090_response_matrix",
+        "op_100_wls_solve",
+        "op_120_submission_validation",
+        "op_130_runtime_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\shapelet_source_reconstruction\\oracle\\oracle-shapelet-source-reconstruction"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\shapelet_source_reconstruction\\pruned\\oracle-shapelet-source-reconstruction"
+      ]
+    },
+    "single_molecule_light_field": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\single_molecule_light_field\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\single_molecule_light_field\\prune\\variants\\v_a05c17238be5\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\single_molecule_light_field\\prune\\candidates\\op_009_backward_ols\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_004_optics_model",
+        "op_011_light_field_fit_engine",
+        "op_013_output_metrics"
+      ],
+      "deleted_ops": [
+        "op_001_public_contract",
+        "op_002_load_localizations",
+        "op_003_center_localizations",
+        "op_005_mla_lattice",
+        "op_006_lens_assignment",
+        "op_007_filter_lenses",
+        "op_008_alpha_model",
+        "op_009_backward_ols",
+        "op_010_group_localisations",
+        "op_012_aberration_correction",
+        "op_014_runtime_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\single_molecule_light_field\\oracle\\oracle-single-molecule-light-field"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\single_molecule_light_field\\pruned\\oracle-single-molecule-light-field"
+      ]
+    },
+    "spectral_snapshot_compressive_imaging": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\spectral_snapshot_compressive_imaging\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\spectral_snapshot_compressive_imaging\\prune\\variants\\v_ca7a5fe5b33b\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\spectral_snapshot_compressive_imaging\\prune\\candidates\\op_040_sensing_matrix\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_020_load_inputs",
+        "op_030_dispersion_geometry",
+        "op_060_gap_initialization",
+        "op_070_gap_data_step",
+        "op_100_iteration_schedule",
+        "op_110_assemble_output"
+      ],
+      "deleted_ops": [
+        "op_010_output_contract",
+        "op_040_sensing_matrix",
+        "op_050_forward_transpose",
+        "op_080_tv_prior",
+        "op_090_learned_denoiser",
+        "op_120_validate_output",
+        "op_130_smoke_probe"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\spectral_snapshot_compressive_imaging\\oracle\\oracle-spectral-snapshot-compressive-imaging"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\spectral_snapshot_compressive_imaging\\pruned\\oracle-spectral-snapshot-compressive-imaging"
+      ]
+    },
+    "usct_FWI": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\usct_FWI\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\usct_FWI\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\usct_FWI\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_010_contract",
+        "op_020_metadata_params",
+        "op_030_load_observations",
+        "op_040_restriction_operator",
+        "op_050_initial_slowness",
+        "op_060_near_source_muting",
+        "op_070_cbs_domain_setup",
+        "op_080_cbs_solve_iteration",
+        "op_090_source_intensity_objective",
+        "op_100_adjoint_gradient",
+        "op_110_ncg_linesearch",
+        "op_120_multifreq_bootstrap",
+        "op_130_output_writing",
+        "op_140_output_validation_probe"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\usct_FWI\\oracle\\oracle-usct-FWI"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\usct_FWI\\pruned\\oracle-usct-FWI"
+      ]
+    },
+    "weather_radar_data_assimilation": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\weather_radar_data_assimilation\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\weather_radar_data_assimilation\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\weather_radar_data_assimilation\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_010_public_contract",
+        "op_020_case_data_loading",
+        "op_030_model_space_scaling",
+        "op_040_forward_operator",
+        "op_050_drift_model_unet",
+        "op_060_stochastic_interpolant",
+        "op_070_taylor_x1_estimate",
+        "op_080_guidance_gradient",
+        "op_090_guided_em_sample",
+        "op_100_autoregressive_rollout",
+        "op_110_output_writing",
+        "op_120_smoke_probe",
+        "op_130_submission_validation"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\weather_radar_data_assimilation\\oracle\\oracle-weather-radar-data-assimilation"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\weather_radar_data_assimilation\\pruned\\oracle-weather-radar-data-assimilation"
+      ]
+    },
+    "xray_laminography_tike": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\xray_laminography_tike\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\xray_laminography_tike\\prune\\variants\\v_88375127b3b3\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\xray_laminography_tike\\prune\\candidates\\op_050_forward_adjoint\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_030_geometry_grid"
+      ],
+      "deleted_ops": [
+        "op_010_contract",
+        "op_020_load_inputs",
+        "op_040_nufft_primitives",
+        "op_050_forward_adjoint",
+        "op_060_cost_gradient",
+        "op_070_step_length",
+        "op_080_cg_step",
+        "op_090_reconstruct_driver",
+        "op_100_gpu_runtime",
+        "op_110_write_output",
+        "op_120_validate_submission"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\xray_laminography_tike\\oracle\\oracle-xray-laminography-tike"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\xray_laminography_tike\\pruned\\oracle-xray-laminography-tike"
+      ]
+    },
+    "xray_ptychography_tike": {
+      "source": "lifecycle",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\xray_ptychography_tike\\generated-skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\xray_ptychography_tike\\prune\\baseline\\variant\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\xray_ptychography_tike\\prune\\baseline\\variant-manifest.json",
+      "enabled_ops": [
+        "op_001_case_layout",
+        "op_002_batch_drop",
+        "op_003_scan_shift",
+        "op_004_object_frame",
+        "op_005_probe_modes",
+        "op_006_patch_io",
+        "op_007_forward_model",
+        "op_008_objective",
+        "op_009_input_validation",
+        "op_010_probe_rescale",
+        "op_011_batch_update",
+        "op_012_epoch_loop",
+        "op_013_output_packaging",
+        "op_014_metric_diagnostics"
+      ],
+      "deleted_ops": null,
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\xray_ptychography_tike\\oracle\\oracle-xray-ptychography-tike"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\xray_ptychography_tike\\pruned\\oracle-xray-ptychography-tike"
+      ]
+    },
+    "eht-black-hole-tomography-20260630-164513": {
+      "source": "lifecycle/variant",
+      "oracle_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\eht-black-hole-tomography-20260630-164513\\generated-skills\\oracle-eht-black-hole-tomography\\skills",
+      "pruned_source": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\eht-black-hole-tomography-20260630-164513\\prune\\variants\\v_73140520f90b\\skills",
+      "source_manifest": "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\oracle-skill-lifecycle\\eht-black-hole-tomography-20260630-164513\\prune\\continuations\\20260721T084958287Z-21355-fcc8d01c\\before\\candidates\\op_100_training_loop\\candidate-manifest.json",
+      "enabled_ops": [
+        "op_060_keplerian_warp"
+      ],
+      "deleted_ops": [
+        "op_010_contract",
+        "op_020_case_loading",
+        "op_030_geometry_units",
+        "op_040_positional_encoding",
+        "op_050_nerf_mlp",
+        "op_070_support_mask",
+        "op_080_volume_render",
+        "op_090_image_loss",
+        "op_100_training_loop",
+        "op_110_emission_grid_sampling",
+        "op_120_output_writing",
+        "op_130_output_validation"
+      ],
+      "oracle_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\eht-black-hole-tomography-20260630-164513\\oracle\\oracle-eht-black-hole-tomography"
+      ],
+      "pruned_targets": [
+        "D:\\yan1\\agent\\AutoSkill\\my_claude\\output\\skills\\eht-black-hole-tomography-20260630-164513\\pruned\\oracle-eht-black-hole-tomography"
+      ]
+    }
+  },
+  "skipped": [
+    {
+      "task": "seismic_FWI_original",
+      "source": "lifecycle",
+      "reason": "no candidate/baseline matched frontier enabled ops with skill dir"
+    }
+  ]
+}
