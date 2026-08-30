@@ -1,0 +1,11 @@
+{
+  "baseline": [
+    {
+      "method": "gradient descent, complex field MSE, 100 iter, lr=5.0, no TV, positivity=True",
+      "ncc_vs_ref": 0.877,
+      "nrmse_vs_ref": 0.0807
+    }
+  ],
+  "ncc_boundary": 0.789,
+  "nrmse_boundary": 0.0888
+}

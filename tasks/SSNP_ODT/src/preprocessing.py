@@ -1,56 +1,34 @@
 """
-Data Preprocessing for SSNP-IDT
+Data Preprocessing for SSNP-ODT
 =================================
 
-Handles loading the phantom TIFF volume and metadata, preparing inputs
-for the SSNP forward model and reconstruction.
+Handles loading complex field measurements and metadata.
 
-Pipeline: sample.tiff + meta_data (JSON) → RI contrast volume + parameters
+Pipeline: raw_data.npz (complex fields) + meta_data.json → measurements + parameters
 """
 
 import os
 import json
 import numpy as np
-import tifffile
 
 
-def load_observation(data_dir: str = "data") -> np.ndarray:
+def load_measurements(data_dir: str = "data") -> np.ndarray:
     """
-    Load the phantom TIFF and convert to RI contrast Δn.
-
-    The TIFF contains uint16 values. Conversion:
-        Δn = tiff_data * (tiff_scale / 65535) * ri_contrast_scale
+    Load complex field measurements from raw_data.npz.
 
     Parameters
     ----------
     data_dir : str
-        Path to the data directory containing sample.tiff and meta_data.
+        Path to the data directory.
 
     Returns
     -------
-    phantom_dn : ndarray, shape (Nz, Ny, Nx), float64
-        RI contrast volume (Δn = n - n0).
+    measurements : ndarray, shape (n_angles, Ny, Nx), complex128
+        Complex field images for each illumination angle.
     """
-    meta = load_metadata(data_dir)
-
-    tiff_path = os.path.join(data_dir, "sample.tiff")
-    try:
-        raw = tifffile.imread(tiff_path).astype(np.float64)
-    except ValueError as exc:
-        msg = str(exc)
-        if "requires the 'imagecodecs' package" in msg:
-            raise RuntimeError(
-                "Reading sample.tiff requires the optional 'imagecodecs' "
-                "dependency because the file uses LZW compression. "
-                "Install it with `python -m pip install imagecodecs` and rerun."
-            ) from exc
-        raise
-
-    tiff_scale = meta["tiff_scale"]
-    ri_scale = meta["ri_contrast_scale"]
-    phantom_dn = raw * (tiff_scale / 65535.0) * ri_scale
-
-    return phantom_dn
+    path = os.path.join(data_dir, "raw_data.npz")
+    data = np.load(path)
+    return data["measurements"][0].astype(np.complex128)
 
 
 def load_metadata(data_dir: str = "data") -> dict:
@@ -60,7 +38,7 @@ def load_metadata(data_dir: str = "data") -> dict:
     Parameters
     ----------
     data_dir : str
-        Path to the data directory containing the meta_data file.
+        Path to the data directory.
 
     Returns
     -------
@@ -81,7 +59,7 @@ def load_metadata(data_dir: str = "data") -> dict:
 
 def prepare_data(data_dir: str = "data") -> tuple:
     """
-    Load and prepare all data needed for the SSNP-IDT pipeline.
+    Load measurements and metadata for the SSNP-ODT pipeline.
 
     Parameters
     ----------
@@ -90,11 +68,9 @@ def prepare_data(data_dir: str = "data") -> tuple:
 
     Returns
     -------
-    phantom_dn : ndarray, shape (Nz, Ny, Nx), float64
-        RI contrast volume.
+    measurements : ndarray, shape (n_angles, Ny, Nx), complex128
     metadata : dict
-        Imaging parameters.
     """
-    phantom_dn = load_observation(data_dir)
+    measurements = load_measurements(data_dir)
     metadata = load_metadata(data_dir)
-    return phantom_dn, metadata
+    return measurements, metadata

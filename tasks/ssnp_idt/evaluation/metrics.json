@@ -1,0 +1,10 @@
+{
+  "baseline": [
+    {
+      "ncc": 0.809,
+      "nrmse": 0.104
+    }
+  ],
+  "ncc_boundary": 0.728,
+  "nrmse_boundary": 0.114
+}

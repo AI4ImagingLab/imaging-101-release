@@ -1,6 +1,6 @@
 """
-SSNP Forward Model for Intensity Diffraction Tomography
-=========================================================
+SSNP Forward Model for Optical Diffraction Tomography
+=======================================================
 
 Physical model (Split-Step Non-Paraxial):
 
@@ -13,11 +13,14 @@ Physical model (Split-Step Non-Paraxial):
         └ -kz·sin(kz·Δz)   cos(kz·Δz)    ┘   └ â_d┘
 
     Q (scattering): local RI modulation in real space
-        u_d -= k0²·(n0² - n²(x,y,z))·Δz · u
+        u_d -= k0²·(2·n0·Δn + Δn²)·Δz · u
 
-    The output intensity is:  I = |F · P_NA · P_Δzf · Φ(zn)|²
+    The output complex field is:  E = F · P_NA · P_Δzf · Φ(zn)
     where F extracts the forward-propagating component and P_NA
     is the pupil function.
+
+    Unlike IDT (which discards phase by squaring), ODT retains the full
+    complex field E, giving access to both amplitude and phase.
 
 Implementation uses PyTorch for GPU acceleration and autograd support.
 """
@@ -30,7 +33,7 @@ import torch
 @dataclass
 class SSNPConfig:
     """
-    Physical parameters for the SSNP-IDT model.
+    Physical parameters for the SSNP-ODT model.
 
     Attributes
     ----------
@@ -61,27 +64,13 @@ class SSNPConfig:
     def from_metadata(cls, metadata: dict) -> "SSNPConfig":
         """Construct SSNPConfig from a metadata dictionary.
 
-        The official ``ssnp`` codebase parameterises propagation using the
-        dimensionless sampling
-
-            res = xyz / lambda0 * n0
-
-        where ``xyz`` is the physical voxel size.  If metadata stores voxel
-        size in micrometres, it must therefore be converted before use.
+        The SSNP codebase parameterises propagation using the dimensionless
+        sampling res = xyz / lambda0 * n0, where xyz is the physical voxel
+        size. Metadata stores voxel size in micrometres and must be converted.
         """
-        # Support both metadata schemas:
-        #  - legacy:  explicit n0, res_um, n_angles
-        #  - current: n_medium, camera_pixel_size/magnification, angle_num
+        n0 = metadata["n0"]
         wavelength = metadata["wavelength_um"]
-        if "n0" in metadata:
-            n0 = metadata["n0"]
-            res_um = tuple(metadata["res_um"])
-            n_angles = metadata["n_angles"]
-        else:
-            n0 = metadata["n_medium"]
-            px = metadata["camera_pixel_size"] / metadata["magnification"]
-            res_um = (px, px, px)
-            n_angles = metadata["angle_num"]
+        res_um = tuple(metadata["res_um"])
         res = tuple(size * n0 / wavelength for size in res_um)
         return cls(
             volume_shape=tuple(metadata["volume_shape"]),
@@ -90,17 +79,18 @@ class SSNPConfig:
             NA=metadata["NA"],
             wavelength_um=wavelength,
             res_um=res_um,
-            n_angles=n_angles,
+            n_angles=metadata["n_angles"],
         )
 
 
 class SSNPForwardModel:
     """
-    SSNP-based intensity diffraction tomography forward model.
+    SSNP-based optical diffraction tomography forward model.
 
-    Implements the split-step non-paraxial propagation through a 3D RI
-    distribution and computes resulting intensity images for multiple
-    illumination angles.
+    Implements split-step non-paraxial propagation through a 3D RI
+    distribution and returns complex field images for multiple illumination
+    angles. Retaining the full complex field (amplitude + phase) is the
+    key distinction from intensity-only IDT.
 
     Parameters
     ----------
@@ -121,12 +111,9 @@ class SSNPForwardModel:
         self.ny = ny
         self.nx = nx
 
-        # Precompute frequency-domain quantities
         self.kz = self._compute_kz()
         self.eva_mask = self._compute_evanescent_mask()
         self.pupil = self._compute_pupil()
-
-        # c_gamma (direction cosine) for frequency grid
         self.c_gamma = self._compute_c_gamma()
 
     # ──────────────────────────────────────────────────────────────────────
@@ -134,53 +121,29 @@ class SSNPForwardModel:
     # ──────────────────────────────────────────────────────────────────────
 
     def _compute_c_gamma(self) -> torch.Tensor:
-        """
-        Compute cos(gamma) = sqrt(1 - sin²α - sin²β) on the 2D frequency grid.
-
-        Returns shape (Ny, Nx) float64 tensor.
-        """
+        """cos(gamma) = sqrt(1 - sin²α - sin²β) on the 2D frequency grid."""
         res = self.config.res
         fx = torch.fft.fftfreq(self.nx, dtype=self.real_dtype, device=self.device) / res[0]
         fy = torch.fft.fftfreq(self.ny, dtype=self.real_dtype, device=self.device) / res[1]
         FY, FX = torch.meshgrid(fy, fx, indexing="ij")
-
         eps = 1e-8
         c_gamma = torch.sqrt(torch.clamp(1.0 - FX**2 - FY**2, min=eps))
         return c_gamma
 
     def _compute_kz(self) -> torch.Tensor:
-        """
-        Compute kz = c_gamma * (2π · res_z) on the 2D frequency grid.
-
-        kz is the axial spatial frequency in normalised units, used in
-        the P operator's rotation matrix.
-
-        Returns shape (Ny, Nx) float64 tensor.
-        """
+        """kz = c_gamma * (2π · res_z) — axial spatial frequency."""
         c_gamma = self._compute_c_gamma()
         kz = c_gamma * (2.0 * np.pi * self.config.res[2])
         return kz.to(self.device)
 
     def _compute_evanescent_mask(self) -> torch.Tensor:
-        """
-        Damping mask for evanescent waves.
-
-        exp(min((c_gamma - 0.2) * 5, 0))
-
-        Returns shape (Ny, Nx) float64 tensor.
-        """
+        """Damping mask: exp(min((c_gamma - 0.2) * 5, 0))."""
         c_gamma = self._compute_c_gamma()
         mask = torch.exp(torch.clamp((c_gamma - 0.2) * 5.0, max=0.0))
         return mask.to(self.device)
 
     def _compute_pupil(self) -> torch.Tensor:
-        """
-        Binary pupil function with smooth cutoff at NA.
-
-        Uses a sigmoid-like function centred at c_gamma = sqrt(1 - (NA/n0)²).
-
-        Returns shape (Ny, Nx) complex128 tensor.
-        """
+        """Binary pupil function with smooth sigmoid cutoff at NA."""
         c_gamma = self._compute_c_gamma()
         na_norm = self.config.NA / self.config.n0
         cutoff = np.sqrt(1.0 - na_norm**2)
@@ -194,52 +157,33 @@ class SSNPForwardModel:
 
     def _make_incident_field(self, angle_idx: int) -> tuple:
         """
-        Construct a tilted plane wave and its z-derivative for the given
-        illumination angle.
+        Tilted plane wave and its z-derivative for illumination angle m.
 
-        The illumination direction is:
-            kx_in = NA · cos(2π·m/n_angles)
-            ky_in = NA · sin(2π·m/n_angles)
-
-        The tilt is applied by truncating to the nearest integer frequency
-        to maintain periodicity (matching the original code's `trunc=True`).
-
-        Parameters
-        ----------
-        angle_idx : int
-            Index m of the illumination angle (0 to n_angles-1).
-
-        Returns
-        -------
-        u  : (Ny, Nx) complex128 tensor — tilted plane wave
-        ud : (Ny, Nx) complex128 tensor — z-derivative of the field
+        kx_in = NA · cos(2π·m/n_angles),  ky_in = NA · sin(2π·m/n_angles).
+        Truncated to nearest integer frequency for periodicity.
         """
         na = self.config.NA / self.config.n0
         n_angles = self.config.n_angles
         res = self.config.res
 
         theta = 2.0 * np.pi * angle_idx / n_angles
-        c_a = na * np.cos(theta)  # direction cosine along x
-        c_b = na * np.sin(theta)  # direction cosine along y
+        c_a = na * np.cos(theta)
+        c_b = na * np.sin(theta)
 
-        # Truncate to nearest integer frequency for periodicity
         norm_x = self.nx * res[0]
         norm_y = self.ny * res[1]
         c_a = int(c_a * norm_x) / norm_x
         c_b = int(c_b * norm_y) / norm_y
 
-        # Pixel coordinates
         x = torch.arange(self.nx, dtype=self.real_dtype, device=self.device)
         y = torch.arange(self.ny, dtype=self.real_dtype, device=self.device)
 
-        # Phase ramps
         phase_x = 2j * np.pi * c_a * res[0] * x
         phase_y = 2j * np.pi * c_b * res[1] * y
 
         tilt = torch.exp(phase_y).unsqueeze(1) * torch.exp(phase_x).unsqueeze(0)
         tilt = tilt.to(dtype=self.dtype, device=self.device)
 
-        # Compute kz for this illumination direction
         c_gamma_in = np.sqrt(max(1.0 - c_a**2 - c_b**2, 1e-8))
         kz_in = c_gamma_in * (2.0 * np.pi * res[2])
 
@@ -255,23 +199,10 @@ class SSNPForwardModel:
     def _apply_propagation(self, u: torch.Tensor, ud: torch.Tensor,
                            dz: float = 1.0) -> tuple:
         """
-        P operator: free-space propagation by dz slices.
+        P operator: free-space propagation by dz slices in Fourier space.
 
-        In Fourier space, applies the 2×2 rotation matrix:
             â_new  =  cos(kz·dz) · â  + sin(kz·dz)/kz · â_d
             â_d_new = -kz·sin(kz·dz) · â + cos(kz·dz) · â_d
-
-        Evanescent components are damped by the evanescent mask.
-
-        Parameters
-        ----------
-        u  : (Ny, Nx) complex tensor — field
-        ud : (Ny, Nx) complex tensor — z-derivative
-        dz : float — propagation distance in slice units
-
-        Returns
-        -------
-        u_new, ud_new : propagated field and derivative
         """
         kz = self.kz
         eva = self.eva_mask
@@ -282,7 +213,6 @@ class SSNPForwardModel:
         a = torch.fft.fft2(u)
         a_d = torch.fft.fft2(ud)
 
-        # 2×2 matrix multiply
         a_new = cos_kz * a + (sin_kz / kz) * a_d
         a_d_new = (-kz * sin_kz) * a + cos_kz * a_d
 
@@ -296,34 +226,15 @@ class SSNPForwardModel:
         """
         Q operator: scattering by a single RI slice.
 
-        ud -= k0² · (2·n0·Δn + Δn²) · Δz_physical · u
+            ud -= k0² · (2·n0·Δn + Δn²) · Δz_physical · u
 
-        where Δz_physical = (2π·res_z / n0)² · dz is the normalised
-        physical thickness, and k0 = 2π/λ.
-
-        Parameters
-        ----------
-        u        : (Ny, Nx) complex — field
-        ud       : (Ny, Nx) complex — z-derivative
-        dn_slice : (Ny, Nx) real — RI contrast Δn at this z slice
-        dz       : float — slice thickness in normalised units
-
-        Returns
-        -------
-        u, ud_new : field unchanged, derivative updated
+        where Δz_physical = (2π·res_z / n0)² · dz.
         """
         n0 = self.config.n0
         res_z = self.config.res[2]
-
-        # Phase factor matching the original code:
-        # phase_factor = (2π·res_z / n0)² · dz
         phase_factor = (2.0 * np.pi * res_z / n0) ** 2 * dz
-
-        # Scattering potential: k0²(n0² - n²) ≈ -k0²(2·n0·Δn + Δn²)
         scatter = phase_factor * dn_slice * (2.0 * n0 + dn_slice)
-
         ud_new = ud - scatter * u
-
         return u, ud_new
 
     # ──────────────────────────────────────────────────────────────────────
@@ -335,64 +246,33 @@ class SSNPForwardModel:
         """
         Decompose (field, derivative) into forward and backward components.
 
-        In Fourier space:
-            â_f = (â + â_d / (j·kz)) / 2
+            â_f = (â - j·â_d / kz) / 2
             â_b = â - â_f
-
-        Parameters
-        ----------
-        u  : (Ny, Nx) complex — total field
-        ud : (Ny, Nx) complex — z-derivative
-
-        Returns
-        -------
-        uf, ub : forward and backward component fields
         """
         kz = self.kz
-
         a = torch.fft.fft2(u)
         a_d = torch.fft.fft2(ud)
-
-        # Forward component in Fourier space
         a_f = (a - 1j * a_d / kz) * 0.5
         a_b = a - a_f
-
         uf = torch.fft.ifft2(a_f)
         ub = torch.fft.ifft2(a_b)
-
         return uf, ub
 
     def _extract_forward_component(self, u: torch.Tensor,
                                    ud: torch.Tensor) -> torch.Tensor:
         """
-        Back-propagate to focal plane, apply pupil, extract forward component.
+        Back-propagate to focal plane, apply pupil, return complex forward field.
 
-        1. Back-propagate from exit plane (z=zn) to focal plane (z=zn/2)
-           by propagating dz = -nz/2 slices (no scattering)
+        1. Back-propagate from exit plane (z=nz) to focal plane (z=nz/2)
         2. Discard backward component
         3. Apply binary pupil filter in Fourier space
-
-        Parameters
-        ----------
-        u  : (Ny, Nx) complex — field at exit plane
-        ud : (Ny, Nx) complex — z-derivative at exit plane
-
-        Returns
-        -------
-        phi_out : (Ny, Nx) complex — forward field at camera plane
         """
-        # Back-propagate to focal plane
         u_bp, ud_bp = self._apply_propagation(u, ud, dz=-self.nz / 2.0)
-
-        # Extract forward component only
         uf, _ = self._split_forward_backward(u_bp, ud_bp)
-
-        # Apply pupil in Fourier space
         a_f = torch.fft.fft2(uf)
         a_f = a_f * self.pupil
         phi_out = torch.fft.ifft2(a_f)
-
-        return phi_out
+        return phi_out  # complex (Ny, Nx)
 
     # ──────────────────────────────────────────────────────────────────────
     # Full forward model
@@ -401,13 +281,13 @@ class SSNPForwardModel:
     def forward_single(self, dn_volume: torch.Tensor,
                        angle_idx: int) -> torch.Tensor:
         """
-        Simulate intensity image for a single illumination angle.
+        Simulate complex field for a single illumination angle.
 
         Pipeline:
             1. Construct incident tilted plane wave
             2. Propagate through sample (P·Q for each slice)
-            3. Back-propagate, pupil filter, extract forward
-            4. Take intensity |φ_out|²
+            3. Back-propagate, pupil filter, extract forward component
+            4. Return complex field E (amplitude + phase)
 
         Parameters
         ----------
@@ -416,26 +296,20 @@ class SSNPForwardModel:
 
         Returns
         -------
-        intensity : (Ny, Nx) real tensor
+        E : (Ny, Nx) complex128 tensor
         """
         u, ud = self._make_incident_field(angle_idx)
 
-        # Propagate through each slice: P then Q
         for iz in range(self.nz):
             u, ud = self._apply_propagation(u, ud, dz=1.0)
             u, ud = self._apply_scattering(u, ud, dn_volume[iz], dz=1.0)
 
-        # Extract forward component at camera
-        phi_out = self._extract_forward_component(u, ud)
-
-        # Intensity
-        intensity = torch.abs(phi_out) ** 2
-        return intensity
+        return self._extract_forward_component(u, ud)
 
     def forward(self, dn_volume: torch.Tensor,
                 n_angles: int = None) -> torch.Tensor:
         """
-        Simulate intensity images for all illumination angles.
+        Simulate complex fields for all illumination angles.
 
         Parameters
         ----------
@@ -444,25 +318,21 @@ class SSNPForwardModel:
 
         Returns
         -------
-        intensities : (n_angles, Ny, Nx) real tensor
+        fields : (n_angles, Ny, Nx) complex128 tensor
         """
         if n_angles is None:
             n_angles = self.config.n_angles
 
-        intensities = []
+        fields = []
         for m in range(n_angles):
-            I_m = self.forward_single(dn_volume, m)
-            intensities.append(I_m)
+            E_m = self.forward_single(dn_volume, m)
+            fields.append(E_m)
 
-        return torch.stack(intensities, dim=0)
+        return torch.stack(fields, dim=0)
 
     def simulate_measurements(self, dn_volume: torch.Tensor) -> torch.Tensor:
         """Convenience wrapper for forward()."""
         return self.forward(dn_volume)
-
-    # ──────────────────────────────────────────────────────────────────────
-    # Convenience
-    # ──────────────────────────────────────────────────────────────────────
 
     def __repr__(self):
         c = self.config

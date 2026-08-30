@@ -1,12 +1,12 @@
 """
-SSNP Intensity Diffraction Tomography
-=======================================
+SSNP Optical Diffraction Tomography
+=====================================
 
-Reconstruction pipeline for 3D RI from multi-angle intensity measurements.
+Reconstruction pipeline for 3D RI from multi-angle complex field measurements.
 
 Usage
 -----
-    cd tasks/SSNP_ODT
+    cd tasks/ssnp_odt
     python main.py
 """
 
@@ -29,6 +29,8 @@ from src.visualization import (
     print_metrics_table,
 )
 
+_SOLVER_PARAMS = dict(n_iter=100, lr=5.0, tv_weight=0.0, positivity=True)
+
 
 def main():
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -41,14 +43,14 @@ def main():
 
     raw = np.load("data/raw_data.npz")
     gt  = np.load("data/ground_truth.npz")
-    meas_np    = raw["measurements"][0].astype(np.float64)   # (n_angles, Ny, Nx)
-    phantom_dn = gt["delta_n"][0].astype(np.float64)          # (Nz, Ny, Nx)
+    meas_np    = raw["measurements"][0].astype(np.complex128)  # (n_angles, Ny, Nx)
+    phantom_dn = gt["delta_n"][0].astype(np.float64)           # (Nz, Ny, Nx)
 
     config = SSNPConfig.from_metadata(metadata)
-    print(f"  Measurements   : {meas_np.shape}  range [{meas_np.min():.4f}, {meas_np.max():.4f}]")
+    amp = np.abs(meas_np)
+    print(f"  Measurements   : {meas_np.shape}  |E| [{amp.min():.4f}, {amp.max():.4f}]")
     print(f"  Ground truth   : {phantom_dn.shape}  Δn [{phantom_dn.min():.6f}, {phantom_dn.max():.6f}]")
     print(f"  Norm. res      : {config.res}")
-    print(f"  Voxel size     : {config.res_um} μm")
 
     # ── Step 2: Build forward model ───────────────────────────────────────
     print("\nStep 2: Building SSNP forward model...")
@@ -57,18 +59,10 @@ def main():
 
     # ── Step 3: Reconstruct ───────────────────────────────────────────────
     print("\nStep 3: Reconstructing 3D RI...")
-    reconstructor = SSNPReconstructor(
-        n_iter=100,
-        lr=50.0,
-        tv_weight=0.0,
-        positivity=True,
-        device=device,
-    )
+    reconstructor = SSNPReconstructor(**_SOLVER_PARAMS, device=device)
 
-    measurements = torch.tensor(meas_np, dtype=torch.float64, device=device)
-    meas_amp = torch.sqrt(measurements)
-
-    dn_recon, loss_history = reconstructor.reconstruct(meas_amp, model)
+    measurements = torch.tensor(meas_np, dtype=torch.complex128, device=device)
+    dn_recon, loss_history = reconstructor.reconstruct(measurements, model)
     print(f"  Final loss: {loss_history[-1]:.6f}")
 
     # ── Step 4: Evaluate ──────────────────────────────────────────────────

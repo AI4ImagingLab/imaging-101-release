@@ -1,5 +1,5 @@
-from .preprocessing import load_observation, load_metadata, prepare_data
 from .physics_model import SSNPConfig, SSNPForwardModel
+from .preprocessing import load_measurements, load_metadata, prepare_data
 from .solvers import SSNPReconstructor, tv_3d
 from .visualization import (
     plot_ri_slices,
@@ -10,4 +10,3 @@ from .visualization import (
     compute_metrics,
     print_metrics_table,
 )
-from .generate_data import generate_measurements

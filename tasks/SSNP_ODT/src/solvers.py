@@ -1,17 +1,26 @@
 """
-Inverse Solvers for SSNP-IDT Reconstruction
+Inverse Solvers for SSNP-ODT Reconstruction
 =============================================
 
-Reconstruction of the 3D RI distribution from intensity measurements
+Reconstruction of the 3D RI distribution from complex field measurements
 using gradient-descent optimization with TV regularization.
 
-The gradient is computed automatically via PyTorch autograd through
-the entire SSNP forward model (P/Q operators, FFTs, pupil filtering).
+ODT vs IDT loss
+---------------
+IDT measures intensity only (|E|²) and minimises amplitude MSE:
+    L_IDT = Σ_l ‖|E_pred^l| − √I_meas^l‖²
+
+ODT measures the full complex field E and minimises complex field MSE:
+    L_ODT = Σ_l ‖E_pred^l − E_meas^l‖²
+
+The ODT loss is real-valued (squared modulus of a complex residual) and
+PyTorch autograd correctly computes gradients of this real scalar with
+respect to the real-valued Δn volume through the complex forward model.
 
 Solver
 ------
 SSNPReconstructor
-    Gradient descent with amplitude MSE loss, 3D TV regularisation,
+    Gradient descent with complex field MSE loss, 3D TV regularisation,
     and non-negativity constraint (projection after each step).
 """
 
@@ -33,7 +42,7 @@ def tv_3d(volume: torch.Tensor, epsilon: float = 1e-8) -> torch.Tensor:
     Parameters
     ----------
     volume  : (Nz, Ny, Nx) real tensor
-    epsilon : float — smoothing constant for differentiability
+    epsilon : smoothing constant for differentiability
 
     Returns
     -------
@@ -43,7 +52,6 @@ def tv_3d(volume: torch.Tensor, epsilon: float = 1e-8) -> torch.Tensor:
     dy = volume[:, 1:, :] - volume[:, :-1, :]
     dx = volume[:, :, 1:] - volume[:, :, :-1]
 
-    # Pad to uniform size (replicate last slice along each axis)
     dz = torch.nn.functional.pad(dz, (0, 0, 0, 0, 0, 1))
     dy = torch.nn.functional.pad(dy, (0, 0, 0, 1, 0, 0))
     dx = torch.nn.functional.pad(dx, (0, 1, 0, 0, 0, 0))
@@ -57,13 +65,14 @@ def tv_3d(volume: torch.Tensor, epsilon: float = 1e-8) -> torch.Tensor:
 
 class SSNPReconstructor:
     """
-    Gradient-descent reconstruction for SSNP-IDT.
+    Gradient-descent reconstruction for SSNP-ODT.
 
     Minimises:
-        L = Σ_l ‖√I_pred^l − √I_meas^l‖² + τ · TV(Δn)
+        L = Σ_l ‖E_pred^l − E_meas^l‖² / N_pixels  +  τ · TV(Δn)
 
-    using PyTorch autograd for gradient computation and a fixed learning
-    rate with non-negativity projection.
+    where E_pred and E_meas are complex fields (Ny, Nx). The squared modulus
+    ‖·‖² = Σ |·|² is real-valued, giving well-defined real gradients w.r.t.
+    the real Δn volume via PyTorch autograd.
 
     Parameters
     ----------
@@ -79,7 +88,7 @@ class SSNPReconstructor:
         PyTorch device ('cpu' or 'cuda').
     """
 
-    def __init__(self, n_iter: int = 5, lr: float = 350.0,
+    def __init__(self, n_iter: int = 100, lr: float = 5.0,
                  tv_weight: float = 0.0, positivity: bool = True,
                  device: str = "cpu"):
         self.n_iter = n_iter
@@ -91,16 +100,12 @@ class SSNPReconstructor:
     def reconstruct(self, measurements: torch.Tensor,
                     model) -> tuple:
         """
-        Reconstruct 3D RI contrast from intensity measurements.
-
-        Follows the same gradient-descent scheme as the original SSNP-IDT
-        code: for each iteration, accumulate per-angle gradients (each
-        normalised by N_pixels), then apply a single step.
+        Reconstruct 3D RI contrast from complex field measurements.
 
         Parameters
         ----------
-        measurements : (n_angles, Ny, Nx) tensor
-            Measured intensity images (amplitudes, i.e. |field|).
+        measurements : (n_angles, Ny, Nx) complex128 tensor
+            Measured complex field images.
         model : SSNPForwardModel
             Forward model instance.
 
@@ -116,10 +121,8 @@ class SSNPReconstructor:
         n_angles = config.n_angles
         n_pixels = ny * nx
 
-        # measurements should be amplitudes (|field|) to match original code
         meas = measurements.to(self.device)
 
-        # Initialise RI contrast as zeros
         dn = torch.zeros(nz, ny, nx, dtype=torch.float64,
                          device=self.device, requires_grad=True)
 
@@ -128,21 +131,15 @@ class SSNPReconstructor:
         for step in range(self.n_iter):
             total_loss = 0.0
 
-            # Accumulate gradient over all angles (matching original code)
             for m in range(n_angles):
-                # Forward model for single angle
-                pred_intensity = model.forward_single(dn, m)
+                E_pred = model.forward_single(dn, m)   # complex (Ny, Nx)
+                E_meas = meas[m]                        # complex (Ny, Nx)
 
-                # Amplitude-domain MSE, normalised per pixel
-                # loss_m = ||abs(field) - meas_m||² / N_pixels
-                pred_amp = torch.sqrt(pred_intensity + 1e-12)
-                meas_amp = meas[m]
-                loss_m = torch.sum((pred_amp - meas_amp) ** 2) / n_pixels
-
+                # Complex field MSE, normalised per pixel
+                loss_m = torch.sum(torch.abs(E_pred - E_meas) ** 2) / n_pixels
                 loss_m.backward()
                 total_loss += loss_m.item()
 
-            # Add TV regularisation gradient
             if self.tv_weight > 0:
                 tv_val = self.tv_weight * tv_3d(dn) / (nz * n_pixels)
                 tv_val.backward()
@@ -150,7 +147,6 @@ class SSNPReconstructor:
             loss_history.append(total_loss)
             print(f"  Iteration {step + 1}/{self.n_iter}, loss = {total_loss:.6f}")
 
-            # Gradient descent step
             with torch.no_grad():
                 dn -= self.lr * dn.grad
                 if self.positivity:
