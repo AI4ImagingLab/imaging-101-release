@@ -1,0 +1,11 @@
+tasks/sentinel1_volcano_sbas/data/raw_data.npz filter=lfs diff=lfs merge=lfs -text
+tasks/sentinel1_volcano_sbas/evaluation/baseline_reference.npz filter=lfs diff=lfs merge=lfs -text
+tasks/calcium_cnmf_demixing/data/raw_data.npz filter=lfs diff=lfs merge=lfs -text
+tasks/in_vivo_ultrasound_microvascular_mapping/data/raw_data.npz filter=lfs diff=lfs merge=lfs -text
+tasks/in_vivo_ultrasound_microvascular_mapping/test/fixtures/upstream_block001.npz filter=lfs diff=lfs merge=lfs -text
+tasks/sofi_live_cell_fluctuations/data/raw_data.npz filter=lfs diff=lfs merge=lfs -text
+tasks/bsubtilis_differential_dynamics/data/raw_data.npz filter=lfs diff=lfs merge=lfs -text
+tasks/magnetic_particle_tracer_reconstruction/data/raw_data.npz filter=lfs diff=lfs merge=lfs -text
+tasks/historic_film_low_rank_separation/evaluation/baseline_reference.npz filter=lfs diff=lfs merge=lfs -text
+tasks/historic_film_low_rank_separation/test/fixtures/upstream_stages.npz filter=lfs diff=lfs merge=lfs -text
+tasks/lopeg_zeeman_vector_mapping/test/fixtures/upstream.npz filter=lfs diff=lfs merge=lfs -text
