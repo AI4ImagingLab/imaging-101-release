@@ -1,0 +1,8 @@
+{
+  "baseline": [{"method": "Independent pyTFM finite-thickness standard-method result, not true traction", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.99999999,
+  "nrmse_boundary": 1e-7,
+  "reference_provenance": "Frozen upstream run on the exact bundled measured displacement; see test/validation.md",
+  "tolerance_provenance": "Nonzero float64 numerical repeat tolerance frozen in private tfm_acceptance.json before local implementation; physics checks required independently.",
+  "alignment": "None; signed vector components evaluated jointly at every grid point without crop, translation, scale or magnitude conversion."
+}

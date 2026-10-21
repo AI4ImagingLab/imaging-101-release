@@ -1,0 +1,10 @@
+The explicit sphere amplitude and finite Hankel quadrature are adapted from
+SasView/sasmodels. Copyright (c) 2009-2026 SasView Developers; BSD-3-Clause.
+The complete redistribution terms are retained in LICENSE.
+
+The projected-bound least-squares residual convention is adapted from
+bumps.fitters.LevenbergMarquardtFit in Bumps 1.0.5. Bumps states that its code is
+in the public domain except individual files/subpackages with their own notices.
+The selected fitters.py code contains no separate copyright restriction.
+No Bumps GUI, quasi-Newton, DREAM or other separately licensed optimizer code
+is vendored. The selected solver uses SciPy's general MINPACK interface.

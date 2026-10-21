@@ -1,0 +1,19 @@
+{
+  "profile_nrmse_boundary": 2e-05,
+  "parameter_error_boundary": 0.0002,
+  "rfactor_boundary": 0.00125,
+  "nrmse_definition": "RMS pair density difference normalized by reference dynamic range",
+  "parameter_error_definition": "maximum absolute difference normalized by (1,1 eV,0.01 Angstrom^2,0.1 Angstrom)",
+  "rfactor_definition": "squared complex Fourier residual norm divided by measured complex Fourier norm over fixed first-shell R interval",
+  "baseline": [
+    {
+      "method": "exact upstream first-shell feffit",
+      "rfactor": 0.0012310909216523384
+    },
+    {
+      "method": "independent upstream rerun from changed initialization",
+      "profile_nrmse_vs_ref": 1.0887209032310399e-07,
+      "parameter_error_vs_ref": 9.111235487357927e-06
+    }
+  ]
+}

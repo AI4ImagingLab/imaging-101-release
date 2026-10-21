@@ -1,0 +1,103 @@
+{
+  "kind": "fresh cleaned-code measurement, not historical report",
+  "observation_sha256": "9e35ca54e8d970b8dfd8c189709d38cfaa70003238a0e52caf6725abf8c4ccf2",
+  "reference_sha256": "d2d869781fd5f3996143f1d046b95d5c99b62d078fd9faabe1d62db72e8f7847",
+  "source_sha256": {
+    "src/main.py": "0be0854b82cd47e60e08d583634b61beccd85b3a420b79075fe9fc427ab5becd",
+    "src/physics_model.py": "d1fafac919bd4c128fab323a0b225ee9d736c853e68b634527fb2e8fee818068",
+    "src/preprocessing.py": "151972473b6670745b331e0956f81ba62b5b567801039b0fadb6bea5374f5cd2",
+    "src/solvers.py": "99009860c82cb2ca2a70cc7f30bd6f5ca8ba24d83889461e199605d6b92e8521",
+    "src/visualization.py": "7dd9e5b83a9c98d9d6580f1d687efcec9dda245040ead389677df9cd0e31280e",
+    "src/__init__.py": "50b28251062a2765dc2173d201adfbf4988650339b81bb67ed78e2095b7c8434"
+  },
+  "environment": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.1"
+  },
+  "submission": "output/reconstruction.npz",
+  "submission_sha256": "d2d869781fd5f3996143f1d046b95d5c99b62d078fd9faabe1d62db72e8f7847",
+  "judge_report": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_ncc": 1.0,
+      "reconstruction_nrmse": 0.0,
+      "observation_nrmse": 1.0306173095685474e-16
+    },
+    "thresholds": {
+      "reconstruction_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "reconstruction_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "observation_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      }
+    },
+    "errors": []
+  },
+  "run_evidence": [
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "src.main"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.17431290005333722
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "evaluation/judge.py",
+        "--prediction",
+        "output/reconstruction.npz",
+        "--report",
+        "output/judge_report.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.17382390005514026
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "test/",
+        "-v",
+        "--basetemp",
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch_20261020\\bio_medical\\tmp_final_mri_b1_actual_flip_angle"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.6686768000945449
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "jupyter",
+        "nbconvert",
+        "--to",
+        "notebook",
+        "--execute",
+        "notebooks/mri_b1_actual_flip_angle.ipynb",
+        "--output",
+        "mri_b1_actual_flip_angle_executed.ipynb",
+        "--output-dir",
+        "output",
+        "--ExecutePreprocessor.timeout=180",
+        "--ExecutePreprocessor.kernel_name=imaging101-research"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.225198599975556
+    }
+  ],
+  "display_review_note": "Reference bars explicitly labeled self-comparison; exact-zero bars annotated; comparison colorbars include units. Numeric reconstruction/Judge code unchanged.",
+  "active_notebook_ledger_verified": true
+}

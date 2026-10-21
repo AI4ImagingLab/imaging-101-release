@@ -1,0 +1,19 @@
+{
+  "profile_nrmse_boundary": 2e-05,
+  "parameter_error_boundary": 1e-05,
+  "chisqr_boundary": 40.4,
+  "nrmse_definition": "RMS autocovariance error divided by reference dynamic range",
+  "parameter_error_definition": "maximum absolute parameter error normalized by (10000 Angstrom,0.1 volume fraction)",
+  "chisqr_definition": "sum squared (model-depolarisation)/standard_error over all40 observations",
+  "baseline": [
+    {
+      "method": "exact-source sphere SESANS and original Bumps scipy.leastsq",
+      "chisqr": 39.98566457122462
+    },
+    {
+      "method": "separate changed-initialization upstream inversion",
+      "profile_nrmse_vs_ref": 9.937924697021348e-08,
+      "parameter_error_vs_ref": 4.291900515454472e-07
+    }
+  ]
+}

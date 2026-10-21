@@ -1,0 +1,113 @@
+{
+  "kind": "fresh cleaned-code measurement, not historical report",
+  "observation_sha256": "f3ae66619e8e847f1abba816b70dde12bed6008172d018dd3a2adf1d5c183f82",
+  "reference_sha256": "1af4705b2af4489bda780821e57d0b2a8a78a39e43b3d21c53f6a9152e15f796",
+  "source_sha256": {
+    "src/main.py": "40d897f0d84e7695acc0de1d8d7f3daeee962a1ca6d7dbd93b23a87e1ec51143",
+    "src/physics_model.py": "6f703d63c9592e2ea2793eddd01c7aa898f3dce2f921d6bd68a4ed655dc3f047",
+    "src/preprocessing.py": "a7cafecdbaa5ab56de5562ece2eda2da571ec0be46e59895e58ed62030977c35",
+    "src/solvers.py": "20398fef9d79ad31cd82c3f0ff3f7e9806ba4d7dc88653906cdde17f625d0f54",
+    "src/visualization.py": "a10c14507b5abfb6641a84097c97c988c42cbd483c5b63b2d644a2a508d5645d",
+    "src/__init__.py": "11a636e9f49c5415f123bff3c2b0ab174fda209d9887da0147e7bac5d5a564f3"
+  },
+  "environment": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.1"
+  },
+  "submission": "output/reconstruction.npz",
+  "submission_sha256": "af87b553f846f7311287165a0238bdce791549c686eb87c6f3ca59de2ec74fc3",
+  "judge_report": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_ncc": 0.9999999999999999,
+      "reconstruction_nrmse": 1.6017386406817876e-16,
+      "modulation_lifetime_ncc": 1.0,
+      "modulation_lifetime_nrmse": 4.0853927644471627e-16,
+      "observation_nrmse": 1.4988866383914643e-16
+    },
+    "thresholds": {
+      "reconstruction_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "reconstruction_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "modulation_lifetime_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "modulation_lifetime_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "observation_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      }
+    },
+    "errors": []
+  },
+  "run_evidence": [
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "src.main"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.25821650004945695
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "evaluation/judge.py",
+        "--prediction",
+        "output/reconstruction.npz",
+        "--report",
+        "output/judge_report.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.2845294999424368
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "test/",
+        "-v",
+        "--basetemp",
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch_20261020\\bio_medical\\tmp_final_flim_phasor_lifetime"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.117771999910474
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "jupyter",
+        "nbconvert",
+        "--to",
+        "notebook",
+        "--execute",
+        "notebooks/flim_phasor_lifetime.ipynb",
+        "--output",
+        "flim_phasor_lifetime_executed.ipynb",
+        "--output-dir",
+        "output",
+        "--ExecutePreprocessor.timeout=180",
+        "--ExecutePreprocessor.kernel_name=imaging101-research"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.535783299943432
+    }
+  ],
+  "display_review_note": "Reference bars explicitly labeled self-comparison; exact-zero bars annotated; comparison colorbars include units. Numeric reconstruction/Judge code unchanged.",
+  "active_notebook_ledger_verified": true
+}

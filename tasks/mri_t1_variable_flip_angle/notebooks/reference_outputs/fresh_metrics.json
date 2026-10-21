@@ -1,0 +1,113 @@
+{
+  "kind": "fresh cleaned-code measurement, not historical report",
+  "observation_sha256": "f6c5e946f21f164553be3fb52d94c8ed20b869e3434de3188e41c128f6153675",
+  "reference_sha256": "72a9d18d83bfba5bcf90386ce24bbbeb007cd9f3542b0f14d9785782345f7a4a",
+  "source_sha256": {
+    "src/main.py": "35ce371ada71326aa3b6b4e801a6c692df9814409afd9bd8a757bad49171b8fe",
+    "src/physics_model.py": "55051abdbc765a7b8208659e3c645177acb4e5260868607fb17f47a535258597",
+    "src/preprocessing.py": "cfa6a65041dcd8bc85bb5c4d7f4b22544c89918dad67a80454e40520e44aa8d8",
+    "src/solvers.py": "dd2d05d93b648a4d6a4f0bdbd846fb6c6d81a07698c0edcfca95c410b82ac383",
+    "src/visualization.py": "7df4a63d2b0125ae21bfca11e8d21c54ad082b0d2059bca2a2266eb991686f1f",
+    "src/__init__.py": "53ef869944a0903d4701a6919d4c4bd369be4dc77da98b9f366600e2cb0b7293"
+  },
+  "environment": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "matplotlib": "3.11.1"
+  },
+  "submission": "output/reconstruction.npz",
+  "submission_sha256": "d90ecc7a2a4a19e60abcee914872e35fbcfe689daca93a7f2494d20ce80a9d56",
+  "judge_report": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_ncc": 1.0,
+      "reconstruction_nrmse": 5.7139154018493586e-15,
+      "equilibrium_magnetization_ncc": 0.9999999999999999,
+      "equilibrium_magnetization_nrmse": 7.906602433684241e-15,
+      "observation_nrmse": 3.8508133740517735e-15
+    },
+    "thresholds": {
+      "reconstruction_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "reconstruction_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "equilibrium_magnetization_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "equilibrium_magnetization_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "observation_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      }
+    },
+    "errors": []
+  },
+  "run_evidence": [
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "src.main"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.13692920003086329
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "evaluation/judge.py",
+        "--prediction",
+        "output/reconstruction.npz",
+        "--report",
+        "output/judge_report.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.14985429984517395
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "pytest",
+        "test/",
+        "-v",
+        "--basetemp",
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch_20261020\\bio_medical\\tmp_final_mri_t1_variable_flip_angle"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 1.2454988998360932
+    },
+    {
+      "command": [
+        "D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe",
+        "-m",
+        "jupyter",
+        "nbconvert",
+        "--to",
+        "notebook",
+        "--execute",
+        "notebooks/mri_t1_variable_flip_angle.ipynb",
+        "--output",
+        "mri_t1_variable_flip_angle_executed.ipynb",
+        "--output-dir",
+        "output",
+        "--ExecutePreprocessor.timeout=180",
+        "--ExecutePreprocessor.kernel_name=imaging101-research"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.466715299990028
+    }
+  ],
+  "display_review_note": "Reference bars explicitly labeled self-comparison; exact-zero bars annotated; comparison colorbars include units. Numeric reconstruction/Judge code unchanged.",
+  "active_notebook_ledger_verified": true
+}

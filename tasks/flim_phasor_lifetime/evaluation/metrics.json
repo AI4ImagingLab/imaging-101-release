@@ -1,0 +1,33 @@
+{
+  "baseline": [
+    {
+      "method": "independent upstream run on exact bound observations",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        256,
+        256
+      ],
+      "dtype": "float64"
+    },
+    "modulation_lifetime": {
+      "shape": [
+        1,
+        256,
+        256
+      ],
+      "dtype": "float64"
+    }
+  },
+  "reference_type": "standard-method reconstruction; not ground truth",
+  "tolerance_rationale": "Independent upstream and local float64 paths; a one part per million reference-range tolerance permits backend roundoff and is fixed before scoring. See test/validation.md for independent reruns and physical tests.",
+  "observation_nrmse_boundary": 1e-06,
+  "observation_definition": "RMS mismatch in dimensionless calibrated first-harmonic coordinates on supplied support"
+}
