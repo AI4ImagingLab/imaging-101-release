@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "100-iteration Tomviz Landweber SIRT on bound measured tilt series; no actual volume truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "projection_residual": 0.14384113582003832
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-05,
+  "projection_residual_boundary": 0.1452795471782387
+}

@@ -1,0 +1,20 @@
+{
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        1024,
+        1024
+      ],
+      "dtype": "uint16",
+      "relative_l2_boundary": 1e-05
+    }
+  },
+  "baseline": [
+    {
+      "method": "Independent reproduced original implementation",
+      "relative_l2": 0.0
+    }
+  ],
+  "definition": "Per required array Euclidean error/reference norm, full grid, no crop/rescale/alignment. References are standard-method results, not measured physical truth."
+}

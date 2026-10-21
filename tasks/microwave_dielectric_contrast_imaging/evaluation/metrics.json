@@ -1,0 +1,7 @@
+{
+  "baseline": [{"method":"Independent original15-step BIM, alpha0.001, compared to actual30x30 area-mean simulation truth","ncc_vs_ref":0.8953621762316742,"nrmse_vs_ref":0.09552068704478095,"observation_residual":0.023201646071690542}],
+  "ncc_boundary":0.8058259586085068,
+  "nrmse_boundary":0.10507275574925905,
+  "observation_residual_boundary":0.0255218106788596,
+  "metric_provenance":"Boundaries fixed before local implementation; independent original repeat bit identical. NCC is uncentered cosine, NRMSE uses truth dynamic range. Physical residual recomputes the real contrast's dense state and data equations from public geometry, not the original complex intermediate objective. No crop, shift, scale fit, clipping or phase alignment."
+}

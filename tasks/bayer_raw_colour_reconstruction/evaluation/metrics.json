@@ -1,0 +1,28 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original Malvar2004 on native real Canon A540 sensor data; method reference, no physical RGB truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9999999999,
+  "nrmse_boundary": 1e-10,
+  "sample_consistency_max_abs_boundary": 1e-12,
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        2128,
+        2840,
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "acquisition": {
+    "pattern": "RGGB",
+    "white_level": 1023
+  },
+  "provenance": "Exact independent original rerun. Positive float64 numerical tolerances fixed before local extraction; observation sampling supplements method agreement."
+}

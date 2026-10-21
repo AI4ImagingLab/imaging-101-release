@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced original SimPEG fixed-beta regularized prism inversion; standard method, not true density",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "nrmse_definition": "RMS density error divided by dynamic range of the standard-method density volume.",
+  "zero_estimate_ncc": 0.0,
+  "observation_definition": "RMS upward residual after the same normal gravity, height and regional-plane correction on observations and model; mGal. Model tolerance5mGal is not instrument noise.",
+  "density_ncc_boundary": 0.999999999,
+  "density_nrmse_boundary": 1e-07,
+  "observation_rms_mgal_boundary": 2.0,
+  "metric_comparisons": {
+    "density_ncc": ">=",
+    "density_nrmse": "<=",
+    "observation_rms_mgal": "<="
+  }
+}

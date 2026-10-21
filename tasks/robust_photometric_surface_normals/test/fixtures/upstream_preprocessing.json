@@ -1,0 +1,35 @@
+{
+  "matrix_sha256": "30b88c75ef993f6adc9bb9e7837f3a83f115540f0556b8ad6acfcc07d5b5c8dd",
+  "lights_sha256": "c8dbe107ac8765d10836ea8e7fb490673b839fc41e096590ed4b47af82103ad4",
+  "foreground_count": 20317,
+  "original_baselines": [
+    {
+      "method": "l2",
+      "runtime_seconds": 0.05609090000143624,
+      "finite": true,
+      "mean_angle_foreground_deg": 18.470382019020548,
+      "mean_angle_original_all_pixels_deg": 5.7260551678534
+    },
+    {
+      "method": "l1",
+      "runtime_seconds": 100.21787609999956,
+      "finite": true,
+      "mean_angle_foreground_deg": 4.597762735142496,
+      "mean_angle_original_all_pixels_deg": 1.4253653791792311
+    },
+    {
+      "method": "sbl",
+      "runtime_seconds": 14.359778300000471,
+      "finite": true,
+      "mean_angle_foreground_deg": 3.972881838560257,
+      "mean_angle_original_all_pixels_deg": 1.2316442919010733
+    },
+    {
+      "method": "rpca",
+      "runtime_seconds": 2.1065935000005993,
+      "finite": true,
+      "mean_angle_foreground_deg": 3.383759559305128,
+      "mean_angle_original_all_pixels_deg": 1.0490088343262067
+    }
+  ]
+}

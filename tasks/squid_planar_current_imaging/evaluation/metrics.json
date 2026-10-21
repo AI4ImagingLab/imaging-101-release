@@ -1,0 +1,30 @@
+{
+  "baseline": [
+    {
+      "method": "Minimally corrected original Fourier Biot-Savart inverse, full padded current, no actual truth",
+      "ncc_jx": 1.0,
+      "ncc_jy": 1.0,
+      "relative_l2_jx": 0.0,
+      "relative_l2_jy": 0.0
+    }
+  ],
+  "nrmse_definition": "No DR-NRMSE: relative_l2_component = norm(estimate-reference)/norm(reference), evaluated separately for signed jx and jy. This is a numerical standard-method reference, not actual truth.",
+  "physical_definition": "filtered_forward_residual = norm(F(J)-H*FFT(padded_flux) with DC0)/norm(H*FFT(padded_flux) with DC0); divergence_ratio = norm(kx*Jx+ky*Jy)/norm(K*sqrt(abs(Jx)^2+abs(Jy)^2)); dc_ratio = norm(component_means)/RMS(all components).",
+  "threshold_provenance": "Frozen before local extraction in private oracle_record.json. Corrected original independent repeat bit identical; forward1.92e-16, divergence2.00e-17, imaginary8.54e-16. Nonzero tolerances allow numerical portability while retaining both spatial components and physical constraints.",
+  "comparisons": {
+    "ncc_jx": ">=",
+    "relative_l2_jx": "<=",
+    "ncc_jy": ">=",
+    "relative_l2_jy": "<=",
+    "filtered_forward_residual": "<=",
+    "divergence_ratio": "<=",
+    "dc_ratio": "<="
+  },
+  "ncc_jx_boundary": 0.99999999,
+  "relative_l2_jx_boundary": 1e-08,
+  "ncc_jy_boundary": 0.99999999,
+  "relative_l2_jy_boundary": 1e-08,
+  "filtered_forward_residual_boundary": 1e-08,
+  "divergence_ratio_boundary": 1e-08,
+  "dc_ratio_boundary": 1e-10
+}

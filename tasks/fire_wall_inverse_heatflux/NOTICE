@@ -1,0 +1,17 @@
+HFITS algorithm adaptations
+Original authors: P. Dehghani and M. J. DiDomizio, Fire Safety Research Institute,
+UL Research Institutes. The selected inverse energy balance and nominal material
+law are adapted locally from HFITS and distributed under GPL-3.0; see LICENSE.
+Adaptations: removal of GUI/file-format dependencies, vectorized numerical
+evaluation, explicit public NPZ interfaces, and measured-collar target selection.
+The selected source equations and numerical conventions are preserved.
+
+Thermography observations
+Matthew J. DiDomizio (2024), Heat Transfer and Fire Damage Patterns on Walls for
+Fire Model Validation, dataset v1.0.0, UL Research Institutes / FSRI.
+DOI: https://doi.org/10.5281/zenodo.10543089
+License: Creative Commons Attribution 4.0 International,
+https://creativecommons.org/licenses/by/4.0/
+Changes: extract an existing time/spatial window; retain stored Kelvin values;
+convert coordinate arrays from inches to metres; repackage numeric arrays as NPZ.
+Historical author irradiance estimates are separately labeled and are not truth.

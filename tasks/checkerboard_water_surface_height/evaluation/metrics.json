@@ -1,0 +1,14 @@
+{
+  "baseline": [
+    {
+      "method": "Original real-ROI FCD with Herraez phase unwrapping and odd-grid periodic slope integration",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "phase_residual": 0.14872557562675262
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-05,
+  "phase_residual_boundary": 0.15021283138302016,
+  "phase_residual_definition": "RMS wrapped phase mismatch over both observed carrier fields, each allowing only constant circular phase offset for discarded mean slope"
+}

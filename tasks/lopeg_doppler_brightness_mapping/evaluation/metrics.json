@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced unchanged original ZDIpy brightness maximum-entropy reconstruction",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "nrmse_definition": "RMS spatial error divided by reference dynamic range, independently per required component.",
+  "reference_kind": "standard-method result; no actual surface truth",
+  "observation_metric": "mean squared standardized residual over all 16 by 89 measured samples; diagonal variance assumption",
+  "brightness_ncc_boundary": 0.999999999,
+  "brightness_nrmse_boundary": 1e-07,
+  "observation_chi2_per_sample_boundary": 1.002,
+  "metric_comparisons": {
+    "brightness_ncc": ">=",
+    "brightness_nrmse": "<=",
+    "observation_chi2_per_sample": "<="
+  }
+}

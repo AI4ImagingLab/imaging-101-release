@@ -1,0 +1,3 @@
+EEG observations derive from Gerwin Schalk, EEG Motor Movement/Imagery Dataset, version1.0.0(2009), DOI10.13026/C28G6P, PhysioNet, under Open Data Commons Attribution License1.0: https://opendatacommons.org/licenses/by/1-0/ . W.A.Sarnacki collected the data; BCI R&D Program,Wadsworth Center. Changes: first1600samples retained, original calibrated potentials converted toV and NPZ, templategeometry independently supplied. No original subject anatomy or source truth is asserted.
+
+Original numerical oracle: MNE-Python1.13.2, BSD3; original copyright and complete license are preserved in this task's LICENSE. The cleaned mathematical solver is independently local NumPy code.
