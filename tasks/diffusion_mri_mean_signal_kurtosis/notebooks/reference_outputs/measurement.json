@@ -1,0 +1,12 @@
+{
+  "reconstruction_runtime_s": 0.3065068998839706,
+  "experiment_runtime_s": 0.6966464000288397,
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "metrics": {
+    "diffusivity_relative_l2": 0.0,
+    "reconstruction_relative_l2": 0.0,
+    "baseline_relative_l2": 0.0,
+    "forward_shell_rmse": 5.002890195639437
+  }
+}

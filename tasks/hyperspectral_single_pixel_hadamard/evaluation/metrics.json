@@ -1,0 +1,9 @@
+{
+  "baseline": [{"method": "Independent original SPAS full Walsh least-squares inverse, all4096 complementary pairs and2048 detector channels", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0, "independent_repeat_max_absolute_difference": 0.0}],
+  "ncc_boundary": 0.999999999999,
+  "nrmse_boundary": 1e-11,
+  "relative_measurement_residual_boundary": 1e-11,
+  "relative_measurement_residual_definition": "L2(W F W^T minus positive-negative detector readings in acquisition order)/L2(positive-negative readings), all4096 pairs and2048 channels; W is the unnormalized64-point sequency Walsh matrix",
+  "reference_kind": "independently rerun standard method, not actual physical truth",
+  "numerical_tolerance_provenance": "Frozen before local extraction. Two original runs are bitwise identical. Integer detector counts, integer-sign transforms and power-of-two scaling are exactly representable; require exact upstream parity tests and allow nonzero1e-11 numerical implementation tolerance in Judge. A zero or wrong-scale reconstruction fails decisively."
+}

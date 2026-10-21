@@ -1,0 +1,1 @@
+CFIN human diffusion data: Brian Hansen and Sune Norhoj Jespersen (2016), DOI10.5061/dryad.9bc43, CC0 1.0. This benchmark converts native slices8-10 losslessly to NPZ, with no in-plane crop. Code adapted from DIPY1.12.0 msdki.py, BSD3. No truth measurement is available.

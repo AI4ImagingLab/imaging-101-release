@@ -1,0 +1,12 @@
+{
+  "reconstruction_runtime_s": 0.1558645002078265,
+  "experiment_runtime_s": 0.47529869992285967,
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "metrics": {
+    "reconstruction_relative_l2": 4.515835926124896e-08,
+    "orientation_angular_rmse": 2.3716340610362295e-08,
+    "transmittance_relative_l2": 0.0,
+    "depolarization_relative_l2": 6.4846591706579635e-09
+  }
+}

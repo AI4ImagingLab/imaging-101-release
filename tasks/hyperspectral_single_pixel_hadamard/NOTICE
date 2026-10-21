@@ -1,0 +1,23 @@
+This task selects the native direct Walsh inverse of:
+Guilherme Beneti Martins, Laurent Mahieu-Williame, Thomas Baudier and Nicolas
+Ducros, OpenSpyrit: an ecosystem for open single-pixel hyperspectral imaging,
+Optics Express31(10),15599–15614(2023), DOI10.1364/OE.483937.
+
+SPAS reconstruction adaptation: Guilherme Beneti Martins et al., LGPL-3.0.
+SPYRIT Walsh ordering: Sebastien Crombez and Nicolas Ducros. The selected
+original walsh_hadamard.py file explicitly declares GPLv3, even though the
+project-level license is LGPL-3.0; that file-specific notice is preserved and
+the combined task implementation is distributed under GPL-3.0-or-later.
+Original source revisions, adaptations and the exact file licenses are indexed
+in the maintainer validation record. The reconstruction mathematics is local.
+
+Experimental data: SPIHIM collection, CREATIS/OpenSpyrit authors, acquisition
+tomato_slice_2_zoomx1, recorded2021-12-08, configurationv1.2. CC BY4.0.
+Data transformations: JSON acquisition identifiers and wavelength calibration
+were moved into numeric batch-first NPZ arrays; original raw float64 counts
+were preserved exactly. No spatial/spectral resampling or target generation.
+Independent method results are not experimental truth. Redistribution of data
+must retain the authors' attribution and identify these packaging changes.
+
+CC BY4.0 license terms: https://creativecommons.org/licenses/by/4.0/
+Source URLs and exact hashes are kept in maintainer test/validation.md.

@@ -1,0 +1,22 @@
+{
+  "baseline": [
+    {
+      "method": "upstream arim direct contact TFM, independently reproduced",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-07,
+  "output_contract": {
+    "reconstruction": {
+      "shape": [
+        1,
+        251,
+        201
+      ],
+      "dtype": "float64"
+    }
+  },
+  "threshold_provenance": "Independent original and local CPU double-precision runs agree to <1e-15 absolute; 1e-7 dynamic-range NRMSE permits numerical backend variation without admitting poor images."
+}

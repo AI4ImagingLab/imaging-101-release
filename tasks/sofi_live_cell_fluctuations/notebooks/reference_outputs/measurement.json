@@ -1,0 +1,10 @@
+{
+  "reconstruction_runtime_s": 4.798519900068641,
+  "experiment_runtime_s": 4.385199900018051,
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "metrics": {
+    "cumulant2_relative_l2": 0.0,
+    "reconstruction_relative_l2": 0.0
+  }
+}
