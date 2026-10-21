@@ -1,0 +1,11 @@
+{
+  "baseline": [{"method": "PALA radial-symmetry localization, native complex128 oracle, full 30 real acquisition blocks; reference agreement only", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "reconstruction_ncc_boundary": 0.995,
+  "reconstruction_nrmse_boundary": 0.005,
+  "speed_ncc_boundary": 0.99,
+  "speed_nrmse_boundary": 0.01,
+  "reference_kind": "validated standard method, not actual anatomical ground truth",
+  "nrmse_definition": "sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)), full declared array, no fitted alignment or rescaling",
+  "threshold_provenance": "Frozen before local implementation; single-precision original failed these gates and was retained as a precision comparison. Complex128 computation is independently verified without changing these boundaries.",
+  "output_units": {"reconstruction": "distinct retained trajectory crossings per superpixel", "speed": "acquisition pixel/s"}
+}
