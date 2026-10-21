@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original pyspeckit MPFIT on bound IRAM measurements",
+      "parameter_relative_max": 0.0,
+      "maximum_reduced_chi_square": 1.2160321401642158
+    }
+  ],
+  "parameter_relative_max_boundary": 0.0002,
+  "reduced_chi_square_boundary": 1.3,
+  "parameter_metric_definition": "For each of four maps: max(abs(prediction-reference)/abs(reference)); positive nonzero bound reference values are required. Every map must pass.",
+  "observation_metric_definition": "Maximum over nine pixels of sum(((T_model-T_observed)/noise)^2)/(501-4), noise=population std at radio velocities 20..28 km/s.",
+  "reference_kind": "Standard-method result; no physical ground truth",
+  "tolerance_provenance": "Frozen before extraction; original repeat identical, MPFIT stopping sensitivity max relative 1.3421499336145399e-5. Generic optimizer tolerance 2e-4."
+}

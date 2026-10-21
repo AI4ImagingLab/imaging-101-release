@@ -1,0 +1,48 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified upstream, cyclic approximation",
+      "quantity": "reconstruction",
+      "ncc_vs_ref": 0.9941134556857417,
+      "nrmse_vs_ref": 0.0622045391841442
+    },
+    {
+      "method": "Unmodified upstream, cyclic approximation",
+      "quantity": "mask",
+      "ncc_vs_ref": 0.9997424346806061,
+      "nrmse_vs_ref": 0.053350432397319986
+    },
+    {
+      "method": "Unmodified upstream, cyclic approximation",
+      "quantity": "kernel",
+      "ncc_vs_ref": 0.800591778353595,
+      "nrmse_vs_ref": 0.0411955666318248
+    },
+    {
+      "method": "Fresh cleaned exact-projection method",
+      "quantity": "reconstruction",
+      "ncc_vs_ref": 0.9999999997377993,
+      "nrmse_vs_ref": 1.278903286868898e-05
+    },
+    {
+      "method": "Fresh cleaned exact-projection method",
+      "quantity": "mask",
+      "ncc_vs_ref": 0.9999999999554233,
+      "nrmse_vs_ref": 1.662658634008976e-05
+    },
+    {
+      "method": "Fresh cleaned exact-projection method",
+      "quantity": "kernel",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 1.3602484631913632e-17
+    }
+  ],
+  "ncc_boundary": 0.99999,
+  "nrmse_boundary": 0.0001,
+  "observation_rmse_boundary": 0.0051,
+  "reference_type": "validated standard method, not actual truth",
+  "zero_estimate_convention": "NCC=0 for a zero estimate and nonzero comparison array; constant/zero comparison arrays are evaluator errors.",
+  "metric_scope": "all three required quantities; no cropping, scaling or alignment",
+  "observation_rmse_definition": "sqrt(mean((circular_deblatting_model(B,H,F,M)-I)**2)) on normalized BGR intensity",
+  "threshold_provenance": "Independent repeated unmodified upstream runs and separately identified corrected-projection oracle; see test/validation.md."
+}

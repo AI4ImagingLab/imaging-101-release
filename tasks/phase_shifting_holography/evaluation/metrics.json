@@ -1,0 +1,9 @@
+{
+  "baseline": [{"method": "Independently executed upstream SOSR, repeated float64", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.9999999999,
+  "nrmse_boundary": 6.6583485927655845e-8,
+  "reference_type": "method reference, not physical ground truth",
+  "normalization": "Uncentered cosine and RMS error divided by reference max-minus-min across both real channels",
+  "alignment": "None. Full fixed grid and exact DN scale; no phase rotation or tilt fitting.",
+  "threshold_provenance": "Ten times independently measured float32-input upstream NRMSE 6.6583485927655845e-9; float64 repeat difference zero. NCC chosen for numerical agreement, with NRMSE also mandatory. See test/validation.md."
+}

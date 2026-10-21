@@ -1,0 +1,9 @@
+{
+  "baseline": [{"method": "HoloSpy v0.3 Fourier sideband reconstruction, independently acquired vacuum correction", "relative_complex_l2_vs_ref": 0.0, "original_single_precision_relative_l2": 9.561154009425683e-7}],
+  "relative_complex_l2_boundary": 0.00001,
+  "sideband_relative_l2_boundary": 0.00001,
+  "relative_complex_l2_definition": "||estimate-reference||_2 / ||reference||_2, complex modulus, full image, no alignment",
+  "sideband_relative_l2_definition": "||estimate * reconstructed_vacuum_sideband - reconstructed_object_sideband||_2 / ||reconstructed_object_sideband||_2",
+  "threshold_provenance": "Predetermined before local extraction: 10.46 times independently measured original-code single/double relative discrepancy; double rerun difference zero. Numerical reproduction tolerance, not absolute physical accuracy.",
+  "reference_kind": "standard_method_baseline; no independent true complex wave is available"
+}

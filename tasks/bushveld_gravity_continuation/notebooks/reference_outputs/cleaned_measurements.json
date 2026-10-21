@@ -1,0 +1,26 @@
+{
+  "reconstruction_seconds": 0.038662999984808266,
+  "weak_comparison_seconds": 0.027134799980558455,
+  "judge_metrics": {
+    "ncc": 0.9999999999999999,
+    "nrmse": 3.8676581162572825e-14
+  },
+  "station_rmse_mgal": 0.6361770323473235,
+  "maximum_absolute_upstream_difference_mgal": 1.5149659304825036e-11,
+  "comparisons": [
+    {
+      "method": "Reproduced upstream standard",
+      "station_rmse_mgal": 0.636177032346923
+    },
+    {
+      "method": "Fresh standard lambda=0.1",
+      "station_rmse_mgal": 0.6361770323473235,
+      "coefficient_l2_mgal_m": 2116633.8642859757
+    },
+    {
+      "method": "Fresh weak damping lambda=0.0001",
+      "station_rmse_mgal": 0.17826481067404384,
+      "coefficient_l2_mgal_m": 10107171.8989579
+    }
+  ]
+}

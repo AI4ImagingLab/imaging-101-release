@@ -1,0 +1,6 @@
+{
+  "baseline": [{"method": "Independent DIPY 1.12.0 CSA on bound Stanford observations", "relative_l2_vs_ref": 0.0}],
+  "relative_l2_boundary": 0.000001,
+  "relative_l2_definition": "Euclidean error across every real SH coefficient divided by Euclidean reference norm; no alignment, scaling or clipping.",
+  "threshold_provenance": "Fixed before local extraction: approximately eight float32 epsilons for the upstream float32 normalization stage; independently measured attenuation roundoff sensitivity is recorded in validation.md."
+}

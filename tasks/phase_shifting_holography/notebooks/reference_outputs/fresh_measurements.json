@@ -1,0 +1,18 @@
+{
+  "method": "fresh local SOSR",
+  "runtime_seconds": 1.3455123000312597,
+  "ncc_vs_ref": 0.9999999999999998,
+  "nrmse_vs_ref": 0.0,
+  "carrier": [
+    513.6666666666666,
+    467.6666666666667
+  ],
+  "score": 156192,
+  "peak": [
+    514,
+    468
+  ],
+  "candidates": 16,
+  "data_sha256": "6f1044c71141990dfa8ac03ed7bf6c5f336725f88f97b5fe6b23f00bc6994ea8",
+  "reference": "separate upstream SOSR execution"
+}
