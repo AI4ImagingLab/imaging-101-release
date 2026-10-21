@@ -1,0 +1,34 @@
+{
+  "identity": "Reproduced unmodified upstream on exact bound observations",
+  "capture": {
+    "parameters": {
+      "ns": 100,
+      "plateau": false,
+      "freq_end": "lenient",
+      "lam_min": 1e-10,
+      "lam_max": 1000.0,
+      "lam_C": null,
+      "lam_density": 2,
+      "SmFacLam": 0.0,
+      "max_num_modes": null,
+      "delta_base_weight_dist": 0.2,
+      "min_tau_spacing": 1.25,
+      "resample": true,
+      "n_resample": 100
+    },
+    "runtime_s": 1.0102321999147534,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "data_sha256": "21f8a6d80f834e2ae2cc2c27523087af884b093d7a71ef3a5f342ebb0f9ce6d6",
+    "stage_tolerance": {
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "inverse_tolerance_before_extraction": {
+      "relative_l2": 1e-05
+    },
+    "exit_status": 0
+  },
+  "reference_role": "Standard-method result, not physical truth",
+  "result_asset": "evaluation/baseline_reference.npz"
+}

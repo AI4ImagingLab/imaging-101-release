@@ -1,0 +1,150 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "85374c83934829e7ba74871f6da7444983e3cb0e4f2fdce2cff074fb413c353c",
+  "solver_runtime_s": 0.14118659985251725,
+  "experiments_runtime_s": 0.721152399899438,
+  "upstream_relative_errors": {
+    "natural_frequency": 0.0,
+    "damping_ratio": 0.0,
+    "reconstruction": 4.087714252067929e-12,
+    "fitted_accelerance": 5.755036312835917e-13,
+    "lower_residual": 3.774289640682057e-12,
+    "upper_residual": 4.029933856110276e-12
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 4.087714252067929e-12,
+    "observation_relative_error": 0.10063998896074228,
+    "order_relative_response_error": [
+      [
+        30,
+        0.057664209678194016
+      ],
+      [
+        45,
+        0.07572940092911881
+      ],
+      [
+        60,
+        0.10063998896074228
+      ]
+    ],
+    "natural_frequency_Hz": [
+      177.04999133050524,
+      477.3658804994738,
+      933.0989430562875,
+      1535.48268783097,
+      2286.8635109688444,
+      3162.522893402961,
+      4181.873921214116
+    ],
+    "damping_ratio": [
+      0.00795425414360068,
+      0.0017156741229151053,
+      0.0015388540505181423,
+      0.0019519496093310415,
+      0.0028018169835659712,
+      0.002300946023924018,
+      0.0014783437135855578
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "natural_frequency_0_relative_error": 0.0,
+      "natural_frequency_1_relative_error": 0.0,
+      "natural_frequency_2_relative_error": 0.0,
+      "natural_frequency_3_relative_error": 0.0,
+      "natural_frequency_4_relative_error": 0.0,
+      "natural_frequency_5_relative_error": 0.0,
+      "natural_frequency_6_relative_error": 0.0,
+      "damping_ratio_0_relative_error": 0.0,
+      "damping_ratio_1_relative_error": 0.0,
+      "damping_ratio_2_relative_error": 0.0,
+      "damping_ratio_3_relative_error": 0.0,
+      "damping_ratio_4_relative_error": 0.0,
+      "damping_ratio_5_relative_error": 0.0,
+      "damping_ratio_6_relative_error": 0.0,
+      "reconstruction_relative_error": 4.087714252067929e-12,
+      "fitted_accelerance_relative_error": 5.755036312835917e-13,
+      "lower_residual_relative_error": 3.774289640682057e-12,
+      "upper_residual_relative_error": 4.029933856110276e-12
+    },
+    "thresholds": {
+      "natural_frequency_0_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "natural_frequency_1_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "natural_frequency_2_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "natural_frequency_3_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "natural_frequency_4_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "natural_frequency_5_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "natural_frequency_6_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_0_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_1_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_2_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_3_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_4_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_5_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "damping_ratio_6_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "reconstruction_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "fitted_accelerance_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "lower_residual_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "upper_residual_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

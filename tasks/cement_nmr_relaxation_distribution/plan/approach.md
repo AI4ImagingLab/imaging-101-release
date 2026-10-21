@@ -1,0 +1,13 @@
+# Implemented mathematics and numerical conventions
+
+All 120 author OPC files are used in increasing filename order; no synthetic generator is shipped. Read original time column in milliseconds and convert by the exact stored factor 1e-3 to seconds; retain float64 quadrature components in complex128. For each scan, estimate theta as mean over zero-based echoes 1..4 of atan(Im/Re)+π if Re<0. Rotate real=cos(theta)Re+sin(theta)Im. Then drop echo zero, preserving the other 255 acquisition times.
+
+The exponential kernel E_ij=exp(-t_i/T_j) uses T=logspace(-5,0,255) s. Each scan solves min_(a>=0) ||Ea-y||²+alpha||a||², alpha=1e-4, without sample-count normalization and without one-half factors. Construct [E;sqrt(alpha)I] and [y;0], then call the general-purpose active-set scipy.optimize.nnls. This exactly preserves the selected upstream complex-signal branch, which has no offset. There is no logarithmic quadrature weight because a_j denotes a discrete amplitude, not a continuous density. No custom line search or separate initialization is introduced; NNLS initialization and numerical stopping are its standard active-set rules.
+
+The standard CLI reconstructs every acquisition independently and preserves absolute instrument amplitude. The notebook additionally averages already phase-corrected signals, solves the same augmented NNLS once, and contrasts that with the mean of the individually recovered amplitudes. The nonnegativity constraint makes these different operations; neither is substituted for the full-series submission. A separate original upstream average inversion was frozen before implementing this comparison. Alpha sweeps 1e-6,1e-4,1e-2 actively recompute all scans. Integrated amplitude and amplitude-weighted geometric mean T2 are diagnostics, not calibrated porosity or pore size.
+
+The 2024 paper establishes the published nonnegative relaxed ILT use and cites this source. The bound 2018 OPC example has its own provenance; no 2024 acquisition recipe, carrier frequency or instrument setting is silently assigned to those traces. Forward inversion needs actual stored echo times and the coherent signal model, not an unavailable carrier frequency.
+
+## Evaluation
+
+No independent object truth exists for these bound observations. The hidden baseline is the freshly executed original selected method. Judge uses strict per-array/per-component relative Euclidean error with boundary 1e-5 fixed before extraction; complex vectors use their Hermitian norm. Original and fresh measurements are identified separately. Do not interpret reference agreement as physical accuracy. Stage, analytic physics and Judge contract tests complement full-pipeline parity.

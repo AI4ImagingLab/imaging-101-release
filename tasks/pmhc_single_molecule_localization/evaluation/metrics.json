@@ -1,0 +1,38 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original sdt-python Crocker-Grier on all10native pMHC frames",
+      "detection_f1": 1.0,
+      "position_rmse_pixels": 0.0,
+      "mass_relative_rmse": 0.0,
+      "size_rmse_pixels": 0.0,
+      "ecc_rmse": 0.0
+    }
+  ],
+  "thresholds": {
+    "detection_f1": {
+      "comparison": ">=",
+      "boundary": 0.99
+    },
+    "position_rmse_pixels": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "mass_relative_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "size_rmse_pixels": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "ecc_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    }
+  },
+  "matching_definition": "Within each identical frame, maximize matches within0.5pixel then minimize Euclidean distance; no alignment/rescaling. F1=2matched/(Nestimate+Nreference).",
+  "rmse_definitions": "All losses divided by total reference count. Matched squared errors: Euclidean position in pixels; relative mass (estimate/reference-1); size difference in pixels; eccentricity difference. Each unmatched reference contributes1 to every squared loss. Extra detections lower F1.",
+  "reference_kind": "Method-reference localizations; not ground truth",
+  "tolerance_provenance": "Nonzero float64 arithmetic envelope fixed before extraction; see test/validation.md"
+}

@@ -1,0 +1,96 @@
+{
+  "method": "Fresh selected full joint BFGS; independent Hessian diagnostics do not replace it",
+  "sample_counts": {
+    "50": {
+      "noise": [
+        0.6276475127579297,
+        0.01567228705405409,
+        0.0017742194019303627
+      ],
+      "err_noise": [
+        0.005422872747771413,
+        0.00032103509261619586,
+        6.620475445837538e-05
+      ],
+      "success": false,
+      "message": "Desired error not necessarily achieved due to precision loss.",
+      "nll": 5066.818699894164,
+      "gradient_inf_per_observation": 1.4958712358507296e-09
+    },
+    "10": {
+      "noise": [
+        0.6412372728776576,
+        0.017198299713686475,
+        0.0016948723309495079
+      ],
+      "err_noise": [
+        0.01297519746046912,
+        0.0007941052788519615,
+        0.0001691086770660335
+      ],
+      "success": true,
+      "message": "Optimization terminated successfully.",
+      "nll": 984.6057047614399,
+      "gradient_inf_per_observation": 2.40176885008837e-10
+    },
+    "25": {
+      "noise": [
+        0.6341735276811076,
+        0.01564453921131416,
+        0.0017840354395570392
+      ],
+      "err_noise": [
+        0.007850514036402906,
+        0.0004734807104887612,
+        9.988431600729244e-05
+      ],
+      "success": false,
+      "message": "Desired error not necessarily achieved due to precision loss.",
+      "nll": 2514.4824394278676,
+      "gradient_inf_per_observation": 5.735665291478191e-10
+    }
+  },
+  "additive": {
+    "nll": 12016.96915982116,
+    "success": false,
+    "message": "Desired error not necessarily achieved due to precision loss.",
+    "noise": [
+      1.5071928111298538,
+      1.9483315667254413e-22,
+      9.748403748563124e-24
+    ]
+  },
+  "experiment_runtime_s": 5.7844247000757605,
+  "reconstruction_runtime_s": 1.2754376998636872,
+  "selected_diagnostic": {
+    "success": false,
+    "message": "Desired error not necessarily achieved due to precision loss.",
+    "iterations": 169,
+    "nll": 5066.818699894164,
+    "gradient_inf": 1.996988099860724e-05,
+    "gradient_inf_per_observation": 1.4958712358507296e-09
+  },
+  "stationarity_audit": {
+    "actual_success": false,
+    "scaled_gradient_max": 1.996988099860724e-05,
+    "gradient_max_per_observation": 1.4958712358507296e-09,
+    "hessian_min_eigenvalue": 0.0701217874034354,
+    "newton_decrement_diagnostic_only": 5.414536952946593e-11,
+    "possible_nll_gain_diagnostic_only": 2.4556356947869062e-11,
+    "trial_gradient_max_diagnostic_only": 5.527477382586661e-12
+  },
+  "upstream_relative_errors": {
+    "reconstruction": 0.0,
+    "amplitude": 0.0,
+    "delay": 0.0,
+    "noise": 0.0,
+    "expected_waveforms": 0.0,
+    "noise_std": 0.0
+  },
+  "raw_data_sha256": "c0150fb6b5a831d6560677779a55cee397bdb7edf802f8c501c7f8bd3c6bcd7b",
+  "environment": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "platform": "Windows-10-10.0.26200-SP0"
+  }
+}

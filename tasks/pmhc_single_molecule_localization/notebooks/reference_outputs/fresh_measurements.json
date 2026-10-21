@@ -1,0 +1,148 @@
+{
+  "canonical_count": 77,
+  "counts_by_frame": [
+    14,
+    21,
+    12,
+    7,
+    6,
+    5,
+    6,
+    2,
+    2,
+    2
+  ],
+  "upstream_comparison": {
+    "detection_f1": 1.0,
+    "position_rmse_pixels": 0.0,
+    "mass_relative_rmse": 0.0,
+    "size_rmse_pixels": 0.0,
+    "ecc_rmse": 0.0
+  },
+  "max_absolute_upstream_difference": 0.0,
+  "integer_comparison": {
+    "detection_f1": 0.7532467532467533,
+    "position_rmse_pixels": 0.5859488483642323,
+    "mass_relative_rmse": 0.496742636335202,
+    "size_rmse_pixels": 0.496742636335202,
+    "ecc_rmse": 0.496742636335202
+  },
+  "no_bandpass_comparison": {
+    "detection_f1": 0.06297229219143577,
+    "position_rmse_pixels": 0.2655049260307854,
+    "mass_relative_rmse": 1.3463859347466323,
+    "size_rmse_pixels": 0.542847299553941,
+    "ecc_rmse": 0.1666441215161902
+  },
+  "no_bandpass_count": 2305,
+  "threshold_counts": [
+    77,
+    77,
+    77,
+    65
+  ],
+  "radius_counts": [
+    58,
+    77,
+    88,
+    96
+  ],
+  "noise_counts": [
+    77,
+    78,
+    73,
+    79
+  ],
+  "threshold_metrics": [
+    {
+      "detection_f1": 1.0,
+      "position_rmse_pixels": 0.0,
+      "mass_relative_rmse": 0.0,
+      "size_rmse_pixels": 0.0,
+      "ecc_rmse": 0.0
+    },
+    {
+      "detection_f1": 1.0,
+      "position_rmse_pixels": 0.0,
+      "mass_relative_rmse": 0.0,
+      "size_rmse_pixels": 0.0,
+      "ecc_rmse": 0.0
+    },
+    {
+      "detection_f1": 1.0,
+      "position_rmse_pixels": 0.0,
+      "mass_relative_rmse": 0.0,
+      "size_rmse_pixels": 0.0,
+      "ecc_rmse": 0.0
+    },
+    {
+      "detection_f1": 0.9154929577464789,
+      "position_rmse_pixels": 0.39477101697586137,
+      "mass_relative_rmse": 0.39477101697586137,
+      "size_rmse_pixels": 0.39477101697586137,
+      "ecc_rmse": 0.39477101697586137
+    }
+  ],
+  "radius_metrics": [
+    {
+      "detection_f1": 0.7703703703703704,
+      "position_rmse_pixels": 0.5758519546777489,
+      "mass_relative_rmse": 0.5980947720357841,
+      "size_rmse_pixels": 0.6040606102555975,
+      "ecc_rmse": 0.570908411503192
+    },
+    {
+      "detection_f1": 1.0,
+      "position_rmse_pixels": 0.0,
+      "mass_relative_rmse": 0.0,
+      "size_rmse_pixels": 0.0,
+      "ecc_rmse": 0.0
+    },
+    {
+      "detection_f1": 0.7757575757575758,
+      "position_rmse_pixels": 0.417207172448819,
+      "mass_relative_rmse": 0.4647588922417715,
+      "size_rmse_pixels": 0.4510839758989857,
+      "ecc_rmse": 0.41147106150593926
+    },
+    {
+      "detection_f1": 0.7052023121387283,
+      "position_rmse_pixels": 0.4629117503149174,
+      "mass_relative_rmse": 0.6069176581006133,
+      "size_rmse_pixels": 0.5625170245669834,
+      "ecc_rmse": 0.4564601396217564
+    }
+  ],
+  "noise_metrics": [
+    {
+      "detection_f1": 1.0,
+      "position_rmse_pixels": 0.0,
+      "mass_relative_rmse": 0.0,
+      "size_rmse_pixels": 0.0,
+      "ecc_rmse": 0.0
+    },
+    {
+      "detection_f1": 0.9935483870967742,
+      "position_rmse_pixels": 0.0343560073443021,
+      "mass_relative_rmse": 0.017066088758900005,
+      "size_rmse_pixels": 0.012974756864760125,
+      "ecc_rmse": 0.010767652726539047
+    },
+    {
+      "detection_f1": 0.9733333333333334,
+      "position_rmse_pixels": 0.23852985656202275,
+      "mass_relative_rmse": 0.2293391629769283,
+      "size_rmse_pixels": 0.22868098711089138,
+      "ecc_rmse": 0.22846095930456747
+    },
+    {
+      "detection_f1": 0.9230769230769231,
+      "position_rmse_pixels": 0.282846473657979,
+      "mass_relative_rmse": 0.26140191586499584,
+      "size_rmse_pixels": 0.2574748885895384,
+      "ecc_rmse": 0.25743654071581334
+    }
+  ],
+  "canonical_runtime_seconds": 0.01135489996522665,
+  "full_experiments_runtime_seconds": 0.2699527000077069
+}

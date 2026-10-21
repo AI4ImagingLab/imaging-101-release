@@ -1,0 +1,21 @@
+The MDF specification and is distributed under the GNU GPL:
+
+Copyright © 2015-2016 Tobias Knopp and Contributors <t.knopp@uke.de>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+ 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Adapted executable update mathematics from official MDF python/kaczmarzReg.py, Tobias Knopp and Contributors, GPL-3.0-or-later. The complete GPLv3 text is in LICENSE. Exact source and changes are indexed in maintainer validation.md.
+
+OpenMPIData observations: Tobias Knopp, Patryk Szwargulski, Florian Griese and Matthias Gräser, CC BY4.0. https://doi.org/10.1016/j.dib.2019.104971 ; https://creativecommons.org/licenses/by/4.0/ . Native MDF Fourier/calibration data converted to NPZ with fixed independent-calibration frequency selection; all spatial voxels and acquisition cycles retained. No target geometry or reconstruction added to calibration.

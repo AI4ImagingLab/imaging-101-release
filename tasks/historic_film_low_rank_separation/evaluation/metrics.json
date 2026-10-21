@@ -1,0 +1,34 @@
+{
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        84,
+        240,
+        320
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 1e-06
+    },
+    "sparse_component": {
+      "shape": [
+        1,
+        84,
+        240,
+        320
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 1e-06
+    }
+  },
+  "baseline": [
+    {
+      "method": "Independently executed original PCP ADMM, full real film, 1657iterations, no actual component truth",
+      "relative_l2_vs_ref": 0.0,
+      "relative_primal": 9.999964969747064e-08
+    }
+  ],
+  "additive_consistency_relative_boundary": 1.1e-07,
+  "metric_definition": "Each full component Euclidean error divided by its reference norm; additive error norm(D-L-S)/norm(D), D=stored grayscale/255; no alignment/intensity fitting/crop",
+  "provenance": "Nonzero numerical budgets fixed in success_criteria before local extraction; original1000iteration budget was insufficient, increasedto3000 without relaxing convergence threshold. Canonical original1657stoppedat1e-7."
+}

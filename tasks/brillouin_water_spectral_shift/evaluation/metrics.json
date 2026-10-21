@@ -1,0 +1,160 @@
+{
+  "baseline": [
+    {
+      "method": "Independently executed original bmlab standard method; actual object truth unavailable",
+      "relative_error_vs_ref": 0.0
+    }
+  ],
+  "relative_error_boundary": 1e-05,
+  "metric_definition": "Euclidean norm of estimate minus reference divided by reference Euclidean norm. Mixed-unit parameters scored by component. All metrics must pass.",
+  "output_schema": {
+    "reconstruction": {
+      "shape": [
+        1,
+        10,
+        2,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "peak_parameters": {
+      "shape": [
+        1,
+        10,
+        2,
+        4,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "frequency_axis": {
+      "shape": [
+        1,
+        10,
+        2,
+        500
+      ],
+      "dtype": "float64"
+    },
+    "extracted_spectra": {
+      "shape": [
+        1,
+        10,
+        2,
+        500
+      ],
+      "dtype": "float64"
+    },
+    "calibration_frequency": {
+      "shape": [
+        1,
+        2,
+        10,
+        500
+      ],
+      "dtype": "float64"
+    },
+    "calibration_arcs": {
+      "shape": [
+        1,
+        2,
+        500,
+        5,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "calibration_parameters": {
+      "shape": [
+        1,
+        2,
+        10,
+        4
+      ],
+      "dtype": "float64"
+    }
+  },
+  "metric_groups": [
+    {
+      "key": "reconstruction",
+      "name": "reconstruction",
+      "boundary": 1e-05
+    },
+    {
+      "key": "peak_parameters",
+      "name": "peak_parameters_component_0",
+      "boundary": 1e-05,
+      "component": 0,
+      "axis": -1
+    },
+    {
+      "key": "peak_parameters",
+      "name": "peak_parameters_component_1",
+      "boundary": 1e-05,
+      "component": 1,
+      "axis": -1
+    },
+    {
+      "key": "peak_parameters",
+      "name": "peak_parameters_component_2",
+      "boundary": 1e-05,
+      "component": 2,
+      "axis": -1
+    },
+    {
+      "key": "peak_parameters",
+      "name": "peak_parameters_component_3",
+      "boundary": 1e-05,
+      "component": 3,
+      "axis": -1
+    },
+    {
+      "key": "frequency_axis",
+      "name": "frequency_axis",
+      "boundary": 1e-05
+    },
+    {
+      "key": "extracted_spectra",
+      "name": "extracted_spectra",
+      "boundary": 1e-05
+    },
+    {
+      "key": "calibration_frequency",
+      "name": "calibration_frequency",
+      "boundary": 1e-05
+    },
+    {
+      "key": "calibration_arcs",
+      "name": "calibration_arcs",
+      "boundary": 1e-05
+    },
+    {
+      "key": "calibration_parameters",
+      "name": "calibration_parameters_component_0",
+      "boundary": 1e-05,
+      "component": 0,
+      "axis": -1
+    },
+    {
+      "key": "calibration_parameters",
+      "name": "calibration_parameters_component_1",
+      "boundary": 1e-05,
+      "component": 1,
+      "axis": -1
+    },
+    {
+      "key": "calibration_parameters",
+      "name": "calibration_parameters_component_2",
+      "boundary": 1e-05,
+      "component": 2,
+      "axis": -1
+    },
+    {
+      "key": "calibration_parameters",
+      "name": "calibration_parameters_component_3",
+      "boundary": 1e-05,
+      "component": 3,
+      "axis": -1
+    }
+  ]
+}

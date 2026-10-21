@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Original rf water-level, full calibrated GE.WLF Tohoku observations; not physical truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "required_components": [
+    "radial",
+    "transverse"
+  ],
+  "reference_kind": "original_method_result",
+  "provenance": "test/validation.md",
+  "rationale": "Independent repeated original run identical; conservative nonzero tolerance for floating-point FFT/filter backend roundoff. Both components evaluated independently; agreement is not physical accuracy."
+}

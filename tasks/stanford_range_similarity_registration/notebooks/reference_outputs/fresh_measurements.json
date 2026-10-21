@@ -1,0 +1,61 @@
+{
+  "runtime_seconds": 7.820978899952024,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_relative_l2": 1.3865124958846524e-16,
+      "rotation_relative_l2": 0.0,
+      "translation_relative_l2": 0.0,
+      "scale_relative_l2": 0.0,
+      "transform_consistency_m": 0.0,
+      "orthogonality_frobenius": 1.6315082952773415e-15,
+      "rotation_determinant_error": 6.661338147750939e-16,
+      "nearest_rms_m": 0.0022296180307762228
+    },
+    "thresholds": {
+      "reconstruction_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "rotation_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "translation_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "scale_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "transform_consistency_m": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "orthogonality_frobenius": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "rotation_determinant_error": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "nearest_rms_m": {
+        "comparison": "<=",
+        "boundary": 0.0024525798338538444
+      }
+    },
+    "errors": []
+  },
+  "sweep_columns": [
+    "family",
+    "value",
+    "rms_m",
+    "median_m",
+    "iterations",
+    "scale",
+    "seconds"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "baseline": [
+    {
+      "method": "Original canonical BFGS result; precision-loss flag disclosed, independently verified nearstationary",
+      "relative_error_vs_ref": 0.0
+    }
+  ],
+  "relative_error_boundary": 1e-06,
+  "metric_definition": "Relative Euclidean norm error; three differently dimensioned noise parameters scored separately. All groups must pass.",
+  "output_schema": {
+    "reconstruction": {
+      "shape": [
+        1,
+        267
+      ],
+      "dtype": "float64"
+    },
+    "amplitude": {
+      "shape": [
+        1,
+        50
+      ],
+      "dtype": "float64"
+    },
+    "delay": {
+      "shape": [
+        1,
+        50
+      ],
+      "dtype": "float64"
+    },
+    "noise": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "expected_waveforms": {
+      "shape": [
+        1,
+        50,
+        267
+      ],
+      "dtype": "float64"
+    },
+    "noise_std": {
+      "shape": [
+        1,
+        50,
+        267
+      ],
+      "dtype": "float64"
+    }
+  },
+  "metric_groups": [
+    {
+      "key": "reconstruction",
+      "name": "reconstruction",
+      "boundary": 1e-06
+    },
+    {
+      "key": "amplitude",
+      "name": "amplitude",
+      "boundary": 1e-06
+    },
+    {
+      "key": "delay",
+      "name": "delay",
+      "boundary": 1e-06
+    },
+    {
+      "key": "noise",
+      "name": "noise_component_0",
+      "boundary": 1e-06,
+      "component": 0,
+      "axis": -1
+    },
+    {
+      "key": "noise",
+      "name": "noise_component_1",
+      "boundary": 1e-06,
+      "component": 1,
+      "axis": -1
+    },
+    {
+      "key": "noise",
+      "name": "noise_component_2",
+      "boundary": 1e-06,
+      "component": 2,
+      "axis": -1
+    },
+    {
+      "key": "expected_waveforms",
+      "name": "expected_waveforms",
+      "boundary": 1e-06
+    },
+    {
+      "key": "noise_std",
+      "name": "noise_std",
+      "boundary": 1e-06
+    }
+  ]
+}

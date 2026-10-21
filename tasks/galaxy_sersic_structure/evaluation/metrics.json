@@ -1,0 +1,44 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original PySersic PixelRenderer Gaussian MAP, all three measured bands",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999,
+  "nrmse_boundary": 0.001,
+  "parameter_absolute_tolerances": [
+    0.02,
+    0.02,
+    1.0,
+    0.005,
+    0.005,
+    0.002,
+    0.002,
+    2e-06
+  ],
+  "flux_relative_tolerance": 0.005,
+  "parameter_order": [
+    "xc",
+    "yc",
+    "flux",
+    "r_eff",
+    "n",
+    "ellip",
+    "theta",
+    "sky_back"
+  ],
+  "parameter_units": [
+    "pixel",
+    "pixel",
+    "nanomaggies",
+    "pixel",
+    "dimensionless",
+    "dimensionless",
+    "radian",
+    "nanomaggies/pixel"
+  ],
+  "reference_kind": "standard_method_result_not_truth",
+  "rationale": "Independent fixed-stage and gradient parity plus analytic physics checks; image .001NRMSE and position .02pixel/flux .005relative fixed before extraction. Nonzero numerical/optimization tolerance preserves all band/parameter requirements under float32 Adam plateau, not material truth."
+}

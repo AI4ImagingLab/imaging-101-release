@@ -1,0 +1,17 @@
+{
+  "count": 77,
+  "runtime_seconds": 0.03873959998600185,
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "source_commit": "c9d1c09641e7d781a39a36e6fc89e429bf191ca9",
+  "parameters": {
+    "radius": 3,
+    "noise_radius": 1,
+    "signal_thresh": 300,
+    "mass_thresh": 5000
+  },
+  "shape": [
+    10,
+    128,
+    128
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        168,
+        168
+      ],
+      "dtype": "float64"
+    },
+    "tent_reconstruction": {
+      "shape": [
+        1,
+        128,
+        128
+      ],
+      "dtype": "float64"
+    }
+  },
+  "baseline": [
+    {
+      "method": "Independently executed author BiNI, author-provided quantized analytic normal fields; no actual depth truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-05,
+  "metric_provenance": "Numerical agreement budget fixed before local extraction; independent original repeats checked separately. Additive gauge fixed to zero mean in each full support; no evaluator realignment."
+}

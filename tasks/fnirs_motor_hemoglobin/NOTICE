@@ -1,0 +1,3 @@
+This task includes an array-based adaptation of optical_density and beer_lambert_law from MNE-Python1.12.1 (BSD-3-Clause; copyright the MNE-Python contributors). Source notices are preserved in src/preprocessing.py; the explicit spectral inverse is algebraically equivalent for the bound two-wavelength case. Full MNE license is LICENSE.
+
+FRESH Motor Dataset by Rickson C. Mesquita, doi:10.18112/openneuro.ds005963.v1.0.0, is CC0-1.0. Full native subject01/sessionleft2s intensity observations and geometric calibration are included without downcasting. Spectral absorption coefficients are factual reference measurements by Scott Prahl, OMLC, interpolated and scaled as in MNE. They are independent of this recording's unknown concentrations.

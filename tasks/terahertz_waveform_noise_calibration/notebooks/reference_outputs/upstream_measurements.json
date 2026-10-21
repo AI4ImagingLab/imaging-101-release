@@ -1,0 +1,166 @@
+{
+  "runtime_seconds": 11.228912699967623,
+  "shape": [
+    267,
+    50
+  ],
+  "dt_ps": 0.05003462406015038,
+  "success": false,
+  "message": "Desired error not necessarily achieved due to precision loss.",
+  "iterations": 169,
+  "fval": 5066.818699894164,
+  "gradient_max": 1.996988099860724e-05,
+  "noise": [
+    0.6276475127579297,
+    0.01567228705405409,
+    0.0017742194019303627
+  ],
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "raw_file_hashes": {
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan003.thz": "83d67c367d74be61ec075c46f642c6e593fe1d95dc691ee598707ea445401721",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan004.thz": "af6ac48941caf9e86a6eff1ff911fc05fb5329907fc2eb17fc44657020492752",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan005.thz": "119771b615097c2ed6ca67e682e1a805eb78fb3b7429693f8aadc7f0c0e65ebd",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan006.thz": "fc146969b47dc1b5fc35f7026b679489cd24b7c75a8dde7233798cde0f1b9190",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan007.thz": "14e7b3168ee45e9e96aa4adf58b31b50b121609d223d5575cd0d9fa2065898c5",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan008.thz": "57df96a43a1daedc86e2c43a9020e87f3f9133ba26dbf0af3dca1720c3eab451",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan009.thz": "faa4b7736abdcc2ea0b7df06ed12bea45450d64c1f7b4aaf59d4827f10e6f307",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan010.thz": "6da78586fb12cf0e24129e6006c97d550b1beffcfcd52ec2ed0f97c66478b131",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan011.thz": "b68888834fabddb26f0d8ce821ead94f12fbed98b511a40fcc1bb5bcc4f36b47",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan012.thz": "1065e9eca7fe8db8f172d882f7e21064121d223adad42c5d2481299a94f1b291",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan013.thz": "89d5e66044d3e59ad86ab05b3a588cb31efb0be3ccc414885292de484b86ef58",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan014.thz": "41ef244e72458a694fb8cd67972d2acf0717944e14379a71a6ec72d7e2b4f3e1",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan015.thz": "e9998900cac0ef262989c6007fd2e0748e1887d4a4433056a10dc4f3d7340bd2",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan016.thz": "4280c75634226f08cc93f38f1b710af7976d9e937a4b61b40c19a51506041275",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan017.thz": "3801f9353c716973782369ec71b95d9a014a9df7ce798abeb4bb7d79bc5e5c43",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan018.thz": "c99ca3436481d31c5aa670c4268d9bc2db4db1aa11f11df6c3717faef7ef3834",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan019.thz": "be2af1544716d9a5f0ed961745adc027e61789762352a3e03c3543dc381add39",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan020.thz": "9afb46554d43d4a04712b0005e523189d8682f5de29e8b2af9ce1eeb68dc3ad9",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan021.thz": "d720dec3ee625328e5eea0b1513d4a83ff3d223623c1f0135eeb0fc72a2e3268",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan022.thz": "cecff6776c7c9e92ba8551ba8634a3cb5e637d10ec0a47deedb136296e91c743",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan023.thz": "2ea12ef306983fee65a09199af885600ce3a39cdd6cd3f0142a754a7d0d26a64",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan024.thz": "65b8d047e51394a6702371d7df56f546e594a961fc11d45d046ded2a1b4868b1",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan025.thz": "7c568e6b903ccddc428410d3d0164daeb89d6dd2732abb8eba277adae31727d6",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan026.thz": "300bda03abfb305d6f60356e6c04395b6bc2351f0f3b5ff92bdd5ade9532562c",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan027.thz": "381b90c9b09bc5981e88d43492aac8866b2b10cc2f3ba9fca72a7bc182cfc0ae",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan028.thz": "e25fa910fc9efab63cdc3cefa9dfbaa465f9ddac1c19a7fca9e86c0437eb52e1",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan029.thz": "7a6ad86db629a1c718a6ef5f63a1705a9d47d2a84715c6be7043015523c668b5",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan030.thz": "7e46c98a02d7c80711a4f03e6ce75498028819997c087c89645ef62f932aa620",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan031.thz": "9ba6d02f4f09b089b3572f321bc0d9d9c91e28672920b2f0a1887c36460c1e14",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan032.thz": "4dd309b5f07f1523f2fda0874233bac22eb2e0a564af1bc82073ab9bbe8327a8",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan033.thz": "121f368fa73a8278df566c6bd1d62c1740d42eca3fa97e8a3d51c3b7deed9f8e",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan034.thz": "4495fa5347d3b6993aac7f7c2d5ed0e3751d51fbbbe8b551472d631a8f6f8678",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan035.thz": "bc9aacc2fb6cbf6576fd53e464e96b9ffb72456ae6bc1edfe29b1cdd37ba6e7e",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan036.thz": "4c81999e207a4df1566014eeb35c8761624bf963fdab5d659f0c9cdbe6c32b59",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan037.thz": "cd7c74a943bf46f5d0d0bfc77110c2f029f391e63cf7be906cbe77dbcb92c59f",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan038.thz": "23ae06dbf44e342d588f40eb1320b0028cd6107ff1d123e383b67a41448837cf",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan039.thz": "f0f620568b8637c453f1dbc78cdc1d865787778f6436aa21ba2497be67e27617",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan040.thz": "358b97f7afd6fa9b8e5d1d7a4aa7bab042415ed5984ccd0665727cefaa8dcc06",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan041.thz": "44963b88c71db55a8a554e07a7c8a6cde39432a61169a91fc95c4bac2b27a0df",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan042.thz": "ed65223f673fa7e5df11e08be5b3bdbf5d2a37c40b84e9d460068d57f41e1c59",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan043.thz": "60ac6d1d254970318e4f68f1fa643d347d8c899cceed786e90f3de6f1e1d582f",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan044.thz": "7e366999ff7b697a67ba09f9ae8f40a4b80d17bf4aeffd61872adfd3211c72b5",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan045.thz": "ff4707103a6e2589330e66e36b7496a7e5a79e44c07d9d2136dbc359d11931ae",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan046.thz": "23a5238e022d574e00e89ecf86b4b9ca0b5a8c0c9947d5dd31ec69ed6ae8c7f9",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan047.thz": "fd3d1277c15d33042743ef6bae76a02e3f5621e2bd1f503c6610268d5bf40cbc",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan048.thz": "02b0305cbc99b9497d4615eb6c14b068e17273e9dfa2f1501794135cba92d516",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan049.thz": "99f0cf4461edc5c72a042801fd53b77ee83705cda3fbfcea6844b1e48b5ef21a",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan050.thz": "de64f915449cbd912343aa7f640b690c6b63982024e167fe9285c4669c99586e",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan051.thz": "c925e3a3f76ee96b7000ca822a5eafe5b02b2084ebc4a9d0be093ca0665f244f",
+    "matlab_source\\jsdodge-thz-tds-mle-bd39827\\dat\\2017-03-20\\Air Scans\\Normal\\Scan052.thz": "8c62fd55f6a8a87048549b420167b94527cac393c04f807770030b25b947da5b"
+  },
+  "bundled_sha256": "c0150fb6b5a831d6560677779a55cee397bdb7edf802f8c501c7f8bd3c6bcd7b",
+  "identity": "Independently executed original THzTools canonical BFGS; precision-loss flag remains false",
+  "method_paper": "10.1364/OE.417724",
+  "software_paper": "10.21105/joss.07542",
+  "source_commit": "b4ecea908921fdd30d996b8eb12513a777e3807a",
+  "original_precision_investigation": {
+    "original_success": false,
+    "original_message": "Desired error not necessarily achieved due to precision loss.",
+    "dimension": 368,
+    "n_observations": 13350,
+    "nll": 5066.818699894164,
+    "gradient_inf": 1.996988099860724e-05,
+    "gradient_inf_per_observation": 1.4958712358507296e-09,
+    "hessian_min_eigenvalue": 0.07012178740495172,
+    "hessian_max_eigenvalue": 250.844884455233,
+    "newton_decrement": 5.41453695287039e-11,
+    "newton_nll": 5066.818699894139,
+    "newton_gain": 2.4556356947869062e-11,
+    "newton_scaled_step_max": 4.1078779023493e-06,
+    "newton_physical_step_max": 3.254983056698759e-07,
+    "newton_gradient_inf": 5.569605063668968e-12,
+    "directional_gradient_checks": [
+      {
+        "point": "initial",
+        "direction": 0,
+        "analytic": 5.535790616514265,
+        "finite": 5.5357906294375425,
+        "absolute_error": 1.2923277559195867e-08
+      },
+      {
+        "point": "initial",
+        "direction": 1,
+        "analytic": 6.815162772797111,
+        "finite": 6.815162774273631,
+        "absolute_error": 1.476520239407364e-09
+      },
+      {
+        "point": "initial",
+        "direction": 2,
+        "analytic": -23.611153032599713,
+        "finite": -23.611153049387212,
+        "absolute_error": 1.6787499390602534e-08
+      },
+      {
+        "point": "initial",
+        "direction": 3,
+        "analytic": 35.03904312788795,
+        "finite": 35.03904312356099,
+        "absolute_error": 4.326963676248852e-09
+      },
+      {
+        "point": "initial",
+        "direction": 4,
+        "analytic": -28.42318504413153,
+        "finite": -28.42318506554875,
+        "absolute_error": 2.1417221773845085e-08
+      },
+      {
+        "point": "final",
+        "direction": 0,
+        "analytic": -5.264965224391086e-06,
+        "finite": -5.2600626077037305e-06,
+        "absolute_error": 4.902616687355283e-09
+      },
+      {
+        "point": "final",
+        "direction": 1,
+        "analytic": 1.2974178797154682e-06,
+        "finite": 1.2823875294998288e-06,
+        "absolute_error": 1.503035021563939e-08
+      },
+      {
+        "point": "final",
+        "direction": 2,
+        "analytic": 7.937005284276569e-07,
+        "finite": 7.980816008057445e-07,
+        "absolute_error": 4.381072378087623e-09
+      },
+      {
+        "point": "final",
+        "direction": 3,
+        "analytic": -8.944695625089942e-07,
+        "finite": -8.981260180007666e-07,
+        "absolute_error": 3.656455491772479e-09
+      },
+      {
+        "point": "final",
+        "direction": 4,
+        "analytic": -2.4942127190398375e-06,
+        "finite": -2.5324879970867187e-06,
+        "absolute_error": 3.8275278046881175e-08
+      }
+    ]
+  }
+}

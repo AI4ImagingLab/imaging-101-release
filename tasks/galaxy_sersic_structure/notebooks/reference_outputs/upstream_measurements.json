@@ -1,0 +1,63 @@
+{
+  "code_revision": "12978a7a5eeee8c0cba3eadda0b64c25257e3ac2",
+  "paper": "https://doi.org/10.21105/joss.05703",
+  "data_origin": "Author DECaLS DR9-south real FITS, original120x120 central ROI",
+  "license": "MIT code; CC BY4.0 Legacy Survey images",
+  "renderer": "PixelRenderer defaults os_pixel_size6,num_os12",
+  "loss": "gaussian_loss",
+  "priors": {
+    "xc": [
+      60.0,
+      5.0
+    ],
+    "yc": [
+      60.0,
+      5.0
+    ],
+    "flux": [
+      0.0,
+      300.0
+    ],
+    "r_eff": [
+      0.5,
+      30.0
+    ],
+    "n": [
+      0.65,
+      8.0
+    ],
+    "ellip": [
+      0.0,
+      0.9
+    ],
+    "theta": [
+      0.0,
+      3.141592653589793
+    ]
+  },
+  "parameter_order": [
+    "xc",
+    "yc",
+    "flux",
+    "r_eff",
+    "n",
+    "ellip",
+    "theta",
+    "sky_back"
+  ],
+  "seeds": [
+    20261020,
+    20261021,
+    20261022
+  ],
+  "runtime_seconds": 29.025781099917367,
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "jax": "0.10.2",
+  "os": "Windows-10-10.0.26200-SP0",
+  "hashes": {
+    "cutout_59.1067_-30.4848.fits": "0758cfadfa77774461b8c5fd456a96e03f54e9dfd843046a0fb89fd45d180122",
+    "copsf_59.1067_-30.4848.fits": "da78a138b90396bb95fef514ff22031414e6a7151d46eed980939c44c00b870f",
+    "galaxy_oracle.npz": "e05b308854b73d44b1cb24ca57e52abc580247a1873e1a3eacbad2bf47354fb6"
+  }
+}

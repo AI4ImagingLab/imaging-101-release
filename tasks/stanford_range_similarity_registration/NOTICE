@@ -1,0 +1,2 @@
+Mathematical implementation adapted from Siavash Khallaghi pycpd, MIT; see LICENSE.
+Measured laser range data: Stanford University Computer Graphics Laboratory, Cyberware3030MS,1994. Research use and free redistribution permitted with attribution; commercial products require Stanford permission. Acknowledge Stanford Computer Graphics Laboratory. Exact source/revision and complete archived terms are documented in test/validation.md.

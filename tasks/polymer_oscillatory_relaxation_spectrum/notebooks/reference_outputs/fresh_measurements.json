@@ -1,0 +1,65 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "21f8a6d80f834e2ae2cc2c27523087af884b093d7a71ef3a5f342ebb0f9ce6d6",
+  "solver_runtime_s": 0.4114274000748992,
+  "experiments_runtime_s": 2.5617861000355333,
+  "upstream_relative_errors": {
+    "reconstruction": 0.0,
+    "maxwell_modes": 0.0,
+    "fitted_moduli": 0.0
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 0.0,
+    "continuous_relative_residual_norm": 0.314077459094319,
+    "discrete_relative_residual_norm": 0.15646932770257801,
+    "lambda_selected": 3.362042204095548,
+    "discrete_mode_count": 13,
+    "lambda_factor_mode_count_relative_residual": [
+      [
+        0.1,
+        13,
+        0.2174782613621821
+      ],
+      [
+        1,
+        13,
+        0.314077459094319
+      ],
+      [
+        10,
+        13,
+        0.633551283161425
+      ]
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_relative_error": 0.0,
+      "maxwell_modes_0_relative_error": 0.0,
+      "maxwell_modes_1_relative_error": 0.0,
+      "fitted_moduli_relative_error": 0.0
+    },
+    "thresholds": {
+      "reconstruction_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "maxwell_modes_0_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "maxwell_modes_1_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "fitted_moduli_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

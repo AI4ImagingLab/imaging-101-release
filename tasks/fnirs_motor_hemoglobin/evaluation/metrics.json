@@ -1,0 +1,36 @@
+{
+  "baseline": [
+    {
+      "method": "Independent MNE-Python1.12.1 modified Beer-Lambert on complete FRESH sub01 left2s",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999999,
+  "nrmse_boundary": 1e-09,
+  "thresholds": {
+    "hbo_ncc": {
+      "comparison": ">=",
+      "boundary": 0.999999999
+    },
+    "hbo_nrmse": {
+      "comparison": "<=",
+      "boundary": 1e-09
+    },
+    "hbr_ncc": {
+      "comparison": ">=",
+      "boundary": 0.999999999
+    },
+    "hbr_nrmse": {
+      "comparison": "<=",
+      "boundary": 1e-09
+    },
+    "forward_relative_rms": {
+      "comparison": "<=",
+      "boundary": 1e-10
+    }
+  },
+  "reference_kind": "method reference, no actual physiological truth",
+  "numerical_tolerance_provenance": "Fixed before extraction; float64 full-rank 2x2 inverse, conservative roundoff envelope. See test/validation.md.",
+  "forward_definition": "Frobenius norm(E*d*6*1000*c + ln(I/mean_time(I)))/norm(ln(I/mean_time(I))))"
+}

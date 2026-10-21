@@ -1,0 +1,34 @@
+{
+  "identity": "Reproduced unmodified upstream on exact bound observations",
+  "capture": {
+    "parameters": {
+      "lower": 10,
+      "upper": 5000,
+      "pol_order_high": 60,
+      "approximate_modes": [
+        176,
+        476,
+        932,
+        1534,
+        2258,
+        3161,
+        4180
+      ],
+      "reference_response": 1
+    },
+    "runtime_s": 0.8835557999555022,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "data_sha256": "85374c83934829e7ba74871f6da7444983e3cb0e4f2fdce2cff074fb413c353c",
+    "stage_tolerance": {
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "inverse_tolerance_before_extraction": {
+      "relative_l2": 1e-05
+    },
+    "exit_status": 0
+  },
+  "reference_role": "Standard-method result, not physical truth",
+  "result_asset": "evaluation/baseline_reference.npz"
+}
