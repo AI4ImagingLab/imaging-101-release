@@ -1,0 +1,38 @@
+{
+  "kind": "fresh cleaned-code measurement, distinct from upstream reproduction",
+  "data_sha256": "ed834af32088018016348833b7ecff6025a9b151900a54a15ad2273e0606d78d",
+  "reference_sha256": "cbd8d0ffcfd85de2c6ab1340279e2253c291153633da8ee305e0d6380af2ddbd",
+  "method": "local Hansen-Law first-order hold",
+  "parameters": {
+    "dr_mm": 0.025,
+    "hold_order": 1
+  },
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "runtime_seconds": 0.0035386999370530248,
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "pytest": "9.1.1",
+    "nbformat": "5.11.1",
+    "nbconvert": "7.17.1",
+    "ipykernel": "7.3.0"
+  },
+  "metrics": {
+    "ncc": 0.999826608983468,
+    "nrmse": 0.004119801658595976
+  },
+  "metric_definitions": {
+    "ncc": "cosine, no centering",
+    "nrmse": "RMS error / reference dynamic range"
+  },
+  "code_sha256": {
+    "generate_data.py": "a856a3c3ecef9023a206a479de0dc1ac00859a149150b4ccf30568af30052481",
+    "main.py": "9f27b7e1598f1ecb152a4a383d747c76f906a15a5209e10d862b3e901a25a68c",
+    "physics_model.py": "be47d23bef9469213c94489a4ccd89294301b4569ef5353e52a168b1d081c18e",
+    "preprocessing.py": "bdf9daa347cfeb91c467cb7672644e75f3615e31d47806ce8985171fd4b6eea7",
+    "solvers.py": "86ed864d65a05bdbc39623322d2ac27b0762f5f6b7730d1527547557e985a078",
+    "visualization.py": "b2348ca27a0e8186fdbb0e902713a4c23290f0f651be9fa726b9ad54c2ceaeef",
+    "__init__.py": "53bb6824a3382e51e104f9635c607358f559d2577cd5f77e59135c76c0c37540"
+  }
+}
