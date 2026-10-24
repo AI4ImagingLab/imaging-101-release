@@ -1,0 +1,5 @@
+# Attribution and research-use provenance
+
+This local mathematical implementation follows Yang Yang, Wenye Ma, Yin Zheng, Jian-Feng Cai and Weiyu Xu, Fast Single Image Reflection Suppression via Convex Optimization, CVPR2019. Original code and example photographs were supplied through yyhz76/reflectSuppress. Copyright in the originals remains with their respective owners.
+
+The downloaded repository did not identify a source redistribution license. Some supplementary photographs are collected from the Internet; repository inclusion does not establish author ownership. This local research package does not assert MIT, CC-BY or unrestricted redistribution rights. Original downloads, exact revision, individual data hashes and the unresolved redistribution terms are recorded privately in test/validation.md. No complete original checkout is part of this task.

@@ -1,0 +1,25 @@
+# Implemented approach
+
+This private staged task reconstructs the complete32×32 depth-averaged gas density and its conditional propagated standard uncertainty from author-existing simulated dot-pattern displacements. The selected published method is diagonal uncertainty-weighted least-squares integration, with the author's Poisson comparison. A separate archived unmodified full run exposed a calibration uncertainty defect; the qualified oracle corrects exactly three conversion derivatives before extraction. The reconstruction is a selected-method reference, never actual density truth.
+
+## Physical conversion
+
+Let U,V be signed sensor displacements in pixels, p=10⁻⁵m/pixel, M=.105/(1−.105), Z=.25m, L=.01m, K=.225×10⁻³m³/kg, ambient densityρ0=1.225kg/m³, and n0=1+Kρ0. The depth-averaged density gradients are gx=cU, gy=cV with c=n0 p/(MKZL), in kg/m⁴. Coordinates are x=(X−256)p/Mg and y=(Y−256)p/Mg, Mg=M/.75. Both array axes retain the author ordering: rows increase y, columns increase x.
+
+The supplied MC random standard uncertainties are derived from correlation-plane estimates after subtracting their estimated bias variance, not hidden true displacement. With sM=.1 and sZ=.001m, the implemented first-order conditional gradient variance is (c sU)²+(cU sM/M)²+(cU sZ/Z)²; likewise for V. This is the author's independent-input covariance approximation, including its limitation of treating calibration contributions as independent at different nodes. The corrected derivative follows the same fixed-n0 mean law. The original source omitted L and inverted n0 in all three sigma factors; the exact correction ratio n0²/L=100.0551325969 is independently unit- and central-difference checked.
+
+## Discrete integration
+
+All1024 native nodes are retained. D stacks forward first differences on992 horizontal then992 vertical edges, then124 perimeter selectors scaled by1/dx. B maps nodal x/y gradients to corresponding edges with arithmetic endpoint averages; its boundary rows vanish. C maps the124 ambient density observations to boundary rows with scale1/dx. For g=[gx;gy] and d=ρ0 on the perimeter, b=Bg+Cd. Covariance Q=B diag(sg²) Bᵀ+C diag(sd²) Cᵀ, with sd=10⁻¹⁰kg/m³. Weight W=diag(1/diag(Q)) uses marginal variances; this is WLS, not full GLS despite an upstream variable name.
+
+The objective is one-half(Dρ−b)ᵀW(Dρ−b). The solution is A⁻¹ DᵀWb, A=DᵀWD, using a general sparse direct solve. There is no artificial iteration, initialization, line search, or stopping tolerance. Conditional covariance is A⁻¹(DᵀW Q W D)A⁻ᵀ; standard uncertainty is the square root of its diagonal. All shared-edge covariance induced by B is preserved in propagation, even though weights use only its diagonal.
+
+Poisson comparison uses the author five-point Laplacian and centered gradient divergence in the interior. The selected complete perimeter uses Dirichlet rowsρ/dx²=d/dx². No Neumann rows occur in this binding. Its covariance is propagated through the same right-hand-side mapping and inverse Laplacian. It is computed actively, not loaded as a fresh result.
+
+## Evaluation and scientific diagnostics
+
+The public result requires both complete density and uncertainty maps in physical kg/m³. Independent source reruns, alternate SuperLU ordering, and float32 serialization measured separately froze nonzero range-NRMSE tolerances3.539330494974542e−8 and2.2615553491073282e−8 before local extraction; NCC≥.999999999 for each. A separately implemented evaluator also tests all1984 edge and124 boundary residuals with RMS≤.4877693425703862 in supplied standard-deviation units. Exact-known boundary precision requires float64 output. The parent-approved source qualification, original failures, unavailable true-error weights, and conditional covariance limitations remain explicit.
+
+The analytical covariance is checked by2048 independent gradient/boundary Gaussian draws with seed731, propagated through the same fixed linear WLS operator. Empirical sigma differs by relative-L2=.015611746853669024, consistent with finite Monte Carlo sampling; this validates algebra only. A uniform-gradient weighting ablation replaces the1984 edge weights by their mean while preserving boundary weights, and still propagates the supplied full Q. A displacement-only ablation omits calibration contributions to variance, preserving mean optical conversion. Fresh sensor-noise multipliers0,.5,1,2,4 use independent seeds1200..1204 and MC displacement sigmas, without changing coordinates or bound observations. Source paper true-error weights are unavailable and are not fabricated.
+
+The source normal matrix reports a conditioning warning due to boundary precision. Independently equilibrating the same matrix changes its1-norm condition number from3.1007656989278454e19 to6523.1819851045075 and matches propagated sigma to6.845588012978014e−15 range-NRMSE. The warning remains visible. No local threshold was changed after scoring. Plans, public constants, actual function defaults and full-field/no-alignment metric conventions were semantically checked against executable code.

@@ -1,0 +1,27 @@
+{
+  "baseline": [
+    {
+      "method": "unchanged current author full100frame tracer, measured against independent existing author truth",
+      "point_recall": 0.9569904,
+      "point_precision": 0.9980834935984347,
+      "position_rms_mm": 0.001931899053295085,
+      "edge_recall": 0.9550440404040405,
+      "edge_precision": 0.9979995541429242
+    }
+  ],
+  "point_recall_boundary": 0.8612913600000001,
+  "point_precision_boundary": 0.9881026586624504,
+  "position_rms_mm_boundary": 0.0021250889586245936,
+  "edge_recall_boundary": 0.8595396363636364,
+  "edge_precision_boundary": 0.9880195586014949,
+  "matching_radius_mm": 0.1,
+  "definitions": {
+    "point_matching": "Each frame: nearest actual truth, candidate distances stably sorted, unique truth ownership, distance<=0.1mm; no crop/scale/alignment.",
+    "point_recall": "matched points / all1250000 author truth points",
+    "point_precision": "matched points / all predicted points",
+    "position_rms_mm": "RMS Euclidean distance on unique matches; no matches assigns0.1mm finite failure penalty",
+    "edge_recall": "correct consecutive-frame same-segment predicted edges / all1237500 true consecutive edges",
+    "edge_precision": "correct consecutive-frame same-segment predicted edges / all predicted consecutive-frame edges; no edges gives0"
+  },
+  "provenance": "Five boundaries frozen from unchanged original before local; qualified native source and local must pass without relaxing them."
+}

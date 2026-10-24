@@ -1,0 +1,16 @@
+{
+  "baseline": [{"method": "Independent complete author automated PerovskiteOxide110, same real ADF/ABF, seed20261022; method reference, not truth", "comparison": "Three-sublattice point sets and Gaussian covariance/peak profiles"}],
+  "centroid_max_pixel_boundary": 0.23,
+  "centroid_rms_pixel_boundary": 0.0073,
+  "covariance_relative_boundary": 0.0028,
+  "peak_relative_boundary": 0.000075,
+  "invalid_profile_count_boundary": 0,
+  "provenance": "Frozen before local implementation; rounded-up threefold independent full-source RNG envelope; no fitted alignment or spatial mask",
+  "metric_definitions": {
+    "centroid_max_pixel": "max Euclidean matched centre error in nm / 0.012443924564929288 nm/pixel",
+    "centroid_rms_pixel": "RMS Euclidean matched centre error in pixel",
+    "covariance_relative": "L2 of all differences in Cxx,Cxy,Cyy divided by L2 of reference entries",
+    "peak_relative": "L2 peak-contrast difference divided by L2 reference peaks",
+    "invalid_profile_count": "Count of non-positive-definite Gaussian covariances or nonpositive peak contrasts"
+  }
+}

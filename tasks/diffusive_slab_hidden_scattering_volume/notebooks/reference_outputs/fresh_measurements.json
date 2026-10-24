@@ -1,0 +1,9 @@
+{
+  "runtime_seconds": 0.6325836000032723,
+  "ncc": 0.9999999999999947,
+  "nrmse": 6.519459343313314e-09,
+  "raw_data_sha256": "62e0322e95338b6aac2f6f90acba38a0fa882c96d36d7d0621f9887aab3ea949",
+  "reference": "independent original exact bound observations",
+  "nrmse_definition": "RMS error divided by reference dynamic range",
+  "method": "complete fresh closed-form current-author convention"
+}

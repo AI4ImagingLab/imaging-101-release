@@ -1,0 +1,108 @@
+# Mouse Head Fluorescence Yield Tomography
+
+> Reconstruct a three-dimensional fluorescence-yield field inside a mouse head from boundary excitation and fluorescence measurements, despite strong tissue scattering and sparse angular sampling.
+> Domain: biology | Keywords: fluorescence tomography, diffuse light, regularized inversion | Difficulty: Hard
+
+## Background
+
+Fluorescent molecular probes emit light after optical excitation. Binding a probe to a biological target can reveal molecular activity. In thick tissue, repeated scattering prevents direct assignment of detected light to its origin.
+
+Fluorescence tomography combines several illumination and detection positions with a light-propagation model. Anatomical imaging can supply the tissue boundary and optical-fiber positions. Applications include preclinical studies of targeted probes, tumor biology and treatment response. Uncertain optical properties and limited measurement coverage constrain recoverable spatial detail.
+
+## Problem Description
+
+The author-supplied observations are spectrally processed real measurements of an EGFR-targeted probe in a mouse-head acquisition. MRI-derived geometry is provided; internal anatomical regions are not reconstruction priors. The unknown yield is the product of quantum yield and fluorophore absorption.
+
+For excitation fluence $u$, fluorescence fluence $v$, unknown yield $q$, and known point-source distribution $s$, the continuous-wave model is
+
+```math
+-\nabla\cdot(\kappa_x\nabla u)+\mu_xu=s,\qquad
+-\nabla\cdot(\kappa_m\nabla v)+\mu_mv=qu.
+```
+
+Here $\mu$ denotes background absorption, $\kappa$ denotes diffusion coefficient, and subscripts $x,m$ denote excitation and emission. For either fluence $w$, every exterior face has outward-normal condition
+
+```math
+\kappa\partial_nw+\xi w=0,\qquad
+\xi=\frac{1}{2A},\quad
+A=\frac{2/(1-R_0)-1+c^3}{1-c^2},\quad
+R_0=\left(\frac{n_r-1}{n_r+1}\right)^2,\quad
+c=\left|\cos(\arcsin(1/n_r))\right|.
+```
+
+The refractive index relative to air is $n_r$. Linear tetrahedral basis functions $N_i$ give mass entries $M_{ij}=\int N_iN_j\,dV$. The discrete emission load is $M(q\odot u)$, where $\odot$ denotes nodal multiplication. Exterior faces follow from tetrahedral connectivity.
+
+Detectors interpolate boundary fluence. A calibrated datum is $y_a=F_aX^{\mathrm{model}}_a/X_a$, where $F_a,X_a$ are observed fluorescence and excitation in channel $a$, and $X^{\mathrm{model}}_a$ is predicted excitation. Only 56 channels constrain thousands of spatial unknowns. The requested field is conditional on the specified regularized model, rather than an independently measured molecular concentration.
+
+Save `output/reconstruction.npz`, relative to the task workspace, with exactly this key:
+
+| Key | Shape | Dtype | Description |
+|---|---|---|---|
+| reconstruction | (1, 5707) | float64 | Nonnegative real fluorescence yield in mm^-1, in the exact node order of `nodes`. |
+
+Every node is evaluated using cosine NCC, dynamic-range-normalized RMS error and maximum absolute error against a specified standard-method result, together with relative L2 disagreement between predicted and calibrated observations. No masking, permutation, alignment or fitted scale is applied.
+
+## Data Description
+
+Every active author measurement is retained. XYZ coordinates are the author's Cartesian mesh coordinates in millimetres. Indices are zero-based.
+
+| Key | Shape | Dtype | Description |
+|---|---|---|---|
+| fluorescence | (1, 56) | float64 | Observed processed probe fluorescence, instrument-relative intensity units. |
+| excitation | (1, 56) | float64 | Observed excitation for the same channels, instrument-relative intensity units. |
+| links | (1, 56, 2) | int64 | Source and detector indices per channel, dimensionless. |
+| nodes | (1, 5707, 3) | float64 | Tissue FEM coordinates, XYZ in mm. |
+| tetrahedra | (1, 29448, 4) | int64 | Tissue-node indices per tetrahedron, dimensionless. |
+| boundary_vertices | (1, 5707) | bool | Known boundary-vertex indicator, dimensionless; exterior faces follow from connectivity. |
+| source_positions | (1, 8, 3) | float64 | Model point sources displaced inward by the author's optical-transport convention, XYZ in mm. |
+| detector_positions | (1, 8, 3) | float64 | Surface detector coordinates, XYZ in mm. |
+| coarse_nodes | (1, 3323, 3) | float64 | Fixed geometry-only reconstruction-basis coordinates, XYZ in mm. |
+| coarse_tetrahedra | (1, 17350, 4) | int64 | Reconstruction-basis connectivity, dimensionless indices. |
+
+**Acquisition metadata**
+
+| Parameter | Value | Unit | Meaning |
+|---|---|---|---|
+| Geometry | 8 sources x 7 other detectors | dimensionless | All 56 ordered pairs. |
+| Modulation frequency | 0 | MHz | Continuous-wave data; no lifetime recovery. |
+| Excitation absorption | 0.009 | mm^-1 | Fixed background coefficient. |
+| Emission absorption | 0.006 | mm^-1 | Fixed background coefficient. |
+| Excitation diffusion | 0.251953 | mm | Exact supplied author mesh value. |
+| Emission diffusion | 0.260620 | mm | Exact supplied author mesh value. |
+| Refractive index | 1.33 | dimensionless | Tissue relative to air. |
+| Assumed quantum yield | 0.1 | dimensionless | Converts homogeneous absorption initialization to yield; only their product is recovered. |
+| Point-source amplitude | cos(0.15) | dimensionless | Real CW part of the author's source; angle is in radians. |
+| Source footprint | Barycentric point load | mm | No Gaussian broadening. |
+| Detector convention | Boundary-only P1 interpolation | dimensionless | Remove interior-vertex weights and renormalize in local order. |
+| Reconstruction geometry | Author-generated 20 x 20 x 20 grid clipped to tissue | dimensionless | Fixed tetrahedralization avoids triangulation ties; no fitted values supplied. |
+| Fine interpolation | P1, with nearest inside fine-node fallback | dimensionless | Outside the coarse mesh, copy interpolation from the nearest fine node that lies inside. |
+| Noise covariance | Not supplied | intensity units^2 | No independent covariance estimate available. |
+
+## Method Hints
+
+Use regularized, unguided finite-element tomography with excitation-normalized measurements and homogeneous data-driven initialization. Damped relative-yield updates on the supplied coarse basis retain a volumetric field while reducing the spatial parameter count.
+
+The conditional estimator uses the continuum triple-basis adjoint sensitivity as an inexact Jacobian for its nodal-product forward model. It retains the author's adjoint-source phase convention. This sensitivity is not the exact discrete derivative. Damped data-space normal equations regularize the underdetermined updates; observation residuals and regularization sensitivity remain essential to interpretation.
+
+For detector $d$, let $D_0$ be its unfiltered geometric P1 interpolation, $\mathrm{i}$ the imaginary unit and the overbar complex conjugation. The retained adjoint convention and continuum sensitivity are
+
+```math
+A_ma_d=\exp(-0.15\mathrm{i})D_{0,d}^{T},\qquad
+J^{\mathrm{pre}}_{ri}=\int N_i u_s\overline{a_d}\,dV,
+```
+
+where channel $r$ joins source $s$ to detector $d$. The homogeneous absorption initializer minimizes the sum of squared full-channel log residuals for uniform yield $q=0.1a$. Its derivative-bisection convention uses $a$ in $[10^{-10},0.1]$ mm^-1, forward derivative increment $10^{-10}$ mm^-1, and absolute consecutive-objective change below $10^{-4}$, with at most 40 evaluations. This defines the numerical initialization of the conditional estimator rather than an independent concentration calibration.
+
+The specified relative-coordinate estimator forms $c=Cq$, $d=\log y-\log f$, and $W=\operatorname{Re}(J^{\mathrm{pre}}/f)B\operatorname{diag}(c)$. Here $f$ is the full predicted measurement vector, $B,C$ are the geometry interpolation operators from coarse to fine and fine to coarse, and $J^{\mathrm{pre}}$ is the continuum adjoint sensitivity. Its key update is
+
+```math
+\Delta c=\operatorname{diag}(c)W^T[WW^T+rI]^{-1}d,
+\qquad r=10\max_i(WW^T)_{ii}.
+```
+
+The identity matrix is $I$. The source's data-driven homogeneous initialization uses derivative bisection of the full log-squared observation error; the relative-yield iterations stop at at most 2% objective reduction. These conventions specify the conditional estimator whose numerical agreement is evaluated.
+
+## References
+
+- Davis et al., *Comparing implementations of magnetic-resonance-guided fluorescence molecular tomography for diagnostic classification of brain tumors*, Journal of Biomedical Optics 15, 051602 (2010). [Original method family](https://doi.org/10.1117/1.3483902).
+- NIRFAST, *Tutorial: Imaging a mouse brain tumor in an MRI-coupled fluorescence molecular tomography system*. [Author tutorial and sample data](https://www.nirfast.org/). The selected configuration is the three-dimensional unguided reconstruction, with explicitly corrected exterior-face assembly.

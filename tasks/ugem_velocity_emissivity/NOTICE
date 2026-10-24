@@ -1,0 +1,16 @@
+This package is a local mathematical extraction of the maximum-entropy Doppler
+mapping method described by H. C. Spruit (1998), with real U Gem spectra supplied
+through the pydoppler author repository. Upstream code and complete source
+archives are kept separately for maintainer verification.
+
+The Python wrapper repository contains an MIT license template naming the Python
+Packaging Authority. This does not establish that the historical Spruit Fortran
+implementation or observational spectra carry that license. The original
+Fortran identifies H. C. Spruit and its historical version. No explicit
+redistribution license for that Fortran or these spectra was established.
+Permission for public redistribution remains unresolved; no MIT or Creative
+Commons grant for those materials is asserted here. The present verification
+and extraction were performed for the user's authorized local research.
+
+The full original notices, exact source hashes, data provenance, minimum
+environment adapters and failed runs are indexed in test/validation.md.

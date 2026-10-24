@@ -1,0 +1,24 @@
+{
+  "baseline": [
+    {
+      "method": "Full unmodified author Python API, fixed S0P=0, nonnegative kPL/L0, interior L0=1 initialization; NumPy1.26.4",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "fields": [
+    "exchange_rate",
+    "initial_lactate"
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "max_abs_over_range_boundary": 1e-05,
+  "negative_count_boundary": 0,
+  "nrmse_definition": "sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)), all1024 native pixels separately for each required field",
+  "reference_role": "Conditional standard-method result; no independently measured kPL/L0 truth. Fixed-input original rerun bitwise; separate original NumPy2 scalar-index compatibility run establishes backend numerical envelope.",
+  "shape": [
+    1,
+    32,
+    32
+  ]
+}

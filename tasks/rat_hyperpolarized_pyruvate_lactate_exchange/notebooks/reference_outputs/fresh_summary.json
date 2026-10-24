@@ -1,0 +1,94 @@
+{
+  "reconstruction_seconds": 28.823038399976213,
+  "sensitivity_seconds": {
+    "T1L20": 28.562922999990406,
+    "T1L30": 28.53327280000667,
+    "flip095": 28.698565200000303,
+    "flip105": 26.943119400006253
+  },
+  "agreement": {
+    "exchange_rate": {
+      "ncc": 0.9999999999999819,
+      "dr_nrmse": 4.573957748950697e-08,
+      "max_abs_over_range": 8.201226081877829e-07
+    },
+    "initial_lactate": {
+      "ncc": 0.9999999999999076,
+      "dr_nrmse": 7.139788926671538e-08,
+      "max_abs_over_range": 1.6910595211765337e-06
+    }
+  },
+  "forward_null_labels": [
+    "Zero signal",
+    "Per-pixel constant",
+    "k=0, fitted L0",
+    "Fresh inputless"
+  ],
+  "forward_relative_l2": [
+    1.0,
+    0.5660148859024048,
+    0.8332749565668754,
+    0.489943916066924
+  ],
+  "negative_fitted_lactate_samples": 21,
+  "negative_forcing_samples": 11161,
+  "condition_range": [
+    1.0069201886673118,
+    2.4179172868738585
+  ],
+  "quartile_sensitivity_medians": [
+    0.02368831972603345,
+    0.018031594283638097,
+    0.008167042707288097,
+    0.0009974704978246577
+  ],
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "exchange_rate/ncc": 0.9999999999999819,
+      "exchange_rate/dr_nrmse": 4.573957748950697e-08,
+      "exchange_rate/max_abs_over_range": 8.201226081877829e-07,
+      "exchange_rate/negative_count": 0,
+      "initial_lactate/ncc": 0.9999999999999076,
+      "initial_lactate/dr_nrmse": 7.139788926671538e-08,
+      "initial_lactate/max_abs_over_range": 1.6910595211765337e-06,
+      "initial_lactate/negative_count": 0
+    },
+    "thresholds": {
+      "exchange_rate/ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "exchange_rate/dr_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "exchange_rate/max_abs_over_range": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "exchange_rate/negative_count": {
+        "comparison": "<=",
+        "boundary": 0
+      },
+      "initial_lactate/ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "initial_lactate/dr_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "initial_lactate/max_abs_over_range": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "initial_lactate/negative_count": {
+        "comparison": "<=",
+        "boundary": 0
+      }
+    },
+    "errors": []
+  }
+}

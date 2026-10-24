@@ -1,0 +1,26 @@
+This private benchmark extraction implements the tilted-ring method of
+E. M. Di Teodoro and F. Fraternali, using BBarolo revision
+2a780fe3c933eb81fd767a3bda17964a9eca2936. Original BBarolo core headers
+permit GNU GPL version2 or any later version; their copyright and warranty
+notice is preserved by the accompanying LICENSE. Some older documentation
+mentions GPL3; GPL3 is within the core's GPL2-or-later choice. No MIT or
+other license is inferred for the original core.
+
+The isolated original uses CFITSIO, WCSLIB and FFTW. Those packages and the
+original binaries are not imported or redistributed as task runtime code.
+The cleaned runtime and standalone evaluator use general NumPy and SciPy.
+
+The unchanged NGC2403 FITS observation is an author-distributed example
+whose header identifies VLA data and the original acquisition. No separate
+explicit data redistribution license was located. The code license is not
+asserted to license the observation. This package is staged for the user's
+authorized local research; wider publication/redistribution rights remain
+unresolved. The paper's availability likewise is not a data license.
+
+The original initialization copy reads beyond a40-element prepass array
+when41 rings are requested. All original failed/successful-but-undefined
+runs are retained privately. A minimal bounds-only qualification copies
+only available prepass elements and preserves the supplied initialization
+on the unmatched last ring, with all41 target rings still fitted. Labels
+"qualified original" refer to that route. They do not claim unchanged
+upstream execution or independent kinematic truth.

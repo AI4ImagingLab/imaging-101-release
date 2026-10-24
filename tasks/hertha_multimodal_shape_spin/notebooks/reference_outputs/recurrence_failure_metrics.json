@@ -1,0 +1,8 @@
+{
+  "role": "Actual failed full local recurrence-path Judge measurements captured in console before later standard CLI overwrote default output; no full failed NPZ is claimed retained.",
+  "source": "validation_run/pytest_process.json and source_before.json; native1/272.7590881seconds,36pass+1fullqualityfail",
+  "metrics": {
+    "latitude_deg_absolute_error": 0.08373279762632535,
+    "longitude_deg_absolute_error": 0.1363500997476308
+  }
+}

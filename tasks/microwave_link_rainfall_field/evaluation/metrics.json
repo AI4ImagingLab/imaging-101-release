@@ -1,0 +1,6 @@
+{
+  "baseline": [{"method": "Independent complete original RAINLINK wet-dry rerun on native full observations; reference is a method result", "nrmse_vs_ref": 0.0}],
+  "nrmse_boundary": 9.663465651076436e-09,
+  "negative_count_boundary": 0,
+  "tolerance_provenance": "Frozen before local extraction:1.5 times measured full-field float32 output serialization range-NRMSE6.4423104340509565e-09. Independent original full rerun exact; no independent rainfall truth is available."
+}

@@ -1,0 +1,5 @@
+# Attribution and data provenance
+
+The real photographs and independent reference measurements originate from the intrinsic-image benchmark of Roger Grosse, Micah K. Johnson, Edward H. Adelson and William T. Freeman, ICCV2009. The local mathematical implementation follows the baseline algorithms distributed by those authors. Original code and photographs remain attributable to their authors.
+
+The official downloaded code/data archives did not identify a separate redistribution license. This local research package does not assert MIT, CC-BY or unrestricted redistribution rights for those assets. Full original archives, author download evidence and associated source-mirror identity are retained privately and documented in test/validation.md.

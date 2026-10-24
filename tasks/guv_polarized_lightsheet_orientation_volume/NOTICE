@@ -1,0 +1,24 @@
+Original implementation: Polaris, Copyright (c) 2017 Talon Chandler,
+MIT License, retained in LICENSE. Mathematical extraction preserves the selected
+author-published GUV estimator, with an explicitly qualified parity-aware spatial
+frequency correction for odd grid dimensions. No original domain package is
+required by the cleaned task.
+
+Real observations and independent calibration: BioImageArchive accession
+S-BIAD1055, DOI 10.6019/S-BIAD1055, Talon Chandler and collaborators,
+"Volumetric imaging of the 3D orientation of cellular structures with a polarized
+fluorescence light-sheet microscope", associated with PNAS
+DOI 10.1073/pnas.2406679122. The archive metadata explicitly identifies Creative
+Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+Changes to data representation: exact lossless extraction of the author's
+predefined registered analysis ROI; same-session author's central calibration
+cube; TIFF counts converted without resampling to batch-first NPZ arrays.
+The original registered observations already include author deskewing and
+registration. Whole original observation TIFF hashes are not claimed because
+only public byte ranges were retrieved; every retrieved range, selected native
+complete-plane verification, ROI array hash and full calibration-file hash is
+indexed in private provenance. No target reconstruction is released as an input.
+
+Neither the source authors nor the data providers endorse this benchmark.

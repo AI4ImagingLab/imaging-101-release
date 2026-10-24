@@ -1,0 +1,16 @@
+{
+  "ncc_boundary": 0.9999999,
+  "nrmse_boundary": 1e-06,
+  "max_error_over_reference_range_boundary": 5e-06,
+  "forward_relative_L2_boundary": 0.22,
+  "baseline": [
+    {
+      "method": "unchanged author OSEM 4 iterations 8 subsets, real Lu177 phantom, method-reference",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "nrmse_definition": "RMS error divided by full reference dynamic range",
+  "reference_type": "method_reference_not_truth",
+  "negative_count_boundary": 0
+}

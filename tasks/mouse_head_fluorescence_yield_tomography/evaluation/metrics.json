@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "qualified author full3D unguided CW FMT on all56 real observations",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "forward_relative_L2": 0.18907149090940267
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "max_abs_boundary": 1e-10,
+  "forward_relative_l2_boundary": 0.191,
+  "reference_type": "conditional standard-method result, not molecular truth",
+  "nrmse_units": "RMS divided by reference max-minus-min, all5707 nodes",
+  "tolerance_provenance": "Source solution-format roundtrip DR-NRMSE2.9717864e-7, maxabs4.9798254e-11 mm^-1; exact P1 and independent source repeats frozen before local extraction"
+}

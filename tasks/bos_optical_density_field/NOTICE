@@ -1,0 +1,20 @@
+Scientific method and original sample-data provenance:
+Lalit Rajendran, Jiacheng Zhang, Sally Bane, Pavlos Vlachos and collaborators,
+public author bos-density-integration-package, exact revision
+4c8f7f8df5dc61bec3c39e9109f382e99b492779.
+
+The upstream README requests citation of its two density-integration papers.
+No explicit software/data redistribution license was found in that checkout.
+Do not infer MIT, CC or a redistribution grant from public availability.
+This staged package is prepared for the authorized local research benchmark;
+public redistribution rights for the author-existing processed observations
+and source-derived fixtures remain unresolved. Complete upstream source stays
+in the maintainer-only archive. The cleaned mathematics is implemented locally
+with NumPy/SciPy primitives; it does not import the original package.
+
+Qualification: the original uncertainty-conversion factors omit slab thickness
+and invert ambient refractive index relative to the source mean optical law.
+Three factors were minimally corrected, independently unit/derivative checked,
+before the qualified source run and local extraction. This is not an unchanged
+reproduction of all original source expressions. Original failures and exact
+diffs remain in private provenance and test/validation.md.

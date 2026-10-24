@@ -1,0 +1,12 @@
+{
+  "baseline": [
+    {
+      "method": "Original native50-PC geostatistical method on complete author-existing simulation",
+      "ncc_vs_ref": 0.9968568173310184,
+      "nrmse_vs_ref": 0.04797944553496118
+    }
+  ],
+  "ncc_boundary": 0.8971711355979166,
+  "nrmse_boundary": 0.052777390088457304,
+  "forward_head_rms_boundary": 0.5412737116335221
+}

@@ -1,0 +1,33 @@
+{
+  "baseline": [
+    {
+      "method": "Author native 2x2 fit on the complete predefined 926-point band, against its accepted conditional method reference; not independent material truth",
+      "n0_absolute_error": 0.0,
+      "n1_absolute_error": 0.0,
+      "n2_absolute_error": 0.0,
+      "thickness_nm_absolute_error": 0.0,
+      "nrmse": 0.0,
+      "index_consistency_absolute_error": 0.0,
+      "rho_relative_rms": 0.012221012668514263
+    }
+  ],
+  "n0_absolute_error_boundary": 1e-7,
+  "n1_absolute_error_boundary": 0.0005,
+  "n2_absolute_error_boundary": 0.001,
+  "thickness_nm_absolute_error_boundary": 1e-7,
+  "nrmse_boundary": 1e-7,
+  "index_consistency_absolute_error_boundary": 1e-10,
+  "rho_relative_rms_boundary": 0.02,
+  "definitions": {
+    "n0_absolute_error": "Absolute error of the dimensionless Cauchy intercept, parameters[0,0].",
+    "n1_absolute_error": "Absolute error of the original source-scaled numerical coefficient, parameters[0,1]. The conventional coefficient B in nm^2 equals 100*n1; the submitted numerical coordinate is n1.",
+    "n2_absolute_error": "Absolute error of the original source-scaled numerical coefficient, parameters[0,2]. The conventional coefficient C in nm^4 equals 1e7*n2; the submitted numerical coordinate is n2.",
+    "thickness_nm_absolute_error": "Absolute film thickness error in nm, parameters[0,3].",
+    "nrmse": "RMS error over all 926 dimensionless refractive-index samples divided by the full reference max-minus-min range. No crop, alignment, permutation or scaling.",
+    "index_consistency_absolute_error": "Maximum absolute difference over all 926 samples between submitted reconstruction and n0+100*n1/lambda_nm^2+1e7*n2/lambda_nm^4 from submitted parameters.",
+    "rho_relative_rms": "L2 norm of independent full-band complex Fresnel rho(parameters)-tan(Psi_observed)*exp(-i*Delta_observed), divided by L2 norm of observed rho. Fixed author-model70deg, fixed silica276.36nm with n=1.452+3600/lambda_nm^2, public passive silicon n+i*k. All 926 samples are used."
+  },
+  "comparison": "Every required metric must be finite and <= its own boundary; all seven must pass.",
+  "provenance": "All limits were frozen in FROZEN_SOURCE_ACCEPTANCE.json before local implementation. Exact author 2x2 repeats are bitwise equal; independent native 4x4 fits differ in [n0,n1,n2,d] by [9.09e-11,4.55e-7,5.78e-7,7.77e-11]. Nonzero field limits are about 1000 times these independent numerical variations. They test conditional method reproduction, not experimental physical uncertainty. The 0.02 observation-consistency limit was separately frozen before the source fit.",
+  "reference_role": "Validated original-method result, not measured or simulated ground truth. If actual ground_truth.npz exists, including an invalid directory or dangling symlink, it takes strict precedence and cannot silently fall back."
+}

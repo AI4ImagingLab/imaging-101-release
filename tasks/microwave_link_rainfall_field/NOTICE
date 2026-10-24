@@ -1,0 +1,36 @@
+Mathematical workflow adapted from RAINLINK version1.31.
+Copyright (C)2024 Aart Overeem.
+
+The original R source states:
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Exact source: overeem11/RAINLINK commit
+ce355d68dcb59ec17f75d05babc4a6f6d2ee90f0, archived privately with source,
+paper, original runtime and qualification evidence. Local Python mathematics
+replaces the domain-library dependencies; no RAINLINK, gstat, sf or s2 package
+is called by the cleaned runtime.
+
+Qualifications: two header=TRUE coefficient-file reads in the private original
+driver preserve all numeric coefficients. The main binding consistently selects
+the paper's full wet/dry option; the sequential demonstration's final overwritten
+no-wet/dry result is preserved as a separate actual original comparison.
+
+The actual T-Mobile Netherlands/Nokia sample data are author-supplied public
+research observations. The paper expressly describes the RAINLINK link dataset
+as freely available for all parties. No independent additional data license
+grant was identified; the GPL declaration on software is not asserted to grant
+ownership or unrestricted redistribution rights in third-party measurements.
+Public redistribution of those measurements remains unresolved; this package is
+maintainer-only local research staging. No contact with data owners was made.
+
+The reconstructed field is a conditional method estimate, not rainfall truth.
+Spatial midpoint, stationary covariance and effective wet-antenna assumptions
+remain scientific limitations. The dataset is measured; no new target or noise
+observations were manufactured for the binding.

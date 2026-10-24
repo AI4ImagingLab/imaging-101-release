@@ -1,0 +1,31 @@
+{
+  "baseline": [
+    {
+      "method": "Independent complete original C O0 against complete original C O1 accepted state; real observations, not asteroid truth",
+      "mesh_x_range_nrmse": 0.0009640106628687121,
+      "mesh_y_range_nrmse": 0.0025085466807651027,
+      "mesh_z_range_nrmse": 0.00488952045045173,
+      "latitude_deg_absolute_error": 0.017128466582249757,
+      "longitude_deg_absolute_error": 0.01591264645639967,
+      "period_hours_absolute_error": 1.326339020835121e-07,
+      "ao_offsets_rms_arcsec": 5.40618845756213e-05,
+      "ao_log_gains_rms_dimensionless": 0.00015886146924617091,
+      "occultation_offset_rms_km": 0.07078228086818952
+    }
+  ],
+  "boundaries": {
+    "mesh_x_range_nrmse": 0.0014460159943030682,
+    "mesh_y_range_nrmse": 0.003762820021147654,
+    "mesh_z_range_nrmse": 0.007334280675677596,
+    "latitude_deg_absolute_error": 0.025692699873374636,
+    "longitude_deg_absolute_error": 0.023868969684599506,
+    "period_hours_absolute_error": 1.9895085312526817e-07,
+    "ao_offsets_rms_arcsec": 8.109282686343195e-05,
+    "ao_log_gains_rms_dimensionless": 0.00023829220386925636,
+    "occultation_offset_rms_km": 0.10617342130228428,
+    "complete_weighted_objective": 32.0597667103784
+  },
+  "nrmse_definition": "Each Cartesian coordinate separately: sqrt(mean((estimate-reference)^2))/(max(reference_coordinate)-min(reference_coordinate)); complete402orderedvertices,no alignment/crop/rescale. Other blocks use physical-unit absolute or RMS errors.",
+  "metric_provenance": "Frozen source_only_acceptance_freeze.json before local math. Field boundaries1.5times independent full O0/O1 differences; complete weighted objective1.1times larger independent source objective.",
+  "forward_definition": "All923relativeLC +2x11399complexAO +18x4occultationendpoint residuals and4selected regularizers; weights8,2,.1,30,5,.5,1. NumPy Green-integral independent forward. Physical forward evaluated after all field/nuisance gates pass; failing field gates are decisive without scoring invalid degenerate geometry."
+}

@@ -1,0 +1,8 @@
+{
+  "baseline": [{"method": "Qualified original contour restoration with independently corrected Gauss-to-node extrapolation; no spatial truth", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 0.000001,
+  "max_abs_boundary": 0.001,
+  "max_abs_unit": "MPa",
+  "provenance": "Fixed before local extraction; propagate original six-scientific-decimal native stress rounding through independently validated extrapolation. See test/validation.md."
+}

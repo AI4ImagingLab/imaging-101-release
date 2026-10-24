@@ -1,0 +1,21 @@
+The geostatistical inverse mathematics and the hydraulic example are extracted
+from pyPCGA by Jonghyun Lee, exact revision recorded in test/validation.md.
+Copyright (c) 2018, Jonghyun Lee. The full original BSD 3-clause conditions and
+disclaimer are preserved in LICENSE. The example observation and target arrays
+are author-existing simulations distributed with that repository; no separate
+data-specific license notice was found. No third-party dataset ownership or
+additional data license grant is invented.
+
+The cleaned runtime does not call FloPy or MODFLOW. It explicitly constructs the
+same confined-aquifer harmonic finite-volume equations and solves them using
+general numerical primitives. Original numerical forward serialization, source
+and independent backend differences are documented in validation. The small
+co-kriging linear system uses its independently validated Schur/Woodbury form
+rather than the original general matrix-free Krylov numerical backend.
+
+The original reported variance helper has an independently demonstrated missing
+lower-block saddle contribution. It is preserved only as a named source variance
+diagnostic for scientific comparison. The complete conditional covariance is
+also computed explicitly; neither is an independently measured uncertainty.
+The primary full-field log-conductivity inverse and output are unchanged in
+physical scope, and are evaluated against actual author simulation truth.

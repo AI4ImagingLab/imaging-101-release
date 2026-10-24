@@ -1,0 +1,25 @@
+{
+  "baseline": [
+    {
+      "method": "Qualified author WLS full32x32 run; method reference, not truth",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0,
+      "density_sigma_ncc_vs_ref": 1.0,
+      "density_sigma_nrmse_vs_ref": 0.0
+    }
+  ],
+  "quantities": {
+    "reconstruction": {
+      "ncc_boundary": 0.999999999,
+      "nrmse_boundary": 3.539330494974542e-08
+    },
+    "density_sigma": {
+      "ncc_boundary": 0.999999999,
+      "nrmse_boundary": 2.2615553491073282e-08
+    }
+  },
+  "forward_rms_boundary": 0.4877693425703862,
+  "zero_estimate_cosine": 0.0,
+  "metric_scope": "All1024 nodes per quantity; all1984 gradient and124 boundary equations; no mask/alignment/rescaling",
+  "reference_provenance": "Source-qualified calibration derivatives, originalWLS integration, full author-existing sample. Tolerances frozen from independent source reruns, alternate sparse ordering and measured output precision before local implementation."
+}

@@ -1,0 +1,82 @@
+{
+  "environment": {
+    "python": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+    "python_version": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "backend": "inline",
+    "math_source_sha256": "fecee2ce9f6652099e9f13159ceacb452fa57c768ff1d3393a8c1c0e607261d5",
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "runtime_seconds": 544.2926393999951,
+  "report": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "mesh_x_range_nrmse": 0.0009647612663002938,
+      "mesh_y_range_nrmse": 0.0025067309254862406,
+      "mesh_z_range_nrmse": 0.004904367260149017,
+      "latitude_deg_absolute_error": 0.017151096523093656,
+      "longitude_deg_absolute_error": 0.016193896797062735,
+      "period_hours_absolute_error": 1.3293060163732662e-07,
+      "ao_offsets_rms_arcsec": 5.376813955894787e-05,
+      "ao_log_gains_rms_dimensionless": 0.00015410974314812058,
+      "occultation_offset_rms_km": 0.0696087630492922,
+      "complete_weighted_objective": 28.4942599342202
+    },
+    "thresholds": {
+      "mesh_x_range_nrmse": {
+        "comparison": "<=",
+        "boundary": 0.0014460159943030682
+      },
+      "mesh_y_range_nrmse": {
+        "comparison": "<=",
+        "boundary": 0.003762820021147654
+      },
+      "mesh_z_range_nrmse": {
+        "comparison": "<=",
+        "boundary": 0.007334280675677596
+      },
+      "latitude_deg_absolute_error": {
+        "comparison": "<=",
+        "boundary": 0.025692699873374636
+      },
+      "longitude_deg_absolute_error": {
+        "comparison": "<=",
+        "boundary": 0.023868969684599506
+      },
+      "period_hours_absolute_error": {
+        "comparison": "<=",
+        "boundary": 1.9895085312526817e-07
+      },
+      "ao_offsets_rms_arcsec": {
+        "comparison": "<=",
+        "boundary": 8.109282686343195e-05
+      },
+      "ao_log_gains_rms_dimensionless": {
+        "comparison": "<=",
+        "boundary": 0.00023829220386925636
+      },
+      "occultation_offset_rms_km": {
+        "comparison": "<=",
+        "boundary": 0.10617342130228428
+      },
+      "complete_weighted_objective": {
+        "comparison": "<=",
+        "boundary": 32.0597667103784
+      }
+    },
+    "errors": []
+  },
+  "components": {
+    "lightcurves": 23.00774256637838,
+    "adaptive_optics": 2.4894120585488384,
+    "occultation": 1.1106531331736758,
+    "regularizers": 1.8864521761193038
+  }
+}

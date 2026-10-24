@@ -1,0 +1,7 @@
+{
+  "original_O1": "Complete original source O1 accepted state,not stale outshape snapshot; all bound observations; original baseline reference.",
+  "original_O0": "Independent complete original source O0 accepted state; same observations/configuration; numeric uncertainty comparison,not truth.",
+  "original_subdivision_snapshot": "Complete original author135_subdiv.ini exported mesh578vertices1152faces; different source parameterization and weights,not isolated controlled local ablation or truth.",
+  "fresh_measurements": "Written only by active notebook; actual fresh parameters/history,forward models and measured quality; not a reconstruction cache.",
+  "recurrence_failure": "Complete explicit-recursion extraction run failed latitude/longitude gates; pytest_process and source_before hashes retained privately. Numeric failure metrics captured from its actual Judge report before later CLI overwrote defaultoutput; no full failed mesh NPZ is claimed retained."
+}

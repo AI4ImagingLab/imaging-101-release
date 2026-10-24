@@ -1,0 +1,10 @@
+{
+  "baseline": [{"method": "Unchanged original ordinary fixed-background RL, complete30updates, explicit false optional flags; actual authorDC2observations", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0, "source_count_relative_error": 0.00041257287731698175}],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 0.00001,
+  "source_count_relative_error_boundary": 0.001,
+  "reference_type": "Standard-method result; not actual sky truth",
+  "tolerance_provenance": "Frozen before local inverse. Two full original30update runs bitwise identical; nonzero float32 tolerance 1e-5. Full original adjoint and dwell error below1e-5. Source-count closure gate0.001 frozen from native full-forward closure0.0004126; no alignment/rescaling/masking.",
+  "source_count_relative_error_definition": "abs(dot(public_exposure,estimate)-sum(events-background))/sum(events-background)",
+  "limits": "Ideal known injected background; finite Monte Carlo response and averaged-attitude model. Baseline image agreement is not proof of physical truth; native attitude overdispersion and fixed-fitted-model sparse-deviance discrepancy are reported separately."
+}
