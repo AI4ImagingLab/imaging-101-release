@@ -1,0 +1,51 @@
+{
+  "baseline": [
+    {
+      "method": "Independent exact-revision full 121-region 250-update original run",
+      "wavefront_psf_relative_error": 1.6113642130485458e-07,
+      "observation_relative_error": 0.01818781165192021
+    }
+  ],
+  "thresholds": {
+    "reconstruction_ncc_min": {
+      "comparison": ">=",
+      "boundary": 0.99999
+    },
+    "reconstruction_nrmse_max": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "objects_ncc_min": {
+      "comparison": ">=",
+      "boundary": 0.99999
+    },
+    "objects_nrmse_max": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "wavefront_psf_relative_error": {
+      "comparison": "<=",
+      "boundary": 0.01
+    },
+    "observation_relative_error": {
+      "comparison": "<=",
+      "boundary": 0.018551577884958616
+    },
+    "mosaic_relative_error": {
+      "comparison": "<=",
+      "boundary": 2e-06
+    },
+    "translation_gauge_max": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "null_slot_max": {
+      "comparison": "<=",
+      "boundary": 1e-07
+    }
+  },
+  "nrmse_definition": "Intensity RMS error divided by reference dynamic range; computed separately for each passband.",
+  "psf_relative_error_definition": "L2 norm of predicted minus reproduced unit-flux PSFs divided by reproduced PSF L2 norm.",
+  "observation_relative_error_definition": "L2 norm of all local reconstructed-object/PSF forward residuals divided by normalized apodized observation L2 norm.",
+  "provenance": "Fixed extraction-quality tolerances, independent original repeat and fresh reruns; see test/validation.md. No physical truth available."
+}

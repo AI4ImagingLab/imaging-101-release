@@ -1,0 +1,24 @@
+{
+  "baseline": [
+    {
+      "method": "Independent minimally corrected QSM.m SSTGV, paper-based physical regularization, full raw-phase volume",
+      "reconstruction_ncc": 1.0,
+      "reconstruction_nrmse": 0.0,
+      "residual_phase_ncc": 1.0,
+      "residual_phase_nrmse": 0.0,
+      "pde_relative_residual": 0.004286750793256695,
+      "eta_rms_rad": 0.08087621554939445
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.999999,
+  "reconstruction_nrmse_boundary": 1e-05,
+  "residual_phase_ncc_boundary": 0.999999,
+  "residual_phase_nrmse_boundary": 1e-05,
+  "pde_relative_residual_boundary": 0.004715425872582365,
+  "eta_rms_rad_boundary": 0.0889638371043339,
+  "reference_identity": "Standard-method result; not actual biological truth. COSMOS/STI independent imperfect measurements appear only in maintainer scientific comparisons.",
+  "comparison_mask": "Public acquisition brain mask for array agreement/eta RMS; six-neighbor interior for PDE.",
+  "pde_definition": "norm(L(residual_phase)-W(PHASE_PER_PPM*reconstruction)-wrapped_L(phase)) / norm(wrapped_L(phase)), on the public six-neighbor interior.",
+  "energy_definition": "sqrt(mean(residual_phase[public_mask]**2)) in radians.",
+  "tolerance_provenance": "Boundaries frozen from independent C reruns and full-state double-precision parity; full CUDA validation pending at freeze time and must pass before completion. Nonzero 1e-5 range-normalized tolerance is a conservative numerical floor; thresholds may not be relaxed after the fresh run. Full CUDA validation subsequently passed without changing these frozen boundaries; see test/validation.md and archived full_cuda_parity.json."
+}
