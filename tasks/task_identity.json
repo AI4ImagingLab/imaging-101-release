@@ -15761,7 +15761,7 @@
       "domain": "earth science",
       "domain_zh": "地球科学",
       "original_domain_label": "earth science",
-      "status": "pending_maintainer_confirmation",
+      "status": "placeholder_directory",
       "confirmation": null,
       "paper_source": {
         "status": "not_recorded",
@@ -15791,7 +15791,7 @@
         "local_path": null,
         "evidence_available_in_committed_payload": false
       },
-      "classification_note": "Earth-science classification inferred from the seismic directory name; directory is empty and has no paper, data or implementation evidence.",
+      "classification_note": "Earth-science classification inferred from the seismic directory name; only a Python bytecode cache is present, with no README, paper, observations or implementation source.",
       "payload_committed": false,
       "identity_fields_present": true,
       "source_completeness": {
@@ -15799,7 +15799,7 @@
         "data_source": "unknown",
         "standard_implementation_source": "unknown"
       },
-      "pending_reason": "Scientific acceptance is not recorded in the maintainer acceptance ledger; identity is included without claiming task completion."
+      "pending_reason": "Placeholder directory containing only a Python bytecode cache; README, paper, data and implementation source have not been supplied."
     },
     {
       "task_id": "seismic_FWI_original",
@@ -19666,9 +19666,9 @@
     },
     {
       "task_id": "seismic_FDFWI",
-      "status": "pending_maintainer_confirmation",
+      "status": "placeholder_directory",
       "payload_committed": false,
-      "reason": "Scientific acceptance is not recorded in the maintainer acceptance ledger; identity is included without claiming task completion."
+      "reason": "Placeholder directory containing only a Python bytecode cache; README, paper, data and implementation source have not been supplied."
     }
   ]
 }
