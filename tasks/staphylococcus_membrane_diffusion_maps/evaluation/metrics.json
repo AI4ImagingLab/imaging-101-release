@@ -1,0 +1,68 @@
+{
+  "baseline": [
+    {
+      "quantity": "reconstruction",
+      "method": "independent original exact bound-observation runs",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "float32_roundtrip_metrics": {
+        "ncc": 0.9999999999999998,
+        "nrmse": 2.152195826620982e-08
+      }
+    },
+    {
+      "quantity": "molecule_number",
+      "method": "independent original exact bound-observation runs",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "float32_roundtrip_metrics": {
+        "ncc": 0.9999999999999998,
+        "nrmse": 8.781267856070228e-09
+      }
+    },
+    {
+      "quantity": "correlation_offset",
+      "method": "independent original exact bound-observation runs",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "float32_roundtrip_metrics": {
+        "ncc": 0.9999999999999997,
+        "nrmse": 4.920753453353464e-09
+      }
+    }
+  ],
+  "thresholds": {
+    "reconstruction_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999
+    },
+    "reconstruction_nrmse": {
+      "comparison": "<=",
+      "boundary": 1.076097913310491e-06
+    },
+    "molecule_number_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999
+    },
+    "molecule_number_nrmse": {
+      "comparison": "<=",
+      "boundary": 4.390633928035114e-07
+    },
+    "correlation_offset_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999
+    },
+    "correlation_offset_nrmse": {
+      "comparison": "<=",
+      "boundary": 2.4603767266767316e-07
+    },
+    "correlation_residual": {
+      "comparison": "<=",
+      "boundary": 0.10712328844066853
+    }
+  },
+  "reference_kind": "validated standard-method result, not physical truth",
+  "correlation_residual_definition": "sqrt(mean over52 fixed cell bins and104 nonzero lags of ((model-observed_ACF)/observed_ACF_at_first_lag)^2))",
+  "evaluated_mask": "All author-label2x2bins containing exactly one positive cell ID; background mixed with one cell retained; mixed positive IDs excluded;52pixels; no output-dependent quality filtering",
+  "tolerance_rationale": "Three independent cleaned repeats and two original repeats are bitwise. NRMSE uses50times measured float32-roundtrip floors (minimum1e-7); NCC1minus1e-10. This is numerical method agreement, not accuracy. Full original forward residual boundary1.1times measured actual residual."
+}

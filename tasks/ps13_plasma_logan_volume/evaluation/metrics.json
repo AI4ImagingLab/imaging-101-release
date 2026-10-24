@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced original dynamicpet weightedLogan with arterialparent-plasmainput; no actualVTtruth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "late_linear_relative_weighted_residual": 0.06196459006685477
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-07,
+  "late_linear_relative_weighted_residual_boundary": 0.06258423596752331,
+  "reference_kind": "Independent reproduced standard-method result, not biological truth",
+  "threshold_rationale": "Original two independent reruns exactly equal. Nonzero NRMSE tolerance1e-7 permits numeric portability while remaining stricter than scientifically meaningful map changes. Additional1.01xoriginal transformed observation residual gate."
+}

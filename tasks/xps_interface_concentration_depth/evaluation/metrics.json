@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "original XPSinv accelerated CP, licensed native10-EAL, all201 unknown,100000updates",
+      "ncc_vs_ref": 0.9982452869545168,
+      "nrmse_vs_ref": 0.05658952983182777
+    }
+  ],
+  "ncc_boundary": 0.8984207582590651,
+  "nrmse_boundary": 0.06224848281501055,
+  "reference": "author supplied simulated chemical concentration, not a reconstruction",
+  "nrmse_definition": "RMS error / (max(reference)-min(reference)), all201 samples, no alignment"
+}

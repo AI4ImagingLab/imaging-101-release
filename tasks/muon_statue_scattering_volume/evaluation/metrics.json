@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "Qualified geometric POCA, exact full author GEANT4 statue acquisition",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 5e-06,
+  "reference_type": "Qualified published-method reference, not physical truth",
+  "precision_rationale": "Fixed tolerance supports float32 SVD and batched geometric solves, independently checked with float64 geometry and repeated runs; no output alignment."
+}

@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Original PyDDA JAX full3DVAR, real NOAA NEXRAD A/B, weak zero-horizontal-wind prior",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0,
+      "northward_ncc_vs_ref": 1.0,
+      "northward_nrmse_vs_ref": 0.0,
+      "vertical_ncc_vs_ref": 1.0,
+      "vertical_nrmse_vs_ref": 0.0
+    }
+  ],
+  "reference_kind": "standard-method conditional wind volume, no physical truth",
+  "reconstruction_ncc_boundary": 0.99999,
+  "reconstruction_nrmse_boundary": 5e-05,
+  "northward_ncc_boundary": 0.99999,
+  "northward_nrmse_boundary": 5e-05,
+  "vertical_ncc_boundary": 0.99999,
+  "vertical_nrmse_boundary": 5e-05
+}

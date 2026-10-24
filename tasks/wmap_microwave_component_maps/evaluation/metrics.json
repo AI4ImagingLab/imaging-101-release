@@ -1,0 +1,19 @@
+{
+  "baseline": [
+    {
+      "method": "Independent FGBuster fixed-spectrum inversion of bound real WMAP observations",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0,
+      "synchrotron_ncc_vs_ref": 1.0,
+      "synchrotron_nrmse_vs_ref": 0.0,
+      "dust_ncc_vs_ref": 1.0,
+      "dust_nrmse_vs_ref": 0.0
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.999999,
+  "reconstruction_nrmse_boundary": 1e-07,
+  "synchrotron_ncc_boundary": 0.999999,
+  "synchrotron_nrmse_boundary": 1e-07,
+  "dust_ncc_boundary": 0.999999,
+  "dust_nrmse_boundary": 1e-07
+}

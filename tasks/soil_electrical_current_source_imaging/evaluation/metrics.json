@@ -1,0 +1,12 @@
+{
+  "baseline": [
+    {
+      "method": "Original bounded iCSD on unchanged author simulation, wc1000 wr1",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.99999,
+  "reconstruction_nrmse_boundary": 0.0001,
+  "reference_kind": "independently reproduced method; actual source grid truth unavailable"
+}

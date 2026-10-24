@@ -1,0 +1,11 @@
+# Shipped interfaces and execution flow
+
+`python -m src.main` calls preprocessing.load_data(path='data/raw_data.npz'), solvers.reconstruct(data,beta=2.), and saves output/reconstruction.npz with reconstruction and surface_density, both float64(1,32,48). Only data/raw_data.npz is read by the solver. Imports do not select a plotting backend.
+
+load_data returns copies with batch axis removed: intensity/uncertainty(3,32,48),wavelengths(3,),galactic coordinates(32,48),response_wavelength(L,),spectral_response(3,L). Intensity units MJy/sr, uncertainty same; coordinates degrees and wavelengths micrometres.
+
+physics_model.planck(wavelength,temperature) accepts broadcastable micrometre/K arrays and returns SI spectral radiance. flux(wavelength,temperature,mass,beta=2.) returns Jy in the source method's one-pc/one-steradian coefficient convention. forward(wavelengths,temperature,surface_density,beta=2.) accepts wavelength(F,),T/Sigma(Y,X) and returns radiance(F,Y,X). jacobian(wavelengths,temperature,surface_density) returns(F,Y,X,2), derivatives with respect to K and kg/m². bandpass_prediction(wavelengths,temperature,surface_density,response_wavelength,spectral_response,beta=2.) returns(F,Y,X) quoted broad-band radiance; this is notebook-only calibration-bias diagnosis.
+
+solvers.fit_pixel(wavelengths,intensity,uncertainty,temperature_init=20.,mass_init=.01,beta=2.) returns a two-element array[T,Sigma]. reconstruct(data,beta=2.) calls it for every pixel and returns maps(2,Y,X),prediction(3,Y,X). Optimization is local task physics with a permitted general-purpose optimizer; no domain package is used. No new observations are generated, so no generator is shipped.
+
+The active notebook loads real observations, computes fresh standard fields, then uses visualization functions for acquisition, forward spectra/Jacobian, original/fresh comparisons, residuals, full-response diagnostics and actual refit sensitivity. Archived source outputs are explicitly separate from fresh results. The standalone Judge imports no src code; each quantity is scored independently using hidden method reference and metric config resolved relative to evaluation/judge.py. Tests use frozen source stages and pipeline fixtures; none import source PTS or private scripts. All file consumers are recorded in validation.

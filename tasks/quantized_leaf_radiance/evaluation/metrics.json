@@ -1,0 +1,14 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified original author TGV dequantization, alpha0.45/fac2/2000 updates, author simulated six-level quantization of real oak-leaf photo",
+      "ncc_vs_ref": 0.9975063086444824,
+      "nrmse_vs_ref": 0.03211854620544848
+    }
+  ],
+  "ncc_boundary": 0.8977556777800342,
+  "nrmse_boundary": 0.035330400825993334,
+  "interval_violation_boundary": 1e-06,
+  "reference_type": "Original real photograph prior to simulated quantization, not a reconstruction",
+  "threshold_rationale": "Truth-reference default0.9*baseline NCC and1.1*baseline dynamic-range NRMSE, plus exact public interval feasibility within1e-6 float32 tolerance; validated by independently run source/native fresh method and poor mid-point/zero outputs."
+}
