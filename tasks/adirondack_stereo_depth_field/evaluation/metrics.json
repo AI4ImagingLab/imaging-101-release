@@ -1,0 +1,49 @@
+{
+  "baseline": [
+    {
+      "method": "Unchanged original BMVC2015 MGM8, complete author Adirondack Q acquisition",
+      "disparity_ncc": 0.980955102334221,
+      "disparity_nrmse": 0.11783727554088902,
+      "depth_ncc": 0.9961421250084753,
+      "depth_nrmse": 0.15156348394973018,
+      "disparity_bad1_fraction": 0.16715410320130283,
+      "geometry_relative_error": 5.063362306227417e-08
+    }
+  ],
+  "thresholds": {
+    "disparity_ncc": {
+      "comparison": ">=",
+      "boundary": 0.8828595921007989
+    },
+    "disparity_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.12962100309497793
+    },
+    "depth_ncc": {
+      "comparison": ">=",
+      "boundary": 0.8965279125076278
+    },
+    "depth_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.16671983234470322
+    },
+    "disparity_bad1_fraction": {
+      "comparison": "<=",
+      "boundary": 0.18386951352143313
+    },
+    "geometry_relative_error": {
+      "comparison": "<=",
+      "boundary": 3.5762786865234375e-07
+    }
+  },
+  "disparity_bad1_definition": "Fraction of all finite independent measured disparities with absolute error greater than1 native pixel; occlusions are included.",
+  "geometry_definition": "Maximum over every output pixel of abs(depth-f*B/(D+doffs))/(f*B/(D+doffs)); camera constants inREADME.",
+  "mask_provenance": "Fixed independent structured-light measurement availability only; all354918 finite measurements, no reconstruction-based or nonocclusion-quality mask.",
+  "threshold_provenance": "Independent original runs and bad controls before local extraction; criteria_frozen_before_local.json in private archive",
+  "disparity_ncc_boundary": 0.8828595921007989,
+  "disparity_nrmse_boundary": 0.12962100309497793,
+  "depth_ncc_boundary": 0.8965279125076278,
+  "depth_nrmse_boundary": 0.16671983234470322,
+  "disparity_bad1_fraction_boundary": 0.18386951352143313,
+  "geometry_relative_error_boundary": 3.5762786865234375e-07
+}

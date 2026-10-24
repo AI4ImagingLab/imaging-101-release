@@ -1,0 +1,47 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original default PCG repeat",
+      "ncc_vs_ref": 0.9999999999999998,
+      "nrmse_vs_ref": 0.0
+    },
+    {
+      "method": "Independent original tighter-PCG tolerance 1e-5",
+      "ncc_vs_ref": 0.9999988674200637,
+      "nrmse_vs_ref": 0.00014437187338231305
+    },
+    {
+      "method": "Original-map float32 serialization roundtrip",
+      "ncc_vs_ref": 0.9999999999999961,
+      "nrmse_vs_ref": 2.423173564779274e-09
+    }
+  ],
+  "ncc_boundary": 0.9999983011300956,
+  "nrmse_boundary": 0.00021655781007346957,
+  "reference_type": "method reference, not independent truth",
+  "metric_scope": "All 2522880 unsmoothed real grid samples; no alignment or mask.",
+  "threshold_provenance": "Frozen from upstream repeat, measured float32 quantization and a tighter original solve before reading/scoring any full cleaned field. Limits include 1.5 times observed stopping error and 20 times serialization NRMSE; NCC uses the corresponding cosine deficit.",
+  "poor_controls": {
+    "zero": {
+      "ncc_vs_ref": 0.0,
+      "nrmse_vs_ref": 0.09585334416331912
+    },
+    "uniform_mean": {
+      "ncc_vs_ref": 0.04308623560051912,
+      "nrmse_vs_ref": 0.09576433062258727
+    },
+    "shuffled": {
+      "ncc_vs_ref": 0.0021984648594908537,
+      "nrmse_vs_ref": 0.13540800856715415
+    },
+    "additional_2Mpc_smoothing": {
+      "ncc_vs_ref": 0.888039283910569,
+      "nrmse_vs_ref": 0.0520849921031013
+    }
+  },
+  "source_only_input_hashes": {
+    "original_native": "90b6e998c0c028ea15a8b0b6df48df8b7bd0b7872453557205a6b256e7a0981f",
+    "original_repeat": "90b6e998c0c028ea15a8b0b6df48df8b7bd0b7872453557205a6b256e7a0981f",
+    "original_tight": "3a0cc4238875fe9ee8b76a5fa799b546ca91eb344a45908f6a6ed1213d7b7100"
+  }
+}

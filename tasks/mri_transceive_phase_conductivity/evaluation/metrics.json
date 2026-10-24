@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Unchanged EPTlib0.1.1 phaseHelmholtz,all25native repeats,quadraticSGcuboidradius5",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "reference_type": "standard_method_not_independent_truth",
+  "output_keys": [
+    "reconstruction"
+  ],
+  "comparison_mask": "data/raw_data.npz reconstruction_support fixedfrominputavailability",
+  "nrmse_definition": "RMS error divided by max(reference)-min(reference), ondeclaredfixedsupport",
+  "tolerance_provenance": "Prelocal originalfloat32nextafteroneULP dynamicNRMSE8.136333964421884e-7; boundary1e-6 preservesnativeoutputprecision. Quantitativepaper_nominal0.56S/misnottruth."
+}

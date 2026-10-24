@@ -1,0 +1,55 @@
+{
+  "reference_type": "independently executed original standard-method result; no independent microstructure truth",
+  "baseline": [
+    {
+      "method": "Fresh explicit multi-compartment SMT versus unmodified original on exact full CFIN observations",
+      "fields": {
+        "intra_fraction": {
+          "ncc": 0.9999999999999968,
+          "nrmse": 1.5884131386927387e-08,
+          "max_abs": 6.770129095112765e-07
+        },
+        "intrinsic_diffusivity": {
+          "ncc": 1.0000000000000016,
+          "nrmse": 2.2215732354406866e-08,
+          "max_abs": 4.413130668193266e-10
+        },
+        "extra_transverse_diffusivity": {
+          "ncc": 0.9999999999999996,
+          "nrmse": 1.091556505950067e-08,
+          "max_abs": 2.0374727867264214e-09
+        },
+        "extra_mean_diffusivity": {
+          "ncc": 0.999999999999998,
+          "nrmse": 1.4416672411001984e-08,
+          "max_abs": 1.3730765394039807e-09
+        }
+      }
+    }
+  ],
+  "fields": {
+    "intra_fraction": {
+      "ncc_boundary": 0.999999,
+      "nrmse_boundary": 1e-05,
+      "float32_nextafter_dynamic_range_nrmse": 3.7770710197738017e-08
+    },
+    "intrinsic_diffusivity": {
+      "ncc_boundary": 0.999999,
+      "nrmse_boundary": 1e-05,
+      "float32_nextafter_dynamic_range_nrmse": 6.116700986745902e-08
+    },
+    "extra_transverse_diffusivity": {
+      "ncc_boundary": 0.999999,
+      "nrmse_boundary": 1e-05,
+      "float32_nextafter_dynamic_range_nrmse": 3.413424354774068e-08
+    },
+    "extra_mean_diffusivity": {
+      "ncc_boundary": 0.999999,
+      "nrmse_boundary": 1e-05,
+      "float32_nextafter_dynamic_range_nrmse": 4.69060453213973e-08
+    }
+  },
+  "nrmse_definition": "RMS error divided by max(reference)-min(reference), over every fixed observation-mask voxel, separately for each required field.",
+  "support": "Public fixed input-only observation_mask; exact zero padding outside. No scale, axis, intensity or field alignment.",
+  "threshold_provenance": "Frozen before local inverse in private prelocal_full_gate.json: measured source64/source32 and float32 nextafter envelopes, all four quantities; no threshold adjusted to fit local results."
+}

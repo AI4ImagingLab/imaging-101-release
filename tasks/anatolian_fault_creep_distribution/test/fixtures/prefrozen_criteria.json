@@ -1,0 +1,122 @@
+{
+  "stage": "frozen before any local acquisition/inverse mathematics",
+  "reference_kind": "original author simplified homogeneous halfspace tied-deep conditional NNLS, not geologic truth",
+  "main_slip_range_nrmse_boundary": 8.797334907099953e-09,
+  "main_slip_ncc_boundary": 0.9999999999999787,
+  "absolute_boundaries": {
+    "deep_slip": 2.0164389624710566e-07,
+    "east_slip": 1.894024119833415e-09,
+    "west_slip": 1.78090323738056e-09,
+    "basin_coefficient": 7.924878220322285e-08,
+    "datum0": 3.6215212162460375e-08,
+    "datum1": 1.2257501680323912e-09,
+    "datum2": 7.483888708748054e-08,
+    "datum3": 3.900402134604519e-08,
+    "datum4": 2.5106039913680434e-08
+  },
+  "measured_serialization_main_nrmse": 5.8648899380666354e-09,
+  "repeat_maxabs": 0.0,
+  "factor": 1.5,
+  "stage_tolerances": {
+    "green_matrix_atol": 2e-11,
+    "green_matrix_rtol": 1e-09,
+    "covariance_atol": 1e-11,
+    "covariance_rtol": 2e-12
+  },
+  "notes": "All nuisance quantities separately scored; all1292main slip patches and all7remote/deep patches retained. Basis coefficient formal kPa/year, not source mislabel MPa/year or physical pressure truth.",
+  "observation_weighted_rms_reference": 1.1809396435215258,
+  "observation_weighted_rms_boundary": 1.2399866256976022,
+  "poor_controls": {
+    "zero": {
+      "main_range_nrmse": 0.328303839227683,
+      "weighted_observation_rms": 2.992657106778487,
+      "deep_slip_maxabs": 26.05956114460914,
+      "east_slip_maxabs": 0.024426014627093234,
+      "west_slip_maxabs": 0.1003063232274781,
+      "basin_coefficient_maxabs": 7.158043345032759,
+      "datum0_maxabs": 8.814875363698178,
+      "datum1_maxabs": 3.470732482897617,
+      "datum2_maxabs": 2.682312674238247,
+      "datum3_maxabs": 12.13743784527749,
+      "datum4_maxabs": 1.576964231057147
+    },
+    "uniform_main": {
+      "main_range_nrmse": 0.2592596827779747,
+      "weighted_observation_rms": 1.2775387998014118,
+      "deep_slip_maxabs": 0.0,
+      "east_slip_maxabs": 0.0,
+      "west_slip_maxabs": 0.0,
+      "basin_coefficient_maxabs": 0.0,
+      "datum0_maxabs": 0.0,
+      "datum1_maxabs": 0.0,
+      "datum2_maxabs": 0.0,
+      "datum3_maxabs": 0.0,
+      "datum4_maxabs": 0.0
+    },
+    "reverse_main": {
+      "main_range_nrmse": 0.33224756155014135,
+      "weighted_observation_rms": 1.2591093154622526,
+      "deep_slip_maxabs": 0.0,
+      "east_slip_maxabs": 0.0,
+      "west_slip_maxabs": 0.0,
+      "basin_coefficient_maxabs": 0.0,
+      "datum0_maxabs": 0.0,
+      "datum1_maxabs": 0.0,
+      "datum2_maxabs": 0.0,
+      "datum3_maxabs": 0.0,
+      "datum4_maxabs": 0.0
+    },
+    "negative_main": {
+      "main_range_nrmse": 0.656607678455366,
+      "weighted_observation_rms": 1.6797258366441457,
+      "deep_slip_maxabs": 0.0,
+      "east_slip_maxabs": 0.0,
+      "west_slip_maxabs": 0.0,
+      "basin_coefficient_maxabs": 0.0,
+      "datum0_maxabs": 0.0,
+      "datum1_maxabs": 0.0,
+      "datum2_maxabs": 0.0,
+      "datum3_maxabs": 0.0,
+      "datum4_maxabs": 0.0
+    },
+    "source_gls": {
+      "main_range_nrmse": 0.0755856202060716,
+      "weighted_observation_rms": 1.040193149063525,
+      "deep_slip_maxabs": 11.857438761171615,
+      "east_slip_maxabs": 0.012920894647584358,
+      "west_slip_maxabs": 0.0014427148433334425,
+      "basin_coefficient_maxabs": 0.18615685286752015,
+      "datum0_maxabs": 0.4273350455176388,
+      "datum1_maxabs": 0.030303865310751466,
+      "datum2_maxabs": 5.338606799447863,
+      "datum3_maxabs": 2.1359322528229647,
+      "datum4_maxabs": 2.9357783926458794
+    },
+    "source_untied_nnls": {
+      "main_range_nrmse": 0.03240589236602332,
+      "weighted_observation_rms": 1.1777119541998569,
+      "deep_slip_maxabs": 9.878984042679761,
+      "east_slip_maxabs": 0.0037185868444521188,
+      "west_slip_maxabs": 0.013521369786348256,
+      "basin_coefficient_maxabs": 0.31260041953426754,
+      "datum0_maxabs": 0.0705795360836845,
+      "datum1_maxabs": 0.18707837490067902,
+      "datum2_maxabs": 0.08101969582965296,
+      "datum3_maxabs": 0.13530527571808193,
+      "datum4_maxabs": 0.05401988169364813
+    },
+    "wrong_basin_units": {
+      "main_range_nrmse": 0.0,
+      "weighted_observation_rms": 169.4747019295114,
+      "deep_slip_maxabs": 0.0,
+      "east_slip_maxabs": 0.0,
+      "west_slip_maxabs": 0.0,
+      "basin_coefficient_maxabs": 7150.8853016877265,
+      "datum0_maxabs": 0.0,
+      "datum1_maxabs": 0.0,
+      "datum2_maxabs": 0.0,
+      "datum3_maxabs": 0.0,
+      "datum4_maxabs": 0.0
+    }
+  }
+}

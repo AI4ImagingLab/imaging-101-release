@@ -1,0 +1,18 @@
+The local mathematical extraction adapts LookUp3D scanner code by
+geometryprocessing, copyright (c) 2024, under the accompanying MIT License.
+Private verification preserves the exact original revision and explicitly
+records array-sqrt and depth-gather API qualifications; this is not a claim
+that all original interfaces execute unchanged.
+
+Author-distributed measured exposures and independent calibration are from
+Pereira, Gao, Piadyk, Fouhey, Silva and Panozzo, Data of LookUp3D:
+Data-Driven 3D Scanning, NYU Data Repository (2025), version DOI
+10.58153/1n4p2-ygf77, under Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/
+https://doi.org/10.58153/1n4p2-ygf77
+Adaptations: exact sensor ROI selection, TIFF RGB-to-NPZ packaging and
+reshaping supplied low-rank calibration factors; native intensity scale and
+all selected calibration values are retained. These local adaptations and
+computed fields are identified independently of author measurements.
+
+No dense independently measured object geometry is supplied or claimed.

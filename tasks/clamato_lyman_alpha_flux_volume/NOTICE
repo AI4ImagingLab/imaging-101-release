@@ -1,0 +1,23 @@
+The local covariance lookup, whitening and explicit PCG conventions derive from dachshund by Casey W. Stark (2014), adapted to NumPy/SciPy. General spatial indexing and sparse products replace exhaustive zero-valued pair loops; the selected mathematical model is preserved.
+
+Copyright (c) 2014, Casey W. Stark.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+Observations: CLAMATO DR1 by Lee et al. (2018), doi:10.5281/zenodo.1292459. Creative Commons Attribution 4.0, https://creativecommons.org/licenses/by/4.0/. This task repackages the author continuum-normalized v4 spectral pixels into batch-first NPZ without changing values.

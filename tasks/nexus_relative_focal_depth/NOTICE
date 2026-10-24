@@ -1,0 +1,66 @@
+# Required notices
+
+The local explicit variational depth-from-focus implementation adapts the author
+CUDA port by Dennis Mack, Adrian Haarbach and Markus Schlaffer, Technical
+University Munich,2014. Source-file teaching/supervision attribution also names
+Maria Klodt, Jan Stuehmer, Mohamed Souiai and Thomas Moellenhoff. The source
+repository distributes the GNU General Public License version2; its complete
+unaltered text is retained in LICENSE. Exact source revision and modifications
+are documented in maintainer test/validation.md. No additional later-version
+license grant is inferred.
+
+The small general-purpose binary32 Gaussian elimination preserves the operation
+order of OpenCV3.4.16 core's generic small-matrix LU implementation. It does not
+import OpenCV or call a domain reconstruction library. Its upstream license and
+copyright notice follow verbatim.
+
+By downloading, copying, installing or using the software you agree to this license.
+If you do not agree to this license, do not download, install,
+copy or use the software.
+
+
+                          License Agreement
+               For Open Source Computer Vision Library
+                       (3-clause BSD License)
+
+Copyright (C) 2000-2021, Intel Corporation, all rights reserved.
+Copyright (C) 2009-2011, Willow Garage Inc., all rights reserved.
+Copyright (C) 2009-2016, NVIDIA Corporation, all rights reserved.
+Copyright (C) 2010-2013, Advanced Micro Devices, Inc., all rights reserved.
+Copyright (C) 2015-2021, OpenCV Foundation, all rights reserved.
+Copyright (C) 2015-2016, Itseez Inc., all rights reserved.
+Copyright (C) 2019-2021, Xperience AI, all rights reserved.
+Third party copyrights are property of their respective owners.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice,
+    this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+  * Neither the names of the copyright holders nor the names of the contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+
+This software is provided by the copyright holders and contributors "as is" and
+any express or implied warranties, including, but not limited to, the implied
+warranties of merchantability and fitness for a particular purpose are disclaimed.
+In no event shall copyright holders or contributors be liable for any direct,
+indirect, incidental, special, exemplary, or consequential damages
+(including, but not limited to, procurement of substitute goods or services;
+loss of use, data, or profits; or business interruption) however caused
+and on any theory of liability, whether in contract, strict liability,
+or tort (including negligence or otherwise) arising in any way out of
+the use of this software, even if advised of the possibility of such damage.
+
+
+The real registered focal-stack images are from Adrian Haarbach's author
+Depth from Focus datasets, Zenodo record438196, distributed as CC BY4.0.
+Attribution: Adrian Haarbach, Depth from Focus datasets, doi:10.5281/zenodo.438196.
+The task stores losslessly converted numeric BGR observations. No new image
+registration, image alteration or absolute physical calibration is asserted.
+Data license: https://creativecommons.org/licenses/by/4.0/

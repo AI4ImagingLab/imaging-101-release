@@ -1,0 +1,27 @@
+{
+  "baseline": [
+    {
+      "method": "original author simplified homogeneous halfspace tied-deep conditional NNLS, not geologic truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "reference_kind": "conditional validated original method result, not truth",
+  "main_slip_ncc_boundary": 0.9999999999999787,
+  "main_slip_nrmse_boundary": 8.797334907099953e-09,
+  "absolute_boundaries": {
+    "deep_slip": 2.0164389624710566e-07,
+    "east_slip": 1.894024119833415e-09,
+    "west_slip": 1.78090323738056e-09,
+    "basin_coefficient": 7.924878220322285e-08,
+    "datum0": 3.6215212162460375e-08,
+    "datum1": 1.2257501680323912e-09,
+    "datum2": 7.483888708748054e-08,
+    "datum3": 3.900402134604519e-08,
+    "datum4": 2.5106039913680434e-08
+  },
+  "observation_weighted_rms_boundary": 1.2399866256976022,
+  "nrmse_definition": "RMS error divided by reference dynamic range over all1292main fault patches. Constant/nonfinite references are evaluator errors. Other required quantities use separate max-absolute errors in declared physical units.",
+  "observation_metric_definition": "sqrt((d-Gm)^T Cd^-1(d-Gm)/3554), using independently captured original geometry-derived operator and known noise covariance.",
+  "tolerance_provenance": "Frozen before local extraction from independent original rerun and float32-serialization diagnostic, factor1.5; see test/fixtures/prefrozen_criteria.json and validation.md."
+}

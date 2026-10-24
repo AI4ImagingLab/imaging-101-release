@@ -1,0 +1,32 @@
+{
+  "baseline": [
+    {
+      "method": "Original author float64 signed TV: TAM",
+      "ncc_vs_ref": 0.9798557718620025,
+      "nrmse_vs_ref": 0.04729885151878784,
+      "mass_relative_error": 0.07027345870287668
+    },
+    {
+      "method": "Original author float64 signed TV: TEMPO",
+      "ncc_vs_ref": 0.9877817607040076,
+      "nrmse_vs_ref": 0.05565058790795883,
+      "mass_relative_error": 0.010668133624245884
+    }
+  ],
+  "ncc_boundary": 0.9,
+  "nrmse_boundary_per_species": [
+    0.05202873667066663,
+    0.06121564669875471
+  ],
+  "mass_relative_error_boundary": 0.15,
+  "forward_noise_rms_lower_boundary": 0.9,
+  "forward_noise_rms_upper_boundary": 1.1,
+  "absolute_residual_lag1_boundary": 0.1,
+  "reference": "Actual analytical author-defined nonnegative fields sampled on inverse lattice; no alignment/crop/rescaling",
+  "provenance": "Frozen before local extraction: publicNPZ82da9130..., formal_source_evidence.json, known receiver sigma5000",
+  "metric_definitions": {
+    "mass_relative_error": "abs(sum(estimate)-sum(truth))/abs(sum(truth)); common pixel area cancels",
+    "forward_noise_rms_over_sigma": "RMS(A(estimate)-observed)/5000 on all40x1200 samples",
+    "absolute_residual_lag1": "Absolute Pearson correlation of adjacent field-channel residual pairs over all projections; no per-projection mean removal"
+  }
+}

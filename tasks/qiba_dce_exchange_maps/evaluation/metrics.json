@@ -1,0 +1,23 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced complete published standard Tofts-Kety estimator including native clipping; all3000 source-existing noisy phantom pixels",
+      "ktrans_ncc": 0.9229122579780826,
+      "ktrans_nrmse": 0.19474378614914736,
+      "extracellular_fraction_ncc": 0.9322052296273867,
+      "extracellular_fraction_nrmse": 0.1890152437107675
+    }
+  ],
+  "nrmse_definition": "RMS error divided by max(reference)-min(reference), over all3000 raster pixels.",
+  "reference_kind": "actual independently specified QIBA digital phantom parameter truth",
+  "quantities": {
+    "ktrans": {
+      "ncc_boundary": 0.8306210321802744,
+      "nrmse_boundary": 0.2142181647640621
+    },
+    "extracellular_fraction": {
+      "ncc_boundary": 0.8389847066646481,
+      "nrmse_boundary": 0.20791676808184426
+    }
+  }
+}

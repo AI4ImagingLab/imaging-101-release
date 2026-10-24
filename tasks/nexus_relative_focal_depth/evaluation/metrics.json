@@ -1,0 +1,10 @@
+{
+  "baseline": [
+    {"method": "Unmodified author CUDA degree8/400step result as method reference; no independent physical depth truth", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0},
+    {"method": "Independently executed unchanged domain-source with compiler FMA disabled, before local extraction", "ncc_vs_ref": 0.9999999998335811, "nrmse_vs_ref": 0.000004668425928513327}
+  ],
+  "ncc_boundary": 0.9999999997503717,
+  "nrmse_boundary": 0.00000700263889276999,
+  "tolerance_provenance": "1.5times source-only whole-field FMA on/off numerical spread, fixed before local extraction; alternative initialization not used to set tolerance",
+  "comparison_scope": "all1080x1920 relative focal coordinates; no crop, alignment, gain or offset fit"
+}

@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Unchanged author Ratio2pH release v3.0, full43root native images, independent9+8root calibration",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "reference_type": "standard_method_not_independent_truth",
+  "output_keys": [
+    "reconstruction"
+  ],
+  "aggregation": "Every one of43 input-defined root images must independently meet both boundaries; no pooling hides failures.",
+  "nrmse_definition": "Per-image RMS error divided by that image reference max-minus-min over finite nonzero input-ratio pixels.",
+  "tolerance_provenance": "Prelocal nativefloat32nextafter1ULP dynamicNRMSE max5.695746871895818e-7; boundary1e-6 retainsoutputprecision."
+}

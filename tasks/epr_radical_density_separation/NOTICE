@@ -1,0 +1,8 @@
+Local EPR acquisition and TV inversion mathematics adapted from PyEPRI.
+Copyright(c)2024 Remy Abergel, MIT License, reproduced in LICENSE.
+The supplied benchmark observations are newly generated with the original author
+synthetic experiment; real author reference spectra provide relative spectral
+calibration. No independently calibrated absolute molecular amount is asserted.
+The reference spectra are publicly offered author research demonstration data;
+no separate data redistribution authorization was found. This is a local
+research package; no external publication or independent data license is claimed.

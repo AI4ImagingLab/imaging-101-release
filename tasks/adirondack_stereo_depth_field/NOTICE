@@ -1,0 +1,12 @@
+The locally extracted Census and MGM/SGM recurrences are adapted from MGM.
+Copyright (C) 2015 Gabriele Facciolo, Carlo de Franchis, Enric Meinhardt.
+Distributed under GNU Affero General Public License version3; see LICENSE.
+Exact source revision and adaptations are recorded in maintainer validation.
+
+The real Adirondack images, camera calibration and independent disparity
+measurements are supplied by the Middlebury stereo dataset authors. Their data
+page expressly grants use and publication of all images and disparity maps and
+requests citation of Scharstein et al., High-Resolution Stereo Datasets with
+Subpixel-Accurate Ground Truth, GCPR2014. This is a custom permission, not a claim
+that the dataset has an invented Creative Commons license.
+https://vision.middlebury.edu/stereo/data/
