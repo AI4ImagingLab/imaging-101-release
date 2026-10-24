@@ -1,0 +1,13 @@
+{
+ "baseline": [{"method": "Independent original full acquisition and phase-contrast inverse, no measured velocity truth", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+ "ncc_boundary": 0.9999995, "nrmse_boundary": 0.000001,
+ "x_ncc_boundary": 0.9999995, "x_nrmse_boundary": 0.000001,
+ "y_ncc_boundary": 0.9999995, "y_nrmse_boundary": 0.000001,
+ "z_ncc_boundary": 0.9999995, "z_nrmse_boundary": 0.000001,
+ "phase_phasor_rms_boundary": 0.000002,
+ "outside_mask_max_boundary": 0.00000001,
+ "reference_kind": "independently reproduced original standard method; no actual velocity truth",
+ "tolerance_provenance": "Frozen before cleaned implementation; original source block on Windows versus original complete Linux run has RMS7.91e-10m/s, DRNRMSE2.092e-9, max2.98e-8m/s. Same original arithmetic in float64 differs DRNRMSE2.071e-9. Nonzero1e-6 normalized bounds allow numerical backend precision without expanding a zero self-error. Physical phasor threshold accounts for complex64 angle/mean precision; no fitted phase or scale.",
+ "phase_phasor_rms_definition": "sqrt(mean(abs(exp(i*(pi*v/VENC+mean_t theta))-exp(i*theta))^2)) on all3directions and the fixed public magnitude mask; theta=atan2(imag(Sd*conj(S0)),real(...)), independent complex128 arithmetic; VENC=.16m/s",
+ "outside_mask_max_definition": "Maximum absolute submitted velocity over all3directions outside reference magnitude>0.10global maximum, in m/s"
+}

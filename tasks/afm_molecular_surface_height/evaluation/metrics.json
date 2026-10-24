@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Known-probe erosion with explicit zero-substrate projection; independent upstream erosion + declared projection",
+      "ncc_vs_ref": 0.9514423828199022,
+      "nrmse_vs_ref": 0.03055631860849182,
+      "observation_rmse": 3.018926125977721
+    }
+  ],
+  "ncc_boundary": 0.856298144537912,
+  "nrmse_boundary": 0.033611950469341005,
+  "observation_rmse_boundary": 3.3208187385754937,
+  "reference_kind": "author_existing_simulated_actual_surface",
+  "observation_rmse_definition": "sqrt(mean((D(reconstruction)-measurements)**2)), all 30 frames and all pixels, Angstrom",
+  "threshold_rationale": "Actual-truth baseline scaling 0.9*NCC and 1.1*dynamic-range-NRMSE; forward RMSE is 1.1 times independently reproduced standard result, consistent with acquisition noise sigma=3 Angstrom."
+}

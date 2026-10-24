@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "unchanged original PyLorentz TIE, native ROI, nearest defocus, periodic boundary",
+      "reference": "validated standard-method estimate; no actual truth"
+    }
+  ],
+  "metric_provenance": "Original NumPy2.4.6 run vs independent NumPy1.26.4 rerun: float32 reduction differences induce <=6e-6 T nm absolute; conservative nonzero 1e-6 dynamic-range tolerance. Observation boundaries fixed at 1.05 times independent spectral-forward baseline residual; no contrast fit or alignment.",
+  "observation_B_boundary": 0.42465354918856807,
+  "observation_E_boundary": 0.25339891452110497,
+  "induction_consistency_boundary": 1e-10,
+  "phase_B_ncc_boundary": 0.999999,
+  "phase_B_nrmse_boundary": 1e-06,
+  "phase_E_ncc_boundary": 0.999999,
+  "phase_E_nrmse_boundary": 1e-06,
+  "Bx_ncc_boundary": 0.999999,
+  "Bx_nrmse_boundary": 1e-06,
+  "By_ncc_boundary": 0.999999,
+  "By_nrmse_boundary": 1e-06
+}

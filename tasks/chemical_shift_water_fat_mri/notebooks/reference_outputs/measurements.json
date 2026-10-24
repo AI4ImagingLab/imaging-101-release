@@ -1,0 +1,175 @@
+{
+  "paper": "Complete ISMRM2015 proceedings3653; journal2017 abstract-only, no full-text claim",
+  "unmodified_original_run": {
+    "exit_status": 0,
+    "runtime_s": 1.2776802000007592,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "data_shape": [
+      3,
+      101,
+      101,
+      4
+    ],
+    "data_dtype": "complex64",
+    "bound_hash": "c76959255a907d04edc318fa48dd91ee69b4f34d8bcf7b19e93553656f43ac22",
+    "code_revision": "657d7e98ee5ca1b16fc16e34ed4625bfb6643912",
+    "original_data_params": "DataParams(t=(0.00287, 0.00607, 0.00927), B0=1.494, voxelsize=(1.5, 1.5, 5.0), cyclic=(False, False, False), crop=None, pad=False, temperature=37, offresCenter=0.0)",
+    "original_algo_params": "QPBOparams(nR2=145, R2max=144.0, R2cand=(40.0,), nB0=100, use3D=True, magnitudeDiscrimination=False, autocrop=False, output=['wat', 'fat', 'ff', 'B0map', 'R2map'], mu=0.1, offresPenalty=0.0, neighbourhoodRadius=0.0, multiScale=True, nICMiter=10, maxICMupdate=10, graphcutLimit=0.0)",
+    "original_model_params": "ModelParams(watCS=4.64655, fatCS=(5.3, 4.31, 2.76, 2.1, 1.3, 0.9), relAmps=(0.048, 0.039, 0.004, 0.128, 0.693, 0.087), realEstimates=False)",
+    "cut_calls": [
+      {
+        "nodes": 4,
+        "seconds": 2.9000002541579306e-05,
+        "unlabeled": 0
+      },
+      {
+        "nodes": 16,
+        "seconds": 5.1899995014537126e-05,
+        "unlabeled": 2
+      },
+      {
+        "nodes": 49,
+        "seconds": 0.00010910000128205866,
+        "unlabeled": 12
+      },
+      {
+        "nodes": 338,
+        "seconds": 0.0007869000037317164,
+        "unlabeled": 53
+      },
+      {
+        "nodes": 2704,
+        "seconds": 0.006801100003940519,
+        "unlabeled": 2
+      },
+      {
+        "nodes": 10404,
+        "seconds": 0.027039499997044913,
+        "unlabeled": 0
+      },
+      {
+        "nodes": 40804,
+        "seconds": 0.11460559999977704,
+        "unlabeled": 17
+      }
+    ],
+    "qualification": "Author algorithm unchanged; full supplied volume without example-config ROI cropping; explicit acquisition and algorithm kwargs; tracers only record binary cut inputs and labels."
+  },
+  "qualified_original_run": {
+    "exit_status": 0,
+    "runtime_s": 1.282368200001656,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "data_shape": [
+      3,
+      101,
+      101,
+      4
+    ],
+    "data_dtype": "complex64",
+    "bound_hash": "c76959255a907d04edc318fa48dd91ee69b4f34d8bcf7b19e93553656f43ac22",
+    "code_revision": "657d7e98ee5ca1b16fc16e34ed4625bfb6643912",
+    "original_data_params": "DataParams(t=(0.00287, 0.00607, 0.00927), B0=1.494, voxelsize=(1.5, 1.5, 5.0), cyclic=(False, False, False), crop=None, pad=False, temperature=37, offresCenter=0.0)",
+    "original_algo_params": "QPBOparams(nR2=145, R2max=144.0, R2cand=(40.0,), nB0=100, use3D=True, magnitudeDiscrimination=False, autocrop=False, output=['wat', 'fat', 'ff', 'B0map', 'R2map'], mu=0.1, offresPenalty=0.0, neighbourhoodRadius=0.0, multiScale=True, nICMiter=10, maxICMupdate=10, graphcutLimit=0.0)",
+    "original_model_params": "ModelParams(watCS=4.64655, fatCS=(5.3, 4.31, 2.76, 2.1, 1.3, 0.9), relAmps=(0.048, 0.039, 0.004, 0.128, 0.693, 0.087), realEstimates=False)",
+    "cut_calls": [
+      {
+        "nodes": 4,
+        "seconds": 3.01000036415644e-05,
+        "unlabeled": 0
+      },
+      {
+        "nodes": 16,
+        "seconds": 5.1899995014537126e-05,
+        "unlabeled": 9
+      },
+      {
+        "nodes": 49,
+        "seconds": 0.00011140000424347818,
+        "unlabeled": 33
+      },
+      {
+        "nodes": 338,
+        "seconds": 0.0007714999956078827,
+        "unlabeled": 150
+      },
+      {
+        "nodes": 2704,
+        "seconds": 0.006961000006413087,
+        "unlabeled": 322
+      },
+      {
+        "nodes": 10404,
+        "seconds": 0.027369999996153638,
+        "unlabeled": 613
+      },
+      {
+        "nodes": 40804,
+        "seconds": 0.11136930000066059,
+        "unlabeled": 1753
+      }
+    ],
+    "qualification": "Qualified original: sole mathematical correction swaps graph.add_pairwise_term endpoint order to(q,p), matching q-first constructed pair table. All other numeric author source unchanged. One print-only f-string syntax compatibility replacement, no original disk edits. Full supplied volume without example-config ROI cropping; explicit acquisition/algorithm kwargs; tracers record stages only."
+  },
+  "endpoint_proof": {
+    "primitive_api_doc": "Adds pairwise term Eij(x_i, x_j) with cost values E00, E01, E10, E11.\n\t    IMPORTANT: see note about the constructor \n        ",
+    "candidate_A": [
+      0,
+      1
+    ],
+    "candidate_B": [
+      2,
+      4
+    ],
+    "unary_D": [
+      [
+        0.0,
+        2.0
+      ],
+      [
+        100.0,
+        0.0
+      ]
+    ],
+    "q_first_pairwise_table": [
+      1.0,
+      16.0,
+      1.0,
+      4.0
+    ],
+    "unmodified_endpoint_p_q_labels": [
+      0,
+      1
+    ],
+    "corrected_endpoint_q_p_labels": [
+      0,
+      0
+    ],
+    "unmodified_physical_energy": 16.0,
+    "corrected_physical_energy": 3.0,
+    "exhaustive_physical_energies": {
+      "(0, 0)": 3.0,
+      "(0, 1)": 16.0,
+      "(1, 0)": 103.0,
+      "(1, 1)": 104.0
+    },
+    "conclusion": "Author table is indexed q,p but is supplied to primitive as p,q. Swap endpoint order only; all candidate/curvature/scale/ICM mathematics unchanged."
+  },
+  "qualification": "Only binary primitive endpoint order(p,q) becomes(q,p), restoring the constructed physical energy; independent four-state test, unmodified and qualified runs separately identified",
+  "data_type": "Author-provided challenge case17 observations; source-introduction commit explicitly names fatwater challenge; anatomical details not supplied",
+  "truth": "No independent spatial truth; baseline is qualified author method result",
+  "prelocal_thresholds": {
+    "stage_float_rtol": 1e-06,
+    "stage_float_atol": 1e-12,
+    "discrete_labels": "exact equality with generic solver same version",
+    "reference_map_dynamic_range_nrmse_boundary": 1e-05,
+    "reference_map_ncc_boundary": 0.99999,
+    "decision": "Numerical reproducibility tolerance rather than multiplying zero self error. Frozen before first local run. All5required maps independently evaluated; no hidden alignment/rescale/crop."
+  },
+  "fresh": "Computed actively by notebook; never substituted by captured output"
+}

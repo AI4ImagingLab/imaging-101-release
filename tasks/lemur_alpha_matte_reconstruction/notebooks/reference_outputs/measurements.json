@@ -1,0 +1,53 @@
+{
+  "selected": {
+    "runtime_seconds": 0.5985900000014226,
+    "iterations": 1350,
+    "last_recursive_residual": [
+      1350,
+      6.6410257977708626e-06,
+      9.939294383071883e-08
+    ],
+    "max_difference_default_ichol": 3.822980819323529e-05,
+    "relative_l2_difference_default_ichol": 2.679236260022633e-06,
+    "source_revision": "6d5c4a6bed0e5672abac0bad078e594423ffe4fd",
+    "selected_configuration": "original estimate_alpha_cf with documented original jacobi preconditioner; epsilon1e-7 radius1 CG rtol1e-7 maxiter10000 zero initialization",
+    "parity_criteria": {
+      "laplacian_rtol": 1e-08,
+      "laplacian_atol": 1e-11,
+      "stage_rtol": 1e-07,
+      "stage_atol": 1e-08,
+      "full_field_relative_l2": 1e-06
+    },
+    "selected_before_local_extraction": true
+  },
+  "default": {
+    "runtime_seconds": 0.5588606999954209,
+    "shape": [
+      440,
+      680
+    ],
+    "unknown_pixels": 38666,
+    "iterations": 6,
+    "last_recursive_residual": [
+      6,
+      6.340822069976835e-06,
+      9.489994332702861e-08
+    ],
+    "explicit_unclipped_residual": null,
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "numba": "0.68.0",
+    "python": "3.11.11",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "source_revision": "6d5c4a6bed0e5672abac0bad078e594423ffe4fd",
+    "raw_sha256": "0916ac23b8584a784f28ed263889fa0f563c4950aa9cd1a4ed65b7add19791d9",
+    "source_unchanged": true,
+    "preconditioner_allocation_bound": 8000000,
+    "alpha_min": 0.0,
+    "alpha_max": 1.0
+  },
+  "independent_preconditioner_rms_difference": 1.5970571814922722e-06,
+  "output_float32_rounding_rms": 4.218421285299302e-09,
+  "reference_kind": "standard method result, not actual opacity truth",
+  "source_data_license": "CC0-1.0 Mathias Appel photograph; authored manual trimap in MIT source archive"
+}

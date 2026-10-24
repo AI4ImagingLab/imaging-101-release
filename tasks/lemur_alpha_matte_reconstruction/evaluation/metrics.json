@@ -1,0 +1,14 @@
+{
+  "baseline": [
+    {
+      "method": "independently reproduced original closed-form matting, original optional Jacobi CG configuration",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9999999999,
+  "nrmse_boundary": 1e-05,
+  "known_pixel_max_error_boundary": 1e-08,
+  "reference_kind": "standard method, no actual opacity truth",
+  "tolerance_rationale": "Nonzero numerical tolerance from independent original incomplete-Cholesky versus Jacobi solves at unchanged residual tolerance; observed full-image RMS difference 1.5970571814922722e-06. Output float32-rounding RMS 4.218421285299302e-09. Native stage parity is independently checked and stricter; threshold does not establish physical opacity accuracy."
+}

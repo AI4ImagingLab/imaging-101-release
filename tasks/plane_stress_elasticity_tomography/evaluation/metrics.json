@@ -1,0 +1,29 @@
+{
+  "baseline": [
+    {
+      "method": "Independent complete qualified author TV on final small-strain observations",
+      "ncc_vs_ref": 0.9995365432249756,
+      "nrmse_vs_ref": 0.030705388682738345,
+      "relative_displacement_error": 0.0052063236282099065,
+      "maximum_abs_principal_strain": 0.002344767328500574
+    }
+  ],
+  "selected_standard_method": "qualified source TV, original99-update cap and original cost-increase/relative-cost stopping",
+  "ncc_boundary": 0.8995828889024781,
+  "nrmse_boundary": 0.033775927551012185,
+  "relative_displacement_error_boundary": 0.005726955991030898,
+  "maximum_abs_principal_strain_boundary": 0.01,
+  "reference_role": "Actual simulated modulus, not a reconstruction or inferred calibration",
+  "nrmse_definition": "sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)), all800 elements without alignment or scaling",
+  "relative_displacement_error_definition": "L2 norm of independent FEM prediction minus public noisy displacement, divided by L2 norm of that displacement",
+  "maximum_abs_principal_strain_definition": "Maximum absolute principal affine strain of independently predicted displacement over all800 P1 triangles; engineering shear divided by2",
+  "threshold_provenance": {
+    "NCC": ".9 times complete qualified-source actual-truth NCC",
+    "NRMSE": "1.1 times complete qualified-source actual-truth NRMSE",
+    "observation": "1.1 times complete qualified-source relative displacement error; reference exhibits regularization bias and this is not a chi-squared threshold",
+    "strain": "Fixed small-strain applicability ceiling.01, selected before corrected physical acquisition generation"
+  },
+  "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+  "code_revision": "3f3deaccb60883cdedab1e7c1e2b93bb83e8b52f",
+  "qualification": "Current-vector central J, correct homogeneous grid index, public-noisy-data ad-hoc weights, fixed consistent quadratic barriers; all other selected TV conventions retained"
+}

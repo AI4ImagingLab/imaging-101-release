@@ -1,0 +1,27 @@
+{
+  "chi2_boundary": 1.1786173897013836,
+  "reference_scattering_nrmse_boundary": 1e-06,
+  "mass_error_boundary": 1e-06,
+  "negative_mass_fraction_boundary": 0.13233774201800175,
+  "outside_mass_fraction_boundary": 0.11198335350661684,
+  "disconnected_fraction_boundary": 0.01,
+  "porod_tail_relative_rms_boundary": 0.2,
+  "rg_relative_error_boundary": 0.1,
+  "metric_definitions": {
+    "reference_scattering_nrmse": "RMS discrepancy between estimate and hidden standard-reference full-FFT shell scattering sampled at every468 measured q, divided by max(reference scattering)-min(reference scattering); no rescaling, spatial alignment or molecular-truth claim. Ground truth takes precedence if present; otherwise baseline_reference supplies reconstruction. Independent5 source starts agree at floating-point roundoff;1e-6 is a documented nonzero conservative numerical tolerance.",
+    "chi2": "Mean squared residual divided by supplied experimental sigma squared over all468 measured q; fixed normalization I/I_GNOM(0); no amplitude or offset fitting. Full Fourier shell average, cubic shell interpolation as in source.",
+    "negative_mass_fraction": "absolute negative mass / positive mass, preserving final Fourier-projection tail",
+    "outside_mass_fraction": "Positive mass beyond radius Dmax40A from acquisition-independent integer center / positive mass; soft support, not a hard molecular boundary.",
+    "disconnected_fraction": "1 - largest connected positive mass fraction within Gaussian sigma1.5vox/core20percent support",
+    "porod_tail_relative_rms": "RMS of (computed shell intensity/declared Porod extrapolation - 1) for all shells above measured qmax",
+    "rg_relative_error": "abs(first-shell scattering Rg - weighted Guinier Rg from actual measurements q<=0.08/A)/measurement Rg",
+    "mass_error": "abs(integral rho dV - 1)"
+  },
+  "baseline": [
+    {
+      "method": "Qualified original Hermitian-corrected DENSS, five independent seeds41-45, final Fourier projection; no spatial truth",
+      "chi2": 1.071470354273985
+    }
+  ],
+  "scientific_nonuniqueness": "No voxel-reference NCC/NRMSE or hidden seed criterion. Rotation/handedness/translation do not identify molecular shape; shape differences are reported only."
+}

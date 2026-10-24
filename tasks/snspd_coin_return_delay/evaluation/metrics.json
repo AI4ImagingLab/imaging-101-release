@@ -1,0 +1,19 @@
+{
+  "baseline": [
+    {
+      "method": "Original CVPR2022 FullHist/IdentityCoding matchfilt applied to independent real Glasgow SNSPD data",
+      "max_abs_bin_error": 0.0,
+      "mean_abs_bin_error": 0.0,
+      "mean_correlation_regret": 0.0
+    }
+  ],
+  "max_abs_bin_error_boundary": 1e-06,
+  "mean_abs_bin_error_boundary": 1e-07,
+  "mean_correlation_regret_boundary": 0.0001,
+  "definitions": {
+    "max_abs_bin_error": "max absolute signed depth difference divided by0.149896229mm",
+    "mean_abs_bin_error": "mean absolute signed depth difference divided by0.149896229mm",
+    "mean_correlation_regret": "mean(max_s ZNCC(y,hshift_s)-ZNCC(y,hshift_candidate)); computational circular correlation over10000 bins; absolute shift from fixed public corner reference"
+  },
+  "provenance": "Independent complete original constructor and local repetitions have exact integer peaks. All10000lags were independently converted using Decimal exact rational SI units and five float multiplication orders; worst pairwise difference is recorded in private snspd_roundoff_experiment.json. Conservative nonzero max1e-6bin/mean1e-7bin boundaries cover numeric conversion only, not a one-bin physical accuracy allowance."
+}

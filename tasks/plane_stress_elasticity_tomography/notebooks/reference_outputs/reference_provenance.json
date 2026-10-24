@@ -1,0 +1,62 @@
+{
+  "unmodified_tv": {
+    "source_trajectory": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\openqsei\\small_strain_rectangle\\segmented\\TV\\trajectory.mat",
+    "sha256": "cc20a876f76cfc0257c354a53b6446be9edddbabdaec4386e4bedc671df27ea8",
+    "updates": 2,
+    "finished": true,
+    "sum_process_runtime_seconds": 329.6181237000055,
+    "failed_process_attempts": 0,
+    "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+    "reference_kind": "method result, not truth"
+  },
+  "unmodified_smooth": {
+    "source_trajectory": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\openqsei\\small_strain_rectangle\\segmented\\smooth\\trajectory.mat",
+    "sha256": "44b77e816dd98207ece282ea46db03cff7ef8cbc79a72313ffbd737b5c5c014c",
+    "updates": 2,
+    "finished": true,
+    "sum_process_runtime_seconds": 328.70325030003005,
+    "failed_process_attempts": 0,
+    "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+    "reference_kind": "method result, not truth"
+  },
+  "unmodified_tikhonov": {
+    "source_trajectory": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\openqsei\\small_strain_rectangle\\segmented\\tikhonov\\trajectory.mat",
+    "sha256": "02acffdfbe39f9bc6f0e5260208d54d4079bd66f5ee5d4bc6210c75a26db6351",
+    "updates": 99,
+    "finished": true,
+    "sum_process_runtime_seconds": 19605.854849100055,
+    "failed_process_attempts": 8,
+    "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+    "reference_kind": "method result, not truth"
+  },
+  "qualified_tv": {
+    "source_trajectory": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\openqsei\\small_strain_rectangle\\qualified_segmented\\TV\\trajectory.mat",
+    "sha256": "87a26605da3c70ee3201bd5be45367b46c9c30b325d9204bca9332d076171cfe",
+    "updates": 9,
+    "finished": true,
+    "sum_process_runtime_seconds": 1446.7094902000026,
+    "failed_process_attempts": 4,
+    "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+    "reference_kind": "method result, not truth"
+  },
+  "qualified_smooth": {
+    "source_trajectory": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\openqsei\\small_strain_rectangle\\qualified_segmented\\smooth\\trajectory.mat",
+    "sha256": "8d4dca61823da1405f8eb8f9ce50d851ba3a25f809658e7d0038d96715472ddc",
+    "updates": 10,
+    "finished": true,
+    "sum_process_runtime_seconds": 1647.3664182999855,
+    "failed_process_attempts": 1,
+    "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+    "reference_kind": "method result, not truth"
+  },
+  "qualified_tikhonov": {
+    "source_trajectory": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\openqsei\\small_strain_rectangle\\qualified_segmented\\tikhonov\\trajectory.mat",
+    "sha256": "b786fef853afc8a5e3cb93d57fa732df1e552efbdd6d33090572ca2667fb543c",
+    "updates": 14,
+    "finished": true,
+    "sum_process_runtime_seconds": 3057.4192762999446,
+    "failed_process_attempts": 7,
+    "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+    "reference_kind": "method result, not truth"
+  }
+}

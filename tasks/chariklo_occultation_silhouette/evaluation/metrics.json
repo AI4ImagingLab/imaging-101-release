@@ -1,0 +1,22 @@
+{
+  "center_f_error_boundary": 1.6494378015777118,
+  "center_g_error_boundary": 5.4091788453559335,
+  "radius_error_boundary": 7.319274820044414,
+  "oblateness_error_boundary": 0.044554469252895634,
+  "position_angle_error_boundary": 39.73124188176298,
+  "contour_ncc_boundary": 0.9990446254188371,
+  "contour_nrmse_boundary": 0.019089202023294543,
+  "contour_consistency_km_boundary": 1e-08,
+  "timing_sigma_rms_boundary": 0.475402208965845,
+  "negative_penetration_km_boundary": 0.0,
+  "parameter_definition": "[center_f km,center_g km,semi-major-axis km,oblateness dimensionless,position-angle degrees modulo180]",
+  "boundary_provenance": "All five parameter and contour bounds from independently reproduced original negative-filtered delta-chi2<1 ensemble;1.1times maximum departures. Observation timing RMS1.1times reproduced original; negative path must remain clear. Contour consistency1e-8km numerical tolerance.",
+  "baseline": [
+    {
+      "method": "Original SORA chi-square search plus full negative path filtering",
+      "timing_sigma_rms": 0.43218382633258634,
+      "chi2_radial": 1.2505703941826032
+    }
+  ],
+  "missing_contact_count_boundary": 0.0
+}

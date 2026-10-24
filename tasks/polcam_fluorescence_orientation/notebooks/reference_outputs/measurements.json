@@ -1,0 +1,161 @@
+{
+  "source_categories": {
+    "paper_report": "Published Fig.6 illustrates other processed representations; no reported historical numerical accuracy is used here.",
+    "reproduced_upstream": "Full exact bound stack, unmodified napari-polcam e4cd20f39b6b726ade8e17a4768f2210596e612d; None method, offset0; arrays in evaluation/baseline_reference.npz",
+    "fresh_cleaned": "Actively reconstructed by src.main.run; arrays in output/reconstruction.npz"
+  },
+  "upstream_measurement": {
+    "runtime_s": 7.100004900006752,
+    "exit_status": 0,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "shape": [
+      116,
+      298,
+      298
+    ],
+    "source_sha256": "395e74216c2973b405d7edf55a83c5e1c6e4e8bbeb61822210aad7ca9458fe00",
+    "data_sha256": "7efcc784f698775651deab169d4592da0a2eabb4e17ec510fc3e2b2004a6fd47",
+    "finite": true,
+    "range_raw": [
+      399.0,
+      1499.0
+    ],
+    "range_degree": [
+      0.0,
+      0.2893882369021956
+    ],
+    "tolerances_frozen_before_local": {
+      "channels_atol": 0,
+      "stokes_atol": 0,
+      "orientation_atol": 1e-14,
+      "degree_atol": 1e-14
+    },
+    "warnings": []
+  },
+  "fresh_measurement": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "stokes0_ncc": 1.0000000000000002,
+      "stokes0_nrmse": 0.0,
+      "stokes1_ncc": 1.0000000000000002,
+      "stokes1_nrmse": 0.0,
+      "stokes2_ncc": 1.0,
+      "stokes2_nrmse": 0.0,
+      "degree_ncc": 1.0,
+      "degree_nrmse": 1.3773962485057759e-17,
+      "angular_rmse": 0.0,
+      "observation_residual": 0.016804278834125018
+    },
+    "thresholds": {
+      "stokes0_ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999999
+      },
+      "stokes0_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "stokes1_ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999999
+      },
+      "stokes1_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "stokes2_ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999999
+      },
+      "stokes2_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "degree_ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999999
+      },
+      "degree_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "angular_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "observation_residual": {
+        "comparison": "<=",
+        "boundary": 0.018484706717537523
+      }
+    },
+    "errors": []
+  },
+  "execution_records": [
+    {
+      "stage": "cli",
+      "command": [
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+        "-m",
+        "src.main"
+      ],
+      "cwd": "D:\\yan1\\agent\\AutoSkill\\imaging-101-release\\tasks\\polcam_fluorescence_orientation",
+      "exit_code": 0,
+      "runtime_s": 3.9090623000010964
+    },
+    {
+      "stage": "judge",
+      "command": [
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+        "evaluation/judge.py",
+        "--prediction",
+        "output/reconstruction.npz",
+        "--report",
+        "output/judge_report.json"
+      ],
+      "cwd": "D:\\yan1\\agent\\AutoSkill\\imaging-101-release\\tasks\\polcam_fluorescence_orientation",
+      "exit_code": 0,
+      "runtime_s": 1.130237400000624
+    },
+    {
+      "stage": "pytest",
+      "command": [
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "test/",
+        "-v",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp",
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\polcam\\pytest-final-temp"
+      ],
+      "cwd": "D:\\yan1\\agent\\AutoSkill\\imaging-101-release\\tasks\\polcam_fluorescence_orientation",
+      "exit_code": 0,
+      "runtime_s": 16.59030360000179
+    },
+    {
+      "stage": "notebook",
+      "command": [
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+        "-m",
+        "nbconvert",
+        "--to",
+        "notebook",
+        "--execute",
+        "notebooks/polcam_fluorescence_orientation.ipynb",
+        "--ExecutePreprocessor.timeout=300",
+        "--ExecutePreprocessor.kernel_name=imaging101-bio-b5",
+        "--output",
+        "polcam_executed.ipynb",
+        "--output-dir",
+        "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch5_20261021\\bio_med_mechanics\\polcam"
+      ],
+      "cwd": "D:\\yan1\\agent\\AutoSkill\\imaging-101-release\\tasks\\polcam_fluorescence_orientation",
+      "exit_code": 0,
+      "runtime_s": 21.69947979999415
+    }
+  ]
+}

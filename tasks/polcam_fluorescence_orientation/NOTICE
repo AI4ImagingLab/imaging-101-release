@@ -1,0 +1,3 @@
+Algorithm: Bruggeman et al., POLCAM: instant molecular orientation microscopy for the life sciences, Nature Methods 21, 1873-1883 (2024), DOI 10.1038/s41592-024-02382-8.
+Local implementation derives the explicit analyzer inversion, channel ordering and effective polarization conventions from BSD-3-Clause napari-polcam, copyright Ezra Bruggeman; its complete license is in LICENSE.
+Data: Ezra Bruggeman and Markus Koerbel, T cells, version 1, DOI 10.5281/zenodo.10471496, CC BY 4.0. Complete deposited EPI stack losslessly converted from TIFF to NPZ; no new crop, interpolation, noise injection or intensity conversion.

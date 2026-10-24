@@ -1,0 +1,19 @@
+{
+  "independent_absolute_step_vs_source_relative_frobenius": 0.00011321259065368829,
+  "independent_double_step_vs_source_relative_frobenius": 0.00010982227178084401,
+  "independent_two_steps_relative_frobenius": 3.776955379743373e-05,
+  "frozen_J_relative_frobenius_boundary": 0.0005660629532684414,
+  "independent_GN_direction_relative_errors": [
+    3.3416400295747924e-05,
+    3.03379473299134e-05
+  ],
+  "frozen_GN_direction_relative_boundary": 0.0001670820014787396,
+  "rule": "Five times independent step/backend uncertainty, J cap1e-3 and GN cap.02; fixed before cleaned-J tests",
+  "independent_qualified_backend_field_relative_difference": 7.458364494487454e-06,
+  "independent_qualified_backend_cost_relative_difference": 0.0002840171275584507,
+  "frozen_full_field_relative_boundary": 3.729182247243727e-05,
+  "frozen_full_cost_relative_boundary": 0.0014200856377922534,
+  "rule_sha256": "b76f339df3e3cd46d46087bd9d0fa0b0bc712899691c3c245b86b0c27771525a",
+  "source": "Two actual complete qualified source runs; no cleaned arrays used in threshold calculation",
+  "both_actual_stops": "original cost-increase criterion; nine updates"
+}

@@ -1,0 +1,96 @@
+{
+  "source_categories": {
+    "published": "JOSS2022 and ExperimentalMechanics2019 provide method descriptions; their unrelated reported pressure scores are not evidence of this bound-data run.",
+    "unmodified_original_pipeline": "All280 real raw frames; original defective first-row integration boundary preserved; original kinematics and VFM; separately identified comparison.",
+    "corrected_original_mechanics": "Minimal acquisition-integration index correction justified independently, then unchanged original mechanics on exact bound optical displacement estimate; hidden standard reference.",
+    "fresh_cleaned": "Local source actively reconstructs all250 corrected derived deflection observations."
+  },
+  "unmodified_run": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "skimage": "0.22.0",
+    "source_revision": "05b14f0834fa675579eabdf43fac046259df19bb",
+    "stages": [
+      {
+        "stage": "original_grid_deflectometry",
+        "runtime_s": 100.82062929999665,
+        "shape": [
+          250,
+          393,
+          484
+        ],
+        "range_y": [
+          -0.0008988611260144838,
+          0.0009470206703034422
+        ],
+        "range_x": [
+          -0.0009995584549292505,
+          0.0010029809069843413
+        ]
+      },
+      {
+        "stage": "original_slope_integration",
+        "runtime_s": 13.678873400000157,
+        "shape": [
+          250,
+          79,
+          97
+        ],
+        "range": [
+          -3.478265177067855e-05,
+          9.440880496927259e-05
+        ]
+      },
+      {
+        "stage": "original_kinematics_and_VFM",
+        "runtime_s": 5.597593600003165,
+        "shape": [
+          250,
+          60,
+          78
+        ],
+        "range": [
+          -30430.785298887644,
+          360141.91903785674
+        ]
+      }
+    ],
+    "exit_status": 0,
+    "runtime_s": 159.03323540000565,
+    "peak_rss_bytes": 1106608128
+  },
+  "boundary_investigation": {
+    "explicitly_corrected_oracle_not_unmodified": true,
+    "change": "ind_n = np.array((flat_inds, flat_inds)) -> ind_n=(flat_inds,flat_inds+n_y) for first x-derivative row only",
+    "independent_linear_ramp_max_abs_error": 5.329070518200751e-15,
+    "runtime_s": 24.540916600002674,
+    "deflection_relative_l2_change": 0.0005111984261777664,
+    "deflection_max_abs_change_m": 1.0928929301954034e-06,
+    "corrected_force_core_nrmse": 0.09114770181322994,
+    "corrected_force_whole_nrmse": 0.30965252664975257,
+    "canonical_data_decision": "Use minimal independently justified first-row optical integration index correction; unchanged original mechanics inverse then captures exact bound observations. Preserve unmodified original full-pipeline comparator."
+  },
+  "bound_original_mechanics_run": {
+    "exit_status": 0,
+    "runtime_s": 12.679590200001257,
+    "type": "Corrected acquisition preprocessing, unmodified original VFM/kinematics, no cleaned imports",
+    "source_revision": "05b14f0834fa675579eabdf43fac046259df19bb",
+    "correction": "One wrong top-boundary finite-difference column index in optical integration; independently validated by linear ramp; no pressure/force target used",
+    "observations_shape": [
+      250,
+      79,
+      97
+    ],
+    "pressure_shape": [
+      250,
+      60,
+      78
+    ],
+    "force_nrmse": 0.09114770181323001,
+    "force_boundary": 0.10026247199455302,
+    "peak_force_N": 363.564543750032,
+    "sigma": 6,
+    "window": 20
+  }
+}

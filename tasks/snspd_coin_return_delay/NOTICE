@@ -1,0 +1,12 @@
+Algorithm extraction: Compressive Single-Photon3D Cameras, Felipe Gutierrez-Barragan
+and coauthors, CVPR2022; original code MIT, Copyright(c)2022 Felipe Gutierrez-Barragan.
+The complete original MIT license follows in LICENSE.
+
+Real measurements: Kuznesof etal., Mid-infrared high-resolution photon-counting
+LiDAR, Optics Express33(22),45684-45694(2025), DOI10.1364/OE.576861.
+Dataset: Glasgow research data DOI10.5525/gla.researchdata.2070, CC BY4.0,
+Copyright holder: University of Glasgow, 2025.
+https://creativecommons.org/licenses/by/4.0/ . Native50x50 Nobel chocolate-medal
+histograms and independently supplied3500nm instrument response were repackaged
+from plain text into NPZ without altering photon counts. SNSPD hardware is
+independent of the CVPR2022 SPAD camera study; no common hardware claim is made.
