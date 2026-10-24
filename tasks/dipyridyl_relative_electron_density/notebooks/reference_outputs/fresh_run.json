@@ -1,0 +1,77 @@
+{
+  "runtime_seconds": 61.54411849999451,
+  "primary_runtime_seconds": 6.4986091000027955,
+  "environment": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "executable": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "backend": "module://matplotlib_inline.backend_inline"
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "ncc": 0.9989629082253738,
+      "nrmse": 0.001758786221731934,
+      "intensity_relative_l2": 0.00010239649895416404,
+      "mean_relative": 5.5514425609748885e-18
+    },
+    "thresholds": {
+      "ncc": {
+        "comparison": ">=",
+        "boundary": 0.9
+      },
+      "nrmse": {
+        "comparison": "<=",
+        "boundary": 0.014489186542210463
+      },
+      "intensity_relative_l2": {
+        "comparison": "<=",
+        "boundary": 0.00011263614884958044
+      },
+      "mean_relative": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      }
+    },
+    "errors": [],
+    "alignment": {
+      "periodic_shift_voxels": [
+        0.0048995253914495395,
+        5.016346148158037e-05,
+        0.0027140056593199483
+      ],
+      "spatial_inversion": false
+    }
+  },
+  "quality": {
+    "primary": {
+      "ncc": 0.9989629082253738,
+      "nrmse": 0.001758786221731934,
+      "all_signed_intensity_l2": 0.00010239649895416404
+    },
+    "seed23": {
+      "ncc": 0.9505036428975289,
+      "nrmse": 0.012150414059209405,
+      "all_signed_intensity_l2": 0.00010239649895416404
+    },
+    "seed24": {
+      "ncc": 0.9426336850805748,
+      "nrmse": 0.013080758755138191,
+      "all_signed_intensity_l2": 0.00010239649895416404
+    },
+    "random phases": {
+      "ncc": 0.12136233819651374,
+      "nrmse": 0.051192856960672946,
+      "all_signed_intensity_l2": 0.00010239649895416404
+    }
+  },
+  "raw_sha256": "29883cacf46176f078a6d741ebbf966e9c52a6ef9bf03c151bae8c38161855f0",
+  "source_roles": {
+    "old": "Unmodified independent NumPy1.26 original, method reference not truth",
+    "modern": "Independent qualified NumPy2.4 source captured after backend diagnosis",
+    "fresh": "Active local full-volume reconstruction and five full-volume controls"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "baseline": [{"method": "Unmodified author Pastis PM1 on all native350 loci and53883 positive contact pairs, with source ICE visibility correction; source NumPy2.4.6/SciPy1.17.1 backend", "distance_ncc": 1.0, "distance_nrmse": 0.0, "relative_poisson_excess": 0.0}],
+  "distance_ncc_boundary": 0.999999,
+  "distance_nrmse_boundary": 0.000001,
+  "relative_poisson_excess_boundary": 0.00001,
+  "distance_definition": "Euclidean distances for every unique pair among all343 input-supported loci; arbitrary translation and orthogonal transformations, including reflection, are unidentifiable and cancel exactly; no scale alignment",
+  "nrmse_definition": "RMS error of all unique supported-locus pair distances divided by max-minus-min of reference pair distances",
+  "relative_poisson_excess_definition": "(Poisson_negative_log_likelihood(prediction)-Poisson_negative_log_likelihood(reference))/max(1,abs(Poisson_negative_log_likelihood(reference))); positive53883 observed pairs only; alpha=-3,beta=1, and input-derived fixed ICE biases",
+  "reference_type": "Validated standard-method result, not measured chromatin truth",
+  "tolerance_provenance": "Frozen before local implementation: float32 coordinate quantization yields distanceNRMSE1.9671533816699332e-9; thresholds allow numerical representation differences while requiring the selected conditional standard estimator. Legacy NumPy1.26.4/SciPy1.13.1 changes the nonconvex trajectory and is separately disclosed, not used to relax canonical agreement."
+}

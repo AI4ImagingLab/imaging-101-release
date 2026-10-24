@@ -1,0 +1,22 @@
+{
+  "runtime_seconds": 14.122510400004103,
+  "M_shape": [
+    1708,
+    357
+  ],
+  "D_shape": [
+    357,
+    201909
+  ],
+  "D_nnz": 245283,
+  "V_nnz": 425346,
+  "angle_count": 1707,
+  "partition_components": 1,
+  "original_tension_repeat_maxabs": 0.0,
+  "original_pressure_repeat_maxabs": 0.0,
+  "pressure_gram_rank": 64,
+  "pressure_gram_condition": 91.78183984946723,
+  "python": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch7_20261022\\groups\\astro_earth_mech\\foam\\oracle-env\\Scripts\\python.exe",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1"
+}

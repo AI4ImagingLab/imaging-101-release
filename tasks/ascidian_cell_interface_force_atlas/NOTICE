@@ -1,0 +1,14 @@
+Local force-inference mathematics is adapted from foambryo, copyright Sacha
+Ichbiah (2021), Matthieu Perez (2024), and other upstream contributors.
+The selected upstream software is licensed GPL-3.0-or-later. The full GPLv3
+license is included in LICENSE; source revision and adaptations are recorded
+in maintainer validation materials. This package includes no foambryo runtime.
+
+The observed mesh Phallusia_Guignard_et_al.rec was supplied in the method
+authors' publicly linked example data collection, attributed to Guignard et al.
+It is real microscopy-derived segmented geometry, not synthetic force truth.
+The article's CC BY 4.0 license and the software's GPL license must not be
+assumed to license this separately hosted mesh. A separate mesh redistribution
+license was not stated by the linked collection. This local research binding
+preserves attribution and that unresolved redistribution limitation; it does
+not assert a newly granted open-data license.

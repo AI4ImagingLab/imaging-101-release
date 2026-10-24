@@ -1,0 +1,87 @@
+{
+  "runtime_seconds": 52.53855830000248,
+  "runs": [
+    {
+      "method": "YoungDupre",
+      "runtime_seconds": 5.6384811000025366,
+      "tension_finite": true,
+      "pressure_finite": true,
+      "mean_tension": 1.0,
+      "tension_range": [
+        0.3880896617919779,
+        7.571407383599137
+      ]
+    },
+    {
+      "method": "ProjectionYoungDupre",
+      "runtime_seconds": 5.616153100010706,
+      "tension_finite": true,
+      "pressure_finite": true,
+      "mean_tension": 0.9999999999999997,
+      "tension_range": [
+        0.34385354692549497,
+        7.33622729416399
+      ]
+    },
+    {
+      "method": "Lami",
+      "runtime_seconds": 5.659670900000492,
+      "tension_finite": true,
+      "pressure_finite": true,
+      "mean_tension": 1.0,
+      "tension_range": [
+        0.25089046932553943,
+        8.580638809636772
+      ]
+    },
+    {
+      "method": "InvLami",
+      "runtime_seconds": 5.661387000000104,
+      "tension_finite": true,
+      "pressure_finite": true,
+      "mean_tension": 1.0,
+      "tension_range": [
+        0.4434704145055652,
+        7.46226031552177
+      ]
+    },
+    {
+      "method": "LogLami",
+      "runtime_seconds": 5.407249100011541,
+      "tension_finite": true,
+      "pressure_finite": true,
+      "mean_tension": 1.0421631338849318,
+      "tension_range": [
+        0.4901706857966473,
+        2.0716381916113455
+      ]
+    },
+    {
+      "method": "Variational",
+      "runtime_seconds": 13.06169800000498,
+      "tension_finite": true,
+      "pressure_finite": true,
+      "mean_tension": 1.0,
+      "tension_range": [
+        0.04537902730489951,
+        41.78175326278647
+      ]
+    }
+  ],
+  "arrays": [
+    "YoungDupre_tensions",
+    "YoungDupre_pressures",
+    "ProjectionYoungDupre_tensions",
+    "ProjectionYoungDupre_pressures",
+    "Lami_tensions",
+    "Lami_pressures",
+    "InvLami_tensions",
+    "InvLami_pressures",
+    "LogLami_tensions",
+    "LogLami_pressures",
+    "Variational_tensions",
+    "Variational_pressures",
+    "Laplace_pressures",
+    "WeightedLaplace_pressures"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "reference_type": "validated standard-method result; no measured biological force truth",
+  "baseline": [
+    {
+      "method": "Original author scalar Young-Dupre and variational Laplace on the exact full64-cell real microscopy-derived mesh",
+      "tensions_ncc_vs_ref": 1.0,
+      "tensions_nrmse_vs_ref": 0.0,
+      "pressures_ncc_vs_ref": 1.0,
+      "pressures_nrmse_vs_ref": 0.0
+    }
+  ],
+  "thresholds": {
+    "tensions_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999794431
+    },
+    "tensions_nrmse": {
+      "comparison": "<=",
+      "boundary": 2.384619215064322e-06
+    },
+    "pressures_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999979622
+    },
+    "pressures_nrmse": {
+      "comparison": "<=",
+      "boundary": 2.2095445828954433e-06
+    },
+    "pressure_normal_equations_relative_l2": {
+      "comparison": "<=",
+      "boundary": 1e-05
+    },
+    "mean_tension_absolute_error": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "medium_pressure_absolute": {
+      "comparison": "<=",
+      "boundary": 1e-10
+    }
+  },
+  "threshold_provenance": "Independent full original repeat, three LAPACK drivers in float64/float32, and serialization, frozen before local extraction. Each error limit is five times measured worst backend NRMSE, with nonzero floor; see validation.",
+  "alignment": "None. Every interface and region is evaluated, in geometric label order. Gauge is mean tension1, exterior pressure0.",
+  "nrmse_definition": "sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)), evaluated separately for all357 tensions and all65 region pressures.",
+  "physics_definition": "Relative L2 norm of Vcell(D^T gamma-Vcell^T p) normalized by ||Vcell D^T gamma||. Explicit triangle derivatives from public geometry; this is pressure normal-equation consistency, not physical truth or zero vertex force."
+}
