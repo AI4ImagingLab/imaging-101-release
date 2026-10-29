@@ -1,0 +1,7 @@
+{
+  "mean_energy_excess_boundary": 1e-05,
+  "definition": "Mean over pixels of -6 times degree-eight normalized measured contrast polynomial at u plus isotropic forward-difference TV. Compare against attainable baseline energy under this same observation-defined objective.",
+  "polynomial_convention": "Unique float64 least-squares projection of 19 normalized contrast values onto degree<=8 polynomials; normalized nodes k/9-1; intensity divided by255; contrast normalized per pixel by maximum plus0.3. Stable basis choice and solver trajectory are free.",
+  "reference_type": "Attainable energy level, not physical depth truth",
+  "threshold_provenance": "Declared per-pixel objective tolerance, validated with float32/float64 and alternate candidate controls; not noise calibration."
+}

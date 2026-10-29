@@ -1,0 +1,19 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original Pre-CAT two-step, measured cardiac scan, repeated exactly",
+      "observation_rmse": 0.07805802475666919
+    }
+  ],
+  "frozen_before_local_extraction": true,
+  "upstream_repeat_max_abs": 0.0,
+  "stage_atol": 1e-08,
+  "stage_rtol": 1e-07,
+  "observation_rmse_boundary": 0.08586382723233611,
+  "baseline_observation_rmse": 0.07805802475666919,
+  "interpretation": "Numerical method reference, not truth; ppm widths/centers, unit-fraction amplitudes. All six pools evaluated separately.",
+  "maximum_voxel_mse_excess_boundary": 1e-06,
+  "evaluation_semantics": "Per-supported-pixel attainable six-pool Lorentzian data-fit bound, physical component ranges and fixed input support. Equal or lower residual fits accepted; no staged-optimizer parameter identity.",
+  "semantic_version": "v2",
+  "baseline_role": "Historical v1 numerical/stage comparison and attainable source observation fit; self-agreement values are not current acceptance criteria."
+}

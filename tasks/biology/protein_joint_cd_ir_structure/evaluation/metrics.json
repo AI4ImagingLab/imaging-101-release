@@ -1,0 +1,40 @@
+{
+  "baseline": [
+    {
+      "method": "Original complete SELCON3, four wholly held-out proteins, IRscale15",
+      "fraction_max_error": 0.0,
+      "cd_refit_rmse": 0.0,
+      "ir_refit_rmse": 0.0
+    }
+  ],
+  "thresholds": {
+    "fraction_max_error": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "cd_refit_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "ir_refit_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-07
+    },
+    "fraction_sum_deviation": {
+      "comparison": "<=",
+      "boundary": 0.06
+    },
+    "fraction_min": {
+      "comparison": ">=",
+      "boundary": -0.025
+    }
+  },
+  "definitions": {
+    "fraction_max_error": "Max absolute fraction deviation across all4proteins\u00d74structures",
+    "cd_refit_rmse": "RMS error in molar differential extinction,66CDbins",
+    "ir_refit_rmse": "RMS error in unscaled normalized absorbance,61IRbins",
+    "fraction_sum_deviation": "Max absolute sum-of-fractions minus1 per protein",
+    "fraction_min": "Minimum signed fraction; original permits small negatives, no clipping"
+  },
+  "provenance": "Frozen before extraction from independent deterministic original runs; no physical truth claim"
+}

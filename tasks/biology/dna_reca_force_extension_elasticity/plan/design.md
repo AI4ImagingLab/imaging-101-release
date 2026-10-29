@@ -1,0 +1,11 @@
+# Shipped interfaces
+
+Standard caller flow is python -m src.main → load_data → reconstruct → residual_and_jac → explicit force/Jacobian functions → submission → output/reconstruction.npz. No upstream modules, imaging libraries or cross-task imports are used. No synthetic generator exists because real observations are reused.
+
+preprocessing.load_data(path='data/raw_data.npz') validates and removes only the single batch axis, returning1318/1329native float64force/distance vectors and fixed mask_control/mask_reca. physics_model contains only extracted standalone mathematical functions: calc_cubic_root(a,b,c,selected_root); coefficient-root derivative helpers; ewlc_marko_siggia_force(d,Lp,Lc,St,kT=4.11), its analytic jacobian returning four derivative vectors and its extension derivative. Distances are micrometres,Lp nm,St force pN,kT pN nm. Functions have no file or plotting side effects.
+
+solvers.residual_and_jac(parameters,data) returns a1914vector in pN and a Fortran-contiguous1914×4Jacobian. Control residuals precede RecA. reconstruct(data) returns OptimizeResult from the joint constrained fit. submission(fit,data) returns the exact5batch-first float64arrays in README. main() alone writes output. It does not choose a plotting backend.
+
+visualization.make_figures(data,fit,original,rejected) returns three figures. It calculates fresh selected predictions, plots all native data and declared fit support, residuals, original-vs-fresh-vs-rejected per-condition RMSEand local model-conditional contour-length covariance intervals. Original/rejected results come from separately identified numeric archives. No missing method is zero-filled. pyplot is imported without setting its backend.
+
+Standalone Judge imports only stdlib and NumPy. It resolves hidden assets relative to itself, validates exactkeys/shapes/float64/finite arrays, prioritizes actualtruth if present and otherwise uses original method reference. Every physical output is independently compared, with two raw observation RMSEcriteria. Report parent creation/native exit0/1/2and caller-CWDpaths follow the standard contract. Test fixtures carry original stage arrays; notebook references hold only original/rejected comparisons. Notebook actively reconstructs both bound curves before evaluating and plotting them.

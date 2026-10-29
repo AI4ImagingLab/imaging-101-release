@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "100-iteration Tomviz Landweber SIRT on bound measured tilt series; no actual volume truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "projection_residual": 0.14384113582003832
+    }
+  ],
+  "projection_residual_boundary": 0.1452795471782387,
+  "historical_v1_thresholds": {
+    "ncc_boundary": 0.999999,
+    "nrmse_boundary": 1e-05
+  },
+  "evaluation_version": "2.0-nonnegative-noise-compatible-minimum-norm-class",
+  "density_l2_boundary": 204914.20122959153,
+  "density_l2_definition": "Full-volume Euclidean density norm; standard feasible bound plus relative1e-8 numerical allowance. Preserves early-stopping regularity without requiring a finite iteration endpoint. No hidden volume identity."
+}

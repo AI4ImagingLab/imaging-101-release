@@ -1,0 +1,1 @@
+MITadaptation of pyGAPS byPaulIacomi. Originallicense retained. Calibrationinterpolation uses explicit positive PCHIP correction and tightened documentedSLSQPprecision; not unchanged-source reproduction. Kernel-relative coefficients have no assertedabsolute pore-volume calibration.

@@ -1,0 +1,24 @@
+{
+  "energy_max_abs_boundary": 0.002,
+  "thermodynamic_scaled_max_abs_boundary": 1e-05,
+  "baseline_max_abs_boundary": 2e-05,
+  "observation_relative_l2_boundary": 0.0182,
+  "energy_internal_consistency_boundary": 1e-06,
+  "reference_role": "Validated full original2020 global equilibrium method result; no independent thermodynamic truth",
+  "frozen_before_local_implementation": true,
+  "tolerance_rationale": "Three independent public-derived source starts converge max scaled parameter spread1.65e-7; energy/physical parameters must agree while full observations constrain prediction. Column-normalized Jacobian rank18, minimum singular value0.0396. No crop or selected curve.",
+  "baseline": [
+    {
+      "method": "Original whole2020 global LMfit1.0.1 method with native public API precision refinement, all95430points",
+      "observation_relative_l2": 0.018108853759137004
+    }
+  ],
+  "metric_definitions": {
+    "energy_max_abs": "max absolute free-energy difference in kJ/mol over all15x3181 points",
+    "thermodynamic_scaled_max_abs": "max component |estimate-reference|/max(1,|reference|), all4 declared parameter units",
+    "baseline_max_abs": "max absolute difference across both channel7-vectors in respective declared coefficient units",
+    "observation_relative_l2": "L2 of full95430 normalized-intensity residuals divided by L2 of observed normalized intensities",
+    "energy_internal_consistency": "max absolute kJ/mol difference of submitted energy and independent thermodynamic model of submitted4parameters"
+  },
+  "physical_accuracy_claim": false
+}

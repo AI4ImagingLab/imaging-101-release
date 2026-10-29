@@ -245,19 +245,17 @@ class Agent:
                     # Check if output/reconstruction.npy exists in the sandbox
                     # rather than checking for a specific filename like "main.py".
                     # The agent may name its entry point differently (e.g. solution.py).
-                    _, rc = self.runner.exec("test -f output/reconstruction.npy")
+                    from evaluation_harness.benchmark import uses_npz_contract
+                    output_name = "output/reconstruction.npz" if uses_npz_contract(self.runner.task_dir) else "output/reconstruction.npy"
+                    _, rc = self.runner.exec(f"test -f {output_name}")
                     output_exists = (rc == 0)
                     if not output_exists and result.iterations > 1:
                         log.warning(
                             "DONE signaled but output/reconstruction.npy not found — "
                             "forcing continuation (iter %d)", i)
                         observation = (
-                            "[System] output/reconstruction.npy was not found.\n"
-                            "You must run your pipeline to produce "
-                            "output/reconstruction.npy before signaling DONE.\n"
-                            "Run your entry point (e.g. python main.py) and ensure "
-                            "it saves the reconstructed image to output/reconstruction.npy.\n"
-                            "Then signal DONE when the output is saved."
+                            f"[System] {output_name} was not found. Run your chosen entry point "
+                            "to compute every output required by README before signaling DONE."
                         )
                         messages.append({"role": "user",
                                          "content": f"Observation:\n{observation}"})
@@ -308,6 +306,11 @@ class Agent:
         """
         try:
             import numpy as np
+            from evaluation_harness.benchmark import uses_npz_contract
+            if uses_npz_contract(self.runner.task_dir):
+                # Shape, complex conventions and nonnegativity are task-specific;
+                # no generic 2-D/magnitude/zero test overrides the public contract.
+                return None
             out_path = self.runner.workspace / "output" / "reconstruction.npy"
             if not out_path.exists():
                 return "output/reconstruction.npy not found"

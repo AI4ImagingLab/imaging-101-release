@@ -1,0 +1,6 @@
+Selected ElecSus RbD2 mathematics adapted under Apache License2.0.
+Copyright2014-2018 M.A.Zentile,J.Keaveney,L.Weller,D.Whiting,C.S.Adams,I.G.Hughes.
+Original source1933456b905739fb31c89665cdc6733e769e5ec0.
+Experimental data James Keaveney, ElecSusTestData, Apache2.0, d6c5c5010d25b77cb6f749fe79041899d9edb016.
+Adaptations: explicit local atomic/Voigt transverse propagation; remove GUI/other isotopes/geometries; identifiable normalized-angle gauge and original-supported differential evolution; local original sine bounds, objective and stop semantics.
+Historical unstable LM protocols and failed single-seed response gate are not claimed as passed. Three independently run original outcomes define finite empirical optimizer support, not physical confidence limits.

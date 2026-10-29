@@ -8,13 +8,15 @@ import re
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import numpy as np
 
-from .agent import AgentResult
 from .config import RunConfig
 from .docker_runner import DockerRunner
-from .llm_client import LLMClient
+if TYPE_CHECKING:
+    from .agent import AgentResult
+    from .llm_client import LLMClient
 
 log = logging.getLogger(__name__)
 
@@ -203,6 +205,22 @@ class Scorer:
         per-task recipes or task-native output formats are required of the agent.
         """
         from . import reference_scoring
+
+        from .benchmark import uses_npz_contract, score_submission
+        if uses_npz_contract(self.config.task.task_dir):
+            workspace = getattr(self.runner, "workspace", None)
+            if workspace is not None and Path(workspace).is_dir():
+                return score_submission(self.config.task.task_dir,
+                                        Path(workspace) / "output/reconstruction.npz")
+            # Copy only the inert submitted NPZ out of the container; the
+            # trusted Judge and hidden references never enter the container.
+            import subprocess
+            import tempfile
+            with tempfile.TemporaryDirectory(prefix="imaging101-submission-") as temp:
+                prediction = Path(temp) / "reconstruction.npz"
+                subprocess.run(["docker", "cp", f"{self.runner.container}:/workspace/output/reconstruction.npz",
+                                str(prediction)], capture_output=True, check=False)
+                return score_submission(self.config.task.task_dir, prediction)
 
         workspace = Path(self.runner.container) if getattr(self.runner, "container", None) else None
         if workspace and workspace.is_dir():

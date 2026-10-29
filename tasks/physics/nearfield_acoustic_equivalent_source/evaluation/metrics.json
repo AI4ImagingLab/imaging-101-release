@@ -1,0 +1,19 @@
+{
+  "baseline": [
+    {
+      "method": "Original second-order TV/TGV source baseline, 20000 Condat-Vu steps",
+      "reference": "standard-method estimate, not actual source truth",
+      "observation_relative_l2": 0.03036261908710003
+    }
+  ],
+  "relative_complex_l2_boundary": 2e-05,
+  "magnitude_cosine_boundary": 0.999999,
+  "observation_relative_l2_boundary": 0.03188075004145503,
+  "relative_complex_l2_definition": "norm(complex estimate - complex reference)/norm(complex reference), all pixels; no phase/gain alignment",
+  "magnitude_cosine_definition": "dot(abs(estimate),abs(reference))/(norm(abs(estimate))*norm(abs(reference))); zero estimate scores zero",
+  "observation_relative_l2_definition": "norm(independent complex128 SI free-field propagator times relative source - public pressure)/norm(public pressure)",
+  "provenance": "Stage/full-run relative2e-5 float32 tolerance fixed before extraction. Original exact-bound data run; independent source reconstruction and full local comparison pass. Nonzero reference tolerance avoids self-comparison-zero thresholds. Observation boundary is1.05 times original residual. All outputs retain fixed author processed pressure amplitude/phase; no actual volume-velocity truth exists.",
+  "evaluation_version": "2.0-convex-second-difference-objective",
+  "regularized_objective_boundary": 4206091749400.686,
+  "v2_definition": "Objective ||Gq-p||? + lambda sum sqrt(abs(Dxx q)?+abs(Dyy q)?), second forward index differences with right/bottom zero extension, lambda=smax(G)*10^(-35/20)*norm(p)/sqrt(2000). Bound is independently evaluated feasible standard value plus1e-8relative numeric allowance. Retain original observation residual. No hidden map agreement."
+}

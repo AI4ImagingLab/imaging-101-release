@@ -1,0 +1,21 @@
+{
+  "baseline": [
+    {
+      "method": "Original KwiatLab MLE on 36 measured corrected counts",
+      "density_distance": 0.0,
+      "intensity_relative_error": 0.0
+    }
+  ],
+  "density_distance_boundary": 2e-05,
+  "intensity_relative_error_boundary": 1e-06,
+  "observation_rmse_boundary": 0.02,
+  "physicality_boundary": 1e-07,
+  "metric_definitions": {
+    "density_distance": "Frobenius norm of complex density difference; no phase, scale or basis alignment",
+    "intensity_relative_error": "absolute scalar difference divided by reference intensity",
+    "observation_rmse": "RMS(Born predicted corrected counts minus observed corrected counts)/submitted intensity",
+    "physicality": "maximum of trace error, Hermitian Frobenius error, negative minimum eigenvalue"
+  },
+  "reference_type": "method result, not physical truth",
+  "threshold_provenance": "Independent native reruns with mixed initial states differed by <=1.48914e-6 Frobenius and2.54322e-9 scale-relative; float32 representation errors1.06071e-8 and2.73638e-8. Tightened from preimplementation conservative bounds before release."
+}

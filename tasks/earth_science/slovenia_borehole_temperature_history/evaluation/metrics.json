@@ -1,0 +1,14 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original CIBOR rank2 SVD on all seven measured Slovenian profiles",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "max_temperature_rmse_boundary": 0.095,
+  "reference_kind": "standard method, not physical ground truth",
+  "max_temperature_rmse_definition": "Maximum over seven sites of temperature residual RMS in K; independently fitted200\u2013300m geothermal trend and analytic heat-diffusion erfc operator."
+}

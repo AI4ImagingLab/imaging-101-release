@@ -6,6 +6,28 @@ This file provides guidance to Agent when working with code in this repository.
 
 **imaging-101** is a benchmark suite for evaluating coding agents on computational imaging tasks. It covers 8 domains (mathematics, physics, chemistry & material science, astronomy, earth science, mechanics, biology, medicine) with standardized task structure, reference implementations, and automated evaluation.
 
+## Current public benchmark policy
+
+Use the eight-domain directory layout `tasks/<domain>/<task_name>/`, with domain
+folders `mathematics`, `physics`, `chemistry_material_science`, `astronomy`,
+`earth_science`, `mechanics`, `biology`, and `medicine`. The user's current
+benchmark request takes precedence over earlier method-reproduction conventions.
+The original59task contents are protected; their directory locations may change.
+
+For later tasks, README plus raw observations and legitimate calibration must
+define a scientifically meaningful solvable target and exact NPZ output contract.
+Necessary physical constants, discretization, units, constraints and objective
+weights belong in the problem definition; implementation code, arbitrary random
+seeds, finite-solver recipes and reference-repository URLs do not. A strict hidden
+reference must not force a particular implementation when other valid inverse
+solutions exist. Version and independently validate scientific evaluation changes
+rather than silently relaxing thresholds. Never invent missing calibration.
+
+Use `python -m evaluation_harness.benchmark prepare` and `judge` for public-only
+exports and trusted standalone evaluation. No hidden source/GT mount or encoded
+answer/self-evaluation blob is permitted in an agent environment. See
+`docs/PUBLIC_BENCHMARK.md` for the runtime boundary and commands.
+
 ## Repository Structure
 
 ```
@@ -13,7 +35,7 @@ imaging-101/
 ├── skills/                    # Shared skill library (available to agents)
 ├── evaluation_harness/        # Benchmark evaluation framework
 ├── docs/                      # Documents
-└── tasks/<task_name>/         # Individual imaging tasks
+└── tasks/<domain>/<task_name>/         # Individual imaging tasks
 
 ```
 
@@ -24,7 +46,7 @@ authoritative throughout this specification; do not add root-level entry-point
 wrappers or duplicate test/report directories.
 
 ```text
-tasks/<task_name>/
+tasks/<domain>/<task_name>/
 |-- README.md                  # Public problem, data, metadata, and output contract
 |-- requirements.txt           # Cleaned runtime subset of the shared environment
 |-- data/
@@ -91,7 +113,7 @@ The reference implementation in `src/`, plans, notebooks, evaluation assets, and
 ## Commands
 
 ```bash
-cd tasks/<task_name>
+cd tasks/<domain>/<task_name>
 conda activate imaging-101               # Shared environment, prepared by maintainers
 # requirements.txt documents the task subset; do not upgrade packages per task
 python -m src.main                       # Standard run; writes output/reconstruction.npz
@@ -457,4 +479,4 @@ without evidence or relax acceptance thresholds to conceal it.
 
 ### Pilot reference
 
-The completed tasks `tasks/eht_black_hole_original/` serve as format references. When in doubt, follow their structure, code style, and test patterns.
+The completed tasks `tasks/astronomy/eht_black_hole_original/` serve as format references. When in doubt, follow their structure, code style, and test patterns.

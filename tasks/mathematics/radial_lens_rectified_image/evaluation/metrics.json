@@ -1,0 +1,9 @@
+{
+  "baseline": [{"method": "Original AMI algebraic radial method; numerical reference, not GT", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.9999,
+  "nrmse_boundary": 0.00392156862745098,
+  "coefficient_relative_boundary": 0.0001,
+  "gauge_error_boundary": 1e-12,
+  "odd_coefficient_boundary": 1e-16,
+  "threshold_provenance": "Frozen before local extraction in private binding_before_local.json. Nonzero quantization/backend envelope; every image and coefficient criterion must pass."
+}

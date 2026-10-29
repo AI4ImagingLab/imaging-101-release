@@ -1,0 +1,55 @@
+{
+  "output_schema": {
+    "reconstruction": {
+      "shape": [
+        1,
+        267
+      ],
+      "dtype": "float64"
+    },
+    "amplitude": {
+      "shape": [
+        1,
+        50
+      ],
+      "dtype": "float64"
+    },
+    "delay": {
+      "shape": [
+        1,
+        50
+      ],
+      "dtype": "float64"
+    },
+    "noise": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "expected_waveforms": {
+      "shape": [
+        1,
+        50,
+        267
+      ],
+      "dtype": "float64"
+    },
+    "noise_std": {
+      "shape": [
+        1,
+        50,
+        267
+      ],
+      "dtype": "float64"
+    }
+  },
+  "mean_nll_excess_boundary": 1e-06,
+  "expected_relative_l2_boundary": 1e-07,
+  "noise_std_relative_l2_boundary": 1e-07,
+  "evaluation_semantics": "Independent mean heteroscedastic Gaussian negative log likelihood with physical drift gauges and Fourier/variance-derived array consistency; no precision-loss optimizer parameter identity.",
+  "likelihood_definition": "0.5 mean(log(v)+(x-zeta)^2/v), with numerical v in pA squared; additive constant omitted. Reported noise amplitudes are corrected by sqrt(50/49), so likelihood variance is reported variance times49/50.",
+  "reference_type": "Attainable likelihood, not actual waveform/noise truth",
+  "tolerance_provenance": "Declared mean log-likelihood numerical budget1e-6 per measured sample; derived arrays1e-7 relative L2; not confidence bounds."
+}

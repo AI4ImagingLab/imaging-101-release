@@ -1,0 +1,22 @@
+{
+  "concentration_repeats": {
+    "shape": [
+      1,
+      3,
+      30,
+      6
+    ],
+    "dtype": "float64",
+    "sha256": "517de4217b0f06deb7c2d957d49844525622a237ed17682fa407e4ac9f0c6706"
+  },
+  "charge_repeats": {
+    "shape": [
+      1,
+      3,
+      3000,
+      2
+    ],
+    "dtype": "float64",
+    "sha256": "946c555bbe1d91cb86d3d7b10d5893fa6bc586085cad9d220502ab6ade530792"
+  }
+}

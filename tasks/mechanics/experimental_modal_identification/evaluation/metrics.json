@@ -1,0 +1,53 @@
+{
+  "output_schema": {
+    "natural_frequency": {
+      "shape": [
+        1,
+        7
+      ],
+      "dtype": "float64"
+    },
+    "damping_ratio": {
+      "shape": [
+        1,
+        7
+      ],
+      "dtype": "float64"
+    },
+    "reconstruction": {
+      "shape": [
+        1,
+        6,
+        7
+      ],
+      "dtype": "complex128"
+    },
+    "fitted_accelerance": {
+      "shape": [
+        1,
+        6,
+        4999
+      ],
+      "dtype": "complex128"
+    },
+    "lower_residual": {
+      "shape": [
+        1,
+        6
+      ],
+      "dtype": "complex128"
+    },
+    "upper_residual": {
+      "shape": [
+        1,
+        6
+      ],
+      "dtype": "complex128"
+    }
+  },
+  "maximum_response_mse_excess_boundary": 1e-06,
+  "maximum_fitted_relative_l2_boundary": 1e-07,
+  "definition": "For each of six measured responses separately, in-band complex MSE divided by measured mean squared response may exceed attainable seven-mode standard fit by at most1e-6; all output spectra must reproduce the submitted poles/residues/residual terms.",
+  "reference_type": "Attainable rational-response fit, not measured mode truth",
+  "tolerance_provenance": "Declared0.1% additional relative RMS response budget and numerical derived-spectrum tolerance; not modal confidence limits."
+}

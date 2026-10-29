@@ -108,7 +108,8 @@ def check_task_environment(
     python_executable: str = sys.executable,
 ) -> dict:
     """Return a structured environment report for one task."""
-    task_dir = (repo_root / "tasks" / task_name).resolve()
+    from .task_paths import resolve_task
+    task_dir = resolve_task(repo_root, task_name)
     requirements_path = task_dir / "requirements.txt"
 
     if not task_dir.exists():
@@ -202,7 +203,8 @@ def setup_task_environment(
     timeout: int = 1800,
 ) -> dict:
     """Create a venv and install task requirements."""
-    repo_root = task_dir.parent.parent.resolve()
+    from .task_paths import repository_root
+    repo_root = repository_root(task_dir)
     task_dir = task_dir.resolve()
     actual_venv_dir = venv_dir if venv_dir.is_absolute() else repo_root / venv_dir
     commands = environment_commands(

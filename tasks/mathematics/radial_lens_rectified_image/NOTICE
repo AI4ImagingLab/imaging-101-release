@@ -1,0 +1,3 @@
+Local algebraic and radial-resampling mathematics is adapted from AMI Research Group, Copyright2010–2014, original contact lalvarez@dis.ulpgc.es.
+Original selected source licence: Creative Commons Attribution-NonCommercial-ShareAlike3.0 Spain, https://creativecommons.org/licenses/by-nc-sa/3.0/es/deed.en . Adaptations and explicit numerical correction are documented in test/validation.md.
+Calibration photograph and author-selected primitives: Luis Alvarez,Luis Gomez,J.Rafael Sendra, IPOL2010; article Image Credits state all author images CC-BY-SA. No more specific version is asserted. Attribution: https://doi.org/10.5201/ipol.2010.ags-alde . Retain these notices and original applicable terms when redistributing adapted code/data.

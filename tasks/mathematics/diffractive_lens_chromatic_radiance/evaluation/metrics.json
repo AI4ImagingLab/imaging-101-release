@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original three-iteration CCT, measured full diffractive-lens image",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-05,
+  "green_max_error_boundary": 1e-07,
+  "provenance": "Numerical agreement with original, not ground truth; frozen before local extraction. Full signed RGB, no clipping or rescaling."
+}

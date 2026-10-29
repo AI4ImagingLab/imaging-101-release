@@ -1,0 +1,33 @@
+{
+  "baseline": [
+    {
+      "method": "Independent native FIREFLY, full two-stage supported-band fit",
+      "mean_standardized_squared_residual": 0.9880370142790428
+    }
+  ],
+  "mean_standardized_squared_residual_boundary": 1.0374388649929949,
+  "metric_definition": "Full2308point original mean standardized squared residual, log attenuation total variation, and log-RMS agreement of median-normalized attenuation with median-normalized Calzetti law at submitted EBV. Positive grey factor unidentifiable; no hidden weight/curve comparison. All original unknowns retained.",
+  "provenance": "Exact independent full upstream/local candidate parity; nonzero numerical tolerances include float32 representation. All supported observed bins enter forward consistency without clipping.",
+  "historical_v1_thresholds": {
+    "weight_max_error_boundary": 0.0001,
+    "attenuation_nrmse_boundary": 0.002,
+    "ebv_absolute_error_boundary": 0.0001
+  },
+  "evaluation_version": "2.0-nonnegative-population-smooth-dust-class",
+  "log_attenuation_tv_boundary": 0.2835785786811014,
+  "color_law_logrms_boundary": 0.04561968339812343,
+  "regularity_provenance": "Dust TV and color-summary budgets from independently reproduced feasible original output plus relative1e-8 and absolute1e-10 numerical allowance; original full-data residual boundary unchanged. Conditional regularized class, not equivalent to finite FIREFLY BIC selection.",
+  "precision_calibration": {
+    "float64_standard": {
+      "mean_standardized_squared_residual": 0.9880370142790428,
+      "log_attenuation_tv": 0.28357812438393876,
+      "color_law_logrms": 0.045619682841926606
+    },
+    "float32_standard": {
+      "mean_standardized_squared_residual": 0.9880369213460964,
+      "log_attenuation_tv": 0.2835785757453157,
+      "color_law_logrms": 0.04561968260077585
+    },
+    "definition": "Both declared output precisions of independently reproduced standard; new regularity boundaries use their maximum plus relative1e-8 and absolute1e-10. Original observation boundary unchanged."
+  }
+}

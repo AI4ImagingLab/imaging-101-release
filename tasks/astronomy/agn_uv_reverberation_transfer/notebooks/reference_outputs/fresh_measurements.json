@@ -1,0 +1,94 @@
+{
+  "seconds": 13.651093399967067,
+  "rounds": [
+    {
+      "start": 0,
+      "attempt": 0,
+      "objective": 433.7125156419178,
+      "iterations": 1106,
+      "evaluations": 1600,
+      "warning": 1
+    },
+    {
+      "start": 0,
+      "attempt": 1,
+      "objective": 431.7208087147605,
+      "iterations": 412,
+      "evaluations": 630,
+      "warning": 0
+    },
+    {
+      "start": 1,
+      "attempt": 0,
+      "objective": 435.0760887680619,
+      "iterations": 1131,
+      "evaluations": 1600,
+      "warning": 1
+    },
+    {
+      "start": 1,
+      "attempt": 1,
+      "objective": 435.0027628607006,
+      "iterations": 480,
+      "evaluations": 726,
+      "warning": 0
+    },
+    {
+      "start": 2,
+      "attempt": 0,
+      "objective": 438.0364662220597,
+      "iterations": 821,
+      "evaluations": 1231,
+      "warning": 0
+    }
+  ],
+  "report": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "transfer_scaled_error": 0.0,
+      "continuum_log_error": 0.0,
+      "profile_rmse_0": 1.1681712993299917e-14,
+      "observation_wrms_0": 1.3988432542048475,
+      "profile_rmse_1": 1.1003857954314198e-14,
+      "observation_wrms_1": 0.7275772237178485,
+      "profile_rmse_2": 9.209686451197086e-15,
+      "observation_wrms_2": 0.6844215356227661
+    },
+    "thresholds": {
+      "transfer_scaled_error": {
+        "comparison": "<=",
+        "boundary": 0.005
+      },
+      "continuum_log_error": {
+        "comparison": "<=",
+        "boundary": 0.005
+      },
+      "profile_rmse_0": {
+        "comparison": "<=",
+        "boundary": 0.01
+      },
+      "observation_wrms_0": {
+        "comparison": "<=",
+        "boundary": 1.4787854169150882
+      },
+      "profile_rmse_1": {
+        "comparison": "<=",
+        "boundary": 0.01
+      },
+      "observation_wrms_1": {
+        "comparison": "<=",
+        "boundary": 0.7739560849037411
+      },
+      "profile_rmse_2": {
+        "comparison": "<=",
+        "boundary": 0.01
+      },
+      "observation_wrms_2": {
+        "comparison": "<=",
+        "boundary": 0.7286426124039052
+      }
+    },
+    "errors": []
+  }
+}

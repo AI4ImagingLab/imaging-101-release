@@ -1,0 +1,180 @@
+{
+  "runtime_seconds": 169.90996909991372,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "amplitude_water_rmse": 0.0,
+      "amplitude_mt_rmse": 0.0,
+      "amplitude_amide_rmse": 0.0,
+      "amplitude_creatine_rmse": 0.0,
+      "amplitude_noe35_rmse": 0.0,
+      "amplitude_noe16_rmse": 0.0,
+      "width_water_rmse": 0.0,
+      "width_mt_rmse": 0.0,
+      "width_amide_rmse": 0.0,
+      "width_creatine_rmse": 0.0,
+      "width_noe35_rmse": 0.0,
+      "width_noe16_rmse": 0.0,
+      "center_water_rmse": 0.0,
+      "center_mt_rmse": 0.0,
+      "center_amide_rmse": 0.0,
+      "center_creatine_rmse": 0.0,
+      "center_noe35_rmse": 0.0,
+      "center_noe16_rmse": 0.0,
+      "field_shift_rmse": 1.218512846681098e-16,
+      "observation_rmse": 0.07805802475666919
+    },
+    "thresholds": {
+      "amplitude_water_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "amplitude_mt_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "amplitude_amide_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "amplitude_creatine_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "amplitude_noe35_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "amplitude_noe16_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "width_water_rmse": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "width_mt_rmse": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "width_amide_rmse": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "width_creatine_rmse": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "width_noe35_rmse": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "width_noe16_rmse": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "center_water_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0001
+      },
+      "center_mt_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0001
+      },
+      "center_amide_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0001
+      },
+      "center_creatine_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0001
+      },
+      "center_noe35_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0001
+      },
+      "center_noe16_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0001
+      },
+      "field_shift_rmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "observation_rmse": {
+        "comparison": "<=",
+        "boundary": 0.08586382723233611
+      }
+    },
+    "errors": []
+  },
+  "selected_pixel_joint_comparison": [
+    {
+      "pixel": [
+        86,
+        14
+      ],
+      "two_step_rmse": 0.14720656381086777,
+      "joint_rmse": 0.14289306958412418,
+      "converged": true,
+      "evaluations": 29,
+      "message": "`ftol` termination condition is satisfied."
+    },
+    {
+      "pixel": [
+        104,
+        137
+      ],
+      "two_step_rmse": 0.04322837430920981,
+      "joint_rmse": 0.03590929230534584,
+      "converged": false,
+      "evaluations": 2000,
+      "message": "The maximum number of function evaluations is exceeded."
+    },
+    {
+      "pixel": [
+        120,
+        88
+      ],
+      "two_step_rmse": 0.03457595421615451,
+      "joint_rmse": 0.0329888305285103,
+      "converged": true,
+      "evaluations": 16,
+      "message": "`ftol` termination condition is satisfied."
+    }
+  ],
+  "bound_fraction": [
+    [
+      0.002126230975828111,
+      0.00022381378692927484,
+      0.7966651745747538
+    ],
+    [
+      0.1310429722470904,
+      0.47079230080572965,
+      0.8049462846911369
+    ],
+    [
+      0.26980752014324083,
+      0.37746195165622204,
+      0.30875111906893465
+    ],
+    [
+      0.3504923903312444,
+      0.6289167412712623,
+      0.16528648164726947
+    ],
+    [
+      0.17423903312444047,
+      0.2448522829006267,
+      0.06490599820948971
+    ],
+    [
+      0.36235452103849597,
+      0.5196956132497762,
+      0.38943598925693823
+    ]
+  ],
+  "forward_ablation_rmse": 0.138800399463304
+}

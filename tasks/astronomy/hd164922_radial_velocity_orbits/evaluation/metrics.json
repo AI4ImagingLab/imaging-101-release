@@ -1,0 +1,45 @@
+{
+  "baseline": [
+    {
+      "method": "Independent precision continuation of the unchanged author posterior API; all four starts converge",
+      "reference_role": "method result; actual orbits unmeasured",
+      "period_abs_day": 0.0,
+      "epoch_phase_abs_day": 0.0,
+      "eccentricity_abs": 0.0,
+      "omega_phase_abs_rad": 0.0,
+      "amplitude_abs_mps": 0.0,
+      "offset_abs_mps": 0.0,
+      "jitter_abs_mps": 0.0,
+      "weighted_residual_rms": 0.9969421620760062
+    }
+  ],
+  "metric_definitions": {
+    "period_abs_day": "maximum absolute period error over both planets",
+    "epoch_phase_abs_day": "maximum epoch difference wrapped into half the reference period",
+    "eccentricity_abs": "maximum eccentricity absolute error",
+    "omega_phase_abs_rad": "maximum circular angular difference in radians",
+    "amplitude_abs_mps": "maximum absolute semi-amplitude error in m/s",
+    "offset_abs_mps": "maximum absolute error over three instrument offsets in m/s",
+    "jitter_abs_mps": "maximum absolute error over three jitter standard deviations in m/s",
+    "weighted_residual_rms": "sqrt(mean((observed-full_model)^2/(instrumental_uncertainty^2+instrument_jitter^2)))"
+  },
+  "rationale": "Tight original parameter tolerances retained unchanged after independently converging the same author posterior from four starts. Original-coordinate solution spread is at most3.81e-5; four objective values agree within1.16e-11. Numerical reference is a well-converged MAP, not the default premature stopping point or physical truth. Observation consistency is additionally required.",
+  "period_abs_day_boundary": 0.001,
+  "epoch_phase_abs_day_boundary": 0.001,
+  "eccentricity_abs_boundary": 0.0001,
+  "omega_phase_abs_rad_boundary": 0.001,
+  "amplitude_abs_mps_boundary": 0.001,
+  "offset_abs_mps_boundary": 0.001,
+  "jitter_abs_mps_boundary": 0.001,
+  "weighted_residual_rms_boundary": 1.05,
+  "comparisons": {
+    "period_abs_day": "<=",
+    "epoch_phase_abs_day": "<=",
+    "eccentricity_abs": "<=",
+    "omega_phase_abs_rad": "<=",
+    "amplitude_abs_mps": "<=",
+    "offset_abs_mps": "<=",
+    "jitter_abs_mps": "<=",
+    "weighted_residual_rms": "<="
+  }
+}

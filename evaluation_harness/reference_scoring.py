@@ -165,7 +165,12 @@ def compute_quality_metrics_from_arrays(out: np.ndarray, gt: np.ndarray) -> dict
 def score_reconstruction(task_dir: Path, recon_dir: Path) -> dict:
     """Score output/reconstruction.npy in recon_dir (or recon_dir/output) against
     the task's auto-discovered reference array. Returns metrics or {'error': ...}."""
+    from .benchmark import uses_npz_contract, score_submission
     recon_dir = Path(recon_dir)
+    if uses_npz_contract(task_dir):
+        # Every declared quantity, complex convention and physical unit belongs
+        # to the task Judge, never a generic magnitude/squeeze/key heuristic.
+        return score_submission(Path(task_dir), recon_dir / "output" / "reconstruction.npz")
     out_path = None
     for base in (recon_dir, recon_dir / "output"):
         p = base / "reconstruction.npy"

@@ -1,0 +1,21 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original MulensModel PSPL fit",
+      "chi2": 427.20382192774014,
+      "reduced_chi2": 1.1301688410786777
+    }
+  ],
+  "t0_error_boundary": 0.01,
+  "u0_error_boundary": 0.001,
+  "tE_error_boundary": 0.02,
+  "flux_error_boundary": 0.002,
+  "reduced_chi2_boundary": 1.2,
+  "definitions": {
+    "t0_error": "absolute days",
+    "u0_error": "absolute Einstein radius units",
+    "tE_error": "absolute days",
+    "flux_error": "L2 error of source/blend divided by reference source flux",
+    "reduced_chi2": "sum squared standardized flux residuals / (383-5)"
+  }
+}

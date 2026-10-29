@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified author Pastis PM1 on all native350 loci and53883 positive contact pairs, with source ICE visibility correction; source NumPy2.4.6/SciPy1.17.1 backend",
+      "distance_ncc": 1.0,
+      "distance_nrmse": 0.0,
+      "relative_poisson_excess": 0.0
+    }
+  ],
+  "relative_poisson_excess_boundary": 1e-05,
+  "distance_definition": "Euclidean distances for every unique pair among all343 input-supported loci; arbitrary translation and orthogonal transformations, including reflection, are unidentifiable and cancel exactly; no scale alignment",
+  "nrmse_definition": "RMS error of all unique supported-locus pair distances divided by max-minus-min of reference pair distances",
+  "relative_poisson_excess_definition": "(Poisson_negative_log_likelihood(prediction)-Poisson_negative_log_likelihood(reference))/max(1,abs(Poisson_negative_log_likelihood(reference))); positive53883 observed pairs only; alpha=-3,beta=1, and input-derived fixed ICE biases",
+  "reference_type": "Validated standard-method result, not measured chromatin truth",
+  "tolerance_provenance": "The pre-existing relative_poisson_excess boundary 1e-5 is retained unchanged. Removing near-exact pair-distance reproduction permits alternative solutions with equal or better public-contact likelihood. Historical reproduction metrics remain archived privately.",
+  "benchmark_semantics_version": 2,
+  "acceptance_definition": "Only the physical positive-pair Poisson objective and exact unsupported padding are acceptance metrics. Pair distances to a particular nonconvex optimum are not an accuracy target."
+}

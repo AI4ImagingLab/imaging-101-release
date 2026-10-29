@@ -1,0 +1,10 @@
+{
+  "baseline": [{"method": "Reproduced PlasmaPy native OML/two-stage Maxwellian/Druyvesteyn, standard-method reference, not actual truth", "eedf_relative_l2": 0.0, "energy_max_abs": 0.0, "parameter_max_relative": 0.0, "normalization_error": 0.0}],
+  "eedf_relative_l2_boundary": 1e-7,
+  "energy_max_abs_boundary": 1e-10,
+  "parameter_max_relative_boundary": 1e-6,
+  "normalization_error_boundary": 1e-7,
+  "metric_definitions": {"eedf_relative_l2":"L2 norm of distribution error divided by reference L2 norm", "energy_max_abs":"Maximum energy-axis absolute error in eV", "parameter_max_relative":"Maximum of absolute relative errors over all eight signed scalar quantities; no alignment or rescaling", "normalization_error":"Absolute departure of absolute trapezoidal distribution integral on the descending energy axis from one"},
+  "reference_role":"Standard-method output. Agreement does not establish accuracy of the plasma model or physical parameters.",
+  "tolerance_provenance":"Frozen before extraction. Exact original reruns and local numerical comparison are documented in test/validation.md. Nonzero tolerances permit numerical roundoff without admitting a zero or changed-scale distribution."
+}

@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "Original complete PT/OSEB, NumPy2 reference; no physical truth"
+    }
+  ],
+  "maximum_temperature_absolute_error_boundary": 0.001,
+  "maximum_flux_absolute_error_boundary": 0.1,
+  "maximum_radiometric_reprojection_K_boundary": 0.001,
+  "maximum_energy_closure_W_m2_boundary": 0.005,
+  "definitions": {
+    "maximum_temperature_absolute_error": "max absolute difference over both complete component temperature arrays, K",
+    "maximum_flux_absolute_error": "max absolute difference over all complete flux, G and radiation arrays, W/m2",
+    "maximum_radiometric_reprojection_K": "max abs((f Tc^4+(1-f)Ts^4)^0.25-Tr), bare f0",
+    "maximum_energy_closure_W_m2": "max absolute component energy closure, canopy SnC+LnC-LEc-Hc and soil SnS+LnS-LEs-Hs-G"
+  }
+}

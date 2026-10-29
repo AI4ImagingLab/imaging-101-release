@@ -1,0 +1,7 @@
+{
+  "baseline": [{"method": "Reproduced official SPD signed standard-major-axis fit, five natural measured specimens", "field_max_error": 0.0}],
+  "field_max_error_boundary": 0.000001,
+  "definition": "Maximum absolute field-strength discrepancy in microtesla across all five named specimens; no alignment, rescaling or masking.",
+  "reference_type": "independent upstream standard-method result; no declared physical ground truth",
+  "rationale": "Nonzero numerical reproduction tolerance fixed before extraction, much larger than float64 parity errors; does not imply microtesla physical accuracy. Historical expected fields are diagnostic context only."
+}

@@ -1,0 +1,8 @@
+{
+  "evaluation_semantics": "Method-independent per-voxel attainable spherical-mean data-fit bound, with physical range and derived-field consistency; replaces parameter-reference similarity.",
+  "objective_definition": "For each supported voxel mean over all positive-b directional squared residuals / observed b0 squared. Within-shell variance cancels in prediction-minus-baseline difference. Every voxel must satisfy the bound. Baseline is an attainable fit, not truth.",
+  "maximum_normalized_mse_excess_boundary": 1e-06,
+  "physical_range_violation_boundary": 1e-07,
+  "derived_relative_error_boundary": 1e-06,
+  "outside_mask_maximum_boundary": 0.0
+}

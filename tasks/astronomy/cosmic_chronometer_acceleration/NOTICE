@@ -1,0 +1,1 @@
+Mathematics adapted from GaPP, Copyright(C)2012,2013MarinaSeikel, GPL3or later. Original author source is kept only in the maintainer archive. This task implements covariance functions, derivatives, Gaussian conditioning, likelihood gradients and hyperparameter optimization explicitly using general NumPy/SciPy.

@@ -1,0 +1,101 @@
+{
+  "runtime_seconds": 0.1319187000626698,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "storage_ncc": 0.9999999999999999,
+      "storage_nrmse": 9.710939121596083e-15,
+      "loss_ncc": 0.9999999999999998,
+      "loss_nrmse": 1.1269864297687997e-15,
+      "msd_ncc": 1.0,
+      "msd_nrmse": 1.3112699068683866e-13,
+      "exponent_ncc": 0.9999999999999999,
+      "exponent_nrmse": 4.919239893080726e-14,
+      "intercept_relative_error": 0.0,
+      "forward_rmse": 0.01566838244616441
+    },
+    "thresholds": {
+      "storage_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "storage_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "loss_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "loss_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "msd_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "msd_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "exponent_ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "exponent_nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "intercept_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "forward_rmse": {
+        "comparison": "<=",
+        "boundary": 0.01723522069078028
+      }
+    },
+    "errors": []
+  },
+  "bandwidths": [
+    "0.05",
+    "0.1",
+    "0.2"
+  ],
+  "residual_by_bandwidth_repeat": [
+    [
+      0.010566115295994974,
+      0.007607474580858273,
+      0.004768923953975117
+    ],
+    [
+      0.01566838244616441,
+      0.010427389741539147,
+      0.00667659709547093
+    ],
+    [
+      0.02220901633350955,
+      0.014956004326743929,
+      0.009827163489065316
+    ]
+  ],
+  "storage_change_by_bandwidth_repeat": [
+    [
+      0.01713810877655557,
+      0.0017775220572074214,
+      0.0025795176100863113
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.043421800192161054,
+      0.0038379906438649855,
+      0.006178334940546642
+    ]
+  ]
+}

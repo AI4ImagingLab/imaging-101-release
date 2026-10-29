@@ -1,0 +1,29 @@
+{
+  "baseline": [
+    {
+      "method": "Original GaPP four kernels, all30 cosmic chronometers",
+      "observation_standardized_rms": [
+        0.6890324603198766,
+        0.6636208388259874,
+        0.6720615096390259,
+        0.6763601006208
+      ]
+    }
+  ],
+  "definitions": {
+    "maximum_q_absolute_error": "max absolute q-reference",
+    "maximum_H_relative_error": "max abs(H-Href)/Href",
+    "maximum_Hprime_sigma_normalized_error": "max abs(Hprime-HprimeRef)/sqrt(Cref[1,1])",
+    "maximum_covariance_sigma_normalized_error": "max abs(C-Cref)/sqrt(Cref_ii*Cref_jj)",
+    "q_identity_error": "max abs(q-((1+z)*Hprime/H-1))",
+    "H0_identity_relative_error": "max abs(H0-H(z0))/H(z0)",
+    "observation_standardized_rms": "maximum over four kernels RMS[(linear interpolation of H at measured z minus observed H)/error]"
+  },
+  "maximum_q_absolute_error_boundary": 0.001,
+  "maximum_H_relative_error_boundary": 0.0001,
+  "maximum_Hprime_sigma_normalized_error_boundary": 0.001,
+  "maximum_covariance_sigma_normalized_error_boundary": 0.001,
+  "q_identity_error_boundary": 1e-08,
+  "H0_identity_relative_error_boundary": 1e-10,
+  "observation_standardized_rms_boundary": 0.7579357063518644
+}

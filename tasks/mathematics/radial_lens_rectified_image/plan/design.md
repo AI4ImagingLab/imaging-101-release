@@ -1,0 +1,15 @@
+# Shipped execution flow
+
+`python -m src.main` calls run(data_path=None,output_path="output/reconstruction.npz"). It loads the task-relative NPZ by default, infers coefficients from observed points and group identities, rectifies the complete RGB image, and writes the two batch-first output arrays. Output paths are caller-relative. Importing main has no plotting/backend side effects.
+
+preprocessing.load_data(path=None) returns a dictionary after removing only the public batch axis: uint8 image(506,688,3),float64 line_points(29,2),int32 line_ids(29,). normalize_points(points) returns normalized float64 positions(N,2) and scalar pixel radius. CENTER is the explicit fixed physical convention.
+
+physics_model.determinant_polynomial(points,line_ids) consumes normalized positions and returns float64 quartic coefficients(5,5), ascending powers. transform_points(points,coefficients) maps distorted pixel positions(N,2) to undistorted pixel coordinates using the five ascending radial coefficients. straightness(points,line_ids) returns mean squared orthogonal line distance in pixel². inverse_radius_lookup(coefficients,max_radius) returns the one-dimensional float64 radius-ratio table. rectify(image,coefficients) returns the full uint8 RGB image with the specified frame and boundary conventions; it performs the documented constant-cell roundoff correction.
+
+solvers.resultant(dx,dy) returns19 ascending coefficients from two5×5 polynomial derivatives. algebraic_minimum(polynomial) returns the two normalized coefficients and a diagnostics dictionary containing normalized objective, resolvent and evaluated candidates. infer_distortion(points,line_ids) returns float64 coefficients(5,), including fixed1,0,0 entries. None of these functions reads reference arrays, writes files or imports an upstream package.
+
+visualization.line_residuals(points,line_ids) supplies signed perpendicular pixel residuals using a general SVD normal. It is a review diagnostic and does not alter the inference objective. The notebook uses local source modules for active fits and perturbations; original fixture arrays are loaded only for labeled comparisons.
+
+evaluation/judge.py is standalone and never imports src. It resolves truth/reference assets relative to itself, validates exact shapes/dtypes/finite coefficients, prefers actual truth when supplied, computes joint metrics, writes UTF8 JSON, and returns0/1/2. The current release contains baseline_reference.npz, no ground_truth.npz. Unit tests cover math, known metric cases and malformed/poor submissions; comparison tests consume frozen original stages and full image. test/conftest.py creates an isolated temporary directory only when pytest has no explicit basetemp, avoiding a shared Windows temp ACL problem.
+
+Private original C++ source/capture executables, papers, downloaded images and diagnostic logs are archived outside this package. Runtime needs only NumPy/SciPy; Matplotlib is used for the active review notebook. The original compiler and image readers are not cleaned-runtime dependencies.

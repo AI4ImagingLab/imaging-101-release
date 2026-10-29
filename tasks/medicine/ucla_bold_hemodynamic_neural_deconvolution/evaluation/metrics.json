@@ -1,0 +1,30 @@
+{
+  "baseline": [
+    {
+      "method": "original canonical+two derivatives/AR1/FFT ridge",
+      "hrf_ncc_vs_ref": 1.0,
+      "hrf_nrmse_vs_ref": 0.0,
+      "neural_drive_ncc_vs_ref": 1.0,
+      "neural_drive_nrmse_vs_ref": 0.0,
+      "worst_roi_observation_residual": 0.20152144162046914
+    }
+  ],
+  "boundaries": {
+    "hrf_ncc": 0.9999999999,
+    "hrf_nrmse": 1e-07,
+    "neural_drive_ncc": 0.9999999999,
+    "neural_drive_nrmse": 1e-07,
+    "worst_roi_hrf_nrmse": 1e-06,
+    "worst_roi_drive_nrmse": 1e-06,
+    "worst_roi_observation_residual": 0.22167358578251609
+  },
+  "metric_definition": "NCC uncentered cosine; NRMSE RMS divided by reference dynamic range. Worst ROI uses corresponding reference ROI dynamic range. Observation residual is per-ROI RMS forward circular-convolution discrepancy divided by RMS actually filtered public BOLD, then maximum over all400ROI.",
+  "rationale": "Frozen before extraction. Original repeated deterministic whole400ROI execution, float64 tolerance and independent physics checks; no zero-self-error mechanical boundary. Forward residual bound1.1timesexact original.",
+  "hrf_ncc_boundary": 0.9999999999,
+  "hrf_nrmse_boundary": 1e-07,
+  "neural_drive_ncc_boundary": 0.9999999999,
+  "neural_drive_nrmse_boundary": 1e-07,
+  "worst_roi_hrf_nrmse_boundary": 1e-06,
+  "worst_roi_drive_nrmse_boundary": 1e-06,
+  "worst_roi_observation_residual_boundary": 0.22167358578251609
+}

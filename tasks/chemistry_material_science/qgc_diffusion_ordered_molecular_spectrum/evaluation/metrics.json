@@ -1,0 +1,54 @@
+{
+  "baseline": [
+    {
+      "method": "Original PALMA hybrid lambda0.01, full29 realQGC support bands",
+      "maximum_band_relative_l2_vs_original": 0.0,
+      "minimum_band_cosine_vs_original": 1.0
+    }
+  ],
+  "band_relative_l2_boundary": 0.0001,
+  "band_cosine_boundary": 0.99999,
+  "observation_ball_ratio_boundary": 1.01,
+  "negative_relative_amplitude_boundary": 1e-08,
+  "metric_definitions": {
+    "relative_l2": "norm(predicted-reference)/norm(reference), separately each of29 bands, worst reported",
+    "cosine": "uncentered cosine each band, minimum reported",
+    "ball_ratio": "norm(K predicted-y)/eta, separately each band, maximum reported",
+    "negative_relative_amplitude": "max(0,-min(predicted))/max(abs(predicted)), separately each band"
+  },
+  "provenance": "Frozen before local extraction in private palma_frozen_criteria.json; nonzero numerical limits for a method reference, plus independent public observation consistency. No truth exists.",
+  "evaluation_version": "2.0-hybrid-entropy-sparsity-target",
+  "regularizer_budgets": [
+    0.993355684729138,
+    1.0008997063903782,
+    1.0049070105724196,
+    1.0006365875269456,
+    0.9825671150842229,
+    0.9856097704308558,
+    0.9898915527817846,
+    0.9762566649405477,
+    0.9776291918061797,
+    0.9760042912050176,
+    0.9738661941199194,
+    0.9750644504646745,
+    0.9772166003743106,
+    0.9905498107673799,
+    1.0055822050719765,
+    1.0047418298919393,
+    0.9762149776010185,
+    0.9892914648298806,
+    0.989762640161048,
+    0.9761462375892674,
+    0.9728145900851392,
+    0.9741589802292957,
+    0.9746093976988884,
+    0.9749330860265202,
+    0.9735924077686975,
+    0.9771629838920802,
+    0.9767788319682039,
+    0.9766216296764113,
+    0.9769129519895273
+  ],
+  "regularizer_budget_ratio_boundary": 1.00000001,
+  "v2_definition": "Per-band scaled convex hybrid regularizer must be no greater than the independently validated feasible standard value plus relative1e-8; retain full attenuation ball and nonnegativity limits. No hidden map matching or capped PPXA trajectory is required."
+}

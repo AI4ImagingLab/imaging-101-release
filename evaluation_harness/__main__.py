@@ -13,6 +13,7 @@ from pathlib import Path
 from .config import LLMConfig, RunConfig, TaskConfig
 from .env_manager import check_task_environment, setup_task_environment
 from .runner import BenchmarkRunner
+from .task_paths import resolve_task
 
 
 MODE_ALIASES = {
@@ -223,7 +224,7 @@ def _handle_run(args) -> None:
 
     # Resolve task directory
     repo_root = Path(__file__).resolve().parent.parent
-    task_dir = repo_root / "tasks" / args.task
+    task_dir = resolve_task(repo_root, args.task)
     args.mode = _resolve_mode(args)
 
     if args.dry_run:
@@ -445,7 +446,7 @@ def _handle_prepare(args) -> None:
     )
 
     repo_root = Path(__file__).resolve().parent.parent
-    task_dir = repo_root / "tasks" / args.task
+    task_dir = resolve_task(repo_root, args.task)
 
     workspace_dir = Path(args.workspace_dir) if args.workspace_dir else None
 
@@ -495,7 +496,7 @@ def _handle_collect(args) -> None:
     )
 
     repo_root = Path(__file__).resolve().parent.parent
-    task_dir = repo_root / "tasks" / args.task
+    task_dir = resolve_task(repo_root, args.task)
     workspace_path = Path(args.workspace_dir)
 
     if not workspace_path.exists():
@@ -710,7 +711,7 @@ def _handle_check_env(args) -> None:
 def _handle_setup_env(args) -> None:
     """Create a local virtual environment for a task."""
     repo_root = Path(__file__).resolve().parent.parent
-    task_dir = repo_root / "tasks" / args.task
+    task_dir = resolve_task(repo_root, args.task)
     if not task_dir.exists():
         print(f"Error: task not found: {args.task}", file=sys.stderr)
         sys.exit(1)

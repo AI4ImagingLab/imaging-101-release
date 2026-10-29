@@ -36,6 +36,14 @@ class BenchmarkRunner:
 
     def __init__(self, config: RunConfig) -> None:
         self.config = config
+        from .benchmark import uses_npz_contract, ensure_benchmark_ready
+        if uses_npz_contract(config.task.task_dir):
+            if config.task.mode == "end_to_end":
+                ensure_benchmark_ready(config.task.task_dir)
+            if config.task.mode == "end_to_end" and config.task.level != "L1":
+                raise ValueError("NPZ benchmark is public-only L1; reference plans stay private")
+            if not _docker_available():
+                raise ValueError("NPZ agent evaluation requires OS isolation; use benchmark.prepare and an isolated external agent, not the host local runner")
         self.client = LLMClient(config.llm)
 
         if _docker_available():
@@ -77,6 +85,9 @@ class BenchmarkRunner:
 
         level = self.config.task.level
         base = ["README.md", "data", "requirements.txt"]
+        from .benchmark import uses_npz_contract
+        if uses_npz_contract(self.config.task.task_dir):
+            return ["README.md", "data/raw_data.npz", "requirements.txt"]
 
         if level == "L2":
             # L2: also seed approach.md into workspace
@@ -209,6 +220,18 @@ class BenchmarkRunner:
         Scoring is based solely on reconstruction quality (NRMSE / NCC) against
         the reference ground truth — no unit-test pass rate is computed.
         """
+        from .benchmark import uses_npz_contract
+        if uses_npz_contract(self.config.task.task_dir):
+            if self.config.framework != "react":
+                raise ValueError("For external/multi-agent NPZ solving, use the public benchmark prepare/judge interface")
+            agent = Agent(self.client, self.runner, self.config.max_iterations,
+                          mode="end_to_end", log_file=self.config.log_file)
+            prompt = ("Solve the following inverse problem from README.md and data/raw_data.npz. "
+                      "Choose, implement and execute your own numerical method using the prepared environment. "
+                      "Save output/reconstruction.npz with ALL declared arrays, exact shapes, dtypes and units. "
+                      "Your code layout is your choice. Hidden judging happens after submission. "
+                      "Signal DONE only after computing and saving your submission.\n\n" + self._read_host_file("README.md"))
+            return agent.run(prompt)
         # Check framework choice
         if self.config.framework == "multi_agent":
             return self._run_end_to_end_multi_agent()

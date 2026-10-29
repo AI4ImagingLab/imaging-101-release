@@ -1,0 +1,10 @@
+{
+  "baseline": [{"method": "Independently executed author offline LIUQE anisotropic MAP, all190 native shot85270frames", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 0.000001,
+  "max_normalized_observation_rmse_boundary": 0.035,
+  "outside_vessel_max_boundary": 0.0,
+  "reference_type": "standard_method_not_ground_truth",
+  "max_normalized_observation_rmse_definition": "maximum over190frames of RMS((A*x-y)/max(y)); A and y use identical max-geometry normalization; all113 good channels",
+  "provenance": "Boundaries frozen privately before local extraction; original maximum residual0.030576372875822475; independent first-frame rerun max absolute difference1.1641532182693481e-9 on reference dynamic range3758557.138069409."
+}

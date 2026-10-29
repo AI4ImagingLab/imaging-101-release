@@ -1,0 +1,75 @@
+{
+  "primary_seconds": 279.4061039000517,
+  "comparison_seconds": 178.27838599996176,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "S0_rmse": 0.0,
+      "D_rmse": 0.0,
+      "fraction_weighted_rmse": 0.0,
+      "Dstar_weighted_rmse": 0.0,
+      "fDstar_rmse": 0.0,
+      "observation_relative_l2": 0.3966103933830301
+    },
+    "thresholds": {
+      "S0_rmse": {
+        "comparison": "<=",
+        "boundary": 0.6811477755077762
+      },
+      "D_rmse": {
+        "comparison": "<=",
+        "boundary": 1.666454616310215e-05
+      },
+      "fraction_weighted_rmse": {
+        "comparison": "<=",
+        "boundary": 0.01699014003074188
+      },
+      "Dstar_weighted_rmse": {
+        "comparison": "<=",
+        "boundary": 0.0032459965257982375
+      },
+      "fDstar_rmse": {
+        "comparison": "<=",
+        "boundary": 0.00022527093165768567
+      },
+      "observation_relative_l2": {
+        "comparison": "<=",
+        "boundary": 0.43627245704530293
+      }
+    },
+    "errors": []
+  },
+  "comparisons": [
+    {
+      "method": "Original joint",
+      "signal_rmse": 113.18947082856413,
+      "relative_l2": 0.3966103933830301,
+      "near_zero_fraction": 0.17399920729290527
+    },
+    {
+      "method": "Original fixed D",
+      "signal_rmse": 113.05090618781163,
+      "relative_l2": 0.39612486963002086,
+      "near_zero_fraction": 0.1969877130400317
+    },
+    {
+      "method": "Fresh joint",
+      "signal_rmse": 113.18947082856413,
+      "relative_l2": 0.3966103933830301,
+      "near_zero_fraction": 0.17399920729290527
+    },
+    {
+      "method": "Fresh fixed D",
+      "signal_rmse": 113.05090618781163,
+      "relative_l2": 0.39612486963002086,
+      "near_zero_fraction": 0.1969877130400317
+    },
+    {
+      "method": "Fresh mono",
+      "signal_rmse": 222.46638122567788,
+      "relative_l2": 0.7795113655584753,
+      "near_zero_fraction": 1.0
+    }
+  ]
+}

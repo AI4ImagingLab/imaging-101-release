@@ -1,3 +1,5 @@
+> Current public NPZ benchmark: see [the public-input guide](../docs/PUBLIC_BENCHMARK.md). The `.npy`/flat-task/L2-L3 examples below are historical research interfaces and must not override a current task README or its standalone Judge.
+
 # Evaluation Harness
 
 The harness provides one CLI for three benchmark mechanisms:

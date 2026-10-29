@@ -1,0 +1,28 @@
+{
+  "branch": "Explicit prehistory-OFF-consistent correction, not unchanged original EM",
+  "posterior_rmse_boundary": 0.01,
+  "transition_rmse_boundary": 0.005,
+  "emission_relative_l2_boundary": 0.01,
+  "noise_relative_error_boundary": 0.01,
+  "initial_rmse_boundary": 0.005,
+  "stage_rtol": 1e-06,
+  "stage_atol": 1e-07,
+  "rationale": "Corrected source stops at relative changes 0.001 under a dynamic 32-state truncation. A one-additional-step original check changes transition entries at most0.00018 and noise0.00041 relative; coefficient-vector change about0.001. Tenfold stopping-scale margins for continuous quantities, half-percent absolute transition/initial and1% posterior RMS are fixed before extraction. No claim of exact full-state EM or biological truth. Posterior normalization requires1e-6.",
+  "baseline": [
+    {
+      "method": "Separately corrected original 32-state Gaussian compound-HMM; no independent biological truth",
+      "posterior_rmse": 0.0,
+      "transition_rmse": 0.0,
+      "emission_relative_l2": 0.0,
+      "noise_relative_error": 0.0,
+      "initial_rmse": 0.0
+    }
+  ],
+  "metric_definitions": {
+    "posterior_rmse": "RMS of ON-posterior difference over all valid recorded frames, padding excluded",
+    "transition_rmse": "RMS over all four transition entries, no permutation alignment",
+    "initial_rmse": "RMS over both initial-state entries",
+    "emission_relative_l2": "Euclidean norm of two loading differences divided by reference loading-vector norm",
+    "noise_relative_error": "Absolute submitted/reference noise-standard-deviation ratio minus one"
+  }
+}

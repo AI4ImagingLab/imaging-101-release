@@ -1,0 +1,1188 @@
+{
+  "created_utc": "2026-10-29T10:22:17.227220+00:00",
+  "task_count": 299,
+  "scope": "156 historical static inverse candidates plus80 independently validated tasks in batches9,10,11and12. All279pre-existing tasks and their historical audit limitations are retained, without claiming fresh numerical recertification.",
+  "criteria": [
+    "Explicit observation-to-latent-target inverse implementation",
+    "Bound raw_data.npz and standard reference/entry/Judge/metrics assets exist",
+    "Canonical notebook contains an active reconstruction path with complete saved execution and figures",
+    "No identified unresolved public-contract solvability blocker"
+  ],
+  "included_count": 236,
+  "included_tasks": [
+    "a3158_xray_gas_deprojection",
+    "abel_plasma_emission",
+    "acbp_equilibrium_free_energy_surface",
+    "adirondack_stereo_depth_field",
+    "afm_molecular_surface_height",
+    "agn_uv_reverberation_transfer",
+    "aluminium_atom_probe_coordinates",
+    "aluminium_crack_tip_stress_intensity",
+    "alv_diffuse_correlation_flow_index",
+    "anatolian_fault_creep_distribution",
+    "archeomagnetic_global_field_mapping",
+    "ascidian_cell_interface_force_atlas",
+    "asl_cbf_att_maps",
+    "asynchronous_acoustic_sensor_geometry",
+    "australia_magnetotelluric_occam_profile",
+    "bayer_raw_colour_reconstruction",
+    "bayesian_monolayer_stress_mapping",
+    "bbo_photon_polarization_density",
+    "bilateral_normal_surface_integration",
+    "bos_optical_density_field",
+    "bracketed_camera_response_radiance",
+    "brain_magnetization_transfer_saturation",
+    "brain_phosphorus_metabolite_quantification",
+    "brain_reversible_relaxation_venous_volume",
+    "brillouin_water_spectral_shift",
+    "bsubtilis_differential_dynamics",
+    "bushveld_gravity_continuation",
+    "calcium_cnmf_demixing",
+    "california_seismic_source_tensor",
+    "carbon_adsorption_pore_population",
+    "cardiac_cest_apparent_pool_contrasts",
+    "celegans_wiener_deconvolution",
+    "cell_membrane_frap_transport",
+    "cement_nmr_relaxation_distribution",
+    "chariklo_occultation_silhouette",
+    "checkerboard_water_surface_height",
+    "chemical_shift_water_fat_mri",
+    "chromatic_lookup_surface_geometry",
+    "clamato_lyman_alpha_flux_volume",
+    "coastal_video_wave_bathymetry",
+    "compton_attitude_sky_intensity",
+    "copper_exafs_pair_distribution",
+    "cordoba_lidar_aerosol_mapping",
+    "cosmic_chronometer_acceleration",
+    "covercrop_electromagnetic_conductivity",
+    "diffractive_lens_chromatic_radiance",
+    "diffusion_mri_mean_signal_kurtosis",
+    "diffusive_slab_hidden_scattering_volume",
+    "dipolar_epr_distance_distribution",
+    "dipyridyl_relative_electron_density",
+    "dirbe_dust_colour_temperature_density",
+    "dna_reca_force_extension_elasticity",
+    "dsc_bolus_residue_perfusion_fields",
+    "dual_retarder_mueller_operator",
+    "ebsd_nickel_crystal_orientation",
+    "ecoli_calibrated_fluorescence_abundances",
+    "edge_weld_contour_normal_stress",
+    "eeg_volume_current_imaging",
+    "eht_black_hole_original",
+    "electrochemical_impedance_drt",
+    "electron_holography_material_phase",
+    "enzyme_substrate_saturation_kinetics",
+    "epicardial_potential_fundamental_solutions",
+    "epr_radical_density_separation",
+    "euclid_constitutive_law",
+    "event_rotation_log_radiance",
+    "exoplanet_thermal_eclipse_mapping",
+    "experimental_modal_identification",
+    "faraday_depth_rmclean",
+    "finite_element_speckle_dic",
+    "fire_wall_inverse_heatflux",
+    "flim_phasor_lifetime",
+    "florence_dual_doppler_wind_volume",
+    "fnirs_motor_hemoglobin",
+    "galaxy_sersic_structure",
+    "gamma_coded_aperture_source_map",
+    "german_seismic_scattering_absorption",
+    "gf2_gsa_pansharpening",
+    "gkp_homodyne_wigner_tomography",
+    "global_gnss_phase_tec_field",
+    "glossy_polarisation_surface_height",
+    "gold_xanes_standard_mixture",
+    "gpr_dune_stolt_migration",
+    "graphene_moire_gpa",
+    "grating_camera_spectral_response",
+    "guv_polarized_lightsheet_orientation_volume",
+    "hardi_csa_odf",
+    "hawaii_gravity_density_volume",
+    "hd164922_radial_velocity_orbits",
+    "hd209458b_transmission_atmosphere",
+    "helium_langmuir_electron_distribution",
+    "hertha_multimodal_shape_spin",
+    "historic_film_low_rank_separation",
+    "hl60_offaxis_wavefield",
+    "holmium_shg_frog_pulse_retrieval",
+    "hydraulic_injection_conductivity",
+    "hyperspectral_single_pixel_hadamard",
+    "ibm_wigner_quantum_process",
+    "impact_plate_surface_load",
+    "in_vivo_ultrasound_microvascular_mapping",
+    "incoherent_scattering_iclass",
+    "intel_se2_pose_graph_reconstruction",
+    "j0437_interstellar_scintillation_arc",
+    "kids450_weak_lensing_mass",
+    "landsat_two_source_energy_partition",
+    "lemur_alpha_matte_reconstruction",
+    "lopeg_doppler_brightness_mapping",
+    "lopeg_zeeman_vector_mapping",
+    "lorentz_tem_projected_induction",
+    "lutetium_spect_attenuation_resolution_activity",
+    "magnetic_microscopy_dipole_inversion",
+    "magnetic_particle_tracer_reconstruction",
+    "masaya_uv_so2_column_transects",
+    "masked_texture_image_reconstruction",
+    "mcf10a_dpc_phase_absorption",
+    "mdck_finite_thickness_traction",
+    "measured_modal_story_stiffness",
+    "membrane_saim_height_field",
+    "metallic_paint_microfacet_distribution",
+    "microphone_array_acoustic_source_power",
+    "microwave_dielectric_contrast_imaging",
+    "microwave_link_rainfall_field",
+    "microwave_notch_resonator_losses",
+    "mitchell_gnss_reflector_height",
+    "mouse_head_fluorescence_yield_tomography",
+    "mouse_oxygen_challenge_spectral_maps",
+    "mri_b1_actual_flip_angle",
+    "mri_t1_variable_flip_angle",
+    "mri_transceive_phase_conductivity",
+    "multi_illumination_intrinsic_fields",
+    "multi_shell_neurite_microstructure",
+    "multicamera_volumetric_particle_trajectories",
+    "multiheight_inline_phase_recovery",
+    "muon_statue_scattering_volume",
+    "n2hp_hyperfine_cloud_mapping",
+    "nadh_bound_fraction_lifetimes",
+    "nascent_transcription_promoter_dynamics",
+    "nearfield_acoustic_equivalent_source",
+    "neural_blind_motion_deconvolution",
+    "neutron_crystal_field_hamiltonian",
+    "neutron_joint_lattice_strain_fields",
+    "neutron_reflectometry_thin_film",
+    "nexus_relative_focal_depth",
+    "ngc2403_tilted_ring_kinematics",
+    "nonlocal_haze_radiance_reconstruction",
+    "oct_coronary_spectral_tomography",
+    "odmr_resonance_magnetic_fields",
+    "ogle_stellar_microlensing_geometry",
+    "omnidirectional_piv_pressure",
+    "orthographic_shape_camera_factorization",
+    "oysand_rayleigh_shear_profile",
+    "pancreatic_spatial_celltype_mixtures",
+    "particle_image_velocimetry",
+    "pendant_drop_capillary_shape",
+    "perovskite_dual_contrast_atomic_columns",
+    "phantom_complex_shear_modulus",
+    "phase_contrast_mri_velocity_field",
+    "phase_shifting_holography",
+    "photoelastic_granular_stress",
+    "plane_stress_elasticity_tomography",
+    "pmma_grid_dark_field_tensor",
+    "polarimetric_interreflection_fields",
+    "polcam_fluorescence_orientation",
+    "polymer_oscillatory_relaxation_spectrum",
+    "porcine_optical_attenuation_field",
+    "powder_diffraction_phase_fractions",
+    "protein_joint_cd_ir_structure",
+    "proton_fluence_magnetic_field",
+    "ps13_plasma_logan_volume",
+    "qgc_diffusion_ordered_molecular_spectrum",
+    "qiba_dce_exchange_maps",
+    "qlipp_birefringent_sample",
+    "qsm_single_step_tgv",
+    "quantized_leaf_radiance",
+    "quartz_diffraction_strain_tomography",
+    "quartz_fiber_thermal_diffusivity",
+    "quartz_velocity_step_friction",
+    "radial_lens_rectified_image",
+    "rat_hyperpolarized_pyruvate_lactate_exchange",
+    "raw_burst_radiance_reconstruction",
+    "rb_voigt_vapour_magnetometry",
+    "renal_filtration_fraction_tubular_transit",
+    "ribosome_temporal_conformation_states",
+    "robust_photometric_surface_normals",
+    "root_apoplastic_ph_field",
+    "rotating_disk_ultrasound_vector_field",
+    "s100a14_zinc_binding_thermodynamics",
+    "saxs_contrast_weighted_particle_size_density",
+    "saxs_protein_density",
+    "scattering_microrheology_modulus",
+    "sdss_stellar_population_dust_distribution",
+    "sediment_210pb_chronology",
+    "sentinel1_volcano_sbas",
+    "sesans_polystyrene_correlation",
+    "single_glass_transmission_field",
+    "skbr3_acceptor_photobleaching_efficiency",
+    "slovenia_borehole_temperature_history",
+    "smc24_nebular_temperature_density",
+    "snspd_coin_return_delay",
+    "soil_electrical_current_source_imaging",
+    "solar_aia_dem_mapping",
+    "solar_crisp_stokes_vector_mapping",
+    "solar_internal_rotation_sola",
+    "solar_multiobject_wavefront_mfbd",
+    "sparse_acceleration_virtual_response",
+    "spinal_cord_ivim_microperfusion",
+    "spinel_polarized_magnetization_depth",
+    "spitzer_stellar_psf_photometry",
+    "squid_planar_current_imaging",
+    "stanford_range_similarity_registration",
+    "staphylococcus_membrane_diffusion_maps",
+    "steel_resonant_elastic_moduli",
+    "stem_cobalt_phosphide_tomography",
+    "tcv_bolometric_emissivity",
+    "teleseismic_receiver_functions",
+    "temporal_coded_snapshot_video",
+    "terahertz_pellet_optical_constants",
+    "terahertz_waveform_noise_calibration",
+    "thellier_thermal_paleointensity",
+    "thermogravimetric_isoconversional_activation_energy",
+    "tidal_current_ellipses",
+    "titania_ellipsometric_dispersion_thickness",
+    "tweezers_exposure_calibrated_dynamics",
+    "ub199_hysteretic_switching_density",
+    "ucla_bold_hemodynamic_neural_deconvolution",
+    "ugem_velocity_emissivity",
+    "ultrasonic_notch_tfm",
+    "uncertain_view_silhouette_volume",
+    "variational_motion_deblatting",
+    "vermiculite_mossbauer_iron_sites",
+    "vesta_stellar_atmosphere_synthesis",
+    "wmap_microwave_component_maps",
+    "wo3_hmf_reaction_network",
+    "xps_interface_concentration_depth",
+    "yeast_hic_consensus_geometry",
+    "zebrafish_indentation_modulus"
+  ],
+  "excluded_tasks": [
+    {
+      "task": "adjust_spectral_material_tomography",
+      "reasons": [
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "bragg_coherent_crystal_strain",
+      "reasons": [
+        "unresolved_fixed_seed_reference_public_contract_solvability_gate"
+      ]
+    },
+    {
+      "task": "cars_spectroscopy",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "confocal-nlos-fk",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "conventional_ptychography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "ct_dual_energy",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "ct_fan_beam",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "ct_poisson_lowdose",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "ct_sparse_view",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "differentiable_deflectometry",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "diffusion_mri_dti",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "eht_black_hole_dynamic",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract"
+      ]
+    },
+    {
+      "task": "eht_black_hole_feature_extraction_dynamic",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "eht_black_hole_tomography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "eht_black_hole_UQ",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "eit_conductivity_reconstruction",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "electron_ptychography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "era5_tensorvar",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "exoplanet_imaging",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract"
+      ]
+    },
+    {
+      "task": "fourier_ptychography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "fpm_inr_reconstruction",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "hessian_sim",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "insar_phase_unwrapping",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "lensless_imaging",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "light_field_microscope",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "lucky_imaging",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mcr_hyperspectral",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "microscope_denoising",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_dynamic_dce",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_grappa",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_l1_wavelet",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_noncartesian_cs",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_pnp_admm",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract",
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_sense",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_t2_mapping",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_tv",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "mri_varnet",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "pet_mlem",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "photoacoustic_tomography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "plane_wave_ultrasound",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "pmhc_single_molecule_localization",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract"
+      ]
+    },
+    {
+      "task": "pnp_mri_reconstruction",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract",
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "raman_cell_phenotyping",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "reflection_ODT",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "s2ism",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "seismic_FDFWI",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract",
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "missing_notebook"
+      ]
+    },
+    {
+      "task": "seismic_FWI_original",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "seismic_lsrtm_original",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "seismic_traveltime_tomography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "shack-hartmann",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "shapelet_source_reconstruction",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract",
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "single_molecule_light_field",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "sofi_live_cell_fluctuations",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract"
+      ]
+    },
+    {
+      "task": "solar_coronal_pfss",
+      "reasons": [
+        "not_strict_inverse_or_unresolved_contract"
+      ]
+    },
+    {
+      "task": "spectral_snapshot_compressive_imaging",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "ssnp_idt",
+      "reasons": [
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "missing_notebook"
+      ]
+    },
+    {
+      "task": "ssnp_odt",
+      "reasons": [
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "ultrasound_sos_tomography",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "usct_FWI",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "weather_radar_data_assimilation",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "xray_laminography_tike",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "xray_ptychography_tike",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    },
+    {
+      "task": "xray_tooth_gridrec",
+      "reasons": [
+        "missing_bound_observations",
+        "incomplete_standard_input_reference_entry_judge_contract",
+        "notebook_cached_unexecuted_error_or_missing_saved_figures"
+      ]
+    }
+  ],
+  "detailed_report": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\inverse_audit_20261026\\REVIEW_REPORT.md",
+  "legacy_static_candidate_count": 156,
+  "new_independently_validated_count": 20,
+  "new_independently_validated_tasks": [
+    "alv_diffuse_correlation_flow_index",
+    "asynchronous_acoustic_sensor_geometry",
+    "cosmic_chronometer_acceleration",
+    "dna_reca_force_extension_elasticity",
+    "epicardial_potential_fundamental_solutions",
+    "intel_se2_pose_graph_reconstruction",
+    "j0437_interstellar_scintillation_arc",
+    "landsat_two_source_energy_partition",
+    "microwave_notch_resonator_losses",
+    "qgc_diffusion_ordered_molecular_spectrum",
+    "quartz_velocity_step_friction",
+    "rb_voigt_vapour_magnetometry",
+    "s100a14_zinc_binding_thermodynamics",
+    "sediment_210pb_chronology",
+    "smc24_nebular_temperature_density",
+    "steel_resonant_elastic_moduli",
+    "temporal_coded_snapshot_video",
+    "ucla_bold_hemodynamic_neural_deconvolution",
+    "vermiculite_mossbauer_iron_sites",
+    "wo3_hmf_reaction_network"
+  ],
+  "new_batch_report": "../../imaging-101-maintainer/research_batch12_20261029/report/REPORT.md",
+  "new_batch_acceptance": "../../imaging-101-maintainer/research_batch12_20261029/release_postflight.json",
+  "cumulative_independently_validated_count": 80,
+  "validated_batches": [
+    {
+      "batch": "batch9",
+      "tasks": [
+        "acbp_equilibrium_free_energy_surface",
+        "aluminium_crack_tip_stress_intensity",
+        "brain_phosphorus_metabolite_quantification",
+        "california_seismic_source_tensor",
+        "carbon_adsorption_pore_population",
+        "coastal_video_wave_bathymetry",
+        "dual_retarder_mueller_operator",
+        "euclid_constitutive_law",
+        "glossy_polarisation_surface_height",
+        "hd164922_radial_velocity_orbits",
+        "helium_langmuir_electron_distribution",
+        "membrane_saim_height_field",
+        "orthographic_shape_camera_factorization",
+        "porcine_optical_attenuation_field",
+        "ribosome_temporal_conformation_states",
+        "saxs_contrast_weighted_particle_size_density",
+        "solar_internal_rotation_sola",
+        "sparse_acceleration_virtual_response",
+        "ub199_hysteretic_switching_density",
+        "uncertain_view_silhouette_volume"
+      ],
+      "report": "../../imaging-101-maintainer/research_batch9_20261026/report/REPORT.md",
+      "acceptance": "../../imaging-101-maintainer/research_batch9_20261026/release_postflight.json"
+    },
+    {
+      "batch": "batch10",
+      "tasks": [
+        "agn_uv_reverberation_transfer",
+        "bbo_photon_polarization_density",
+        "bracketed_camera_response_radiance",
+        "brain_magnetization_transfer_saturation",
+        "brain_reversible_relaxation_venous_volume",
+        "cell_membrane_frap_transport",
+        "enzyme_substrate_saturation_kinetics",
+        "german_seismic_scattering_absorption",
+        "gold_xanes_standard_mixture",
+        "masaya_uv_so2_column_transects",
+        "metallic_paint_microfacet_distribution",
+        "ogle_stellar_microlensing_geometry",
+        "pendant_drop_capillary_shape",
+        "powder_diffraction_phase_fractions",
+        "protein_joint_cd_ir_structure",
+        "radial_lens_rectified_image",
+        "renal_filtration_fraction_tubular_transit",
+        "sdss_stellar_population_dust_distribution",
+        "spinel_polarized_magnetization_depth",
+        "zebrafish_indentation_modulus"
+      ],
+      "report": "../../imaging-101-maintainer/research_batch10_20261027/report/REPORT.md",
+      "acceptance": "../../imaging-101-maintainer/research_batch10_20261027/release_postflight.json"
+    },
+    {
+      "batch": "batch11",
+      "tasks": [
+        "cardiac_cest_apparent_pool_contrasts",
+        "diffractive_lens_chromatic_radiance",
+        "ecoli_calibrated_fluorescence_abundances",
+        "grating_camera_spectral_response",
+        "hd209458b_transmission_atmosphere",
+        "ibm_wigner_quantum_process",
+        "measured_modal_story_stiffness",
+        "mitchell_gnss_reflector_height",
+        "nadh_bound_fraction_lifetimes",
+        "nascent_transcription_promoter_dynamics",
+        "neutron_crystal_field_hamiltonian",
+        "quartz_fiber_thermal_diffusivity",
+        "scattering_microrheology_modulus",
+        "slovenia_borehole_temperature_history",
+        "spinal_cord_ivim_microperfusion",
+        "tcv_bolometric_emissivity",
+        "thellier_thermal_paleointensity",
+        "thermogravimetric_isoconversional_activation_energy",
+        "tweezers_exposure_calibrated_dynamics",
+        "vesta_stellar_atmosphere_synthesis"
+      ],
+      "report": "../../imaging-101-maintainer/research_batch11_20261027/report/REPORT.md",
+      "acceptance": "../../imaging-101-maintainer/research_batch11_20261027/release_postflight.json"
+    },
+    {
+      "batch": "batch12",
+      "tasks": [
+        "alv_diffuse_correlation_flow_index",
+        "asynchronous_acoustic_sensor_geometry",
+        "cosmic_chronometer_acceleration",
+        "dna_reca_force_extension_elasticity",
+        "epicardial_potential_fundamental_solutions",
+        "intel_se2_pose_graph_reconstruction",
+        "j0437_interstellar_scintillation_arc",
+        "landsat_two_source_energy_partition",
+        "microwave_notch_resonator_losses",
+        "qgc_diffusion_ordered_molecular_spectrum",
+        "quartz_velocity_step_friction",
+        "rb_voigt_vapour_magnetometry",
+        "s100a14_zinc_binding_thermodynamics",
+        "sediment_210pb_chronology",
+        "smc24_nebular_temperature_density",
+        "steel_resonant_elastic_moduli",
+        "temporal_coded_snapshot_video",
+        "ucla_bold_hemodynamic_neural_deconvolution",
+        "vermiculite_mossbauer_iron_sites",
+        "wo3_hmf_reaction_network"
+      ],
+      "report": "../../imaging-101-maintainer/research_batch12_20261029/report/REPORT.md",
+      "acceptance": "../../imaging-101-maintainer/research_batch12_20261029/release_postflight.json"
+    }
+  ],
+  "task_paths": {
+    "a3158_xray_gas_deprojection": "tasks/astronomy/a3158_xray_gas_deprojection",
+    "abel_plasma_emission": "tasks/physics/abel_plasma_emission",
+    "acbp_equilibrium_free_energy_surface": "tasks/biology/acbp_equilibrium_free_energy_surface",
+    "adirondack_stereo_depth_field": "tasks/mathematics/adirondack_stereo_depth_field",
+    "adjust_spectral_material_tomography": "tasks/chemistry_material_science/adjust_spectral_material_tomography",
+    "afm_molecular_surface_height": "tasks/chemistry_material_science/afm_molecular_surface_height",
+    "agn_uv_reverberation_transfer": "tasks/astronomy/agn_uv_reverberation_transfer",
+    "aluminium_atom_probe_coordinates": "tasks/chemistry_material_science/aluminium_atom_probe_coordinates",
+    "aluminium_crack_tip_stress_intensity": "tasks/mechanics/aluminium_crack_tip_stress_intensity",
+    "alv_diffuse_correlation_flow_index": "tasks/medicine/alv_diffuse_correlation_flow_index",
+    "anatolian_fault_creep_distribution": "tasks/earth_science/anatolian_fault_creep_distribution",
+    "archeomagnetic_global_field_mapping": "tasks/earth_science/archeomagnetic_global_field_mapping",
+    "ascidian_cell_interface_force_atlas": "tasks/mechanics/ascidian_cell_interface_force_atlas",
+    "asl_cbf_att_maps": "tasks/medicine/asl_cbf_att_maps",
+    "asynchronous_acoustic_sensor_geometry": "tasks/mathematics/asynchronous_acoustic_sensor_geometry",
+    "australia_magnetotelluric_occam_profile": "tasks/earth_science/australia_magnetotelluric_occam_profile",
+    "bayer_raw_colour_reconstruction": "tasks/mathematics/bayer_raw_colour_reconstruction",
+    "bayesian_monolayer_stress_mapping": "tasks/mechanics/bayesian_monolayer_stress_mapping",
+    "bbo_photon_polarization_density": "tasks/physics/bbo_photon_polarization_density",
+    "bilateral_normal_surface_integration": "tasks/mathematics/bilateral_normal_surface_integration",
+    "bos_optical_density_field": "tasks/mechanics/bos_optical_density_field",
+    "bracketed_camera_response_radiance": "tasks/mathematics/bracketed_camera_response_radiance",
+    "bragg_coherent_crystal_strain": "tasks/mechanics/bragg_coherent_crystal_strain",
+    "brain_magnetization_transfer_saturation": "tasks/medicine/brain_magnetization_transfer_saturation",
+    "brain_phosphorus_metabolite_quantification": "tasks/medicine/brain_phosphorus_metabolite_quantification",
+    "brain_reversible_relaxation_venous_volume": "tasks/medicine/brain_reversible_relaxation_venous_volume",
+    "brillouin_water_spectral_shift": "tasks/physics/brillouin_water_spectral_shift",
+    "bsubtilis_differential_dynamics": "tasks/biology/bsubtilis_differential_dynamics",
+    "bushveld_gravity_continuation": "tasks/earth_science/bushveld_gravity_continuation",
+    "calcium_cnmf_demixing": "tasks/biology/calcium_cnmf_demixing",
+    "california_seismic_source_tensor": "tasks/earth_science/california_seismic_source_tensor",
+    "carbon_adsorption_pore_population": "tasks/chemistry_material_science/carbon_adsorption_pore_population",
+    "cardiac_cest_apparent_pool_contrasts": "tasks/medicine/cardiac_cest_apparent_pool_contrasts",
+    "cars_spectroscopy": "tasks/chemistry_material_science/cars_spectroscopy",
+    "celegans_wiener_deconvolution": "tasks/biology/celegans_wiener_deconvolution",
+    "cell_membrane_frap_transport": "tasks/biology/cell_membrane_frap_transport",
+    "cement_nmr_relaxation_distribution": "tasks/chemistry_material_science/cement_nmr_relaxation_distribution",
+    "chariklo_occultation_silhouette": "tasks/astronomy/chariklo_occultation_silhouette",
+    "checkerboard_water_surface_height": "tasks/mechanics/checkerboard_water_surface_height",
+    "chemical_shift_water_fat_mri": "tasks/medicine/chemical_shift_water_fat_mri",
+    "chromatic_lookup_surface_geometry": "tasks/mathematics/chromatic_lookup_surface_geometry",
+    "clamato_lyman_alpha_flux_volume": "tasks/astronomy/clamato_lyman_alpha_flux_volume",
+    "coastal_video_wave_bathymetry": "tasks/earth_science/coastal_video_wave_bathymetry",
+    "compton_attitude_sky_intensity": "tasks/physics/compton_attitude_sky_intensity",
+    "confocal-nlos-fk": "tasks/physics/confocal-nlos-fk",
+    "conventional_ptychography": "tasks/physics/conventional_ptychography",
+    "copper_exafs_pair_distribution": "tasks/chemistry_material_science/copper_exafs_pair_distribution",
+    "cordoba_lidar_aerosol_mapping": "tasks/earth_science/cordoba_lidar_aerosol_mapping",
+    "cosmic_chronometer_acceleration": "tasks/astronomy/cosmic_chronometer_acceleration",
+    "covercrop_electromagnetic_conductivity": "tasks/earth_science/covercrop_electromagnetic_conductivity",
+    "ct_dual_energy": "tasks/medicine/ct_dual_energy",
+    "ct_fan_beam": "tasks/medicine/ct_fan_beam",
+    "ct_poisson_lowdose": "tasks/medicine/ct_poisson_lowdose",
+    "ct_sparse_view": "tasks/medicine/ct_sparse_view",
+    "differentiable_deflectometry": "tasks/mechanics/differentiable_deflectometry",
+    "diffractive_lens_chromatic_radiance": "tasks/mathematics/diffractive_lens_chromatic_radiance",
+    "diffusion_mri_dti": "tasks/medicine/diffusion_mri_dti",
+    "diffusion_mri_mean_signal_kurtosis": "tasks/medicine/diffusion_mri_mean_signal_kurtosis",
+    "diffusive_slab_hidden_scattering_volume": "tasks/physics/diffusive_slab_hidden_scattering_volume",
+    "dipolar_epr_distance_distribution": "tasks/chemistry_material_science/dipolar_epr_distance_distribution",
+    "dipyridyl_relative_electron_density": "tasks/chemistry_material_science/dipyridyl_relative_electron_density",
+    "dirbe_dust_colour_temperature_density": "tasks/astronomy/dirbe_dust_colour_temperature_density",
+    "dna_reca_force_extension_elasticity": "tasks/biology/dna_reca_force_extension_elasticity",
+    "dsc_bolus_residue_perfusion_fields": "tasks/medicine/dsc_bolus_residue_perfusion_fields",
+    "dual_retarder_mueller_operator": "tasks/physics/dual_retarder_mueller_operator",
+    "ebsd_nickel_crystal_orientation": "tasks/chemistry_material_science/ebsd_nickel_crystal_orientation",
+    "ecoli_calibrated_fluorescence_abundances": "tasks/biology/ecoli_calibrated_fluorescence_abundances",
+    "edge_weld_contour_normal_stress": "tasks/mechanics/edge_weld_contour_normal_stress",
+    "eeg_volume_current_imaging": "tasks/medicine/eeg_volume_current_imaging",
+    "eht_black_hole_dynamic": "tasks/astronomy/eht_black_hole_dynamic",
+    "eht_black_hole_feature_extraction_dynamic": "tasks/astronomy/eht_black_hole_feature_extraction_dynamic",
+    "eht_black_hole_original": "tasks/astronomy/eht_black_hole_original",
+    "eht_black_hole_tomography": "tasks/astronomy/eht_black_hole_tomography",
+    "eht_black_hole_UQ": "tasks/astronomy/eht_black_hole_UQ",
+    "eit_conductivity_reconstruction": "tasks/medicine/eit_conductivity_reconstruction",
+    "electrochemical_impedance_drt": "tasks/chemistry_material_science/electrochemical_impedance_drt",
+    "electron_holography_material_phase": "tasks/chemistry_material_science/electron_holography_material_phase",
+    "electron_ptychography": "tasks/physics/electron_ptychography",
+    "enzyme_substrate_saturation_kinetics": "tasks/biology/enzyme_substrate_saturation_kinetics",
+    "epicardial_potential_fundamental_solutions": "tasks/medicine/epicardial_potential_fundamental_solutions",
+    "epr_radical_density_separation": "tasks/chemistry_material_science/epr_radical_density_separation",
+    "era5_tensorvar": "tasks/earth_science/era5_tensorvar",
+    "euclid_constitutive_law": "tasks/mechanics/euclid_constitutive_law",
+    "event_rotation_log_radiance": "tasks/physics/event_rotation_log_radiance",
+    "exoplanet_imaging": "tasks/astronomy/exoplanet_imaging",
+    "exoplanet_thermal_eclipse_mapping": "tasks/astronomy/exoplanet_thermal_eclipse_mapping",
+    "experimental_modal_identification": "tasks/mechanics/experimental_modal_identification",
+    "faraday_depth_rmclean": "tasks/astronomy/faraday_depth_rmclean",
+    "finite_element_speckle_dic": "tasks/mechanics/finite_element_speckle_dic",
+    "fire_wall_inverse_heatflux": "tasks/mechanics/fire_wall_inverse_heatflux",
+    "flim_phasor_lifetime": "tasks/biology/flim_phasor_lifetime",
+    "florence_dual_doppler_wind_volume": "tasks/earth_science/florence_dual_doppler_wind_volume",
+    "fnirs_motor_hemoglobin": "tasks/medicine/fnirs_motor_hemoglobin",
+    "fourier_ptychography": "tasks/biology/fourier_ptychography",
+    "fpm_inr_reconstruction": "tasks/medicine/fpm_inr_reconstruction",
+    "galaxy_sersic_structure": "tasks/astronomy/galaxy_sersic_structure",
+    "gamma_coded_aperture_source_map": "tasks/physics/gamma_coded_aperture_source_map",
+    "german_seismic_scattering_absorption": "tasks/earth_science/german_seismic_scattering_absorption",
+    "gf2_gsa_pansharpening": "tasks/earth_science/gf2_gsa_pansharpening",
+    "gkp_homodyne_wigner_tomography": "tasks/physics/gkp_homodyne_wigner_tomography",
+    "global_gnss_phase_tec_field": "tasks/earth_science/global_gnss_phase_tec_field",
+    "glossy_polarisation_surface_height": "tasks/mathematics/glossy_polarisation_surface_height",
+    "gold_xanes_standard_mixture": "tasks/chemistry_material_science/gold_xanes_standard_mixture",
+    "gpr_dune_stolt_migration": "tasks/earth_science/gpr_dune_stolt_migration",
+    "graphene_moire_gpa": "tasks/chemistry_material_science/graphene_moire_gpa",
+    "grating_camera_spectral_response": "tasks/mathematics/grating_camera_spectral_response",
+    "guv_polarized_lightsheet_orientation_volume": "tasks/biology/guv_polarized_lightsheet_orientation_volume",
+    "hardi_csa_odf": "tasks/medicine/hardi_csa_odf",
+    "hawaii_gravity_density_volume": "tasks/earth_science/hawaii_gravity_density_volume",
+    "hd164922_radial_velocity_orbits": "tasks/astronomy/hd164922_radial_velocity_orbits",
+    "hd209458b_transmission_atmosphere": "tasks/astronomy/hd209458b_transmission_atmosphere",
+    "helium_langmuir_electron_distribution": "tasks/physics/helium_langmuir_electron_distribution",
+    "hertha_multimodal_shape_spin": "tasks/astronomy/hertha_multimodal_shape_spin",
+    "hessian_sim": "tasks/biology/hessian_sim",
+    "historic_film_low_rank_separation": "tasks/mathematics/historic_film_low_rank_separation",
+    "hl60_offaxis_wavefield": "tasks/biology/hl60_offaxis_wavefield",
+    "holmium_shg_frog_pulse_retrieval": "tasks/physics/holmium_shg_frog_pulse_retrieval",
+    "hydraulic_injection_conductivity": "tasks/earth_science/hydraulic_injection_conductivity",
+    "hyperspectral_single_pixel_hadamard": "tasks/physics/hyperspectral_single_pixel_hadamard",
+    "ibm_wigner_quantum_process": "tasks/physics/ibm_wigner_quantum_process",
+    "impact_plate_surface_load": "tasks/mechanics/impact_plate_surface_load",
+    "in_vivo_ultrasound_microvascular_mapping": "tasks/medicine/in_vivo_ultrasound_microvascular_mapping",
+    "incoherent_scattering_iclass": "tasks/physics/incoherent_scattering_iclass",
+    "insar_phase_unwrapping": "tasks/earth_science/insar_phase_unwrapping",
+    "intel_se2_pose_graph_reconstruction": "tasks/mathematics/intel_se2_pose_graph_reconstruction",
+    "j0437_interstellar_scintillation_arc": "tasks/astronomy/j0437_interstellar_scintillation_arc",
+    "kids450_weak_lensing_mass": "tasks/astronomy/kids450_weak_lensing_mass",
+    "landsat_two_source_energy_partition": "tasks/earth_science/landsat_two_source_energy_partition",
+    "lemur_alpha_matte_reconstruction": "tasks/mathematics/lemur_alpha_matte_reconstruction",
+    "lensless_imaging": "tasks/physics/lensless_imaging",
+    "light_field_microscope": "tasks/biology/light_field_microscope",
+    "lopeg_doppler_brightness_mapping": "tasks/astronomy/lopeg_doppler_brightness_mapping",
+    "lopeg_zeeman_vector_mapping": "tasks/astronomy/lopeg_zeeman_vector_mapping",
+    "lorentz_tem_projected_induction": "tasks/chemistry_material_science/lorentz_tem_projected_induction",
+    "lucky_imaging": "tasks/astronomy/lucky_imaging",
+    "lutetium_spect_attenuation_resolution_activity": "tasks/medicine/lutetium_spect_attenuation_resolution_activity",
+    "magnetic_microscopy_dipole_inversion": "tasks/earth_science/magnetic_microscopy_dipole_inversion",
+    "magnetic_particle_tracer_reconstruction": "tasks/medicine/magnetic_particle_tracer_reconstruction",
+    "masaya_uv_so2_column_transects": "tasks/earth_science/masaya_uv_so2_column_transects",
+    "masked_texture_image_reconstruction": "tasks/mathematics/masked_texture_image_reconstruction",
+    "mcf10a_dpc_phase_absorption": "tasks/biology/mcf10a_dpc_phase_absorption",
+    "mcr_hyperspectral": "tasks/chemistry_material_science/mcr_hyperspectral",
+    "mdck_finite_thickness_traction": "tasks/mechanics/mdck_finite_thickness_traction",
+    "measured_modal_story_stiffness": "tasks/mechanics/measured_modal_story_stiffness",
+    "membrane_saim_height_field": "tasks/biology/membrane_saim_height_field",
+    "metallic_paint_microfacet_distribution": "tasks/chemistry_material_science/metallic_paint_microfacet_distribution",
+    "microphone_array_acoustic_source_power": "tasks/mechanics/microphone_array_acoustic_source_power",
+    "microscope_denoising": "tasks/biology/microscope_denoising",
+    "microwave_dielectric_contrast_imaging": "tasks/physics/microwave_dielectric_contrast_imaging",
+    "microwave_link_rainfall_field": "tasks/earth_science/microwave_link_rainfall_field",
+    "microwave_notch_resonator_losses": "tasks/physics/microwave_notch_resonator_losses",
+    "mitchell_gnss_reflector_height": "tasks/earth_science/mitchell_gnss_reflector_height",
+    "mouse_head_fluorescence_yield_tomography": "tasks/biology/mouse_head_fluorescence_yield_tomography",
+    "mouse_oxygen_challenge_spectral_maps": "tasks/biology/mouse_oxygen_challenge_spectral_maps",
+    "mri_b1_actual_flip_angle": "tasks/medicine/mri_b1_actual_flip_angle",
+    "mri_dynamic_dce": "tasks/medicine/mri_dynamic_dce",
+    "mri_grappa": "tasks/medicine/mri_grappa",
+    "mri_l1_wavelet": "tasks/medicine/mri_l1_wavelet",
+    "mri_noncartesian_cs": "tasks/medicine/mri_noncartesian_cs",
+    "mri_pnp_admm": "tasks/medicine/mri_pnp_admm",
+    "mri_sense": "tasks/medicine/mri_sense",
+    "mri_t1_variable_flip_angle": "tasks/medicine/mri_t1_variable_flip_angle",
+    "mri_t2_mapping": "tasks/medicine/mri_t2_mapping",
+    "mri_transceive_phase_conductivity": "tasks/medicine/mri_transceive_phase_conductivity",
+    "mri_tv": "tasks/medicine/mri_tv",
+    "mri_varnet": "tasks/medicine/mri_varnet",
+    "multi_illumination_intrinsic_fields": "tasks/mathematics/multi_illumination_intrinsic_fields",
+    "multi_shell_neurite_microstructure": "tasks/medicine/multi_shell_neurite_microstructure",
+    "multicamera_volumetric_particle_trajectories": "tasks/mechanics/multicamera_volumetric_particle_trajectories",
+    "multiheight_inline_phase_recovery": "tasks/physics/multiheight_inline_phase_recovery",
+    "muon_statue_scattering_volume": "tasks/physics/muon_statue_scattering_volume",
+    "n2hp_hyperfine_cloud_mapping": "tasks/astronomy/n2hp_hyperfine_cloud_mapping",
+    "nadh_bound_fraction_lifetimes": "tasks/biology/nadh_bound_fraction_lifetimes",
+    "nascent_transcription_promoter_dynamics": "tasks/biology/nascent_transcription_promoter_dynamics",
+    "nearfield_acoustic_equivalent_source": "tasks/physics/nearfield_acoustic_equivalent_source",
+    "neural_blind_motion_deconvolution": "tasks/mathematics/neural_blind_motion_deconvolution",
+    "neutron_crystal_field_hamiltonian": "tasks/physics/neutron_crystal_field_hamiltonian",
+    "neutron_joint_lattice_strain_fields": "tasks/chemistry_material_science/neutron_joint_lattice_strain_fields",
+    "neutron_reflectometry_thin_film": "tasks/chemistry_material_science/neutron_reflectometry_thin_film",
+    "nexus_relative_focal_depth": "tasks/mathematics/nexus_relative_focal_depth",
+    "ngc2403_tilted_ring_kinematics": "tasks/astronomy/ngc2403_tilted_ring_kinematics",
+    "nonlocal_haze_radiance_reconstruction": "tasks/mathematics/nonlocal_haze_radiance_reconstruction",
+    "oct_coronary_spectral_tomography": "tasks/medicine/oct_coronary_spectral_tomography",
+    "odmr_resonance_magnetic_fields": "tasks/chemistry_material_science/odmr_resonance_magnetic_fields",
+    "ogle_stellar_microlensing_geometry": "tasks/astronomy/ogle_stellar_microlensing_geometry",
+    "omnidirectional_piv_pressure": "tasks/mechanics/omnidirectional_piv_pressure",
+    "orthographic_shape_camera_factorization": "tasks/mathematics/orthographic_shape_camera_factorization",
+    "oysand_rayleigh_shear_profile": "tasks/earth_science/oysand_rayleigh_shear_profile",
+    "pancreatic_spatial_celltype_mixtures": "tasks/biology/pancreatic_spatial_celltype_mixtures",
+    "particle_image_velocimetry": "tasks/mechanics/particle_image_velocimetry",
+    "pendant_drop_capillary_shape": "tasks/mechanics/pendant_drop_capillary_shape",
+    "perovskite_dual_contrast_atomic_columns": "tasks/chemistry_material_science/perovskite_dual_contrast_atomic_columns",
+    "pet_mlem": "tasks/medicine/pet_mlem",
+    "phantom_complex_shear_modulus": "tasks/mechanics/phantom_complex_shear_modulus",
+    "phase_contrast_mri_velocity_field": "tasks/medicine/phase_contrast_mri_velocity_field",
+    "phase_shifting_holography": "tasks/physics/phase_shifting_holography",
+    "photoacoustic_tomography": "tasks/medicine/photoacoustic_tomography",
+    "photoelastic_granular_stress": "tasks/mechanics/photoelastic_granular_stress",
+    "plane_stress_elasticity_tomography": "tasks/mechanics/plane_stress_elasticity_tomography",
+    "plane_wave_ultrasound": "tasks/medicine/plane_wave_ultrasound",
+    "pmhc_single_molecule_localization": "tasks/biology/pmhc_single_molecule_localization",
+    "pmma_grid_dark_field_tensor": "tasks/chemistry_material_science/pmma_grid_dark_field_tensor",
+    "pnp_mri_reconstruction": "tasks/medicine/pnp_mri_reconstruction",
+    "polarimetric_interreflection_fields": "tasks/physics/polarimetric_interreflection_fields",
+    "polcam_fluorescence_orientation": "tasks/biology/polcam_fluorescence_orientation",
+    "polymer_oscillatory_relaxation_spectrum": "tasks/mechanics/polymer_oscillatory_relaxation_spectrum",
+    "porcine_optical_attenuation_field": "tasks/medicine/porcine_optical_attenuation_field",
+    "powder_diffraction_phase_fractions": "tasks/chemistry_material_science/powder_diffraction_phase_fractions",
+    "protein_joint_cd_ir_structure": "tasks/biology/protein_joint_cd_ir_structure",
+    "proton_fluence_magnetic_field": "tasks/physics/proton_fluence_magnetic_field",
+    "ps13_plasma_logan_volume": "tasks/medicine/ps13_plasma_logan_volume",
+    "qgc_diffusion_ordered_molecular_spectrum": "tasks/chemistry_material_science/qgc_diffusion_ordered_molecular_spectrum",
+    "qiba_dce_exchange_maps": "tasks/medicine/qiba_dce_exchange_maps",
+    "qlipp_birefringent_sample": "tasks/physics/qlipp_birefringent_sample",
+    "qsm_single_step_tgv": "tasks/medicine/qsm_single_step_tgv",
+    "quantized_leaf_radiance": "tasks/mathematics/quantized_leaf_radiance",
+    "quartz_diffraction_strain_tomography": "tasks/chemistry_material_science/quartz_diffraction_strain_tomography",
+    "quartz_fiber_thermal_diffusivity": "tasks/chemistry_material_science/quartz_fiber_thermal_diffusivity",
+    "quartz_velocity_step_friction": "tasks/mechanics/quartz_velocity_step_friction",
+    "radial_lens_rectified_image": "tasks/mathematics/radial_lens_rectified_image",
+    "raman_cell_phenotyping": "tasks/chemistry_material_science/raman_cell_phenotyping",
+    "rat_hyperpolarized_pyruvate_lactate_exchange": "tasks/medicine/rat_hyperpolarized_pyruvate_lactate_exchange",
+    "raw_burst_radiance_reconstruction": "tasks/mathematics/raw_burst_radiance_reconstruction",
+    "rb_voigt_vapour_magnetometry": "tasks/physics/rb_voigt_vapour_magnetometry",
+    "reflection_ODT": "tasks/biology/reflection_ODT",
+    "renal_filtration_fraction_tubular_transit": "tasks/medicine/renal_filtration_fraction_tubular_transit",
+    "ribosome_temporal_conformation_states": "tasks/biology/ribosome_temporal_conformation_states",
+    "robust_photometric_surface_normals": "tasks/mathematics/robust_photometric_surface_normals",
+    "root_apoplastic_ph_field": "tasks/biology/root_apoplastic_ph_field",
+    "rotating_disk_ultrasound_vector_field": "tasks/mechanics/rotating_disk_ultrasound_vector_field",
+    "s100a14_zinc_binding_thermodynamics": "tasks/biology/s100a14_zinc_binding_thermodynamics",
+    "s2ism": "tasks/biology/s2ism",
+    "saxs_contrast_weighted_particle_size_density": "tasks/chemistry_material_science/saxs_contrast_weighted_particle_size_density",
+    "saxs_protein_density": "tasks/biology/saxs_protein_density",
+    "scattering_microrheology_modulus": "tasks/mechanics/scattering_microrheology_modulus",
+    "sdss_stellar_population_dust_distribution": "tasks/astronomy/sdss_stellar_population_dust_distribution",
+    "sediment_210pb_chronology": "tasks/earth_science/sediment_210pb_chronology",
+    "seismic_FDFWI": "tasks/earth_science/seismic_FDFWI",
+    "seismic_FWI_original": "tasks/earth_science/seismic_FWI_original",
+    "seismic_lsrtm_original": "tasks/earth_science/seismic_lsrtm_original",
+    "seismic_traveltime_tomography": "tasks/earth_science/seismic_traveltime_tomography",
+    "sentinel1_volcano_sbas": "tasks/earth_science/sentinel1_volcano_sbas",
+    "sesans_polystyrene_correlation": "tasks/chemistry_material_science/sesans_polystyrene_correlation",
+    "shack-hartmann": "tasks/astronomy/shack-hartmann",
+    "shapelet_source_reconstruction": "tasks/astronomy/shapelet_source_reconstruction",
+    "single_glass_transmission_field": "tasks/mathematics/single_glass_transmission_field",
+    "single_molecule_light_field": "tasks/biology/single_molecule_light_field",
+    "skbr3_acceptor_photobleaching_efficiency": "tasks/biology/skbr3_acceptor_photobleaching_efficiency",
+    "slovenia_borehole_temperature_history": "tasks/earth_science/slovenia_borehole_temperature_history",
+    "smc24_nebular_temperature_density": "tasks/astronomy/smc24_nebular_temperature_density",
+    "snspd_coin_return_delay": "tasks/physics/snspd_coin_return_delay",
+    "sofi_live_cell_fluctuations": "tasks/biology/sofi_live_cell_fluctuations",
+    "soil_electrical_current_source_imaging": "tasks/earth_science/soil_electrical_current_source_imaging",
+    "solar_aia_dem_mapping": "tasks/astronomy/solar_aia_dem_mapping",
+    "solar_coronal_pfss": "tasks/astronomy/solar_coronal_pfss",
+    "solar_crisp_stokes_vector_mapping": "tasks/astronomy/solar_crisp_stokes_vector_mapping",
+    "solar_internal_rotation_sola": "tasks/astronomy/solar_internal_rotation_sola",
+    "solar_multiobject_wavefront_mfbd": "tasks/astronomy/solar_multiobject_wavefront_mfbd",
+    "sparse_acceleration_virtual_response": "tasks/mechanics/sparse_acceleration_virtual_response",
+    "spectral_snapshot_compressive_imaging": "tasks/physics/spectral_snapshot_compressive_imaging",
+    "spinal_cord_ivim_microperfusion": "tasks/medicine/spinal_cord_ivim_microperfusion",
+    "spinel_polarized_magnetization_depth": "tasks/physics/spinel_polarized_magnetization_depth",
+    "spitzer_stellar_psf_photometry": "tasks/astronomy/spitzer_stellar_psf_photometry",
+    "squid_planar_current_imaging": "tasks/physics/squid_planar_current_imaging",
+    "ssnp_idt": "tasks/biology/ssnp_idt",
+    "ssnp_odt": "tasks/biology/ssnp_odt",
+    "stanford_range_similarity_registration": "tasks/mathematics/stanford_range_similarity_registration",
+    "staphylococcus_membrane_diffusion_maps": "tasks/biology/staphylococcus_membrane_diffusion_maps",
+    "steel_resonant_elastic_moduli": "tasks/mechanics/steel_resonant_elastic_moduli",
+    "stem_cobalt_phosphide_tomography": "tasks/chemistry_material_science/stem_cobalt_phosphide_tomography",
+    "tcv_bolometric_emissivity": "tasks/physics/tcv_bolometric_emissivity",
+    "teleseismic_receiver_functions": "tasks/earth_science/teleseismic_receiver_functions",
+    "temporal_coded_snapshot_video": "tasks/mathematics/temporal_coded_snapshot_video",
+    "terahertz_pellet_optical_constants": "tasks/physics/terahertz_pellet_optical_constants",
+    "terahertz_waveform_noise_calibration": "tasks/physics/terahertz_waveform_noise_calibration",
+    "thellier_thermal_paleointensity": "tasks/earth_science/thellier_thermal_paleointensity",
+    "thermogravimetric_isoconversional_activation_energy": "tasks/chemistry_material_science/thermogravimetric_isoconversional_activation_energy",
+    "tidal_current_ellipses": "tasks/earth_science/tidal_current_ellipses",
+    "titania_ellipsometric_dispersion_thickness": "tasks/chemistry_material_science/titania_ellipsometric_dispersion_thickness",
+    "tweezers_exposure_calibrated_dynamics": "tasks/mechanics/tweezers_exposure_calibrated_dynamics",
+    "ub199_hysteretic_switching_density": "tasks/chemistry_material_science/ub199_hysteretic_switching_density",
+    "ucla_bold_hemodynamic_neural_deconvolution": "tasks/medicine/ucla_bold_hemodynamic_neural_deconvolution",
+    "ugem_velocity_emissivity": "tasks/astronomy/ugem_velocity_emissivity",
+    "ultrasonic_notch_tfm": "tasks/mechanics/ultrasonic_notch_tfm",
+    "ultrasound_sos_tomography": "tasks/medicine/ultrasound_sos_tomography",
+    "uncertain_view_silhouette_volume": "tasks/mathematics/uncertain_view_silhouette_volume",
+    "usct_FWI": "tasks/medicine/usct_FWI",
+    "variational_motion_deblatting": "tasks/mathematics/variational_motion_deblatting",
+    "vermiculite_mossbauer_iron_sites": "tasks/chemistry_material_science/vermiculite_mossbauer_iron_sites",
+    "vesta_stellar_atmosphere_synthesis": "tasks/astronomy/vesta_stellar_atmosphere_synthesis",
+    "weather_radar_data_assimilation": "tasks/earth_science/weather_radar_data_assimilation",
+    "wmap_microwave_component_maps": "tasks/astronomy/wmap_microwave_component_maps",
+    "wo3_hmf_reaction_network": "tasks/chemistry_material_science/wo3_hmf_reaction_network",
+    "xps_interface_concentration_depth": "tasks/chemistry_material_science/xps_interface_concentration_depth",
+    "xray_laminography_tike": "tasks/physics/xray_laminography_tike",
+    "xray_ptychography_tike": "tasks/physics/xray_ptychography_tike",
+    "xray_tooth_gridrec": "tasks/medicine/xray_tooth_gridrec",
+    "yeast_hic_consensus_geometry": "tasks/biology/yeast_hic_consensus_geometry",
+    "zebrafish_indentation_modulus": "tasks/mechanics/zebrafish_indentation_modulus"
+  },
+  "public_benchmark_registry": "task_registry.json",
+  "historical_audit_scope_note": "Historical inverse classification and reproduction claims are retained, not replaced by the separate current public-input benchmark readiness audit."
+}

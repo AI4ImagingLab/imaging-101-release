@@ -1,0 +1,21 @@
+{
+  "baseline": [{"method": "Original OpenDrop Young-Laplace shape fit, not ground truth", "approximate_contour_rms_pixels": 0.373}],
+  "geometry_max_boundary": 0.02,
+  "bond_error_boundary": 0.00002,
+  "angle_error_boundary": 0.00002,
+  "profile_rmse_boundary": 0.02,
+  "capillary_error_boundary": 0.05,
+  "capillary_consistency_boundary": 0.05,
+  "forward_rms_boundary": 0.02,
+  "observation_rms_boundary": 0.4,
+  "definitions": {
+    "geometry_max": "max absolute error of apex x,y and radius in pixels",
+    "bond_error": "absolute dimensionless Bond error",
+    "angle_error": "absolute radians, no alignment",
+    "profile_rmse": "sqrt(mean over all 401x2 pixel-coordinate errors)",
+    "capillary_error": "absolute pixel capillary-length error",
+    "capillary_consistency": "abs(submitted capillary length - radius/sqrt(Bond)), pixels",
+    "forward_rms": "RMS nearest-segment distance from submitted profile to independent Young-Laplace polyline, pixels",
+    "observation_rms": "RMS nearest-segment distance from all293observed points to submitted silhouette, pixels"
+  }
+}

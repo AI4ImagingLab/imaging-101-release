@@ -1,0 +1,24 @@
+{
+  "baseline": [
+    {
+      "method": "Explicitly corrected independent pymaginverse oracle, degree3, five iterations",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "intensity_whitened_rms": 1.6060121973684938,
+      "inclination_whitened_rms": 1.70794816253306,
+      "declination_whitened_rms": 1.2452833003510602
+    }
+  ],
+  "reference_kind": "standard_method_result_not_truth",
+  "threshold_provenance": "Current v2: Observation-whitened SSE plus explicitly defined integrated spatiotemporal prior; any equal/better attainable objective accepted. No five-step solver trajectory matching. Numeric objective budgets are predeclared acceptance tolerances, not measured physical uncertainty.",
+  "intensity_whitened_rms_boundary": 1.7666134171053434,
+  "observation_consistency_definition": "sqrt(mean(((observed - predicted)/provided_sigma)^2)) per F/I/D type; angular quantities use degrees and declination residual wraps into [-180,180]. Public data only; predicted from submitted spline coefficients using independent potential gradient and geometric ellipsoid conversion.",
+  "inclination_whitened_rms_boundary": 1.878742978786366,
+  "declination_whitened_rms_boundary": 1.3698116303861663,
+  "relative_energy_excess_boundary": 1e-06,
+  "map_consistency_nT_boundary": 0.001,
+  "evaluation_semantics": "Observation-whitened SSE plus explicitly defined integrated spatiotemporal prior; any equal/better attainable objective accepted. No five-step solver trajectory matching.",
+  "semantic_version": "v2",
+  "baseline_role": "Historical v1 numerical/stage comparison and attainable source observation fit; self-agreement values are not current acceptance criteria.",
+  "historical_v1_threshold_provenance": "Independent unmodified and minimal physics-corrected oracle captures precede extraction. Corrected oracle vs SciPy-only extracted implementation differs at approximately 1e-15 relative scale. Nonzero 1e-7 dynamic-range tolerance covers numerical backend variation, with each of15 epoch/components and spline coefficients scored separately."
+}

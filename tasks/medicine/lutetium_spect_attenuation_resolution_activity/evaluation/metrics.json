@@ -1,0 +1,13 @@
+{
+  "semantic_version": "v2",
+  "poisson_deviance_boundary": 0.1295695136004951,
+  "forward_relative_L2_boundary": 0.22,
+  "negative_count_boundary": 0,
+  "attained_poisson_deviance": 0.1295685136004951,
+  "attained_forward_relative_L2": 0.2192173697360918,
+  "metric_definition": "2*mean(lambda-g+g*log(g/lambda))/mean(g), all 96x128x128 photopeak observations; lambda=Ha+independent scatter; zero-observation log term is zero.",
+  "tolerance_provenance": "Predeclared normalized mean-deviance excess 1e-6 over independently evaluated attainable original field; not measured noise or unique activity accuracy.",
+  "scientific_accuracy_scope": "measurement-consistent conditional reconstruction, no unique spatial truth certification",
+  "reference_role": "Attainable conditional activity fit, no independent activity truth.",
+  "zero_prediction_policy": "When observed count is positive and predicted count is zero, use log(float64 tiny) as a finite rejecting divergence report and return quality fail/1. This is reporting arithmetic, not physical count/noise flooring."
+}

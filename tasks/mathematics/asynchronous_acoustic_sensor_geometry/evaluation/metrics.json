@@ -1,0 +1,66 @@
+{
+  "baseline": [
+    {
+      "label": "primary",
+      "metrics": {
+        "microphone_ncc": 0.9595902583302609,
+        "microphone_nrmse": 0.11810168463971041,
+        "source_ncc": 0.9918537367301272,
+        "source_nrmse": 0.04305363755703928,
+        "timing_rms_seconds": 0.00010597671358642064,
+        "odometry_rms_m": 0.017230913305363076
+      },
+      "cost": 201.65396973011812,
+      "selected_start": 6,
+      "elapsed_s": 7.6666460037231445
+    },
+    {
+      "label": "independent_start_repeat",
+      "metrics": {
+        "microphone_ncc": 0.95950251559124,
+        "microphone_nrmse": 0.11829618416825292,
+        "source_ncc": 0.9918486689174939,
+        "source_nrmse": 0.043067231043299715,
+        "timing_rms_seconds": 0.00010595849618248322,
+        "odometry_rms_m": 0.017238286550392508
+      },
+      "cost": 201.65410932930303,
+      "selected_start": 13,
+      "elapsed_s": 7.538081884384155
+    }
+  ],
+  "thresholds": {
+    "microphone_ncc": {
+      "comparison": ">=",
+      "boundary": 0.863552264032116
+    },
+    "microphone_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.13012580258507822
+    },
+    "source_ncc": {
+      "comparison": ">=",
+      "boundary": 0.8926638020257446
+    },
+    "source_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.04737395414762969
+    },
+    "timing_rms_seconds": {
+      "comparison": "<=",
+      "boundary": 0.00011657438494506271
+    },
+    "odometry_rms_m": {
+      "comparison": "<=",
+      "boundary": 0.01896211520543176
+    }
+  },
+  "nrmse_definition": "RMS coordinate error divided by the actual reference coordinate dynamic range separately for microphone and sound-source groups; cosine is uncentered.",
+  "reference_role": "Surveyed geometry only; author zero clock placeholders are not truth and are excluded.",
+  "microphone_ncc_boundary": 0.863552264032116,
+  "microphone_nrmse_boundary": 0.13012580258507822,
+  "source_ncc_boundary": 0.8926638020257446,
+  "source_nrmse_boundary": 0.04737395414762969,
+  "timing_rms_seconds_boundary": 0.00011657438494506271,
+  "odometry_rms_m_boundary": 0.01896211520543176
+}

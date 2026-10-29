@@ -62,6 +62,12 @@ class LocalRunner:
         self.container = str(self.workspace)  # for API compat
         log.info("Local workspace: %s", self.workspace)
 
+        from .benchmark import uses_npz_contract, prepare_public_workspace
+        if uses_npz_contract(self.task_dir):
+            prepare_public_workspace(self.task_dir, self.workspace)
+            self._venv_bin = None
+            return
+
         if visible_paths:
             for p in visible_paths:
                 src = self.task_dir / p

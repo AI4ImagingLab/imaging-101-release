@@ -1,0 +1,10 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original supported direct Lomb-Scargle branch",
+      "height_max_error": 0.0
+    }
+  ],
+  "height_max_error_boundary": 1e-07,
+  "metric_definition": "Maximum absolute metre discrepancy across all324 fixed arcs; no alignment; reference is method output, not truth."
+}

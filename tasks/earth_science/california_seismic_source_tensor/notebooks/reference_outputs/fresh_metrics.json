@@ -1,0 +1,281 @@
+{
+  "runtime_s": 0.0027356999926269054,
+  "comparison": [
+    {
+      "depth_km": 10.0,
+      "fresh_full_VR": 74.46893184453872,
+      "upstream_full_VR": 74.46893184453873,
+      "full_relative_error": 9.577455412606526e-16,
+      "fresh_deviatoric_VR": 74.46172912248858,
+      "upstream_deviatoric_VR": 74.46172912248859,
+      "deviatoric_relative_error": 1.6797658445513117e-15
+    },
+    {
+      "depth_km": 12.0,
+      "fresh_full_VR": 73.8647709354923,
+      "upstream_full_VR": 73.86477093549233,
+      "full_relative_error": 9.732083656050981e-16,
+      "fresh_deviatoric_VR": 73.83237527232866,
+      "upstream_deviatoric_VR": 73.83237527232866,
+      "deviatoric_relative_error": 1.0453505341329567e-15
+    },
+    {
+      "depth_km": 20.0,
+      "fresh_full_VR": 70.67933775697333,
+      "upstream_full_VR": 70.67933775697335,
+      "full_relative_error": 6.350734931492352e-16,
+      "fresh_deviatoric_VR": 70.59685590278397,
+      "upstream_deviatoric_VR": 70.59685590278397,
+      "deviatoric_relative_error": 8.289090103453445e-16
+    }
+  ],
+  "station_VR": [
+    89.25512891280606,
+    73.30469302966718,
+    74.80860579624715,
+    32.39944888216606,
+    56.79650484038117,
+    86.32352195396584,
+    85.92958895066035,
+    82.3078297762109
+  ],
+  "leave_one_out": [
+    {
+      "omitted": "BK.QRDG.00",
+      "relative_change": 0.050104255869847805,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.RUSS.00",
+      "relative_change": 0.12086687239832962,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.CVS.00",
+      "relative_change": 0.13013326739063236,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.OAKV.00",
+      "relative_change": 0.11915198939572119,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.FARB.00",
+      "relative_change": 0.07586044029811506,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.SAO.00",
+      "relative_change": 0.0801976892919752,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.CMB.00",
+      "relative_change": 0.06451533366629214,
+      "depth_km": 10.0
+    },
+    {
+      "omitted": "BK.MNRC.00",
+      "relative_change": 0.12908655605678435,
+      "depth_km": 10.0
+    }
+  ],
+  "noise_sensitivity": [
+    {
+      "level": 0.0,
+      "replicate": 0,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 1,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 2,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 3,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 4,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 5,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 6,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.0,
+      "replicate": 7,
+      "relative_change": 0.0,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 0,
+      "relative_change": 0.0009912478281792932,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 1,
+      "relative_change": 0.0007204814512444667,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 2,
+      "relative_change": 0.001062065852367133,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 3,
+      "relative_change": 0.0013123770656291525,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 4,
+      "relative_change": 0.0004686924250073292,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 5,
+      "relative_change": 0.0016034135127949375,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 6,
+      "relative_change": 0.0007959478845075718,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.01,
+      "replicate": 7,
+      "relative_change": 0.0007928931919928936,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 0,
+      "relative_change": 0.004956239140890229,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 1,
+      "relative_change": 0.0036024072562244576,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 2,
+      "relative_change": 0.005310329261835524,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 3,
+      "relative_change": 0.006561885328149971,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 4,
+      "relative_change": 0.0023434621250312438,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 5,
+      "relative_change": 0.008017067563979598,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 6,
+      "relative_change": 0.003979739422536141,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.05,
+      "replicate": 7,
+      "relative_change": 0.003964465959969613,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 0,
+      "relative_change": 0.009912478281784381,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 1,
+      "relative_change": 0.007204814512444039,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 2,
+      "relative_change": 0.010620658523667162,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 3,
+      "relative_change": 0.013123770656294265,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 4,
+      "relative_change": 0.00468692425006131,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 5,
+      "relative_change": 0.016034135127964855,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 6,
+      "relative_change": 0.007959478845069153,
+      "depth_km": 10.0
+    },
+    {
+      "level": 0.1,
+      "replicate": 7,
+      "relative_change": 0.007928931919942242,
+      "depth_km": 10.0
+    }
+  ],
+  "adjoint_relative_error": 1.2516772080162422e-15,
+  "notebook_compute_seconds": 1.7259375999565236,
+  "interpretation": "Method reference, not actual source truth; uncertainty plots are sensitivity studies."
+}

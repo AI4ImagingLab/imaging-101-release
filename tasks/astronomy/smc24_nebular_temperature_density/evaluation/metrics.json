@@ -1,0 +1,6 @@
+{
+  "benchmark_semantics_version": 2,
+  "max_fractional_line_ratio_residual_boundary": 0.001,
+  "definition": "Maximum absolute predicted/observed minus one across both extinction-corrected line ratios of all four pairs; all populations calculated from public atomic calibration. Temperature must lie within each selected ion table and density within [1,1e8] cm^-3.",
+  "threshold_provenance": "0.001 fractional diagnostic tolerance is the published scalar inversion tolerance. Version2 accepts all simultaneous roots at this tolerance; historical finite Jacobi outputs are not guaranteed to pass. No reference agreement or empirical threshold relaxation."
+}

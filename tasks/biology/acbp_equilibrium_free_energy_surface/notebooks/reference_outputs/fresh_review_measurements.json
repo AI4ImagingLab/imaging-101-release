@@ -1,0 +1,181 @@
+{
+  "fresh_runtime_seconds": 0.8597243999829516,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "energy_max_abs": 7.500248699443546e-06,
+      "thermodynamic_scaled_max_abs": 9.983588455222517e-08,
+      "baseline_max_abs": 5.99069243101269e-08,
+      "observation_relative_l2": 0.018108853759135998,
+      "energy_internal_consistency": 0.0
+    },
+    "thresholds": {
+      "energy_max_abs": {
+        "comparison": "<=",
+        "boundary": 0.002
+      },
+      "thermodynamic_scaled_max_abs": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "baseline_max_abs": {
+        "comparison": "<=",
+        "boundary": 2e-05
+      },
+      "observation_relative_l2": {
+        "comparison": "<=",
+        "boundary": 0.0182
+      },
+      "energy_internal_consistency": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      }
+    },
+    "errors": []
+  },
+  "thermodynamic_parameters": [
+    53.24023978571673,
+    375.78540154932483,
+    5.633575002620445,
+    15.444556291043872
+  ],
+  "jacobian_rank": 18,
+  "jacobian_scaled_min_singular": 0.03959522459422736,
+  "independent_starts": [
+    {
+      "factor": 0.93,
+      "objective": 66.95554159151126,
+      "thermodynamic": [
+        53.24024004174454,
+        375.7854534204014,
+        5.633575948896785,
+        15.444558315082515
+      ]
+    },
+    {
+      "factor": 1.0,
+      "objective": 66.95554159150805,
+      "thermodynamic": [
+        53.24023978571673,
+        375.78540154932483,
+        5.633575002620445,
+        15.444556291043872
+      ]
+    },
+    {
+      "factor": 1.08,
+      "objective": 66.95554159151216,
+      "thermodynamic": [
+        53.24023987552606,
+        375.7854677589377,
+        5.633576257119116,
+        15.444558741059415
+      ]
+    }
+  ],
+  "nested_zero_heat_capacity_relative_l2": 0.02606819069074354,
+  "legacy_population_rms_difference": 0.058194117387593676,
+  "minimum_absolute_optical_contrast": 0.10784438809083541,
+  "stress": [
+    {
+      "scale": 0.001,
+      "repeat": 0,
+      "thermodynamic": [
+        53.21664032367895,
+        374.9232658695028,
+        5.6302223561961116,
+        15.388071826521541
+      ],
+      "energy_rms_change": 0.09903234612921098
+    },
+    {
+      "scale": 0.001,
+      "repeat": 1,
+      "thermodynamic": [
+        53.264554714118894,
+        376.50579828812056,
+        5.62001450233382,
+        15.506962977065546
+      ],
+      "energy_rms_change": 0.09257195218751472
+    },
+    {
+      "scale": 0.001,
+      "repeat": 2,
+      "thermodynamic": [
+        53.25033530473326,
+        375.8194643483563,
+        5.618848282015472,
+        15.465477666109063
+      ],
+      "energy_rms_change": 0.023510712689759027
+    },
+    {
+      "scale": 0.003,
+      "repeat": 0,
+      "thermodynamic": [
+        53.2643536749885,
+        380.2117987129958,
+        5.731214590151506,
+        15.5722223617274
+      ],
+      "energy_rms_change": 0.4379243628890139
+    },
+    {
+      "scale": 0.003,
+      "repeat": 1,
+      "thermodynamic": [
+        53.27033596884196,
+        379.2390231905292,
+        5.750059674197972,
+        15.551976678888838
+      ],
+      "energy_rms_change": 0.369029537975167
+    },
+    {
+      "scale": 0.003,
+      "repeat": 2,
+      "thermodynamic": [
+        53.23304725461948,
+        374.02327296293055,
+        5.627892455685636,
+        15.35081271725959
+      ],
+      "energy_rms_change": 0.2139901519216967
+    },
+    {
+      "scale": 0.01,
+      "repeat": 0,
+      "thermodynamic": [
+        53.33169541458728,
+        392.9621924619401,
+        5.8903914452126305,
+        16.192422902765887
+      ],
+      "energy_rms_change": 1.9513027677557
+    },
+    {
+      "scale": 0.01,
+      "repeat": 1,
+      "thermodynamic": [
+        53.238863631118974,
+        384.6600271223437,
+        5.881562625771681,
+        15.650481773208154
+      ],
+      "energy_rms_change": 0.9100636503769769
+    },
+    {
+      "scale": 0.01,
+      "repeat": 2,
+      "thermodynamic": [
+        53.30629513026282,
+        378.69098048099113,
+        5.66970267591371,
+        15.640798627434132
+      ],
+      "energy_rms_change": 0.374069510851418
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "baseline": [
+    {
+      "method": "Independently executed original UBathy full two-video DMD/robust-dispersion result versus independent previous-day survey",
+      "ncc_vs_ref": 0.9926581740375783,
+      "nrmse_vs_ref": 0.06947820996167868,
+      "valid_sites": 5615
+    }
+  ],
+  "all_valid_ncc_boundary": 0.8933923566338204,
+  "all_valid_nrmse_boundary": 0.07642603095784656,
+  "required_coverage_boundary": 0.98,
+  "comparisons": {
+    "interior_ncc": ">=",
+    "interior_nrmse": "<=",
+    "all_valid_ncc": ">=",
+    "all_valid_nrmse": "<=",
+    "required_coverage": ">=",
+    "interior_coverage": ">="
+  },
+  "required_site_count": 5615,
+  "reference_kind": "Independent measured survey,31July2020; videos1August2020",
+  "coverage_qualification": "Frozen from two complete independent original-only runs before the first cleaned full-field inversion. Original support5615; repeat5572; common5532; all83 lost sites lie within17.321m of original invalid support. A20m boundary band (four5m output spacings) permits at most2% loss of original support; all4410 fixed interior sites must remain valid. No GT error selected either support or boundary band. Exact-all provisional coverage is rejected by independent native stochastic evidence, not by a cleaned failure.",
+  "footprint_definition": "Original measurement-supported5615-point mask sets required_coverage. Interior is its points more than20m from any originally invalid output point, fixed using coordinates/support only. Interior scores use all4410 locations, never a submitted subset. All submitted valid locations, including extras, are additionally survey-scored. Invalid zero sentinels are never treated as physical depths.",
+  "empty_submission_convention": "Insufficient/all-invalid submitted support or incomplete mandatory interior yields cosine0 and maximum finite float64 error for the affected comparison, plus failing coverage; no NaN/Infinity.",
+  "alignment": "None; no centering, shift, scale fit or GT-based crop.",
+  "reference_hashes": {
+    "ground_truth.npz": "e37376eb58769338584679382d0c1dc3cbb22855462d85450c728ea569592134",
+    "baseline_reference.npz": "1d026ced068c930dc1019f989bb2449cb249d83f8d42175fdf9643b59cd3150f"
+  },
+  "interior_ncc_boundary": 0.8955139166244761,
+  "interior_nrmse_boundary": 0.08879805202146492,
+  "interior_coverage_boundary": 1.0,
+  "interior_site_count": 4410,
+  "interior_metric_provenance": {
+    "original_ncc": 0.9950154629160846,
+    "original_nrmse": 0.08072550183769538,
+    "normalization": "RMS error / dynamic range of survey on4410 fixed interior points",
+    "boundary_rule": "0.9*originalNCC and1.1*originalNRMSE; this is a separately named metric with its own reference domain, not a changed full-domain threshold"
+  }
+}

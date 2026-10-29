@@ -1,0 +1,33 @@
+{
+  "baseline": [
+    {
+      "method": "Original conventional-source full transmission+customLM, best of two independent generic starts, USGS real data; no true site parameters",
+      "rms_normalized_transmission": [
+        0.0004290603552323801,
+        0.0007378654473293786,
+        0.0008636805151808674,
+        0.000807271317991824
+      ]
+    }
+  ],
+  "site_parameter_absolute_boundary_mm_per_s": 0.001,
+  "optical_thickness_absolute_boundary": 0.002,
+  "baseline_absolute_boundary": 1e-05,
+  "transmission_absolute_boundary": 1e-05,
+  "self_consistency_absolute_boundary": 1e-08,
+  "observed_rms_boundaries": [
+    0.00047196639075561817,
+    0.0008116519920623166,
+    0.0009500485666989543,
+    0.0008879984497910065
+  ],
+  "metric_definitions": {
+    "site_parameters": "maximum absolute difference separately IS, fullQS and FWHM, over all4specimens/all4sites, mm/s",
+    "thickness": "maximum absolute effective resonant optical thickness difference",
+    "baseline": "maximum absolute normalized level difference",
+    "transmission": "maximum absolute normalized transmitted intensity difference over allpoints/specimens",
+    "self_consistency": "maximum absolute difference declared quadrature prediction vs submitted spectrum",
+    "quality": "observed normalized transmission RMS separately each specimen"
+  },
+  "rationale": "Per-quantity physical and absolute numerical metrics, not undefined NCC/NRMSE on scalar site values. Frozen independently from original before extraction; quality limits1.1times native original RMS. Self consistency tolerance1e-8 is a known operator numerical constraint, not a physical truth assertion."
+}

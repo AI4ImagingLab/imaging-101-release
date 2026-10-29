@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Independent author DLSuR rerun, three measured repeats; method reference, no truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-05,
+  "intercept_relative_error_boundary": 1e-05,
+  "forward_rmse_boundary": 0.01723522069078028,
+  "metric_definition": "NCC is uncentered cosine; NRMSE uses each quantity reference dynamic range. Each modulus component and every other quantity must pass separately. Forward metric is worst replicate RMS correlation residual.",
+  "reference_kind": "method result; physical truth unavailable",
+  "numerical_tolerance_rationale": "Two independent original runs agree exactly; 1e-5 dynamic-range tolerance permits float64 conditioning/optimizer differences without permitting scientific changes; fixed before local extraction."
+}

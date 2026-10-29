@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "original one-step v2, real RL complete cord support",
+      "S0_rmse": 0.3405738877538881,
+      "D_rmse": 8.332273081551074e-06,
+      "fraction_weighted_rmse": 0.00849507001537094,
+      "Dstar_weighted_rmse": 0.0016229982628991188,
+      "fDstar_rmse": 0.00011263546582884283,
+      "observation_relative_l2": 0.39661039338303
+    }
+  ],
+  "S0_rmse_boundary": 0.6811477755077762,
+  "D_rmse_boundary": 1.666454616310215e-05,
+  "fraction_weighted_rmse_boundary": 0.01699014003074188,
+  "Dstar_weighted_rmse_boundary": 0.0032459965257982375,
+  "fDstar_rmse_boundary": 0.00022527093165768567,
+  "observation_relative_l2_boundary": 0.43627245704530293,
+  "definitions": "S0,D ordinary RMSE; f weighted by 1-exp(-800*reference Dstar), Dstar weighted by reference f; weighted RMS=norm(w*error)/norm(w), zero weight contributes zero. Product fDstar ordinary RMSE. Observation norm ratio uses all11 b-values/all2523 voxels. No alignment."
+}

@@ -1,0 +1,6 @@
+Selected pyTSEB mathematical functions.
+Copyright2016 Hector Nieto and contributors.
+GNU Lesser General Public License version3 or later, as specified by each original mathematical source-file header. Full LGPL3 and its incorporated GPL3 terms are included in LICENSE.
+Source revision ccec8e3c93aed72f4d0ce3563d3e2f149f76e370.
+Explicit adaptations: selected PT/OSEB, KN99/Goudriaan and crop branches extracted into local functions; original core numerical updates/precision retained. Solar-partition helper corrected against independent published equations: sea-level pressure normalization, optical airmass absorption, NIR diffuse band and horizontal water projection. This is corrected reproduction, not unchanged upstream.
+Real Landsat9/ERA5 example data from geeet, source revision ae40313bd890adcac4c03b69eb7939fb154a2434, MIT License. Full original MIT notice is included in LICENSE. Historical output bands are not observations and are excluded from released raw_data.

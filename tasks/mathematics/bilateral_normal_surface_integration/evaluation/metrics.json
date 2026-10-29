@@ -1,0 +1,34 @@
+{
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        168,
+        168
+      ],
+      "dtype": "float64"
+    },
+    "tent_reconstruction": {
+      "shape": [
+        1,
+        128,
+        128
+      ],
+      "dtype": "float64"
+    }
+  },
+  "baseline": [
+    {
+      "method": "Independently executed author BiNI, author-provided quantized analytic normal fields; no actual depth truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "metric_provenance": "Numerical agreement budget fixed before local extraction; independent original repeats checked separately. Additive gauge fixed to zero mean in each full support; no evaluator realignment.",
+  "benchmark_semantics_version": 2,
+  "energy_ratio_boundary": 1.00000001,
+  "stationarity_floor": 1e-06,
+  "stationarity_attainment_factor": 1.1,
+  "gauge_boundary": 1e-08,
+  "definition": "Both normal fields must attain the standard frozen-weight fixed-point quality and weighted residual energy, rather than its height array. Each sigmoid is evaluated from the submitted normal-scaled one-sided gaps. Zero gauge/outside support required. Stationarity tolerance is max(1e-6,1.1 times independently attained standard stationarity), energy no greater than standard times(1+1e-8)."
+}

@@ -1,0 +1,80 @@
+# Provenance and validation: UCLA regional HRF and relative neural input
+
+## Binding and exact sources
+
+Physical task: all400 independently anatomical Schaefer parcels of real resting-state BOLD, all152 retained measured frames, to a regional hemodynamic response function and a model-conditioned relative neural drive. This is a blind deconvolution method reference, with no independent neuronal ground truth. Atlas aggregation is acquisition preprocessing, not a target estimated from HRF output. No ROI was removed for fit quality.
+
+Selected author source https://github.com/bids-apps/rsHRF at actually remotely verified commit a24d8f979e9caa5e089d9a2e7f30c7098b20880a, version1.8.0, MIT2018INCF. Remote commit patch and selectively captured original files are private archive/rsHRF. This is the author's modern2026 implementation of published rsHRF, not a claim to run a2021 release. Method papers DOI10.1016/j.neuroimage.2021.118591 and10.1016/j.media.2013.01.003; dataset DOI10.1038/sdata.2016.110; fixed anatomical atlas DOI10.1093/cercor/bhx179. Primary publication and author repository metadata were checked in this investigation.
+
+Real author-distributed UCLA CNP human resting fMRI, author_real_processed: NITRC https://www.nitrc.org/frs/download.php/11681/sub-10171_surf_data.zip (10084327bytes); https://www.nitrc.org/frs/download.php/11682/Schaefer2018_400Parcels.zip (18799bytes); https://www.nitrc.org/frs/download.php/11702/sub-10171_func_sub-10171_task-rest_bold.json (1433bytes). Exact originals archive/rshrf_surf.zip, rshrf_parcels.zip, rshrf_metadata.json plus extracted GIFTI. Primary OpenfMRI dataset ds000030 license CC0 and dataset description verified; code MIT and anatomical atlas attribution retained in NOTICE. Surface preprocessing was performed upstream with fMRIprep; this task does not claim raw k-space reconstruction or independently validate that earlier processing.
+
+The two hemispheres each have10242vertices and152frames. Integer label1..200 in each independent hemisphere determines fixed averages, order left1..200 then right1..200. Original float32 vertex values are promoted exactly tofloat64 before arithmetic means. TR2s, TE.03s, nominal source scan312s, actual selected record152frames/304s. The difference from nominal156frames is disclosed; no four invented frames and no unsupported claim about their removal. Public NPZ contains only bold(1,400,152) and vertex_counts(1,400); source frame/time order is preserved. File hashes and native private archive inventory: D:\yan1\agent\AutoSkill\imaging-101-maintainer\research_batch12_20261029\bio_med\rshrf_archive_index.json.
+
+## Original full-path execution
+
+Native original execution identity: {"command": ["D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch12_20261029\\bio_med\\oracle_env\\Scripts\\python.exe", "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch12_20261029\\bio_med\\capture_rshrf.py"], "cwd": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch12_20261029\\bio_med", "runtime": 13.222666200017557, "native_exit": 0}. Capture script capture_rshrf.py loads those exact original surface and label arrays, creates the fixed400parcel observations, and invokes unmodified fourD_rsHRF.demo_rsHRF time-series path on all400x152 values, p_jobs1. Wrappers merely copy filter,basis,beta,event intermediates without changing the numerical return. No original or cleaned method is run on a different demo. Native stdout/stderr archive/rshrf_native.stdout.log/.stderr.log; original native MAT and all numeric intermediates archive/rshrf_original/output/ and stage_fixtures.npz; parameter/native Python/NumPy identity run.json alongside. Original computation runtime initially6.4418s, latest native subprocess time above includes imports. Output HRF37x400, deconvolution152x400, all finite. Upstream reports a temporary-folder cleanup warning after numerical output; it is retained rather than suppressed or called a fit failure.
+
+Oracle environment is isolated bio_med/oracle_env, Python3.11.11, NumPy2.4.6,SciPy1.17.1,Matplotlib3.11.2 with upstream-only nibabel/pandas/pybids/joblib and author source. Clean runtime is the shared Python executable, NumPy2.4.6,SciPy1.17.1,Matplotlib3.11.1; no rsHRF,SPM,nibabel,pandas,pybids,joblib or domain library is needed. CPU, numerical threads1, noGPU. No shared package was installed or upgraded.
+
+## Actual source mathematics and an investigated discrepancy
+
+Default canonical basis plus temporal and dispersion derivatives, TR2,T3,T0=1,dt=2/3s, support24s(37samples), AR1, local peak threshold1standard deviation, localK1, candidate event shifts6..12microtime bins. Canonical-only full400region ablation is actively recomputed in the notebook, never filled from cache. Source Gram-Schmidt basis, point-event heuristic, causal convolution design, pivotedQR fitting, Cochrane-Orcutt whitening, piecewise two-line knee selection and FFT regularized inverse are extracted as readable local mathematics. FFT deconvolution downsamples HRF toTR with polyphase filtering, pads to152, uses ridge denominator |H|^2+.1mean(|H|^2), retaining exact amplitude scale and periodic boundary convention.
+
+IMPORTANT source filter alias: original rest_IdealFilter mutates and returns its input. First nominal deconvolution filter[0,Nyquist] aliases the BOLD, then HRF filter[.01,.08] mutates the same storage. Therefore actual author deconvolution also uses final .01-.08Hz filtered BOLD, contrary to the apparent separate-band docstring flow. This was independently traced, captured and explicitly preserved locally; no silent correction. Mirrored padding and FFT mask endpoint conventions are retained. The README/approach describe the actual bound path.
+
+HRF and latent input have an inherent reciprocal amplitude ambiguity; original canonical basis and regression convention fix the computational scale. They are relative model-conditioned quantities, not independent neural activity measurements. Unknown time-delay/event and HRF basis restrictions are disclosed. Circular inverse boundaries are explicitly different from the causal finite event-design fit. Excellent forward consistency cannot prove neuronal truth or physiological identifiability. No claims of neural ground truth or perfect causal recovery are made.
+
+## Pre-frozen stages, numerical tolerances and physics
+
+prepare_rshrf.py froze independently captured original stages and metrics before extract_rshrf_math.py. archive/rshrf_red.log records the missing implementation red gate. All400region original filter/basis parity rtol/atol1e-12; original beta/events/full HRF/input rtol/atol1e-9. Numerical output Judge thresholds were fixed before local extraction: NCC>=.9999999999, dynamic-rangeNRMSE<=1e-7, worst per-region range-normalizedNRMSE<=1e-6 for each required array. Worst-region observation residual bound1.1times original .201521441620... =.2216735858..., fixed before cleaned output. No mask, alignment, crop, amplitude rescaling or threshold relaxation.
+
+| Stage | Original function | Local mathematical function | Independent check |
+|---|---|---|---|
+| Surface anatomical aggregation | author GIFTI+atlas | preprocessing of bundled observations, private capture | exact fixed atlas counts/all152frames |
+| Standardization/reflected bandpass | rest_filter.rest_IdealFilter | preprocessing.preprocess; local rest_IdealFilter | original both stages; constant-signal analytic case |
+| Double gamma and orthogonal derivative basis | spm_hrf,spm_orth,basis_functions | double_gamma_hrf,orthogonalize_basis,canonical_basis | gamma unit mass,orthogonality,original basis |
+| Threshold point-event heuristic | event detection | local event/design functions | known local-peak event cases,all400original events |
+| Lagged regression and AR | wgr_glsco,hrf_estimation | local wgr_glsco and lag regression | known OLS,piecewise-linear knee,original coefficients |
+| FFT regularized inverse | fourD_rsHRF | deconvolve_ridge | circulant adjoint and ridge normal equation |
+| Physical observation operator | convolution | convolve_periodic | adjoint identity and fresh BOLD consistency |
+| Numeric metrics | independent evaluator | judge.score and visualization.roi_residual | known cosine/range-error cases and zero-drive relative RMS1 |
+
+Fresh metrics: {"hrf_ncc": 1.0000000000000002, "hrf_nrmse": 9.80739950678231e-17, "worst_roi_hrf_nrmse": 8.999007216110058e-16, "neural_drive_ncc": 0.9999999999999998, "neural_drive_nrmse": 1.2713896580014325e-14, "worst_roi_drive_nrmse": 8.50356161577687e-14, "worst_roi_observation_residual": 0.20152144162046928}. NCC uses uncentered cosine, NRMSE uses reference max-minus-min, perROI errors use individual region range. Observation residual is each ROI RMS(forward-observed)/RMS(observed), maximum over every400. All outputs separately evaluated. No undefined/NaN thresholds or self-zero-error boundary. Method reference agreement is numerical fidelity, not proof of physical correctness.
+
+## Reference assets and consumers
+
+test/fixtures/upstream_stages.npz: frozen original filters,basis,coefficients,events,HRF and relative input for parity tests. evaluation/baseline_reference.npz: independently executed original method outputs hrf(1,400,37),neural_drive(1,400,152),float64; not truth. notebooks/reference_outputs/original_method.npz: labeled original numeric comparisons; output/reconstruction.npz: fresh cleaned output. No ground_truth.npz is invented. Raw observation SHA256 7f009030bcfe8836ea177ed6b0329943c8b1437c7c5257a0ada828482625ab35.
+
+## Native clean executions and actual figure review
+
+Complete native CLI/Judge/tests/notebook records: D:\yan1\agent\AutoSkill\imaging-101-maintainer\research_batch12_20261029\bio_med\archive\ucla_bold_hemodynamic_neural_deconvolution_validation_1793254347128806300\native_runs.json. Native CLI2.7168s,Judge.7902s,initial19tests4.7756s, full nbconvert14.8596s, all native exit0. Timeout180s justified by full400region reconstruction plus independently fresh400region canonical-only ablation. Explicit private kernel argv uses shared research-runtime Python, OMP/OpenBLAS/MKLthreads1. Final additional independent visualization metric known-case and all20tests: {"command": ["D:/yan1/agent/AutoSkill/imaging-101-maintainer/research-runtime/Scripts/python.exe", "-m", "pytest", "test/", "-v", "--basetemp", "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch12_20261029\\bio_med\\archive\\rshrf_final_test_native"], "native_exit": 0, "runtime": 5.636663099983707}. No numerical implementation or notebook changed after the full execution, only added known-case coverage and this provenance.
+
+Original full executed notebook D:\yan1\agent\AutoSkill\imaging-101-maintainer\research_batch12_20261029\bio_med\archive\ucla_bold_hemodynamic_neural_deconvolution_validation_1793254347128806300\executed.ipynb, SHA256 bb5996db67eaf922e620b3b5b8b3b57d42d6fe33f39ce5f8203620f0c633e916; canonical notebook copied exactly with outputs. Four figures actually viewed: full400BOLD/relative-input heatmaps; all400original/freshHRFs and numerical difference(~1e-15); fixed anatomical parcels1/101/201/301 observed and predicted BOLD; all400forward residuals, fixed HRFs and full-vs-canonical-only peak-lag distribution. Original/fresh and model-dependence legends,units,all-region coverage,no neural-GT claim, readable layout all checked. Canonical-only basis has lower observation residual for many regions; this is shown honestly and not equated to better neural truth. No discarded ROI or hidden favorable examples.
+
+## Semantic, dependency, privacy and completion gates
+
+README and both plans semantically checked against actual signatures, all fixed constants, time/scale conventions, forward and inverse formulas, source alias flow and circular boundaries. Sources/tests/Judge/notebook imports checked: explicit NumPy/SciPy mathematics, Matplotlib figures; no domain solver,upstream import or cross-task import. Solver-visible README/rawNPZ/requirements contain no GitHubURL,hidden target,answer-derived calibration or metadataJSON. Full authoritative output contract lists both quantities,units,axes,dtypes; public inputs and README suffice. Task inventory follows the template, no temporary executed notebook/screenshots/logs/PDF in final task. NOTICE preserves source license and data/atlas attribution. Fixtures/reference arrays all have the above consumers.
+
+All mandatory selected-task AGENTS gates passed: source/paper/dataidentity; original exact complete path; pre-frozen stages and independent physics; constants/units; fresh CLI/Judge; malformed/missing/nonfinite/complex/dtype/shape/nonNPZ/poor outputs; evaluatorasset/report-write/CWD/native exit/truthpriority cases; public sufficiency/privacy; minimal shared runtime; explicit local mathematics; all20tests; complete active notebook and all figures viewed; honest method-reference and metric provenance; README/plans semantic consistency; inventory/license. Parent independent acceptance remains pending. No claim of uniquely identified physiological neural drive is made.
+
+
+## Independent parent acceptance
+
+Canonical kernel metadata is portable python3; all executed cells, counts and scientific outputs are preserved from the private shared-runtime execution.
+
+CLI, standalone Judge, pytest, active nbconvert and dual-engine math rendering were independently rerun: all exit0. Parent notebook: 4 executed code cells, 4 computed PNG outputs, 2 formulas. Private evidence: research_batch12_20261029/acceptance/ucla_bold_hemodynamic_neural_deconvolution/execution.json and semantic_review.json. All panels actually inspected by parent; source/physics/GT roles and limitations semantically checked. Canonical notebook is this parent-executed artifact. No new source or notebook execution is inferred from cached upstream outputs.
+
+
+## Final public-estimator sufficiency amendment
+
+Independent review identified that tight method-reference comparisons require the selected conditional/finite estimator to be defined publicly. README Method Hints now specifies the necessary mathematical prior, feasible set, or canonical finite mapping and constants, without source code, a full hyperparameter table or step-by-step pseudocode. Physical unknown/data, local mathematics, all Judge criteria and all executed notebook code/results are unchanged. The old README/hash, exact source correspondence and new hash are retained privately in acceptance/ucla_bold_hemodynamic_neural_deconvolution/public_mapping_amendment.json and public_mapping_before_README.md. Parent semantically compared every new equation/convention to actual source and independently rerendered all documents with both math engines. No new numerical reconstruction is claimed from this documentation-only amendment.
+
+
+## Final evaluator finite-overflow contract correction
+
+An actually reproduced huge-but-finite prediction caused nonfinite scoring and previously no JSON report. Minimal finite-metric guards now produce nativeexit2/statuserror/emptymetrics/descriptiveerrors. Current freshprediction still passes and normal metric values are exactly unchanged. The prior failure and actual new command/log/hash identities are retained privately in acceptance/ucla_bold_hemodynamic_neural_deconvolution/judge_guard_refresh.json. Complete current suite rerun after guard; all current tests executed. Current distinct test cardinality 21. No extra complete inverse or active notebook reconstruction is claimed from this evaluator-only correction. Solver, data, references, notebook cells/results and all boundaries are unchanged.
+
+
+## Public-contract scientific isolation 2026-10-29
+
+The blind HRF/input target depends on a finite event/lag-selection protocol whose independent physiological estimand is unresolved. Benchmark eligible=false. Scientific review is completed; blind-agent execution is a separate unexecuted gate and is not the reason for isolation. Removed README recipe, where present, is archived privately under benchmark_readiness_20261029/private_readme_recipes. Existing arrays/Judge thresholds unchanged.

@@ -1,0 +1,23 @@
+{
+  "baseline": [
+    {
+      "method": "Explicitly corrected original standardized-residual NLS interface with original Julia physical model, unchanged analytical start/bounds/TRFdefaults; independently repeated, no true physical parameters",
+      "rms_friction": 0.0008989523440455936
+    }
+  ],
+  "a_absolute_boundary": 0.0002,
+  "b_absolute_boundary": 0.0002,
+  "Dc_absolute_boundary_m": 5e-08,
+  "state_absolute_boundary_s": 0.05,
+  "velocity_relative_l2_boundary": 0.005,
+  "friction_absolute_boundary": 1e-05,
+  "observed_friction_rms_boundary": 0.0009888476383917916,
+  "metric_definitions": {
+    "parameters": "separate absolute errors in a,b (dimensionless) and Dc (m)",
+    "state": "maximum absolute theta error in seconds over all914 loadpoint observation coordinates",
+    "slider_velocity": "L2 error divided by nonzero original trajectory L2 norm; explicitly relativeL2, not range-normalized NRMSE",
+    "friction": "maximum absolute friction difference, dimensionless",
+    "observed_rms": "RMSE against public measured detrended friction"
+  },
+  "rationale": "All prior nonzero numerical and physical boundaries retained. Confirmed scalar-interface source error explicitly corrected to full residual vector, original independently repeated and frozen before local correction. No differential-step or initialization chase and no gate relaxation."
+}

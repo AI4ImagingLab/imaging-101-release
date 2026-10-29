@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "independent unmodified mcgeometry CDE on original ALV measurements",
+      "masked_g2_rmse": 0.056341808380579755,
+      "worst_curve_g2_rmse": 0.08851381794910315
+    }
+  ],
+  "beta_max_abs_error_boundary": 0.0001,
+  "flow_index_max_relative_error_boundary": 0.002,
+  "predicted_g2_max_abs_error_boundary": 0.0003,
+  "masked_g2_rmse_boundary": 0.061975989218637735,
+  "worst_curve_g2_rmse_boundary": 0.09736519974401348,
+  "definition": "Absolute beta/g2 errors and maximum pointwise relative flow-index error to independently run method; masked observation RMS in raw dimensionless g2 units; all390curves. No NCC/NRMSE for heterogeneous parameters.",
+  "rationale": "Frozen before extraction: roughly5x original TolFun1e-5 vs1e-8 differences: beta1.7898e-5,flowrelative.00031055,g2max4.9974e-5. Independent optimizer numerical portability allowance, not physical truth. Quality1.1times original global/worst RMS. No thresholds loosened."
+}

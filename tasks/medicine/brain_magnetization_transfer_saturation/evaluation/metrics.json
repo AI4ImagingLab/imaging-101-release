@@ -1,0 +1,42 @@
+{
+  "baseline": [
+    {
+      "method": "Original qMRLab MTSAT_exec Octave8.4.0, exact bound volumes",
+      "reconstruction_rmse": 0.0,
+      "r1_rmse": 0.0
+    }
+  ],
+  "thresholds": {
+    "reconstruction_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-05
+    },
+    "r1_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "reconstruction_ncc": {
+      "comparison": ">=",
+      "boundary": 0.999999
+    },
+    "r1_ncc": {
+      "comparison": ">=",
+      "boundary": 0.999999
+    },
+    "outside_max": {
+      "comparison": "<=",
+      "boundary": 1e-12
+    },
+    "observation_relative_rmse": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    }
+  },
+  "definitions": {
+    "rmse": "RMS absolute error on fixed public observation-only mask; percent for reconstruction and s^-1 for r1",
+    "ncc": "Flattened cosine, no centering, on same mask",
+    "observation_relative_rmse": "L2 predicted-observed / L2 observed for all three FLASH images on mask",
+    "outside_max": "Maximum absolute submitted output outside fixed analysis mask"
+  },
+  "provenance": "Independent identical Octave reruns; nonzero numerical tolerances frozen before local extraction; reference agreement not physical truth"
+}

@@ -1,0 +1,28 @@
+# Implemented mathematics
+
+The unknown is Z(r)=C pV(r), where C=(delta rho)^2/(10^20 cm^-4) and pV is volume fraction per angstrom. A change of variables absorbs the uncalibrated contrast exactly. Setting the implementation's numerical contrast to one does not supply a true material contrast. Recovering an absolute volume fraction would be unidentifiable, so none is reported. The unknown additive constant B has units cm^-1.
+
+For q in angstrom^-1, r in angstrom, uniform sphere amplitude F(x)=3(sin x-x cos x)/x^3 has F(0)=1. Evaluate F=1-x²/10+x^4/280 when x<10^-3, matching the author branch. Volume V=4pi r³/3 in angstrom³. A squared SLD contrast of C times10^20cm^-4 multiplied by V times10^-24cm³ gives10^-4 C V cm^-1. Thus I(q)=B+10^-4 integral V(r)F(qr)² Z(r)dr. This is the dilute noninteracting pinhole model; no slit effect, structure factor or size-dependent contrast is inferred.
+
+All500 original q/I/sigma points are positive finite and retained. The source validity mask drops none. B is the arithmetic mean of the observed intensities with0.5<=q<=1.0 angstrom^-1, using the author's flat-background helper with no power-law term. This estimate is not a known calibration; it is recomputed from the input for every noise/ablation fit and evaluated as an output. It is subtracted from all500 intensities; the original supplied uncertainties are used unchanged. Background-subtracted intensities are permitted to be negative. No later quality mask is applied.
+
+Use500 log-spaced radius centers np.logspace(log10(10),log10(30000),500). The source bin widths are w0=r1-r0, w499=r499-r498, and wj=(r[j+1]-r[j-1])/2 inside. These are full endpoint widths. Define nonnegative bin masses xj=Zj wj and Kij=10^-4 V(rj) F(qi rj)². Then fitted intensity is Kx+B. The source additionally reports trapezoidal density integrals, which give half endpoint weight and therefore differ from sum(x). The notebook distinguishes source trapezoid from the actual discrete bin sum. Its source-named Rg is actually an RMS radius; the local notebook calls it RMS radius and does not mislabel it particle radius of gyration. The single-sphere physical radius of gyration would be sqrt(3/5) r.
+
+## Explicit interior-point gradient iterations
+
+Minimize chi²(x)=sum_i[(Kx-(I-B))i/sigmai]², x>=0. Set Aij=Kij/sigmai, bi=(Ii-B)/sigmai, H=A.T A and c=A.T b. Initialize every bin mass to10^-32. At each iteration compute h=Hx and gradient g=h-c (half the full chi² gradient). The source positive diagonal preconditioner gives D=x/max(h,10^-300), elementwise, and direction p=-D*g. Compute exact quadratic line-search alpha=max(-p.g/(p.Hp),0). If abs(p.Hp)<10^-300 stop. For every negative direction component limit alpha<=0.95*(-xj/pj). Update x=max(x+alpha p,10^-300). Stop as soon as chi²/500<=1, otherwise at1000 updates. No hidden regularization, generic NNLS replacement or smoothing is added. Early discrepancy stopping controls fit complexity. The shipped full run stops after101 updates with chi²499.4421858823589.
+
+The final density is x/max(w,10^-300). No mass normalization, amplitude fitting or smoothing is applied after inversion. Return B unchanged from its public-data estimate. The standard method is the current author port of Irena's published interior-point family, with error weighting explicitly implemented by this revision. The original historical manual discusses alternative q weightings; they are not claimed as executed here.
+
+## Fixed independent reference and boundaries
+
+Before local extraction, the unmodified pyIrena source was run on the exact500-point acquisition in an isolated environment. Full source q/I/error, B, radius, widths, matrix, density, fitted scattering and residuals were frozen. A200-bin preflight could not meet discrepancy (chi² approximately1488 despite20000 steps) and was rejected. A500-bin model reaches discrepancy at101 updates; an independent1000-bin check reaches it at62. This is discretization qualification, not removal of difficult observations. The coarse preflight remains negative evidence outside the task.
+
+No actual distribution truth is identified. Baseline and notebook upstream arrays are independent method results. Density comparison uses uncentered cosine NCC and RMS error divided by the reference density range. Boundaries NCC>=0.999999 and NRMSE<=10^-6 are nonzero numerical method tolerances; the independent full result differs only by floating point roundoff. Background absolute error<=10^-6 cm^-1 is evaluated separately. Full-observation mean standardized squared residual must be<=1.01, slightly above the source discrepancy stopping level1. All four metrics must pass; physical accuracy is not established by passing them. Poor fit is never accommodated by relaxing measurement uncertainties or omitting q points.
+
+Notebook comparisons retain source/fresh density and full scattering, signed standardized residuals, physical integrals, native discrepancy history,200/500/1000-bin discretization, flat-background alternatives and ten uncertainty perturbation refits following the author manual. Perturbation spread is sensitivity to supplied uncertainties, not independent true-distribution error. No perturbation replaces the standard benchmark output.
+
+
+## Public-contract revision 2026-10-29
+
+2.0-noise-compatible-nonnegative-size-density: V1 required a particular finite IPG histogram despite the ill-posed size distribution. V2 preserves the original all-500-point noise discrepancy <=1.01, calibrated background and nonnegative histogram. Raw-only independently implemented column-scaled NNLS achieves chi-square .6924073; zero/reversed distributions fail. No actual truth exists.

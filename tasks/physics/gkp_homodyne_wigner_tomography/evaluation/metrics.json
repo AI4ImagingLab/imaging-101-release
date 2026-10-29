@@ -1,0 +1,23 @@
+{
+  "baseline": [
+    {
+      "method": "Independent unchanged author2025 native calibrated raw333 homodyne ML, all100files/1881028accepted shots/31Fockstates/100updates",
+      "reference_type": "method reference, no actual state truth",
+      "rho_vs_reference_relative_l2": 0.0,
+      "wigner_vs_reference_dynamic_range_nrmse": 0.0
+    }
+  ],
+  "rho_hermitian_relative_boundary": 1e-06,
+  "rho_trace_error_boundary": 1e-06,
+  "rho_minimum_eigenvalue_boundary": -1e-06,
+  "wigner_density_consistency_maxabs_boundary": 1e-06,
+  "nrmse_definition": "RMS real Wigner difference divided by max(reference Wigner)-min(reference Wigner), all201x201 grid points.",
+  "rho_relative_l2_definition": "Frobenius norm of complex density difference divided by Frobenius norm of method reference. No phase-space rotation, phase alignment or gain fitting.",
+  "threshold_provenance": "Method reference has no state truth. Nonzero tolerances exceed independently measured valid complex64/float32 serialization error by at least10; no self-error-zero threshold. Both outputs and physical density/Wigner consistency evaluated. Predeclared independent source parity remains2e-8 scaled full-field.",
+  "benchmark_semantics_version": 2,
+  "mean_loglikelihood_deficit_boundary": 1e-08,
+  "likelihood_definition": "Mean log Born quadrature density over all accepted, independently vacuum/variance calibrated shots. Candidate must attain standard mean likelihood within1e-8 nats per shot; higher likelihood passes. No reference density/Wigner agreement is required.",
+  "tolerance_provenance": "1e-8 nats/shot fixed numerical objective tolerance; no stochastic subsampling. Existing trace/PSD/Hermiticity/Wigner-consistency limits retained.",
+  "actual_truth_rho_relative_l2_boundary": 1e-06,
+  "actual_truth_wigner_nrmse_boundary": 1e-07
+}

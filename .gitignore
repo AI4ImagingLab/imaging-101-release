@@ -19,8 +19,11 @@ archive/
 
 # Task data and outputs
 tasks/**/evaluation/fixtures/
+!tasks/astronomy/eht_black_hole_original/evaluation/fixtures/
 tasks/**/evaluation/reference_outputs/
 tasks/**/data/*.npz
+# Bound benchmark observations follow the domain/task layout.
+!tasks/*/*/data/raw_data.npz
 tasks/**/data/*.fits
 tasks/**/data/*.uvfits
 tasks/**/output/

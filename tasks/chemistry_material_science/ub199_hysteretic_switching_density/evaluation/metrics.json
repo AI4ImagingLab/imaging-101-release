@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Independent paper-corrected FORCsensei current-default preprocessing, isotropic Bayesian selection with2000positions",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0,
+      "standard_error_ncc_vs_ref": 1.0,
+      "standard_error_nrmse_vs_ref": 0.0
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.999999999,
+  "reconstruction_nrmse_boundary": 1e-08,
+  "standard_error_ncc_boundary": 0.999999999,
+  "standard_error_nrmse_boundary": 1e-06,
+  "reference_role": "Independent paper-corrected source execution, not unchanged upstream and not actual truth",
+  "comparison": "Both exact declared arrays, no transformation, fixed instrument-native reportingdomain",
+  "tolerance_provenance": "Independent NumPy1.26.4/source and NumPy2.4.6/local backend comparison gives maxrho6.09e-15 andmaxSE4.1e-11. Nonzero tolerances cover covariance conditioning and remain stringent; zero,scrambled andscaled submissions tested."
+}

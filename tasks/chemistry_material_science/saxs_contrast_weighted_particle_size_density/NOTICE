@@ -1,0 +1,1 @@
+Local extraction of the sphere form factor and interior-point nonnegative least-squares algorithm from pyIrena by Jan Ilavsky, original MIT license retained. Observable is contrast-weighted density; unit contrast is a normalization, not a calibration.

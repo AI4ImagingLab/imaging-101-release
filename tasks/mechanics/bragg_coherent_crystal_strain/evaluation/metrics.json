@@ -1,0 +1,174 @@
+{
+  "baseline": [
+    {
+      "method": "independent corrected-source all200starts per position, top10 integer/twin/globalphase complex mean; not actual truth",
+      "p1_raw_amplitude_residual": 0.08332772900431508,
+      "p2_raw_amplitude_residual": 0.09608779570479088,
+      "metrics": {
+        "p1_complex_relative_l2": 1.975572916289476e-20,
+        "p1_complex_cosine": 0.9999999999999996,
+        "p1_kernel_relative_l2": 0.0,
+        "p1_kernel_mass_error": 0.0,
+        "p1_kernel_negative_mass": -0.0,
+        "p1_phase_rmse": 1.5839772498286366e-17,
+        "p1_relative_projected_strain_rmse": 1.714498612725992e-22,
+        "p1_raw_amplitude_residual": 0.08332772900431538,
+        "p2_complex_relative_l2": 8.453668887136052e-21,
+        "p2_complex_cosine": 1.0,
+        "p2_kernel_relative_l2": 0.0,
+        "p2_kernel_mass_error": 0.0,
+        "p2_kernel_negative_mass": -0.0,
+        "p2_phase_rmse": 1.6422667544472657e-17,
+        "p2_relative_projected_strain_rmse": 5.629327715275418e-23,
+        "p2_raw_amplitude_residual": 0.09608779570479113
+      },
+      "comparison_scope": "reference-selfconsistency measurements, not true-image accuracy"
+    }
+  ],
+  "thresholds": {
+    "p1_kernel_mass_error": {
+      "boundary": 1e-12,
+      "comparison": "<="
+    },
+    "p1_kernel_negative_mass": {
+      "boundary": 0,
+      "comparison": "<="
+    },
+    "p1_raw_amplitude_residual": {
+      "boundary": 0.08332872900431508,
+      "comparison": "<="
+    },
+    "p2_kernel_mass_error": {
+      "boundary": 1e-12,
+      "comparison": "<="
+    },
+    "p2_kernel_negative_mass": {
+      "boundary": 0,
+      "comparison": "<="
+    },
+    "p2_raw_amplitude_residual": {
+      "boundary": 0.09608879570479088,
+      "comparison": "<="
+    },
+    "p1_support_fraction": {
+      "comparison": "<=",
+      "boundary": 0.125
+    },
+    "p1_outside_support_excess": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "p2_support_fraction": {
+      "comparison": "<=",
+      "boundary": 0.125
+    },
+    "p2_outside_support_excess": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    }
+  },
+  "metric_definitions": {
+    "complex_relative_l2": "Euclidean complex L2 error divided by reference norm, after integer/twin/global phase; no scale fit",
+    "complex_cosine": "real conjugate dot / norms after same alignment",
+    "kernel_relative_l2": "Euclidean kernel difference / reference norm",
+    "kernel_mass_error": "abs(sum(kernel)-1)",
+    "kernel_negative_mass": "-sum(min(kernel,0))",
+    "phase_rmse": "wrapped phase RMSE rad on fixed reference1/e mask; candidatezero penalty pi",
+    "relative_projected_strain_rmse": "dimensionless RMS of independently meanremoved nominal q projected centralcomplexratio strain on same fixedreference3cubeeroded mask",
+    "raw_amplitude_residual": "allraw121 squared amplitude residual divided by raw sqrtcount squared norm; no posterior fit"
+  },
+  "reference_kind": "standard-method result; no ground_truth file; selected corrected variant, not unchanged native/paper reproduction",
+  "frozen_proposal_sha256": "0db482e0b195de39039e16afd5c00de1ab44e2e09e396c7f0adfb4635373fde8",
+  "method_reference_review": {
+    "status": "passed",
+    "scope": "selected corrected-method reference consistency only; physical truth and paper morphology/absolute strain not certified",
+    "controls": {
+      "constant": {
+        "exit": 1,
+        "report_sha256": "b111490dae7bc0e68a98ee21311c5aef94b5939c187bce9e59987aa268e57dde"
+      },
+      "differentkernel": {
+        "exit": 1,
+        "report_sha256": "46d3478052ad0de960345022ca3fcacad684b9a52d893d392bd64396a1f4c7f2"
+      },
+      "globalphase": {
+        "exit": 0,
+        "report_sha256": "9ec2cccd0c98ec3d115a70a6bbcd9cf997b8f4b20f04a581ceb59792d4c42691"
+      },
+      "identity": {
+        "exit": 0,
+        "report_sha256": "5652e0cccd4a74ce14d895971b24fc2dbb0188bea5661a8bc526c4b423e940e9"
+      },
+      "kernelshape": {
+        "exit": 2,
+        "report_sha256": "b94be5b36dac3509290cea403997b5aee0b28efb797f8218785113ddca9f62b4"
+      },
+      "localdisplacement": {
+        "exit": 1,
+        "report_sha256": "7684ca5104e771e1a58353dbc75a8e35a73e4fd8595d47da9a9cb9919554ac79"
+      },
+      "negativekernel": {
+        "exit": 1,
+        "report_sha256": "d81319471380890de1b4369f6a264c258be825b7f5a0bf53f25d052092dcfd17"
+      },
+      "nonunitkernel": {
+        "exit": 1,
+        "report_sha256": "6ec5a76f7d911b601e76ce6da979adf4edb74209b42d30afb894cb9248c5475e"
+      },
+      "positionswap": {
+        "exit": 1,
+        "report_sha256": "5309943eebf978a01b98dbcdda42171ec514b1ca742b70169f1d32a3eefe1403"
+      },
+      "regionalphase": {
+        "exit": 1,
+        "report_sha256": "cb8f2c99ee75bbd374fc034d5f868d3c77440b4eded4464d09cd7086651b1828"
+      },
+      "scale": {
+        "exit": 1,
+        "report_sha256": "6ac0b0592993a387ca370c98af9b50fc35097815c3f349d41521018fbf6fdd87"
+      },
+      "translation": {
+        "exit": 0,
+        "report_sha256": "1c8978eddd59be7ae7a46a4f7d9a2a60061d05334e6d4795371c00927a2b448a"
+      },
+      "twin": {
+        "exit": 0,
+        "report_sha256": "01e8e0dbdb57d5f1e78d599dcb6ab051e121d40a4f1baf9dc04ba3feb61da1ff"
+      },
+      "wrongaxis": {
+        "exit": 1,
+        "report_sha256": "3bbd5a4dba7f98632989041bfe4ccf5408590c40c75c7b3dbeb1d61d66ae2d6d"
+      },
+      "zero": {
+        "exit": 1,
+        "report_sha256": "e36a2cefde0535a06a3773735783b0f44fca3283f4f211357581d47b3e164f6c"
+      }
+    },
+    "completed_epoch": 1792367330.377402,
+    "frozen_boundaries_changed": false
+  },
+  "scientific_quality_review": {
+    "status": "limitations_retained",
+    "actual_truth": false,
+    "limitations": [
+      "native source fails nonfinite",
+      "nominal q differs article by0.56%",
+      "P1/P2 count deficits9.90%/11.13%; structured weak-tail/ring residuals",
+      "P2ensemble raw residual worse than every selected member",
+      "selected top10 ensemble convention not verified historical author exactpostprocessing"
+    ]
+  },
+  "p1_kernel_mass_error_boundary": 1e-12,
+  "p1_kernel_negative_mass_boundary": 0,
+  "p1_raw_amplitude_residual_boundary": 0.08332872900431508,
+  "p2_kernel_mass_error_boundary": 1e-12,
+  "p2_kernel_negative_mass_boundary": 0,
+  "p2_raw_amplitude_residual_boundary": 0.09608879570479088,
+  "p1_support_fraction_boundary": 0.125,
+  "p1_outside_support_excess_boundary": 1e-08,
+  "p2_support_fraction_boundary": 0.125,
+  "p2_outside_support_excess_boundary": 1e-08,
+  "benchmark_semantics_version": 2,
+  "definition": "All measured voxels and both PSFs are evaluated by original raw amplitude, unit-mass/nonnegative kernel and own-field compactness checks. Compact support reuses published shrinkwrap sigma1, relative threshold0.1, reflect/truncate4 and a1/8volume prior adapted from the published initial half-box. Outside-support energy may exceed the attained standard fraction by at most1e-8. No reference density, kernel or strain identity.",
+  "gauge_definition": "Support scoring peak-centers each field by integer cyclic translation and selects the better of its own direct/conjugate-inversion representatives. No reference alignment or gain fit is performed. Physical raw forward scale remains fixed. Joint PSF/object ambiguity is not resolved into claimed true strain."
+}

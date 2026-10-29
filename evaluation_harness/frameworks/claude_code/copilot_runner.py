@@ -1,25 +1,9 @@
-"""Third-party agent evaluation: sandbox preparation and result collection.
+"""Third-party public-only workspace preparation and host-side result collection.
 
-This module handles the "copilot" framework — evaluating black-box coding
-agents (GitHub Copilot, Claude Code, Cursor, Windsurf, etc.) that we cannot
-control programmatically.  The workflow is:
-
-1. **Prepare** a sandbox workspace with visible files + a self-eval harness.
-2. **Generate** a prompt that instructs the agent what to do.
-3. The human operator pastes the prompt into the agent and lets it work.
-4. **Collect** results from the sandbox after the agent finishes.
-5. **Score** the results using the same Scorer infrastructure.
-
-Anti-cheat design:
-- evaluation/reference_outputs/ is NEVER copied to the sandbox.
-- evaluation/tests/ and evaluation/fixtures/ are NEVER copied.
-- src/ (reference implementation) is NEVER copied.
-- A self-evaluation script (self_eval.py) is placed in the sandbox.  It
-  loads the ground truth from an OBFUSCATED binary blob (compressed +
-  base64-encoded + XOR-scrambled) that the agent cannot trivially inspect.
-  The script prints only aggregate metrics (NRMSE, NCC, PSNR, SSIM) — it
-  never exposes the raw ground truth array.
-- The self-eval script is marked read-only and includes a stern warning.
+A public NPZ task exports only README, raw observations and environment files.
+No encoded ground truth, reference solver or self-evaluation script is exported.
+Workspaces are file exports, not OS isolation; use an external isolated runner.
+Legacy non-NPZ research interfaces are retained separately.
 """
 
 from __future__ import annotations
@@ -328,6 +312,12 @@ class CopilotSandbox:
         Returns the absolute path to the workspace directory that should
         be opened in the third-party agent's IDE.
         """
+        from evaluation_harness.benchmark import uses_npz_contract, prepare_public_workspace
+        if uses_npz_contract(self.task_dir):
+            if self.level != "L1":
+                raise ValueError("Public NPZ benchmark uses L1 only; reference plans remain private")
+            prepare_public_workspace(self.task_dir, self.workspace)
+            return self.workspace
         log.info("Preparing copilot sandbox at %s", self.workspace)
         self.workspace.mkdir(parents=True, exist_ok=True)
 
@@ -335,7 +325,7 @@ class CopilotSandbox:
         self._copy_visible_files()
 
         # 2. Generate and place self-evaluation script
-        self._place_self_eval_script()
+        # Encoded answers remain answers: never distribute a GT blob.
 
         # 3. Create agent instruction file (INSTRUCTIONS.md)
         # This is redundant with the prompt but helps agents that read files
@@ -368,7 +358,9 @@ class CopilotSandbox:
         }
 
         # Check for reconstruction
-        recon_path = self.workspace / "output" / "reconstruction.npy"
+        from evaluation_harness.benchmark import uses_npz_contract
+        suffix = "npz" if uses_npz_contract(self.task_dir) else "npy"
+        recon_path = self.workspace / "output" / f"reconstruction.{suffix}"
         if recon_path.exists():
             results["has_reconstruction"] = True
             results["reconstruction_path"] = str(recon_path)
@@ -447,27 +439,7 @@ class CopilotSandbox:
                     forbidden_path.unlink()
 
     def _place_self_eval_script(self) -> None:
-        """Generate self_eval.py with obfuscated ground truth."""
-        gt_path = self.task_dir / "evaluation" / "reference_outputs" / "ground_truth.npy"
-        if not gt_path.exists():
-            log.warning("Ground truth not found: %s — self-eval will not work", gt_path)
-            # Place a stub self_eval.py
-            script = '''\
-#!/usr/bin/env python3
-"""Self-evaluation script — ground truth not available for this task."""
-print("ERROR: Ground truth not available. Cannot compute metrics.")
-'''
-            (self.workspace / "self_eval.py").write_text(script, encoding="utf-8")
-            return
-
-        gt = np.load(str(gt_path))
-        gt_blob = _obfuscate_array(gt)
-        gt_hash = hashlib.sha256(gt.tobytes()).hexdigest()[:16]
-
-        script = _generate_self_eval_script(gt_blob, gt.shape, gt_hash)
-        script_path = self.workspace / "self_eval.py"
-        script_path.write_text(script, encoding="utf-8")
-        log.info("Placed self_eval.py with obfuscated GT (%d bytes blob)", len(gt_blob))
+        raise RuntimeError("Embedding even obfuscated ground truth in an agent workspace is forbidden")
 
     def _place_instructions_file(self) -> None:
         """Place an INSTRUCTIONS.md file in the sandbox root.
@@ -516,6 +488,15 @@ def prepare_copilot_evaluation(
 
     # Generate the prompt
     readme = (task_dir / "README.md").read_text(encoding="utf-8")
+    from evaluation_harness.benchmark import uses_npz_contract
+    if uses_npz_contract(task_dir):
+        prompt = ("Solve the inverse problem using only README.md, data/raw_data.npz "
+                  "and the provided environment. Choose and implement your own method. "
+                  "Save output/reconstruction.npz with every key, shape, dtype and unit "
+                  "specified by README. Hidden scoring is run by the maintainer after "
+                  "submission; no local self-evaluation answer is supplied.\n\n" + readme)
+        return {"workspace_path": str(workspace_path), "prompt": prompt,
+                "prompt_file": None, "level": level, "task_name": task_name}
     meta_data_path = task_dir / "data" / "meta_data"
     meta_data = meta_data_path.read_text(encoding="utf-8") if meta_data_path.exists() else ""
     requirements = (task_dir / "requirements.txt").read_text(encoding="utf-8") if (task_dir / "requirements.txt").exists() else ""

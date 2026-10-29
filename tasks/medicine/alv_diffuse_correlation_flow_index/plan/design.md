@@ -1,0 +1,11 @@
+# Shipped interfaces and flow
+
+src.preprocessing.load_data(path='data/raw_data.npz') reads public NPZ allow_pickle=False and removes only the leading batchaxis, returning g2(390,4,199),lag_times(199),countrate(390,4). prepare(data) returns weighted(390,199)float64 and fixedmask(390,199)bool. No data mutation or side effects.
+
+src.physics_model.field_correlation(tau,q,mu_a=MU_A,mu_sp=MU_SP,rho=RHO,n=REFRACTIVE_INDEX,wavelength_mm=WAVELENGTH_MM) evaluates normalized explicit CDE fieldcorrelation. correlation(tau,beta,q,**kwargs) applies Siegert. tau seconds,q=F_mm²/s*1e9,geometry/wavelengthmm,opticalcoefficientsmm^-1; outputdimensionless. Defaults named and exactly aligned toREADME. No upstream library calls.
+
+src.solvers.fit_curve(tau,observed) fits one frozen-support curve and returns [beta,q]. reconstruct(data) independently fits all390, returns exact required beta(1,390),flow_index(1,390)cm²/s,predicted_g2(1,390,199),allfloat64. src.main.main() loads raw,reconstructs,writes only output/reconstruction.npz; standard python -m src.main. No backend mutation on imports.
+
+visualization.curve_rmse(predicted,weighted,mask) returns390dimensionless RMSerrors, covered by knowncase test. make_figures(data,fresh,original,tighter,sensitivity) returns3figures: fixed1/101/201/301fullobservations/support/predictions;all390flow/beta/residualtraces;allfitresidualheatmap,numericaloriginalreruns,andfreshnassumptionsensitivity. No result-dependent favorable example selection. Notebook runs selected full390fit then actively runs full390sensitivity with explicit locally evaluated model and same bounds,then independentJudge scoring and plotting. Archived original/tighter results are separately identified; never substituted for fresh data.
+
+Judge independently implements weighting/mask/metrics,imports onlystdlib/NumPy,strictly validates everyrequiredarraykey/shape/float64/finite,truthpriorityexplicit,relativehiddenpaths/nativeexit/reportcontracts. Fixtures original_stages.npz feed originalpreprocessing/forward/inverseparity. original_method.npz andoriginal_tighter.npz are consumed by nativeNotebook comparisons;baseline_reference.npz is independent originalmethodresult used byJudge,nottruth. No syntheticgenerator,calibrationfittingorcross-taskimports.

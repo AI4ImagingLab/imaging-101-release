@@ -21,7 +21,11 @@ from .copilot_runner import (
     prepare_copilot_evaluation,
     collect_copilot_results,
 )
-from .copilot_scorer import score_copilot_results
+def __getattr__(name):
+    if name == "score_copilot_results":
+        from .copilot_scorer import score_copilot_results
+        return score_copilot_results
+    raise AttributeError(name)
 from .copilot_prompt import (
     generate_agent_prompt,
     generate_instruction_file,

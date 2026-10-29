@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "v2 float64 qualified geometric POCA and explicitly defined double0.999 robust RMS; independently checked NumPy double path",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 5e-06,
+  "reference_type": "Qualified published-method reference, not physical truth",
+  "precision_rationale": "Unchanged acceptance boundaries now compare the precisely defined v2 robust estimator: float64 geometry and aggregation, final float32 serialization. Independent full-raw NumPy geometry gives relative L2 2.5652e-8; historical float32 geometry differs 2.8485% and is archived, not described as ordinary rounding.",
+  "semantic_version": "v2",
+  "precision_revision": "Geometry and robust aggregation use float64; only final field casts float32. Historical v1 float32 geometry differs2.8485% L2 and is archived, not accepted as physical truth.",
+  "historical_v1_precision_rationale": "Fixed tolerance supports float32 SVD and batched geometric solves, independently checked with float64 geometry and repeated runs; no output alignment."
+}

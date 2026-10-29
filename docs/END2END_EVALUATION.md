@@ -1,3 +1,5 @@
+> Current public NPZ benchmark: see [the public-input guide](PUBLIC_BENCHMARK.md). The `.npy`/flat-task/L2-L3 examples below are historical research interfaces and must not override a current task README or its standalone Judge.
+
 # End-to-End Evaluation Guide
 
 How to run the end-to-end (`end2end`) mechanism and how the results are scored

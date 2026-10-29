@@ -1,0 +1,21 @@
+{
+  "baseline": [
+    {
+      "method": "PhasorPy0.12 two-harmonic graphical search, original full measured run",
+      "reconstruction_nrmse": 0.0,
+      "bound_fraction_nrmse": 0.0,
+      "forward_rms": 0.03433711446607921
+    }
+  ],
+  "forward_rms_boundary": 0.037770825912687135,
+  "nrmse_definition": "RMS error / reference dynamic range, separately for both output quantities, all pixels with observed histogram total>0; lifetime channels jointly.",
+  "forward_definition": "sqrt(mean_h,p | (1-f)/(1-i*h*omega*tau_fast)+f/(1-i*h*omega*tau_slow)-z_h |^2), h=1,2, observed support only.",
+  "reference_role": "Independent official implementation result, not biological truth. Bit-exact original rerun; nonzero tolerances frozen before extraction. No per-image rescaling, alignment or cropping.",
+  "benchmark_semantics_version": 2,
+  "grid_membership_max_ns_boundary": 1e-07,
+  "first_harmonic_line_max_boundary": 1e-07,
+  "fraction_projection_max_boundary": 1e-07,
+  "second_harmonic_objective_excess_max_boundary": 1e-12,
+  "definition": "Every observed pixel must use a prior-grid component lifetime, lie on its first-harmonic component line, use the second-harmonic projection as its fraction, and attain second-harmonic squared perpendicular error no greater than the validated mathematical-grid minimum plus 1e-12. Lifetimes are ordered and positive, fractions in [0,1], background zero. Equivalent near-degenerate minima are allowed; no lifetime or fraction agreement to a selected tie is required.",
+  "tolerance_provenance": "Version2 geometric tolerances fixed at 1e-7 phasor/fraction/ns and 1e-12 absolute squared phasor objective before candidate comparison; these control equation and discrete-prior accuracy rather than reference tau agreement. Original forward RMS boundary retained unchanged."
+}

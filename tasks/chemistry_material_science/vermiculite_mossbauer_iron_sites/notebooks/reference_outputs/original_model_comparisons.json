@@ -1,0 +1,146 @@
+[
+  {
+    "file": "vemiculite_ore_ALB1VA00_mossbauer_spectra.csv",
+    "model": "one",
+    "components": 1,
+    "sse": 0.003934022697080652,
+    "rms": 0.002771937603957861,
+    "bic": -5998.334093152595,
+    "runtime_s": 1.0231583999702707
+  },
+  {
+    "file": "vemiculite_ore_ALB1VA00_mossbauer_spectra.csv",
+    "model": "two",
+    "components": 2,
+    "sse": 0.00036084415372112684,
+    "rms": 0.0008395080331578584,
+    "bic": -7196.534259188443,
+    "runtime_s": 1.4448432000353932
+  },
+  {
+    "file": "vemiculite_ore_ALB1VA00_mossbauer_spectra.csv",
+    "model": "three",
+    "components": 3,
+    "sse": 0.0001238476429393245,
+    "rms": 0.0004918230653556909,
+    "bic": -7719.1107059931,
+    "runtime_s": 4.598721499904059
+  },
+  {
+    "file": "vemiculite_ore_ALB1VA00_mossbauer_spectra.csv",
+    "model": "four_alternative",
+    "components": 4,
+    "sse": 9.425550767725375e-05,
+    "rms": 0.0004290603552323801,
+    "bic": -7833.955353176743,
+    "runtime_s": 32.114621299901046
+  },
+  {
+    "file": "vermiculite_ore_ALB5SA00_mossbauer_spectra.csv",
+    "model": "one",
+    "components": 1,
+    "sse": 0.009248348613668921,
+    "rms": 0.004250080103488887,
+    "bic": -5560.685443978744,
+    "runtime_s": 3.606882500112988
+  },
+  {
+    "file": "vermiculite_ore_ALB5SA00_mossbauer_spectra.csv",
+    "model": "two",
+    "components": 2,
+    "sse": 0.002065416662854899,
+    "rms": 0.0020084862259021033,
+    "bic": -6303.2780155561495,
+    "runtime_s": 9.86237759992946
+  },
+  {
+    "file": "vermiculite_ore_ALB5SA00_mossbauer_spectra.csv",
+    "model": "three",
+    "components": 3,
+    "sse": 0.00040383642599243607,
+    "rms": 0.0008881120534687482,
+    "bic": -7113.948319746998,
+    "runtime_s": 6.973921300028451
+  },
+  {
+    "file": "vermiculite_ore_ALB5SA00_mossbauer_spectra.csv",
+    "model": "four_alternative",
+    "components": 4,
+    "sse": 0.0003014496629190331,
+    "rms": 0.0007673127608014456,
+    "bic": -7238.707335143334,
+    "runtime_s": 27.74180860002525
+  },
+  {
+    "file": "vermiculite_ore_GDS469_mossbauer_spectra.csv",
+    "model": "one",
+    "components": 1,
+    "sse": 0.025116858855764167,
+    "rms": 0.007004024910911182,
+    "bic": -5049.14917215994,
+    "runtime_s": 3.150094800046645
+  },
+  {
+    "file": "vermiculite_ore_GDS469_mossbauer_spectra.csv",
+    "model": "two",
+    "components": 2,
+    "sse": 0.0014901264546192034,
+    "rms": 0.001705990396127168,
+    "bic": -6470.43116479691,
+    "runtime_s": 4.864583099959418
+  },
+  {
+    "file": "vermiculite_ore_GDS469_mossbauer_spectra.csv",
+    "model": "three",
+    "components": 3,
+    "sse": 0.0005848719683745286,
+    "rms": 0.0010687974846674655,
+    "bic": -6924.312195083015,
+    "runtime_s": 8.2992170000216
+  },
+  {
+    "file": "vermiculite_ore_GDS469_mossbauer_spectra.csv",
+    "model": "four_alternative",
+    "components": 4,
+    "sse": 0.0003819287652162685,
+    "rms": 0.0008636866443120586,
+    "bic": -7117.552229356626,
+    "runtime_s": 10.87850079999771
+  },
+  {
+    "file": "vermiculite_ore_zonolite4_mossbauer_spectra.csv",
+    "model": "one",
+    "components": 1,
+    "sse": 0.005495253327975052,
+    "rms": 0.0032761130408154836,
+    "bic": -5827.212327306231,
+    "runtime_s": 1.6652792999520898
+  },
+  {
+    "file": "vermiculite_ore_zonolite4_mossbauer_spectra.csv",
+    "model": "two",
+    "components": 2,
+    "sse": 0.00191814664546299,
+    "rms": 0.001935556810563798,
+    "bic": -6341.151960547879,
+    "runtime_s": 4.233498999965377
+  },
+  {
+    "file": "vermiculite_ore_zonolite4_mossbauer_spectra.csv",
+    "model": "three",
+    "components": 3,
+    "sse": 0.00047808385451548053,
+    "rms": 0.0009663112999186897,
+    "bic": -7027.534887351652,
+    "runtime_s": 7.4954785000300035
+  },
+  {
+    "file": "vermiculite_ore_zonolite4_mossbauer_spectra.csv",
+    "model": "four_alternative",
+    "components": 4,
+    "sse": 0.0004772929328180145,
+    "rms": 0.0009655116567966358,
+    "bic": -7003.429321404731,
+    "runtime_s": 21.443001099978574
+  }
+]

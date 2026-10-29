@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original full native SAIMFitKit one-colour LM; method reference, no independent truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "metric_provenance": "Reference tolerances frozen before local implementation; independent original/local/rerun comparisons and forward residual evidence in test/validation.md",
+  "observation_rms_adu_boundary": 193.30091724541984,
+  "reconstruction_ncc_boundary": 0.99999999,
+  "reconstruction_nrmse_boundary": 1e-05,
+  "amplitude_ncc_boundary": 0.99999999,
+  "amplitude_nrmse_boundary": 1e-05,
+  "background_ncc_boundary": 0.99999999,
+  "background_nrmse_boundary": 1e-05
+}

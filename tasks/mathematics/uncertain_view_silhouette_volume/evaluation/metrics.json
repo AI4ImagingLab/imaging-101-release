@@ -1,0 +1,36 @@
+{
+  "baseline": [
+    {
+      "method": "independently reproduced native full128cubed500steps, deterministic backend",
+      "ncc_vs_ref": 0.9249522711985285,
+      "nrmse_vs_ref": 0.1337590206274581,
+      "occupancy_iou": 0.8282710573589154,
+      "view_rmse_rad": 0.0882794011593287
+    }
+  ],
+  "thresholds": {
+    "density_ncc": {
+      "comparison": ">=",
+      "boundary": 0.8324570440786757
+    },
+    "density_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.14713492269020392
+    },
+    "occupancy_iou": {
+      "comparison": ">=",
+      "boundary": 0.7454439516230239
+    },
+    "view_rmse_rad": {
+      "comparison": "<=",
+      "boundary": 0.09710734127526158
+    },
+    "view_max_rad": {
+      "comparison": "<=",
+      "boundary": 0.1000000284206005
+    }
+  },
+  "nrmse_definition": "RMS density error divided by full reference density dynamic range",
+  "pose_metric": "SO(3) geodesic between RzRyRx row-coordinate matrices; no gauge alignment; world gauge anchored by view readings",
+  "provenance": "deterministic_full_prelocal_gate.json froze native true quality and full parity criteria before updated local full run; numerical values unchanged"
+}

@@ -1,3 +1,5 @@
+> Current public NPZ benchmark: see [the public-input guide](PUBLIC_BENCHMARK.md). The `.npy`/flat-task/L2-L3 examples below are historical research interfaces and must not override a current task README or its standalone Judge.
+
 # How to Add a New Task
 
 Step-by-step guide for contributing a new computational imaging task to the imaging-101 benchmark.

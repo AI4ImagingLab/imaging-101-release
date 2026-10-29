@@ -1,0 +1,17 @@
+{
+  "semantic_version": "v2",
+  "normalized_poisson_deviance_boundary": 2.729057677375829,
+  "source_count_relative_error_boundary": 0.001,
+  "attained_normalized_poisson_deviance": 2.7290566773758287,
+  "metric_definition": "2*sum(mu-d+d*log(d/mu))/sum(d), all 278x184320 measurement bins, mu=b+Omega*(C x)R; zero observed count contributes mu.",
+  "zero_prediction_policy": "Positive observed count with zero mean has divergent deviance: report a finite log(float64 tiny) rejection penalty and unsupported_positive_bins>0, always fail/1. This is reporting arithmetic, not physical noise flooring.",
+  "threshold_provenance": "Predeclared normalized deviance excess budget1e-6 over independently float64-evaluated attainable original30-RL field. The original0.001 source-count closure is unchanged. No true sky or calibrated noise accuracy is claimed.",
+  "reference_role": "Attainable conditional Poisson reconstruction quality, not injected sky truth or exact ML optimum.",
+  "scientific_accuracy_scope": "measurement-consistent conditional reconstruction, no unique spatial truth certification",
+  "baseline_measurement": {
+    "raw_sha256": "a3f2a224396cb9af698ec96d6297b2fd1e1b58c690091e2a947d1c1a8474892b",
+    "output_sha256": "326390afc4f704fc81a90cc5e3ab7e9fc3f3ad4d3f9a31d5e6d2a61db1003c81",
+    "arithmetic": "float64 factorized full forward, integer uint16 response mmap and2048-column tiles, no source import"
+  },
+  "unsupported_positive_bins_boundary": 0
+}

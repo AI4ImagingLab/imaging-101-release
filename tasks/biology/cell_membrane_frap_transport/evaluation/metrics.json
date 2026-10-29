@@ -1,0 +1,8 @@
+{
+  "baseline": [{"method":"Independent author HiFRAP execution with documented ARPACK RNG convention; no independently measured truth", "ncc_vs_ref":1.0,"nrmse_vs_ref":0.0}],
+  "ncc_boundary":0.9999,
+  "nrmse_boundary":0.003,
+  "diffusivity_relative_error_boundary":0.05,
+  "diffusivity_relative_error_definition":"abs(D_estimate/D_reference-1)",
+  "provenance":"Pre-extraction original-run ensemble and deterministic stage fixtures; see test/validation.md. No spatial, gain or offset alignment. Reference is a method result, not physical truth."
+}

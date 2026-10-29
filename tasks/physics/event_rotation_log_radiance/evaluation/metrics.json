@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Qualified original TV: independent IMU/newK, normalized clock and corrected two-dimensional flow indexing; real IJRR boxes window",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "observation_residual": 0.14254314518493078
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "observation_residual_boundary": 0.1496703024441773,
+  "reference_type": "baseline_method_result_not_ground_truth",
+  "numerical_tolerance_rationale": "independent deterministic rerun 0; seconds/milliseconds final difference 6.86e-13; general backend tolerance 1e-6 fixed before evaluation",
+  "observation_residual_definition": "norm(D image - c b)/norm(D image), c=max(0,dot(D image,b)/dot(b,b)); b is public motion-compensated NIWE; zero directional norm is assigned residual1",
+  "nrmse_definition": "RMS error divided by reference dynamic range, no alignment",
+  "evaluation_version": "2.0-normalized-tv-observation-class",
+  "anisotropic_tv_boundary": 2090.4319456454514,
+  "v2_definition": "Preserve original directional observation residual limit, require source unit-range percentile gauge and centered-difference anisotropic TV no larger than validated standard plus1e-8relative numeric allowance. No hidden map comparison or finite split-Bregman recipe."
+}

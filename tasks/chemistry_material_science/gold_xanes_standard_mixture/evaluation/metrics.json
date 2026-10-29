@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Native Larch eleven-model standard mixture selection",
+      "observation_rmse": 0.003618693081344629
+    }
+  ],
+  "weight_max_boundary": 0.0001,
+  "spectral_rmse_boundary": 1e-05,
+  "forward_rmse_boundary": 1e-06,
+  "observation_rmse_boundary": 0.0037,
+  "simplex_error_boundary": 1e-06,
+  "definitions": {
+    "weight_max": "max absolute six-weight difference",
+    "spectral_rmse": "RMS normalized absorption difference",
+    "forward_rmse": "RMS fitted spectrum minus submitted-weight mixture",
+    "observation_rmse": "RMS fitted spectrum minus measured normalized absorption",
+    "simplex_error": "absolute sum(weights)-1"
+  }
+}

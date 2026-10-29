@@ -1,15 +1,11 @@
-"""Docker container sandbox for executing agent-generated code.
-
-The original task directory is mounted **read-only** at ``/workspace_src``.
-Selected paths are copied into the writable ``/workspace`` where the agent
-operates.  When the container is removed all agent-written files vanish —
-the original task directory is never modified.
-"""
+"""Container execution with selected public files and no private source mount."""
 
 from __future__ import annotations
 
 import logging
 import subprocess
+import shutil
+import tempfile
 import uuid
 from pathlib import Path
 
@@ -38,14 +34,14 @@ class DockerRunner:
         ----------
         visible_paths
             Relative paths (files or dirs) inside the task directory that
-            the agent is allowed to see.  If *None*, the entire task
-            directory is copied.
+            the agent is allowed to see. If *None*, only README.md,
+            data/raw_data.npz and requirements.txt are copied.
         """
         name = f"imaging101-{uuid.uuid4().hex[:8]}"
         cmd = [
             "docker", "run", "-d",
             "--name", name,
-            "-v", f"{self.task_dir}:/workspace_src:ro",
+            "--network=none",
             "-w", "/workspace",
             "--memory=4g",
             "--cpus=2",
@@ -56,19 +52,26 @@ class DockerRunner:
         subprocess.run(cmd, check=True, capture_output=True, text=True)
         self.container = name
 
-        # Seed workspace with visible files
-        if visible_paths:
-            for p in visible_paths:
-                # cp -a preserves structure; || true in case path doesn't exist
-                self.exec(f"cp -a /workspace_src/{p} /workspace/{p} 2>/dev/null || true")
-        else:
-            self.exec("cp -a /workspace_src/. /workspace/")
-
-        # Install per-task requirements if present
-        req = self.task_dir / "requirements.txt"
-        if req.exists():
-            log.info("Installing task requirements…")
-            self.exec("pip install -q -r /workspace_src/requirements.txt")
+        from .benchmark import PUBLIC_FILES, uses_npz_contract
+        chosen = visible_paths if visible_paths is not None else list(PUBLIC_FILES)
+        if uses_npz_contract(self.task_dir) and "data" in chosen:
+            chosen = ["data/raw_data.npz" if p == "data" else p for p in chosen]
+        with tempfile.TemporaryDirectory(prefix="imaging101-public-") as temp:
+            staging = Path(temp)
+            for rel in chosen:
+                source = (self.task_dir / rel).resolve()
+                if not source.is_relative_to(self.task_dir):
+                    raise ValueError("Visible path escapes task")
+                dest = staging / rel
+                if source.is_dir():
+                    shutil.copytree(source, dest)
+                elif source.is_file():
+                    dest.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(source, dest)
+            subprocess.run(["docker", "cp", str(staging) + "/.", f"{name}:/workspace"],
+                           check=True, capture_output=True, text=True)
+        # The image carries the pinned shared environment. Offline benchmark
+        # execution never installs packages from remote repositories.
 
     # ------------------------------------------------------------------
     def exec(self, command: str) -> tuple[str, int]:

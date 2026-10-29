@@ -1,0 +1,24 @@
+{
+  "baseline": [
+    {
+      "method": "Independent author pyIrena IPG, full 500-point author demo, 500 radius bins, native discrepancy stopping",
+      "density_ncc_vs_ref": 1.0,
+      "density_nrmse_vs_ref": 0.0,
+      "observation_reduced_chi_squared": 0.9988843717647172
+    }
+  ],
+  "density_ncc_boundary": 0.999999,
+  "density_nrmse_boundary": 1e-06,
+  "background_abs_error_boundary": 1e-06,
+  "observation_reduced_chi_squared_boundary": 1.01,
+  "reference_role": "Independently executed standard-method density; no actual generating distribution identified",
+  "metric_definitions": {
+    "density_ncc": "Standard flattened cosine similarity without centering",
+    "density_nrmse": "RMS density error divided by reference density dynamic range",
+    "background_abs_error": "Absolute nuisance background difference in cm^-1",
+    "observation_reduced_chi_squared": "Mean over all500 measured q of squared residual divided by supplied intensity uncertainty; no fitted rescaling"
+  },
+  "tolerance_rationale": "Nonzero tolerances for method-reference reproducibility. Frozen original before extraction; local full pipeline gives same101updates and chi2 with floating point roundoff. Source criterionchi2/N<=1; small1.01margin is numerical and never overrides density/background agreement. Source200-bin poor fit rejected as discretization preflight; all500 observations retained with original uncertainties.",
+  "evaluation_version": "2.0-nonnegative-noise-discrepancy-class",
+  "v2_definition": "Nonnegative contrast-weighted density on the public grid, background equal to public high-q mean within the original1e-6cm^-1 budget, and all500 standardized observations chi2/500<=1.01. No hidden-density comparison or first-discrepancy-crossing iterate is required."
+}

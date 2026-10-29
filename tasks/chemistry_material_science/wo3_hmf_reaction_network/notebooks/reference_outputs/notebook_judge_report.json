@@ -1,0 +1,144 @@
+{
+  "status": "pass",
+  "passed": true,
+  "metrics": {
+    "rate_0_absolute_error": 0.0,
+    "rate_1_absolute_error": 0.0,
+    "rate_2_absolute_error": 0.0,
+    "rate_3_absolute_error": 0.0,
+    "rate_4_absolute_error": 0.0,
+    "rate_5_absolute_error": 0.0,
+    "rate_6_absolute_error": 0.0,
+    "rate_7_absolute_error": 0.0,
+    "rate_8_absolute_error": 0.0,
+    "rate_9_absolute_error": 0.0,
+    "rate_10_absolute_error": 0.0,
+    "species_0_nrmse": 0.0,
+    "species_1_nrmse": 0.0,
+    "species_2_nrmse": 0.0,
+    "species_3_nrmse": 0.0,
+    "species_4_nrmse": 0.0,
+    "species_5_nrmse": 0.0,
+    "species_6_nrmse": 0.0,
+    "species_7_nrmse": 0.0,
+    "species_8_nrmse": 0.0,
+    "species_9_nrmse": 0.0,
+    "species_10_nrmse": 0.0,
+    "species_11_nrmse": 0.0,
+    "species_12_nrmse": 0.0,
+    "species_13_nrmse": 0.0,
+    "species_14_nrmse": 0.0,
+    "charge_nrmse": 0.0
+  },
+  "thresholds": {
+    "rate_0_absolute_error": {
+      "comparison": "<=",
+      "boundary": 3.1580814800006504e-05
+    },
+    "rate_1_absolute_error": {
+      "comparison": "<=",
+      "boundary": 2.3861108304682226e-05
+    },
+    "rate_2_absolute_error": {
+      "comparison": "<=",
+      "boundary": 0.0001701107008936784
+    },
+    "rate_3_absolute_error": {
+      "comparison": "<=",
+      "boundary": 9.416266235236435e-05
+    },
+    "rate_4_absolute_error": {
+      "comparison": "<=",
+      "boundary": 3.1893806694827536e-05
+    },
+    "rate_5_absolute_error": {
+      "comparison": "<=",
+      "boundary": 8.626919059265557e-05
+    },
+    "rate_6_absolute_error": {
+      "comparison": "<=",
+      "boundary": 7.606945046796375e-05
+    },
+    "rate_7_absolute_error": {
+      "comparison": "<=",
+      "boundary": 2.0000000795857603e-05
+    },
+    "rate_8_absolute_error": {
+      "comparison": "<=",
+      "boundary": 0.00015126760831653518
+    },
+    "rate_9_absolute_error": {
+      "comparison": "<=",
+      "boundary": 0.0001329786320097197
+    },
+    "rate_10_absolute_error": {
+      "comparison": "<=",
+      "boundary": 2.9938033960153805e-05
+    },
+    "species_0_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_1_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_2_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_3_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_4_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_5_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_6_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_7_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_8_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_9_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_10_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_11_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_12_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_13_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "species_14_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "charge_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.002
+    }
+  },
+  "errors": []
+}

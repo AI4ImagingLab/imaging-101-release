@@ -114,6 +114,9 @@ def _compute_quality_metrics(workspace_path: Path, task_dir: Path) -> dict:
 
     Uses the same metric computation as scorer.py for consistency.
     """
+    from evaluation_harness.benchmark import uses_npz_contract, score_submission
+    if uses_npz_contract(task_dir):
+        return score_submission(task_dir, workspace_path / "output/reconstruction.npz")
     recon_path = workspace_path / "output" / "reconstruction.npy"
     gt_path = task_dir / "evaluation" / "reference_outputs" / "ground_truth.npy"
 

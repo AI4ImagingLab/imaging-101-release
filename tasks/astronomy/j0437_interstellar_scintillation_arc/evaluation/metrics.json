@@ -1,0 +1,17 @@
+{
+  "reference_type": "Independent author standard-method outcomes on all eight exact real files and their stitched observation; no actual screen-distance truth is available",
+  "thresholds": {
+    "maximum_power_deficit_db": {
+      "comparison": "<=",
+      "boundary": 0.5
+    }
+  },
+  "definitions": {
+    "maximum_kappa_relative_error": "max over all9 conditions of abs(predicted kappa-original kappa)/original kappa",
+    "maximum_power_deficit_db": "max over all9 conditions of max measured arc-power profile minus its linearly interpolated dB power at predicted kappa/(2e6)"
+  },
+  "basis": "Frozen before local extraction. Deterministic original full rerun had all numeric array hashes identical.1% kappa tolerance is smaller than every source empirical noise-based error.0.5dB measured-power allowance retains a physical peak constraint without relabeling source reconstruction as actual truth.",
+  "benchmark_semantics_version": 2,
+  "acceptance_definition": "Every one of the9 reported curvatures must lie within the observation-derived search profile and attain its maximum arc power within the existing0.5dB allowance. The original standard kappa discrepancy is diagnostic only and does not constrain acceptance.",
+  "actual_truth_relative_error_boundary": 0.01
+}

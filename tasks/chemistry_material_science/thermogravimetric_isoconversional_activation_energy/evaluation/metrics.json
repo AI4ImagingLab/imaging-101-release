@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "reproduced 2022 advanced Vyazovkin time trapezoid",
+      "energy_relative_rms": 0.0,
+      "log_integral_rms": 0.046194985268225464
+    }
+  ],
+  "energy_relative_rms_boundary": 0.0001,
+  "log_integral_rms_boundary": 0.050814483795048014,
+  "definitions": {
+    "energy_relative_rms": "sqrt(mean((estimate-reference)^2))/sqrt(mean(reference^2))",
+    "log_integral_rms": "RMS over intervals and heating rates of centered log interval Arrhenius integrals"
+  }
+}

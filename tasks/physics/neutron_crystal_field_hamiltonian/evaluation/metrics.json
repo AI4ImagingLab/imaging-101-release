@@ -1,0 +1,32 @@
+{
+  "baseline": [
+    {
+      "method": "Converged original 30000-evaluation Nelder-Mead on bound observations; independent repeat exact; no true CEF parameters"
+    }
+  ],
+  "parameter_relative_boundary": [
+    0.005,
+    0.05
+  ],
+  "spectrum_nrmse_boundary": [
+    0.0001,
+    0.002
+  ],
+  "observation_nrmse_boundary": [
+    [
+      0.029485281084875234,
+      0.025904866001656885,
+      0.048189573674755265
+    ],
+    [
+      0.026935479044479075,
+      0.024429385799049966,
+      0.03832585457202982
+    ]
+  ],
+  "forward_consistency_boundary": 1e-05,
+  "nrmse_definition": "RMS error / (max(reference)-min(reference)); full-spectrum reference spans all 540 points per model; observation reference spans fixed fit mask separately per temperature.",
+  "parameter_definition": "max(abs(canonical_submission-reference)/abs(reference)) across all15 nonzero quantities, each model separately",
+  "provenance": "Frozen before local results in kes_contract_prelocal.json. Source default3000 versus converged30000 budget sensitivity, not truth uncertainty. Resolution coefficient limits 5e-6 for slope and intercept separately; NCC cosine without centering >= .99; excitation deviation <= .1 meV; selected model and anisotropy exact. Canonical simultaneous B43/B63 sign gauge only.",
+  "physical_validity": "Signed Gaussian FWHM reproduces source only over this measured finite domain. No global profile-normalization or high-energy calibration claim."
+}

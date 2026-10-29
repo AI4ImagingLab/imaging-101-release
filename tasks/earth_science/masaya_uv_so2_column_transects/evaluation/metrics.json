@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original iFit, complete360measured spectra,paper unflatcorrected configuration",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9999,
+  "nrmse_boundary": 0.0001,
+  "reference_type": "standard-method reconstruction; no independently measured SO2 truth",
+  "threshold_provenance": "Preimplementation frozen bounds; upstream/local deterministic numerical parity and independent physical spectral checks, not physical truth accuracy."
+}

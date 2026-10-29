@@ -1,0 +1,75 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "85374c83934829e7ba74871f6da7444983e3cb0e4f2fdce2cff074fb413c353c",
+  "solver_runtime_s": 0.1370119999628514,
+  "experiments_runtime_s": 0.7219370000530034,
+  "historical_v1_decode_and_parameter_errors": {
+    "natural_frequency": 2.7592079414471614e-05,
+    "damping_ratio": 0.027885753854083494,
+    "reconstruction": 0.0,
+    "fitted_accelerance": 0.0,
+    "lower_residual": 0.0,
+    "upper_residual": 0.0
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 0.0,
+    "observation_relative_error": 0.10063998896074228,
+    "order_relative_response_error": [
+      [
+        30,
+        0.057664209678194016
+      ],
+      [
+        45,
+        0.07572940092911881
+      ],
+      [
+        60,
+        0.10063998896074228
+      ]
+    ],
+    "polynomial_order_unstable_modes": [
+      1,
+      0,
+      0
+    ],
+    "natural_frequency_Hz": [
+      177.0598487874965,
+      477.36304088241286,
+      933.1306262401907,
+      1535.472963495878,
+      2286.884132544065,
+      3162.3755062855075,
+      4181.938831634285
+    ],
+    "damping_ratio": [
+      0.00770363952985558,
+      0.0017030833312694398,
+      0.0015901360866547275,
+      0.001963803162781299,
+      0.002811848887084394,
+      0.002339957154623932,
+      0.0014491064066678098
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "maximum_response_mse_excess": 0.0,
+      "maximum_fitted_relative_l2": 1.1216114601381199e-13
+    },
+    "thresholds": {
+      "maximum_response_mse_excess": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "maximum_fitted_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-07
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

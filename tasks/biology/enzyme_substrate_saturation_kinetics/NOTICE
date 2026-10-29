@@ -1,0 +1,9 @@
+Local mathematical extraction of renz0.2.1 by Juan Carlos Aledo.
+Original software is distributed under GNU General Public License version2 or later.
+This adapted implementation preserves that license; see LICENSE.
+Original ONPG laboratory initial-rate data are distributed within the renz package.
+Adaptations: Python/NumPy implementation, analytic Jacobian, explicit Gauss-Newton,
+standalone evaluation, diagnostic plots, and unit conversion before fitting.
+The original ECB intercept error is preserved as labeled historical comparison
+and initializer; corrected geometry is a separately labeled diagnostic.
+No warranty. Biological ground truth and original optical traces are unavailable.

@@ -1,0 +1,38 @@
+{
+  "median_standardized_max_boundary": 0.5,
+  "best_standardized_max_boundary": 3.0,
+  "unscaled_chi2_boundary": 275.9259882866698,
+  "log_posterior_min_boundary": 251.249041852333,
+  "spectrum_max_ppm_boundary": 100.0,
+  "parameter_scales": [
+    13847779.367711436,
+    7.653968592190082e+25,
+    2048333.6010493007,
+    224.53820199768177,
+    0.6887695036114466,
+    1.0917481930404944,
+    1.0283031861555654,
+    0.42286240952929455
+  ],
+  "spectrum_consistency_ppm_boundary": 0.0001,
+  "reference_role": "Original complete 50 walker x1000 transition summary, no burn discard, no physical truth",
+  "definitions": {
+    "median_standardized_max": "max over all8 abs(median-originalmedian)/original fullchain std(ddof1)",
+    "best_standardized_max": "max over all8 abs(best-originalbest)/original fullchain std(ddof1)",
+    "spectrum_max_ppm": "max over all42 abs(submitteddepth-originaldepth)*1e6",
+    "unscaled_chi2": "sum over42 (model(best)-observed)^2/nominalerror^2; not divided by fitted error_multiple",
+    "log_posterior_min": "Normalized Gaussian priors Rs/Mp plus42point Gaussian likelihood including inferred multiplicative error and log normalization",
+    "spectrum_consistency_ppm": "max abs(submitteddepth-independentmodel(best))*1e6"
+  },
+  "baseline": [
+    {
+      "method": "Original complete v4 author example;50walkers x1000steps; seed20261028; all42bands",
+      "median_standardized_max": 0.0,
+      "best_standardized_max": 0.0,
+      "spectrum_max_ppm": 0.0,
+      "unscaled_chi2": 250.84180753333615,
+      "log_posterior_min": 256.249041852333,
+      "spectrum_consistency_ppm": 0.0
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "Original author g2o canonical SE2 Gauss-Newton 20 iterations, Eigen sparse LDLT",
+      "weighted_observation_error": 215.83023494609483
+    }
+  ],
+  "position_max_error_m_boundary": 0.0001,
+  "heading_max_error_rad_boundary": 1e-05,
+  "weighted_observation_error_boundary": 237.41325844070434,
+  "metric_definitions": {
+    "position_max_error_m": "maximum node Euclidean position distance to method reference; fixed identity anchor, no alignment",
+    "heading_max_error_rad": "maximum absolute wrapped angular difference to method reference",
+    "weighted_observation_error": "sum all 1483 canonical residual transpose information residual"
+  },
+  "provenance": "Frozen before local extraction; original GN20/GN50 position discrepancy 5.372117310351247e-10 m and angle 1.4486190025309043e-12 rad. Numerical tolerances are conservative backend allowances, not physical GT errors."
+}

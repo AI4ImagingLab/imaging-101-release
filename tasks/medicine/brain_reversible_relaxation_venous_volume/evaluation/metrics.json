@@ -1,0 +1,60 @@
+{
+  "baseline": [
+    {
+      "method": "Original Octave ase_qbold_3d on the exact averaged measurements; independent repeat identical",
+      "r2prime_rmse": 0.0,
+      "dbv_rmse": 0.0
+    }
+  ],
+  "metric_definition": "For each condition separately, RMSE on the fixed observation mask in physical units; maximum absolute value outside the mask. Signed fits are retained.",
+  "thresholds": {
+    "r2prime_rmse_0": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "dbv_rmse_0": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "outside_max_0": {
+      "comparison": "<=",
+      "boundary": 1e-12
+    },
+    "r2prime_rmse_1": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "dbv_rmse_1": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "outside_max_1": {
+      "comparison": "<=",
+      "boundary": 1e-12
+    },
+    "r2prime_rmse_2": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "dbv_rmse_2": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "outside_max_2": {
+      "comparison": "<=",
+      "boundary": 1e-12
+    },
+    "r2prime_rmse_3": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "dbv_rmse_3": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "outside_max_3": {
+      "comparison": "<=",
+      "boundary": 1e-12
+    }
+  }
+}
