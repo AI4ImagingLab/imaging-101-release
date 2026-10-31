@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Original unchanged RECOLO mechanics inverse on real optical deflection from minimally corrected boundary-derivative acquisition preprocessing",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "force_nrmse_vs_measurement": 0.09114770181323001
+    }
+  ],
+  "ncc_boundary": 0.999999999,
+  "nrmse_boundary": 1e-09,
+  "force_nrmse_boundary": 0.10026247199455302,
+  "force_definition": "sum(pressure[:,20:50,20:50])*spacing^2 vs independently measured hammer force linearly interpolated at t=arange(250)/75000; RMSE divided by dynamic range of interpolated force; no time/scale fitted",
+  "threshold_provenance": "Nonzero numeric tolerance from independent upstream float64 old backend and explicit Hermite formulas; physical force boundary1.1 times independent original bound-data error, frozen without examining any candidate prediction."
+}

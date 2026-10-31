@@ -1,0 +1,9 @@
+{
+  "baseline": [{"method": "Original Photutils 2.3.0 ImagePSF + constant sky, Astropy 8.0.2 bounded TRF fit on bundled GLIMPSE crops", "position_error": 0.0, "flux_relative_error": 0.0, "background_absolute_error": 0.0, "observation_relative_l2": 0.10814110360050014}],
+  "position_error_boundary": 0.00001,
+  "flux_relative_error_boundary": 0.00001,
+  "background_absolute_error_boundary": 0.0001,
+  "observation_relative_l2_boundary": 0.12,
+  "definitions": {"position_error": "maximum Euclidean position discrepancy across four sources, pixel", "flux_relative_error": "maximum abs(estimate-reference)/reference across four strictly positive amplitudes", "background_absolute_error": "maximum absolute sky discrepancy, MJy/sr", "observation_relative_l2": "L2 of fitted image minus public observations divided by L2 of observations, all four patches; no mask, registration or rescaling"},
+  "provenance": "Frozen before local extraction. Double-precision original reruns identical; float32 effective-PSF rounding sensitivity measured independently. Nonzero tolerances exceed measured precision differences. Observation bound 0.12 is 1.1 times original residual rounded upward; instrumental-model discrepancy remains, so this evaluates reproduction of the adopted model rather than independent astrophysical truth."
+}

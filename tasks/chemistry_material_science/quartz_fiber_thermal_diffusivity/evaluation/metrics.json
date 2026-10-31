@@ -1,0 +1,14 @@
+{
+  "relative_error_boundary": 1e-05,
+  "coefficient_relative_error_boundary": 1e-05,
+  "log_amplitude_rmse_boundary": 0.08691849098957881,
+  "phase_rmse_boundary": 0.08447779606689454,
+  "baseline": [
+    {
+      "method": "Original author slope-product inversion of both frequencies and fiber sides",
+      "relative_error": 0
+    }
+  ],
+  "metric_definition": "Maximum componentwise relative error for all inferred arrays, and worst profile RMS residual in log-amplitude and phase; no NCC/NRMSE for low-dimensional near-constant diffusivities.",
+  "reference_kind": "method result, no physical ground truth"
+}

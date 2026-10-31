@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Independent unmodified UTide OLS, rawphase/no nodal corrections, full NOAA observed vectors",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "mean_absolute_error_boundary": 0.0001,
+  "reference_kind": "standard_method_result_not_truth",
+  "metric_scope": "Every east/north cosine, sine and full fitted current independently; meanmaxabsoluteerror cm/s",
+  "rationale": "Original deterministic full-run parity establishes nonzero numerical tolerances; real non-tidal residual is analyzed separately, not mistaken for truth error."
+}

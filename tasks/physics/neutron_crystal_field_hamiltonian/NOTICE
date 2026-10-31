@@ -1,0 +1,8 @@
+This task adapts mathematical routines and the published KErSe2 analysis of
+PyCrystalField, copyright Allen Scheie and contributors, distributed under the
+GNU General Public License version 3. The full license is in LICENSE.
+Source revision: de5abbfbb70e53c60dd758c4ee1a3246663c8460.
+The upstream verification environment and original repository are not runtime
+dependencies. The task implements Stevens operators, transition amplitudes,
+Voigt response, objective and fitting workflow explicitly with NumPy/SciPy.
+The experimental arrays retain the author's processed numerical values.

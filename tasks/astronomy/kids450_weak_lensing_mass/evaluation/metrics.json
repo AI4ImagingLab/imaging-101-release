@@ -1,0 +1,37 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original published-method run on exact public observations; agreement reference, not physical truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "output_contract": {
+    "reconstruction": {
+      "shape": [
+        1,
+        64,
+        64
+      ],
+      "dtype": "float64"
+    },
+    "bmode": {
+      "shape": [
+        1,
+        64,
+        64
+      ],
+      "dtype": "float64"
+    }
+  },
+  "reference_role": "Method agreement only; real observations have no independently known truth.",
+  "threshold_provenance": "Fixed before local extraction; independent reruns with identical bound observations and conventions are deterministic. A nonzero1e-6 numerical floor is conservative; differing precision conventions are documented sensitivity experiments, not repeat errors.",
+  "observation_residual_boundary": 0.0001,
+  "observation_consistency": {
+    "metric": "relative_shear_residual",
+    "original_measurement": 5.100980825819833e-07,
+    "interpretation": "AIA uses the declared nominal-response/adopted-error model; KiDS compares shear at the declared two-pixel Gaussian resolution with zero DC. Neither implies independently known physical truth."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "920d43b4458220c62dca2aabcdd1144e93ff27da5b0b6543b8f0f15846550e73",
+  "solver_runtime_s": 0.41927559999749064,
+  "experiments_runtime_s": 1.2841704001184553,
+  "upstream_relative_errors": {
+    "reconstruction": 0.0,
+    "fitted_echo": 1.9925444661101046e-16
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 0.0,
+    "observation_relative_error": 0.031206193440131567,
+    "averaged_vs_mean_individual_relative_error": 0.2286724439040547,
+    "alpha_relative_residual_amplitude_norm": [
+      [
+        1e-06,
+        0.03118965219650046,
+        466.08550729242114
+      ],
+      [
+        0.0001,
+        0.031206193440131567,
+        207.74564012842237
+      ],
+      [
+        0.01,
+        0.03132119385727345,
+        156.18428836517697
+      ]
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_relative_error": 0.0,
+      "fitted_echo_relative_error": 1.9925444661101046e-16
+    },
+    "thresholds": {
+      "reconstruction_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "fitted_echo_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

@@ -1,0 +1,53 @@
+{
+  "baseline": [
+    {
+      "method": "Qualified original oSVD independently rerun twice, exact captured arrays; not patient truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-07,
+  "forward_relative_l2_boundary": 0.3119447203693109,
+  "required_outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        22,
+        128,
+        128,
+        160
+      ],
+      "dtype": "float64"
+    },
+    "relative_flow": {
+      "shape": [
+        1,
+        22,
+        128,
+        128
+      ],
+      "dtype": "float64"
+    },
+    "transit_time": {
+      "shape": [
+        1,
+        22,
+        128,
+        128
+      ],
+      "dtype": "float64"
+    },
+    "relative_volume": {
+      "shape": [
+        1,
+        22,
+        128,
+        128
+      ],
+      "dtype": "float64"
+    }
+  },
+  "provenance": "Two whole native original runs bitwise agree in47numeric fields; source-only acceptance criteria frozen before local implementation. Nonzero range tolerance accounts for independent linear algebra backend rounding; common forward criterion independently excludes zero/bestconstant nulls. See test/validation.md.",
+  "reference_kind": "baseline_reference; no independent true perfusion/residue measurements available"
+}

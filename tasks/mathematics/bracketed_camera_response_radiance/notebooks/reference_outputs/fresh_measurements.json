@@ -1,0 +1,225 @@
+{
+  "runtime_s": 0.19997439999133348,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "ncc": 0.9999999999999044,
+      "radiance_log_rmse": 1.1284761783040813e-07,
+      "response_log_rmse": 1.0100545386476288e-12,
+      "gauge_max_error": 3.375077994860476e-14,
+      "forward_weighted_adu_rmse": 7.035289489025793
+    },
+    "thresholds": {
+      "ncc": {
+        "comparison": ">=",
+        "boundary": 0.999999
+      },
+      "radiance_log_rmse": {
+        "comparison": "<=",
+        "boundary": 5e-05
+      },
+      "response_log_rmse": {
+        "comparison": "<=",
+        "boundary": 5e-05
+      },
+      "gauge_max_error": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "forward_weighted_adu_rmse": {
+        "comparison": "<=",
+        "boundary": 7.105642315376502
+      }
+    },
+    "errors": []
+  },
+  "baseline_parity": {
+    "linear": {
+      "ncc": 0.9999999999999913,
+      "log_rmse": 9.129854504332294e-08
+    },
+    "gamma": {
+      "ncc": 0.9999999999999926,
+      "log_rmse": 1.0464015604154186e-07
+    }
+  },
+  "per_exposure_forward_adu": [
+    9.033370744654812,
+    5.287715896299268,
+    5.536391635378948,
+    8.573444539842585,
+    4.973852514196163,
+    10.57817807919448,
+    10.008716457872046
+  ],
+  "sensitivity": [
+    {
+      "samples": 64,
+      "lambda": 32.0,
+      "kept": 25,
+      "log_rmse": 0.06848165430879855,
+      "log_exposure_residual": 0.18414602286573273,
+      "monotone": true,
+      "runtime_s": 0.6522118999855593
+    },
+    {
+      "samples": 64,
+      "lambda": 128.0,
+      "kept": 25,
+      "log_rmse": 0.018128947777195568,
+      "log_exposure_residual": 0.20931267802375408,
+      "monotone": true,
+      "runtime_s": 0.7414462000015192
+    },
+    {
+      "samples": 64,
+      "lambda": 512.0,
+      "kept": 25,
+      "log_rmse": 0.10367534639172167,
+      "log_exposure_residual": 0.2636009536332748,
+      "monotone": true,
+      "runtime_s": 0.6170576000004075
+    },
+    {
+      "samples": 256,
+      "lambda": 32.0,
+      "kept": 65,
+      "log_rmse": 0.06882719207042033,
+      "log_exposure_residual": 0.18131602397220764,
+      "monotone": true,
+      "runtime_s": 0.809991899994202
+    },
+    {
+      "samples": 256,
+      "lambda": 128.0,
+      "kept": 65,
+      "log_rmse": 0.0,
+      "log_exposure_residual": 0.1978442962896745,
+      "monotone": true,
+      "runtime_s": 0.820387500047218
+    },
+    {
+      "samples": 256,
+      "lambda": 512.0,
+      "kept": 65,
+      "log_rmse": 0.08025980440761875,
+      "log_exposure_residual": 0.23992594530142639,
+      "monotone": true,
+      "runtime_s": 0.5788170999730937
+    },
+    {
+      "samples": 1024,
+      "lambda": 32.0,
+      "kept": 277,
+      "log_rmse": 0.05220804491168366,
+      "log_exposure_residual": 0.17137329041494637,
+      "monotone": false,
+      "runtime_s": 1.0470118999946862
+    },
+    {
+      "samples": 1024,
+      "lambda": 128.0,
+      "kept": 277,
+      "log_rmse": 0.021189953267670588,
+      "log_exposure_residual": 0.18485621205280223,
+      "monotone": true,
+      "runtime_s": 1.1335848000016995
+    },
+    {
+      "samples": 1024,
+      "lambda": 512.0,
+      "kept": 277,
+      "log_rmse": 0.04577523113178849,
+      "log_exposure_residual": 0.21145534544911243,
+      "monotone": true,
+      "runtime_s": 1.0454823999898508
+    }
+  ],
+  "exposure_subsets": {
+    "Two endpoints": {
+      "status": "rejected_by_local_rank_check",
+      "error": "Response system is rank deficient"
+    },
+    "Three spread": {
+      "ncc": 0.8895558522924395,
+      "log_rmse": 0.7573068099284487,
+      "status": "computed",
+      "monotone": false
+    },
+    "Five spread": {
+      "ncc": 0.9995119594393576,
+      "log_rmse": 0.08235792701816105,
+      "status": "computed",
+      "monotone": true
+    },
+    "All seven": {
+      "ncc": 0.9999999999999998,
+      "log_rmse": 0.0,
+      "status": "computed",
+      "monotone": true
+    }
+  },
+  "synthetic_noise": [
+    {
+      "added_sigma_adu": 0.25,
+      "repeat": 0,
+      "log_rmse": 0.006306507120306984
+    },
+    {
+      "added_sigma_adu": 0.25,
+      "repeat": 1,
+      "log_rmse": 0.007275570061988095
+    },
+    {
+      "added_sigma_adu": 0.25,
+      "repeat": 2,
+      "log_rmse": 0.00772691777267528
+    },
+    {
+      "added_sigma_adu": 0.25,
+      "repeat": 3,
+      "log_rmse": 0.006803122951820053
+    },
+    {
+      "added_sigma_adu": 1.0,
+      "repeat": 0,
+      "log_rmse": 0.03275403815560407
+    },
+    {
+      "added_sigma_adu": 1.0,
+      "repeat": 1,
+      "log_rmse": 0.044002919969670644
+    },
+    {
+      "added_sigma_adu": 1.0,
+      "repeat": 2,
+      "log_rmse": 0.03788021194184904
+    },
+    {
+      "added_sigma_adu": 1.0,
+      "repeat": 3,
+      "log_rmse": 0.03540984124603327
+    },
+    {
+      "added_sigma_adu": 2.0,
+      "repeat": 0,
+      "log_rmse": 0.07155321605402222
+    },
+    {
+      "added_sigma_adu": 2.0,
+      "repeat": 1,
+      "log_rmse": 0.05903115922988354
+    },
+    {
+      "added_sigma_adu": 2.0,
+      "repeat": 2,
+      "log_rmse": 0.06650572353147631
+    },
+    {
+      "added_sigma_adu": 2.0,
+      "repeat": 3,
+      "log_rmse": 0.0619178511756018
+    }
+  ]
+}

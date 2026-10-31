@@ -1,0 +1,69 @@
+{
+  "baseline": [
+    {
+      "method": "Original author GAP-TV100 on full15real exposures, all210chronological frames",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "relative_observation_residual_by_burst": [
+        0.0005178242826787687,
+        0.0004953263411424736,
+        0.0005175605554493557,
+        0.000595739376413148,
+        0.0005459558613848468,
+        0.00048825798358741396,
+        0.0004482280683197803,
+        0.00046320573568353304,
+        0.0004232182662252011,
+        0.0004562532224476716,
+        0.0004348541100560431,
+        0.0004752780757832659,
+        0.000520736765415194,
+        0.0005858923736799756,
+        0.000613198773071941
+      ]
+    }
+  ],
+  "relative_observation_residual_boundaries": [
+    0.0005696067109466456,
+    0.0005448589752567209,
+    0.0005693166109942913,
+    0.0006553133140544629,
+    0.0006005514475233315,
+    0.0005370837819461554,
+    0.0004930508751517583,
+    0.0005095263092518864,
+    0.0004655400928477213,
+    0.0005018785446924388,
+    0.00047833952106164743,
+    0.0005228058833615925,
+    0.0005728104419567134,
+    0.0006444816110479732,
+    0.0006745186503791351
+  ],
+  "metric_aggregation": "Every burst must satisfy both unchanged relative measured-exposure residual and anisotropic spatial TV bound. No temporal derivative, positivity or hidden frame identity.",
+  "reference_role": "Independent original GAP-TV100 method result; no actual video truth is available.",
+  "numerical_tolerance_provenance": "Independent exact-observation repeat at fixedbursts1,8,15 is bitwise identical. A nonzero float64 extraction tolerance is fixed before local code: whole-pipeline maximum absolute1e-7 and stage1e-10. Judge per-frame1e-5dynamic-range error and cosine1-1e-6 are conservative finite numerical-agreement tolerances rather than a physical-accuracy claim; observed-data constraints are independently required. Neither zero self-error nor 0.9/1.1self-comparison is used mechanically.",
+  "historical_v1_thresholds": {
+    "ncc_boundary": 0.999999,
+    "nrmse_boundary": 1e-05
+  },
+  "anisotropic_tv_boundaries": [
+    12573.742698052709,
+    12297.574734659793,
+    12356.584502913529,
+    10107.903597929553,
+    12601.500060118025,
+    12871.77796268253,
+    16165.745739624486,
+    14487.38732529038,
+    17095.573468470247,
+    14812.972156590713,
+    17099.398435905634,
+    13722.723479771745,
+    13410.337054704578,
+    10042.992084975238,
+    10075.129316128929
+  ],
+  "evaluation_version": "2.0-spatial-tv-noise-compatible-video-class",
+  "regularity_provenance": "Per-burst existing independently reproduced feasible standard spatial TV plus relative1e-8 numerical allowance."
+}

@@ -1,0 +1,30 @@
+{
+  "baseline": [
+    {
+      "method": "Independent dense dual solution of the public unique constrained SOLA objective; method target, not true solar interior",
+      "rotation_max_abs_nHz": 0.0,
+      "observation_weighted_rms": 1.1936132278341605
+    },
+    {
+      "method": "Native SOLApack full 29617-observation, 1000-step Lanczos solution; standard-method result, not actual truth",
+      "rotation_max_abs_nHz": 0.017236865150437097,
+      "observation_weighted_rms": 1.19355437766235,
+      "role": "Historical original1000-step approximation, superseded target for current benchmark",
+      "metrics_reference": "Current independently solved exact public-objective target"
+    },
+    {
+      "method": "Fresh converged1500-step cleaned implementation",
+      "rotation_max_abs_nHz": 6.9802183588763e-08,
+      "observation_weighted_rms": 1.1936132279167608
+    }
+  ],
+  "rotation_max_abs_nHz_boundary": 0.001,
+  "observation_weighted_rms_boundary": 1.2,
+  "metric_definitions": {
+    "rotation_max_abs_nHz": "Maximum absolute error over every radius/colatitude sample, nHz of cyclic rotation Omega/(2pi), no scaling/crop/alignment",
+    "observation_weighted_rms": "sqrt(mean(((Kx - measured_splittings)/reported_sigma)^2)), all 29617 coefficients, direct calibrated row contraction; sigma=1 only if original reported error is zero"
+  },
+  "reference_role": "Unique public constrained-SOLA mathematical estimator, independently computed from the exact public data. No true solar interior is supplied.",
+  "threshold_provenance": "Original field boundary0.001nHz and whole-observation boundary1.2 are unchanged. Historical1000-step approximation differs0.01723686515nHz from exact objective;1500-step local convergence control agrees within6.99e-8nHz. Exact dense target has original-operator KKT residual3.60e-15. See current validation and private independent_controls.",
+  "benchmark_semantic_version": 2
+}

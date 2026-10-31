@@ -1,0 +1,17 @@
+# Shipped interfaces and flow
+
+`python -m src.main` calls `run(root=None)`. An omitted root resolves the task directory from the module path, not the shell directory. It returns `(raw, corrected, initial, energy, uptake, history, objective)` and writes `output/reconstruction.npz` with the two declared batch-first float64 outputs, creating output when necessary.
+
+`preprocessing.load_data(path)` loads NPZ without pickle, strips the leading singleton batch into a dictionary, checks bound measurement dimensions and finite arrays, and returns `(raw, corrected)`; corrected is63 by 7 float64 Da. No generator is shipped because these are author measurements.
+
+`initialization.initial_energy(raw,temperature=303.15)` consumes the public dictionary and returns146float64 J/mol initialized from the two-exponential fractional-uptake fits. It has no file reads or writes and imports only NumPy and general SciPy root finding/optimization. Implementation parameter ordering, branch bounds and optimizer settings are described in approach.md.
+
+`physics_model.tensors(raw,corrected)` returns float64 torch tensors `(membership, rates[:,None], times[None,:], observed)` with shapes63 by 146,146 by 1,1 by 7,63 by 7. `forward(energy,membership,intrinsic_rates,time_s)` returns63 by 7 uptake. `losses(energy,membership,intrinsic_rates,time_s,observed,weight=2e-4)` returns scalar MSE, scalar TV and prediction. Model constants are R=8.31446261815324, T=303.15, LABEL_FRACTION=.9. No device is forced; tested runtime is single-thread CPU.
+
+`solvers.reconstruct(raw,corrected,initial,weight=2e-4,max_epochs=200000,patience=100,stop_loss=1e-5)` sets torch CPU threads1, runs the complete local SGD loop, and returns146energy,63 by 7uptake,iterations by 2pre-update history and final scalar objective. It has no file side effects. All histories are measured, never loaded as fresh runs.
+
+`visualization.comparison(raw,corrected,energy,uptake,history,upstream,halfinit)` returns a2 by 2Matplotlib figure of all-field profiles, selected peptide kinetics, all441residuals and full optimization history. The final two inputs are explicitly identified archived source profiles; halfinit is the older uncorrected half-time-initialization counterfactual. `visualization.correction_limits(raw,corrected,energy)` returns an independent forward-limit and correction diagnostic figure. Modules do not change Matplotlib's backend.
+
+`evaluation.judge.forward(energy,membership,rates,times)` is independent NumPy mathematics using stable logaddexp, with no solver imports. `evaluate(prediction,root=None)` returns `(report,exit_code)` and resolves evaluator assets against its own file unless a test supplies a root. CLI `--prediction` and `--report` retain caller-relative semantics. Report schema and codes0/1/2 match AGENTS. Missing assets, invalid NPZ/dtypes/shapes, nonfinite arrays or metrics and inconsistent references produce error reports with empty metrics. Actual ground_truth.npz takes precedence over baseline_reference.npz and requires explicitly configured truth tolerance. JSON serialization forbids NaN and Infinity.
+
+The active notebook calls the complete `run`, then standalone Judge; source comparisons are loaded from documented reference_outputs. It does not import original PyHDX or private oracle code. Private exports of figures and executed review notebooks live outside the task. Fixture outputs are consumed only by parity tests, never by the solver. No cross-task imports, domain solvers, checkpoints or hidden initial fields are used.

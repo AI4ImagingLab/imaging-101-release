@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "BaSiCPy2.0 original complete automatic tuning and approximate reweighting",
+      "objective_counts": 9.99926043859585,
+      "mean_abs_residual_counts": 1.4693172419143665
+    }
+  ],
+  "metric_definitions": {
+    "objective_counts": "mean_abs_residual_counts + (5/128^2)*sum(abs(orthonormal DCT-II(reconstruction*mean(baseline))))",
+    "mean_abs_residual_counts": "mean(abs(resampled_visible_images-baseline*reconstruction))",
+    "flatfield_mean_abs_error": "abs(mean(reconstruction)-1)"
+  },
+  "objective_counts_boundary": 10.09925304298181,
+  "mean_abs_residual_counts_boundary": 1.6162489661058033,
+  "flatfield_mean_abs_error_boundary": 1e-05
+}

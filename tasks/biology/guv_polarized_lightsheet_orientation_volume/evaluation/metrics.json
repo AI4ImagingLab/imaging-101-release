@@ -1,0 +1,11 @@
+{
+  "baseline": [{"method": "Published ALL-state Tikhonov estimator, qualified odd-grid frequency coverage, independent original run on exact real observations", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0, "forward_l2": 0.2889729726737628}],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 0.000001,
+  "max_abs_boundary": 0.000000008,
+  "forward_l2_boundary": 0.2919,
+  "per_coefficient_scoring": "Every one of the15realSHcoefficient fields must independently satisfy all three reference agreement metrics; whole-volume, no mask, no alignment or intensity rescaling.",
+  "forward_l2_definition": "Euclidean norm of complete predicted minus calibrated observed40-state data divided by Euclidean norm of those calibrated observations, with all XYZ support retained.",
+  "reference_type": "Validated qualified standard-method result, not biological truth.",
+  "threshold_provenance": "Frozen before local implementation; original/qualified repeats bitwise. Independent full signed-frequency normal solve maxabs2.873e-10, float32 coefficient roundtrip9.293e-10, four float32 ULP at max coefficient7.451e-9;8e-9absolute bound and1e-6per-field DR-NRMSE. No bound was adjusted to cleaned output."
+}

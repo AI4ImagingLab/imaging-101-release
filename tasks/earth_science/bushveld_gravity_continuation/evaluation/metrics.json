@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Harmonica 0.7.0 scaled damped equivalent sources, repeated on bound real observations",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9999999999,
+  "nrmse_boundary": 0.0002644319101659889,
+  "reference_kind": "validated_standard_method_not_truth",
+  "threshold_provenance": "10 times independently reproduced float32-input sensitivity; float64 independent rerun was identical. Frozen before local extraction.",
+  "nrmse_definition": "sqrt(mean((estimate-reference)**2))/(max(reference)-min(reference))",
+  "zero_estimate_ncc": 0.0,
+  "ncc_arithmetic": "float64; cosine without mean subtraction"
+}

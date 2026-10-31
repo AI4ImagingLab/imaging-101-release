@@ -1,0 +1,28 @@
+{
+  "baseline": [
+    {
+      "method": "Independent physically corrected authorpyGAPS: positivePCHIP calibration, analyticgradient with observedRMS scalar normalization and certifiedSLSQP; full96points/nativequadraticBspline",
+      "weights_ncc_vs_ref": 1.0,
+      "weights_nrmse_vs_ref": 0.0,
+      "observation_relative_l2": 0.03809624630655207
+    }
+  ],
+  "weights_ncc_boundary": 0.999999,
+  "weights_nrmse_boundary": 0.0001,
+  "density_ncc_boundary": 0.999999,
+  "density_nrmse_boundary": 0.0001,
+  "cumulative_max_abs_error_boundary": 0.0001,
+  "observation_relative_l2_boundary": 0.04,
+  "spline_consistency_max_abs_boundary": 1e-08,
+  "reference_role": "Independently executed corrected-source method result, not actual generating poretruth",
+  "tolerance_rationale": "Benchmark boundaries unchanged from independently frozen corrected-source criteria. Broader parent initialization review rejected a false-success uniform start. A newly qualified original-source analytic-gradient/RMS-scalar precision refinement converges all3 public starts, coefficient dynamicNRMSEspread<=4.02e-7, objective20.970090134873; fixtures frozen before localchange. First-order/feasible-dual certificates independently reject false successes. Full96point observationL2<=.04 remains required; no absolute pore-volume claim.",
+  "metric_definitions": {
+    "weights_ncc": "Standarduncentered cosine similarity over all77binweights",
+    "weights_nrmse": "RMS77weight error divided by referenceweightdynamicrange",
+    "density_ncc": "Standarduncentered cosine similarity over100nativeBsplinedensitysamples",
+    "density_nrmse": "RMS100densityerror divided by referencedensitydynamicrange",
+    "cumulative_max_abs_error": "Maximumabsolute kernel-relative cumulativeweight error",
+    "observation_relative_l2": "Uncenterednorm of complete96point modeled-minus-observedloading divided by observedloadingnorm",
+    "spline_consistency_max_abs": "Maximumabsolute difference of submittedsmoothed density/cumulative arrays from independent nativequadraticBsplineevaluation of submittedunsmoothedweights"
+  }
+}

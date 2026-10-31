@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified HFITS constant-convection thin-plate inverse on real HEPT thermal observations; standard method reference, not truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999999,
+  "nrmse_boundary": 1e-07,
+  "balance_nrmse_boundary": 1e-07,
+  "balance_nrmse_definition": "RMS residual of epsilon*1000*q minus the independently calculated storage+convection+two-face radiation-conduction balance, normalized by RMS balance RHS; all target times/pixels",
+  "alignment": "none",
+  "reference_kind": "unmodified standard method, actual flux truth unavailable",
+  "provenance": "Independent original rerun identical, NumPy1.26 to2.4 port max7.11e-15 kW/m2; numerical tolerance is nonzero; see test/validation.md"
+}

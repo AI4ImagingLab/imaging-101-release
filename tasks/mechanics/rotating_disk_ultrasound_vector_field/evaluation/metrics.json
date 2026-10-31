@@ -1,0 +1,43 @@
+{
+  "baseline": [
+    {
+      "method": "Complete official-author MATLAB measuredRF vector recipe with fixedS1e4 robustDCT-PLS; conditional method reference, not velocity truth",
+      "vx_ncc_vs_ref": 1.0,
+      "vx_nrmse_vs_ref": 0.0,
+      "vz_ncc_vs_ref": 1.0,
+      "vz_nrmse_vs_ref": 0.0,
+      "weighted_phasor_rms": 0.05201278063077122
+    }
+  ],
+  "thresholds": {
+    "vx_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999999956
+    },
+    "vx_nrmse": {
+      "comparison": "<=",
+      "boundary": 3.1279966911092165e-08
+    },
+    "vz_ncc": {
+      "comparison": ">=",
+      "boundary": 0.9999999999999956
+    },
+    "vz_nrmse": {
+      "comparison": "<=",
+      "boundary": 3.449385143851913e-08
+    },
+    "weighted_phasor_rms": {
+      "comparison": "<=",
+      "boundary": 0.057214058693848345
+    },
+    "outside_support_maxabs": {
+      "comparison": "<=",
+      "boundary": 1e-12
+    }
+  },
+  "reference_type": "Independently executed official-author conditional method estimate. No measured true disk speed or true velocity field is supplied.",
+  "nrmse_definition": "sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)), separately for every vx and vz value on the full public disk support.",
+  "support": "All31404 pixels in public observation_roi; exterior must be zero. No fitted rotation, gain, alignment, permutation or unreported crop.",
+  "threshold_provenance": "Frozen before local extraction: independent complete original repeat, original complex64-intermediate full pipeline, float32 serialization; five times worst measured NRMSE. NCC numerical floor20float64eps. Phase boundary1.1times original measured phasorRMS.",
+  "physics_metric": "sqrt(sum(abs(AC)*abs(exp(-i*pi*predicted_radial/VN)-AC/abs(AC))^2)/sum(abs(AC))), both receive beams on all31404 publicdisk pixels. AC uses31 temporal pairs and11x11 replicate Hamming averaging."
+}

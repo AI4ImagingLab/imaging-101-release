@@ -1,0 +1,21 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced unchanged original ZDIpy brightness maximum-entropy reconstruction",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "nrmse_definition": "RMS spatial error divided by reference dynamic range, independently per required component.",
+  "reference_kind": "standard-method result; no actual surface truth",
+  "observation_metric": "mean squared standardized residual over all 16 by 89 measured samples; diagonal variance assumption",
+  "observation_chi2_per_sample_boundary": 1.002,
+  "metric_comparisons": {
+    "entropy_cost_excess": "<=",
+    "observation_chi2_per_sample": "<="
+  },
+  "entropy_cost_excess_boundary": 1e-07,
+  "evaluation_semantics": "Method-independent maximum relative entropy with fixed unit photosphere, subject to independently evaluated full spectral chi-square; attainable entropy cost is a bound, not image truth.",
+  "semantic_version": "v2",
+  "baseline_role": "Historical v1 numerical/stage comparison and attainable source observation fit; self-agreement values are not current acceptance criteria."
+}

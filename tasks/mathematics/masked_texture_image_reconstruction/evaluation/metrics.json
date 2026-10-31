@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "independently reproduced original TGV2 fixed8000 updates on author photograph and mask",
+      "ncc_vs_ref": 0.9809076136103239,
+      "nrmse_vs_ref": 0.09255324552920033,
+      "missing_nrmse_vs_ref": 0.11075318325187533
+    }
+  ],
+  "ncc_boundary": 0.8828168522492915,
+  "nrmse_boundary": 0.10180857008212037,
+  "missing_nrmse_boundary": 0.12182850157706288,
+  "known_pixel_max_error_boundary": 1e-08,
+  "reference_kind": "actual complete photograph held independently before applying author mask",
+  "missing_nrmse_definition": "RMS error over fixed unobserved pixels divided by dynamic range of complete reference image"
+}

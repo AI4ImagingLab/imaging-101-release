@@ -1,0 +1,16 @@
+{
+  "definition": "Total sum of six group weighted zero-offset-profiled chi-square values, over every one of 15488 observations. All seven output quantities jointly determine these predictions.",
+  "thresholds": {
+    "total_chi_squared": {
+      "comparison": "<=",
+      "boundary": 15900.910369432995
+    }
+  },
+  "baseline": [
+    {
+      "method": "Corrected V2 original complete 50x1000 sampler; coordinatewise median of last500",
+      "total_chi_squared": 15886.843228983655
+    }
+  ],
+  "quality_budget": "14.067140449340167 added to original median chi-square; transparent conditional fit-quality budget, not a true95%parameter-coverage claim or Wilks inference at a knownMLE."
+}

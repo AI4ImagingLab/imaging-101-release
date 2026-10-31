@@ -1,0 +1,52 @@
+{
+  "code_revision": "9b60caf9aa5102b87935225a118275579e2f73b6",
+  "paper_kind": "Codiga2011 GSO Technical Report2011-01",
+  "station": "cb1401 Newport New Shipbuilding",
+  "bin": 30,
+  "bin_orientation": "side, horizontal range; sensor depth6.7m",
+  "observations": 16822,
+  "first": "2025-01-01T00:05",
+  "last": "2025-03-31T23:58",
+  "largest_gap_seconds": 182100.0,
+  "constituents": [
+    "M2",
+    "S2",
+    "N2",
+    "K1",
+    "O1",
+    "M4",
+    "MS4",
+    "MN4"
+  ],
+  "frequencies_cph": [
+    0.08051140067286326,
+    0.08333333333333336,
+    0.07899924869623724,
+    0.041780746221773274,
+    0.03873065445108998,
+    0.16102280134572652,
+    0.16384473400619662,
+    0.1595106493691005
+  ],
+  "tref_days": 739297.0010416666,
+  "runtime_seconds": 0.024171800119802356,
+  "relative_observation_l2": 0.48159914973552703,
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "os": "Windows-10-10.0.26200-SP0",
+  "settings": {
+    "method": "ols",
+    "nodal": false,
+    "phase": "raw",
+    "trend": false,
+    "conf_int": "none"
+  },
+  "hashes": {
+    "utide.zip": "2375a2bfa09c60d8192e948040a2798a9c7ff435c4566f5f51833297579ecd16",
+    "tide_oracle.npz": "67bb095228c4d715799ea90c727cd123573fcf4d9d1550edea37a261cdb00050",
+    "noaa_cb1401_202501.json": "9407ac57f63daaa8ed24bf350bd1fee6bdc90f46a5da602fb2886ccc5a8dea4d",
+    "noaa_cb1401_202502.json": "8a24d5d288b817faa975299dd0d36104dd5cf1b6058195afb0089d418987f5d5",
+    "noaa_cb1401_202503.json": "02350c7960a9d71f2c7dd40ed1a49c5ea616b53bc893be3bf77eeaeefd363f7b"
+  }
+}

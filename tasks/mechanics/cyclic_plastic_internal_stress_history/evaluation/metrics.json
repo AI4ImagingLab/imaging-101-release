@@ -1,0 +1,22 @@
+{
+    "version":  1,
+    "thresholds":  {
+                       "stress_mse":  {
+                                          "comparison":  "\u003c=",
+                                          "boundary":  621.7591900244984
+                                      },
+                       "backstress_model_error":  {
+                                                      "comparison":  "\u003c=",
+                                                      "boundary":  1E-07
+                                                  },
+                       "isotropic_model_error":  {
+                                                     "comparison":  "\u003c=",
+                                                     "boundary":  1E-07
+                                                 },
+                       "minimum_parameter":  {
+                                                 "comparison":  "\u003e",
+                                                 "boundary":  0
+                                             }
+                   },
+    "definition":  "MSE in MPa squared over all1003measuredstress samples; model errors are maximum absolute state mismatch divided by max(1,max absolute model state). Every parameter and state enters the declared constitutive physics."
+}

@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced unmodified OSMOSIS CPU float32; author Taylor vortex native1001 grid",
+      "ncc_vs_ref": 0.9999997406798791,
+      "nrmse_vs_ref": 0.00016835737028257186
+    }
+  ],
+  "ncc_boundary": 0.8999997666118912,
+  "nrmse_boundary": 0.00018519310731082906,
+  "reference": "Analytic vortex pressure, fixed gauge pixel(1,1), Pa",
+  "provenance": "Bound original run before local implementation; 0.9 baseline NCC and1.1 baseline NRMSE"
+}

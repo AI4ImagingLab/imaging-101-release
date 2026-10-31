@@ -1,0 +1,84 @@
+{
+  "data_sha256": "4facd62cd589e68a30127a3470280ba3fd03bd0dbe8bb810a34c362331aa7929",
+  "active_seconds": 376.43525390000286,
+  "fresh": {
+    "tv": {
+      "ncc_vs_ref": 0.9995366014438117,
+      "nrmse_vs_ref": 0.030703627369251914,
+      "relative_displacement_error": 0.0052121313886459054,
+      "maximum_abs_principal_strain": 0.0023446488052758408
+    },
+    "smooth": {
+      "ncc_vs_ref": 0.9955722961854988,
+      "nrmse_vs_ref": 0.09135053266431818,
+      "relative_displacement_error": 0.006363011920531971,
+      "maximum_abs_principal_strain": 0.0023272340358399023
+    },
+    "tikhonov": {
+      "ncc_vs_ref": 0.9958904073168765,
+      "nrmse_vs_ref": 0.08810587671012221,
+      "relative_displacement_error": 0.01369061927052913,
+      "maximum_abs_principal_strain": 0.002281690125283306
+    }
+  },
+  "source": {
+    "unmodified": {
+      "tv": {
+        "ncc_vs_ref": 0.9813162884348791,
+        "nrmse_vs_ref": 0.18751754035345886,
+        "relative_displacement_error": 0.05150079271782571,
+        "maximum_abs_principal_strain": 0.0031707743299915787
+      },
+      "smooth": {
+        "ncc_vs_ref": 0.9812075614058893,
+        "nrmse_vs_ref": 0.19511675418542396,
+        "relative_displacement_error": 0.05298800837327066,
+        "maximum_abs_principal_strain": 0.003431000088973349
+      },
+      "tikhonov": {
+        "ncc_vs_ref": 0.9688002921575125,
+        "nrmse_vs_ref": 0.303850039343919,
+        "relative_displacement_error": 0.1225499228085089,
+        "maximum_abs_principal_strain": 0.0008022201657679828
+      }
+    },
+    "qualified": {
+      "tv": {
+        "ncc_vs_ref": 0.9995365432249756,
+        "nrmse_vs_ref": 0.030705388682738345,
+        "relative_displacement_error": 0.0052063236282099065,
+        "maximum_abs_principal_strain": 0.002344767328500574
+      },
+      "smooth": {
+        "ncc_vs_ref": 0.9955633266533906,
+        "nrmse_vs_ref": 0.09144282703302357,
+        "relative_displacement_error": 0.006368301802180099,
+        "maximum_abs_principal_strain": 0.0023272198668408814
+      },
+      "tikhonov": {
+        "ncc_vs_ref": 0.9955968121294589,
+        "nrmse_vs_ref": 0.09115644433527434,
+        "relative_displacement_error": 0.01125021396558888,
+        "maximum_abs_principal_strain": 0.002249787873465016
+      }
+    }
+  },
+  "fresh_runs": {
+    "tv": {
+      "runtime_seconds": 57.65020359999471,
+      "updates": 9,
+      "stop": "cost_increase"
+    },
+    "smooth": {
+      "runtime_seconds": 62.14950990000216,
+      "updates": 10,
+      "stop": "cost_increase"
+    },
+    "tikhonov": {
+      "runtime_seconds": 87.20611149999604,
+      "updates": 15,
+      "stop": "cost_increase"
+    }
+  },
+  "provenance": "Fresh calculations from full executed notebook; source results from independent original/qualified full trajectories. All errors compare actual author-defined simulated truth, no alignment."
+}

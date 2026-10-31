@@ -1,0 +1,24 @@
+{
+  "runtime_seconds": 4.54638269986026,
+  "source_commit": "7f3eb62ad3821b30ef2553d6bee47c59608bbdda",
+  "numpy": "2.4.6",
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "threads": 1,
+  "backend": "CPU unmodified original MDF python/kaczmarzReg.py, generic numpy/SciPy",
+  "shape": [
+    7116,
+    6859
+  ],
+  "lambda": 8861.1083984375,
+  "rerun_max_difference": 0.0,
+  "relative_forward_residual": 0.12544610923630145,
+  "range": [
+    -0.0,
+    0.8113417944858698
+  ],
+  "native_data_hashes": {
+    "mpi_calibration3.mdf": "734b98a9627d27b7bf64142f5fa1697e2485e387ba98ee09720c4990eadce57a",
+    "mpi_shape3.mdf": "8a0b8c6d890feb6d7a2a3585416530c478e66b54ad29a89400188a8c1abf261b"
+  },
+  "bound_npz_sha256": "ac980723ceafaa8c2bfd90e48375401cddee7a1a0be96e00e071b1e808c3b37a"
+}

@@ -1,0 +1,24 @@
+{
+  "unpolarized_relative_l2_boundary": 1e-06,
+  "sum_real_relative_l2_boundary": 1e-06,
+  "sum_imaginary_relative_l2_boundary": 1e-06,
+  "difference_real_relative_l2_boundary": 1e-06,
+  "difference_imaginary_relative_l2_boundary": 1e-06,
+  "observation_relative_l2_boundary": 0.153962359425746,
+  "baseline": [
+    {
+      "method": "Unmodified full original16-state least-squares decomposition, twice bit-identical; five equivalent Cartesian fields",
+      "reference_agreement": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "observation_relative_l2": 0.15243698953044157
+    }
+  ],
+  "channel_metric_definition": "Each complete signed channel uses Frobenius(error)/Frobenius(reference), no crop/mask/alignment/gain.",
+  "observation_metric_definition": "sqrt(sum_all_frames_pixels((independent_angular_forward-output-observed_clipped_lower0)^2)/sum_all_frames_pixels(observed_clipped_lower0^2))",
+  "provenance": "Frozen before local reconstruction using actual full original repetitions and float32 serialization; fixed1e-6 channel tolerances exceed10x serialization. Forward limit1.01*original residual+1e-6 retains actual restricted-model mismatch."
+}

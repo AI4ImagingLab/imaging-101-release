@@ -1,0 +1,58 @@
+{
+  "fresh_runtime_seconds": 4.670437199994922,
+  "fresh_speed_um_s": [
+    [
+      9.25986768437256,
+      27.98801674661428
+    ]
+  ],
+  "upstream_speed_um_s": [
+    [
+      9.25986768437256,
+      27.98801674661428
+    ]
+  ],
+  "parameter_max_absolute_difference": 0.0,
+  "diagnostic_fit_relative_l2": [
+    [
+      0.008686161150717462,
+      0.027776420413354798,
+      0.012729205262581455,
+      0.008424903067341723
+    ],
+    [
+      0.0038065583320889113,
+      0.00563977917872764,
+      0.0038065590434721523,
+      0.003660118097391026
+    ]
+  ],
+  "diagnostic_speed_um_s": [
+    [
+      9.259867684365075,
+      9.759737881813829,
+      8.986041353496393,
+      9.715822564112148
+    ],
+    [
+      27.98801674661308,
+      38.89615421396492,
+      27.988016682178095,
+      28.30420755268503
+    ]
+  ],
+  "judge_metrics": {
+    "condition0_amplitude_relative_l2": 0.0,
+    "condition0_background_relative_l2": 0.0,
+    "condition0_relaxation_relative_l2": 0.0,
+    "condition0_exponent_relative_l2": 0.0,
+    "condition0_speed_relative_error": 0.0,
+    "condition0_observation_relative_l2": 0.009520924174246286,
+    "condition1_amplitude_relative_l2": 0.0,
+    "condition1_background_relative_l2": 0.0,
+    "condition1_relaxation_relative_l2": 0.0,
+    "condition1_exponent_relative_l2": 0.0,
+    "condition1_speed_relative_error": 0.0,
+    "condition1_observation_relative_l2": 0.0058330466058011295
+  }
+}

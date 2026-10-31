@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original C++ four power iterations, allocation correction verified bit-identical",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-05,
+  "roughness_error_boundary": 1e-05,
+  "mass_error_boundary": 1e-05,
+  "eigen_residual_boundary": 1e-05,
+  "moment_error_boundary": 1e-05,
+  "provenance": "Frozen brdf_frozen_contract.md before extraction; finite tolerance, not self-error multiplication."
+}

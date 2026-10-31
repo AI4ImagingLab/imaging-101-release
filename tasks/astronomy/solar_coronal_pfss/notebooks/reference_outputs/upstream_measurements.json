@@ -1,0 +1,41 @@
+{
+  "code_revision": "f493e2cdc653e541425f01318ec2f35645ee36d0",
+  "paper": "https://doi.org/10.21105/joss.02732",
+  "data": "https://gong2.nso.edu/oQR/zqs/202009/mrzqs200901/mrzqs200901t1304c2234_022.fits.gz",
+  "license": "GPL3 code; NSO image CC BY4 policy with GONG acknowledgements",
+  "shape": [
+    180,
+    360
+  ],
+  "dtype": ">f4",
+  "removed_mean": -0.11282645460453997,
+  "nr": 35,
+  "rss": 2.5,
+  "shapes": {
+    "radial": [
+      360,
+      180,
+      36
+    ],
+    "polar": [
+      360,
+      181,
+      35
+    ],
+    "azimuthal": [
+      361,
+      180,
+      35
+    ]
+  },
+  "runtime_seconds": 3.268069399986416,
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "sunpy": "7.0.5",
+  "os": "Windows-10-10.0.26200-SP0",
+  "sha256": {
+    "gong.fits.gz": "aad927d8f617f32b72255b862c4910f13640fc7ca13edf98288cd0735a2db6a0",
+    "pfsspy.zip": "3e98e4c73801a2bda085f8005404bcc03428991bec51cdf64e1bfac7f650a6ce",
+    "pfss_oracle.npz": "becd601626d1f679e4f27ab459dbe50490376034085fe8f82a627eb97fc2fb28"
+  }
+}

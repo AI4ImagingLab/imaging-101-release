@@ -1,0 +1,5 @@
+The full-pattern workflow is adapted from powdR, Benjamin Butler and Stephen Hillier, licensed under GPL version 2. The included LICENSE preserves that license.
+
+The variable-metric implementation is adapted from R src/appl/optim.c (vmmin): Copyright (C) 1999-2014 The R Core Team. R code is licensed under GPL version 2 or (at your option) any later version. This combined implementation is distributed under GPL version 2. It is provided without warranty; see LICENSE.
+
+RockJock measured standard patterns, mixtures and weighed compositions originate from the US Geological Survey RockJock data, public domain as identified by the powdR paper. The package's GPL license and original author attribution are retained for the adapted software. The article manuscript itself is not redistributed here.

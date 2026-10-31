@@ -1,0 +1,49 @@
+{
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        40097,
+        3
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 1e-08
+    },
+    "rotation": {
+      "shape": [
+        1,
+        3,
+        3
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 1e-08
+    },
+    "translation": {
+      "shape": [
+        1,
+        3
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 1e-08
+    },
+    "scale": {
+      "shape": [
+        1,
+        1
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 1e-08
+    }
+  },
+  "baseline": [
+    {
+      "method": "Independent unmodified original similarity CPD on measured native range scans; no actual pose truth",
+      "relative_l2_vs_ref": 0.0
+    }
+  ],
+  "metric_definition": "Per-output Euclidean error divided by reference Euclidean norm. Full-source nearest-target RMS in metres. No post-submission registration, scale fitting, cropping or alignment.",
+  "transform_consistency_m_boundary": 1e-10,
+  "orthogonality_frobenius_boundary": 1e-08,
+  "nearest_rms_m_boundary": 0.0024525798338538444,
+  "rotation_determinant_error_boundary": 1e-08
+}

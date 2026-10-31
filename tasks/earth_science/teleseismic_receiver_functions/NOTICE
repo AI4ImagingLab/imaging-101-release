@@ -1,0 +1,3 @@
+The extracted deconvolution mathematics adapts rf, copyright 2013-2024 Tom Eulenfeld and Hannah Mark, MIT (see LICENSE).
+Waveform data: GEOFON Data Centre (1993), GEOFON Seismic Network, doi:10.14470/TR560404, Creative Commons Attribution 4.0 International, https://creativecommons.org/licenses/by/4.0/ . Data have been converted from counts to velocity with the public StationXML instrument response and selected to the stated 240-second acquisition interval. No earthquake model or reconstruction was used in calibration.
+Method: Eulenfeld (2020), rf: Receiver function calculation in seismology, JOSS 5(48),1808, doi:10.21105/joss.01808.

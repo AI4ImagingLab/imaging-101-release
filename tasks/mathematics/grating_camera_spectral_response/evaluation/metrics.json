@@ -1,0 +1,34 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced original LED+fluorescent eos",
+      "ncc_vs_ref": 0.9970848220405905,
+      "nrmse_vs_ref": 0.04690669681656038
+    },
+    {
+      "method": "Reproduced original LED+fluorescent sony",
+      "ncc_vs_ref": 0.994661153159603,
+      "nrmse_vs_ref": 0.042515275446636636
+    },
+    {
+      "method": "Reproduced original LED+fluorescent iphone15promax",
+      "ncc_vs_ref": 0.9931358681067366,
+      "nrmse_vs_ref": 0.04630045407963497
+    },
+    {
+      "method": "Reproduced original LED+fluorescent dji_pocket3",
+      "ncc_vs_ref": 0.9924097949136663,
+      "nrmse_vs_ref": 0.050943168939558636
+    }
+  ],
+  "metric_provenance": "Unmodified author implementation on exact bundled measured crops; reference is independently measured spectral sensitivity sampled at400..700nm10nm. Global RGB peak normalization only, no fitted alignment.",
+  "peak_error_boundary": 1e-06,
+  "eos_ncc_boundary": 0.8973763398365314,
+  "eos_nrmse_boundary": 0.051597366498216425,
+  "sony_ncc_boundary": 0.8951950378436427,
+  "sony_nrmse_boundary": 0.0467668029913003,
+  "iphone15promax_ncc_boundary": 0.893822281296063,
+  "iphone15promax_nrmse_boundary": 0.05093049948759847,
+  "dji_pocket3_ncc_boundary": 0.8931688154222998,
+  "dji_pocket3_nrmse_boundary": 0.056037485833514505
+}

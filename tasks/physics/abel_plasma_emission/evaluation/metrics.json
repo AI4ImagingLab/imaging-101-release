@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "PyAbel v0.9.1 Hansen-Law first-order hold on bound observations",
+      "ncc_vs_ref": 0.9998266089834683,
+      "nrmse_vs_ref": 0.004119801658595976
+    }
+  ],
+  "ncc_boundary": 0.8998439480851215,
+  "nrmse_boundary": 0.004531781824455574,
+  "reference_kind": "synthetic physical truth",
+  "evaluation_convention": "All samples, absolute physical scale, no alignment or fitting."
+}

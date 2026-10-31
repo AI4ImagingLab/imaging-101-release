@@ -1,0 +1,3 @@
+Algorithm source copyright (c)2021 Antoine Monod, GNU Affero General Public License version3 or later; full source notices are retained in adapted modules and LICENSE.
+
+Data: HDR+ Burst Photography Dataset, Hasinoff et al.2016, https://hdrplusdata.org/dataset.html, Creative Commons Attribution-ShareAlike4.0 https://creativecommons.org/licenses/by-sa/4.0/. Adaptation: fixed central native1024² crop of all10 frames of33TJ_20150606_224837_294, repackaged losslessly as NPZ, no prealignment or synthetic noise. Data adaptations remain CC BY-SA4.0. No endorsement is implied.

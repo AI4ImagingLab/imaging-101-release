@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Qualified original Eigenspectra 3PC posterior mean, author noiseless simulation with stated uncertainty",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.9999,
+  "reconstruction_nrmse_boundary": 0.005,
+  "standardized_observation_rms_boundary": 2.05,
+  "reference_kind": "method posterior mean, not physical truth",
+  "observation_definition": "sqrt(mean(((A*c + fitted_constant_stellar_offset - observed)/sigma)^2)); c obtained by degree-two real-harmonic projection of submitted map; only the declared nuisance stellar offset is fitted",
+  "threshold_basis": "three independent original and local long chains, minimum retained length>50tau; independent replica map mean fluctuation and poor-map rejection"
+}

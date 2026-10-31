@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Independent unchanged original GSAS-II relativeP21 full200-step run; no actual density truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9,
+  "nrmse_boundary": 0.014489186542210463,
+  "intensity_relative_l2_boundary": 0.00011263614884958044,
+  "mean_relative_boundary": 1e-06,
+  "alignment": "Complete real periodic trigonometric interpolation; global integer correlation plus bounded analytic-gradient subvoxel optimization; compare both complete spatial inversion choices, no gain/sign fit, no cropping, permutation or reflection-mask selection.",
+  "metric_provenance": "See hidden test/validation.md and frozen source-only criteria; no fitting to cleaned output",
+  "nrmse_definition": "RMS over all165888 real voxels divided by full reference dynamic range after the explicitly declared periodic translation/inversion alignment"
+}

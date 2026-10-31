@@ -1,0 +1,106 @@
+[
+  {
+    "index": 0,
+    "smoothness_flatfield": 0.01,
+    "cost": 29.49149513244629,
+    "entropy_vmin": 3.1749751567840576,
+    "entropy_vmax": 96.83064270019531,
+    "converged": true
+  },
+  {
+    "index": 1,
+    "smoothness_flatfield": 0.1,
+    "cost": 20.238340377807617,
+    "entropy_vmin": 3.1719677448272705,
+    "entropy_vmax": 96.82763671875,
+    "converged": true
+  },
+  {
+    "index": 2,
+    "smoothness_flatfield": 0.5,
+    "cost": 4.965568542480469,
+    "entropy_vmin": 3.1819519996643066,
+    "entropy_vmax": 96.8376235961914,
+    "converged": true
+  },
+  {
+    "index": 3,
+    "smoothness_flatfield": 2.0,
+    "cost": 2.789379358291626,
+    "entropy_vmin": 3.2113726139068604,
+    "entropy_vmax": 96.8670425415039,
+    "converged": true
+  },
+  {
+    "index": 4,
+    "smoothness_flatfield": 8.0,
+    "cost": 2.663942813873291,
+    "entropy_vmin": 3.3050310611724854,
+    "entropy_vmax": 96.96070098876953,
+    "converged": true
+  },
+  {
+    "index": 5,
+    "smoothness_flatfield": 10.0,
+    "cost": 2.738842010498047,
+    "entropy_vmin": 3.343853235244751,
+    "entropy_vmax": 96.99952697753906,
+    "converged": true
+  },
+  {
+    "index": 6,
+    "smoothness_flatfield": 2.5,
+    "cost": 2.6903343200683594,
+    "entropy_vmin": 3.0850021839141846,
+    "entropy_vmax": 96.74066925048828,
+    "converged": true
+  },
+  {
+    "index": 7,
+    "smoothness_flatfield": 3.0,
+    "cost": 2.6234304904937744,
+    "entropy_vmin": 3.0958588123321533,
+    "entropy_vmax": 96.75152587890625,
+    "converged": true
+  },
+  {
+    "index": 8,
+    "smoothness_flatfield": 4.0,
+    "cost": 2.5958805084228516,
+    "entropy_vmin": 3.108027219772339,
+    "entropy_vmax": 96.7636947631836,
+    "converged": true
+  },
+  {
+    "index": 9,
+    "smoothness_flatfield": 5.0,
+    "cost": 2.588416337966919,
+    "entropy_vmin": 3.2501628398895264,
+    "entropy_vmax": 96.90583038330078,
+    "converged": true
+  },
+  {
+    "index": 10,
+    "smoothness_flatfield": 6.0,
+    "cost": 2.614750862121582,
+    "entropy_vmin": 3.2687485218048096,
+    "entropy_vmax": 96.9244155883789,
+    "converged": true
+  },
+  {
+    "index": 11,
+    "smoothness_flatfield": 7.0,
+    "cost": 2.6424317359924316,
+    "entropy_vmin": 3.289942741394043,
+    "entropy_vmax": 96.94561004638672,
+    "converged": true
+  },
+  {
+    "index": 12,
+    "smoothness_flatfield": 8.0,
+    "cost": 2.663942813873291,
+    "entropy_vmin": 3.3050310611724854,
+    "entropy_vmax": 96.96070098876953,
+    "converged": true
+  }
+]

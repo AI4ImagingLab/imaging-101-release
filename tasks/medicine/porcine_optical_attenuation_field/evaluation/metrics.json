@@ -1,0 +1,9 @@
+{
+ "baseline":[{"method":"Unmodified published2015authorDRC on full512x512realOCT observations; method reference, not actual truth","ncc_vs_ref":1.0,"nrmse_vs_ref":0.0,"forward_residual":0.0}],
+ "ncc_boundary":0.99999999,
+ "nrmse_boundary":1e-7,
+ "forward_residual_boundary":1e-7,
+ "forward_residual_definition":"L2 norm of J/(2dz)-mu*S divided by norm of J/(2dz), over all rows except final; S is reverse sum of public-signal-derived corrected J through the penultimate row. Exact selected estimator identity, not an independent physical-truth metric.",
+ "reference_role":"Original method output, no actual measured attenuation truth available",
+ "tolerance_provenance":"Nonzero numerical tolerances frozen before extraction; independent native repeat and low-level later author GitHub implementation agree bitexact; independent physical cell-integral checks characterize Riemann bias. No endpoint crop or fitted alignment during scoring."
+}

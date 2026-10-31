@@ -1,0 +1,136 @@
+{
+  "source_categories": {
+    "paper": "2018 published method; full official23-page supplement actually read; main paper subscription preview only. Twelve paper systems differ from author-provided real lysozyme demo used here. No paper metrics are substituted for this run.",
+    "unmodified_original": "Exact current upstream5009b1c659599423a55c31372ed6a88f1925417f, original rFFT half-space averaging, retained separate comparison;32/64-grid trials in private archive.",
+    "qualified_original": "Only shell Hermitian multiplicity corrected, independently equal fullFFT and90degree rotations;5 independent64^3 original runs. Other selected original iterations/projections/shrinkwrap unchanged.",
+    "fresh_cleaned": "Active local reconstruction below; no original library import, no cached substitution.",
+    "truth": "No spatial truth; different shape-compatible densities are not failed by hidden-reference NCC."
+  },
+  "qualified_runs": {
+    "41": {
+      "exit_status": 0,
+      "runtime_s": 11.544381599996996,
+      "seed": 41,
+      "steps_max": 6000,
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "dmax_A": 40.0,
+      "side_A": 240.0,
+      "voxel_A": 3.75,
+      "final_chi2": 1.5925127596168895,
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "source_revision": "5009b1c659599423a55c31372ed6a88f1925417f",
+      "normalization": "total integrated density=1; no absolute electron count supplied",
+      "shrinkwrap": "original density threshold (published mode), current upstream function",
+      "qualification": "mybinmean uses exact rFFT Hermitian multiplicity for both q-shell mean coordinate and intensity; otherwise original function unchanged"
+    },
+    "42": {
+      "exit_status": 0,
+      "runtime_s": 15.177538800002367,
+      "seed": 42,
+      "steps_max": 6000,
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "dmax_A": 40.0,
+      "side_A": 240.0,
+      "voxel_A": 3.75,
+      "final_chi2": 1.5163525361377497,
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "source_revision": "5009b1c659599423a55c31372ed6a88f1925417f",
+      "normalization": "total integrated density=1; no absolute electron count supplied",
+      "shrinkwrap": "original density threshold (published mode), current upstream function",
+      "qualification": "mybinmean uses exact rFFT Hermitian multiplicity for both q-shell mean coordinate and intensity; otherwise original function unchanged"
+    },
+    "43": {
+      "exit_status": 0,
+      "runtime_s": 5.827942500000063,
+      "seed": 43,
+      "steps_max": 6000,
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "dmax_A": 40.0,
+      "side_A": 240.0,
+      "voxel_A": 3.75,
+      "final_chi2": 1.6625680920017676,
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "source_revision": "5009b1c659599423a55c31372ed6a88f1925417f",
+      "normalization": "total integrated density=1; no absolute electron count supplied",
+      "shrinkwrap": "original density threshold (published mode), current upstream function",
+      "qualification": "mybinmean uses exact rFFT Hermitian multiplicity for both q-shell mean coordinate and intensity; otherwise original function unchanged"
+    },
+    "44": {
+      "exit_status": 0,
+      "runtime_s": 14.871405399993819,
+      "seed": 44,
+      "steps_max": 6000,
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "dmax_A": 40.0,
+      "side_A": 240.0,
+      "voxel_A": 3.75,
+      "final_chi2": 1.540133566592275,
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "source_revision": "5009b1c659599423a55c31372ed6a88f1925417f",
+      "normalization": "total integrated density=1; no absolute electron count supplied",
+      "shrinkwrap": "original density threshold (published mode), current upstream function",
+      "qualification": "mybinmean uses exact rFFT Hermitian multiplicity for both q-shell mean coordinate and intensity; otherwise original function unchanged"
+    },
+    "45": {
+      "exit_status": 0,
+      "runtime_s": 4.848826400004327,
+      "seed": 45,
+      "steps_max": 6000,
+      "shape": [
+        64,
+        64,
+        64
+      ],
+      "dmax_A": 40.0,
+      "side_A": 240.0,
+      "voxel_A": 3.75,
+      "final_chi2": 1.5732440370780163,
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "source_revision": "5009b1c659599423a55c31372ed6a88f1925417f",
+      "normalization": "total integrated density=1; no absolute electron count supplied",
+      "shrinkwrap": "original density threshold (published mode), current upstream function",
+      "qualification": "mybinmean uses exact rFFT Hermitian multiplicity for both q-shell mean coordinate and intensity; otherwise original function unchanged"
+    }
+  },
+  "prelocal_thresholds": {
+    "stage_relative_tolerance": 1e-10,
+    "stage_absolute_tolerance": 1e-12,
+    "full_density_dynamic_range_nrmse_tolerance": 1e-06,
+    "chi2_boundary": 1.1786173897013836,
+    "mass_error_boundary": 1e-06,
+    "negative_mass_fraction_boundary": 0.13233774201800175,
+    "outside_mass_fraction_boundary": 0.11198335350661684,
+    "disconnected_fraction_boundary": 0.01,
+    "porod_tail_relative_rms_boundary": 0.2,
+    "rg_relative_error_boundary": 0.1,
+    "provenance": "Frozen before executing local code; all5 independent qualified upstream seeds, unchanged final Fourier projection, full measured-q fixed I0 scoring, poor cases sphere/zero/constant/single voxel/checkerboard. Rg compared with observation-derived Guinier fit; no model-coordinate reference."
+  },
+  "bound_sha256": "f5f516c97225a365a15ebb77df8e8775047b6b9631017811228f8decdb07bd1f",
+  "paper_supplement_sha256": "57ae54f532081cafda5b3fb266ceab3f8a2f75197239b216a454a1b82d142b98",
+  "known_discrepancies": [
+    "Current reference code uses even realFFT and mean shell radius;2018 published supplementary code uses odd fullFFT and half-bin shell coordinates. This task reproduces selected current reference variant with one qualified average correction.",
+    "Current original final_chi2/Rg refer to pre-final-projection intensity, not returned rho; all evaluation metrics here are independently recomputed from final signed rho.",
+    "Final Fourier projection violates real-space positivity/support softly; tails are retained and quantified."
+  ]
+}

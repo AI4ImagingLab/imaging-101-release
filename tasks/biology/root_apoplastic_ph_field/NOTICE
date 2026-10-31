@@ -1,0 +1,19 @@
+Ratio2pH mathematical extraction and local NumPy adaptation
+
+Original author: Ann-Kathrin Roessling and collaborators, Ratio2pH.
+Source software: Ratio2pH v3.0, Zenodo record18460719, Creative Commons
+Attribution4.0 International, https://doi.org/10.5281/zenodo.18460719 .
+The released Ratio2pH.py is byte-identical to the identified author repository
+revision. The repository has no independent root license: permission here is
+the explicitly licensed software release, not an inferred repository license.
+License text: https://creativecommons.org/licenses/by/4.0/legalcode .
+Changes: extracted explicit normalization, sigmoid response/inverse and float32
+image storage into local NumPy functions; replaced ImageJ dialogs, TIFF IO and
+LUT overlays with benchmark NPZ interfaces and maintainer plots. Core numerical
+constants, inverse clipping and calibration arithmetic are preserved and tested.
+
+Real observations: Roessling et al., BMC Methods2026, associated FreiData
+dataset DOI10.60493/t29wb-7my86, Creative Commons Attribution4.0 International.
+Original microscopy-ratio images, all included roots and calibration samples
+are attributed to the dataset authors. Container conversion does not add
+independent chemical pH truth. No endorsement is implied.

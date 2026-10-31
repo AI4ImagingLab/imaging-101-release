@@ -1,0 +1,29 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified author L1 IRLS on existing specular-shadow renderings",
+      "ncc_vs_ref": 0.9959952770373275,
+      "nrmse_vs_ref": 0.02619656488364513,
+      "mean_angular_error_deg": 4.597762735142496
+    }
+  ],
+  "ncc_boundary": 0.8963957493335948,
+  "nrmse_boundary": 0.02881622137200965,
+  "mean_angular_error_deg_boundary": 5.057539008656746,
+  "unit_norm_max_error_boundary": 1e-08,
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        256,
+        256,
+        3
+      ],
+      "dtype": "float64"
+    }
+  },
+  "mask": "public observed support; background exactlyzero",
+  "reference_kind": "actual author-rendered synthetic surface normals",
+  "alignment": "none",
+  "provenance": "Pre-extraction independent original run and bit-identical repeat; strict angular and unit-norm gates supplement NCC/DR-NRMSE"
+}

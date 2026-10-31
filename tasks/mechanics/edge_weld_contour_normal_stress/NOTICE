@@ -1,0 +1,22 @@
+Mathematical extraction from pyCM1.1.8, Matthew J. Roy (2017), GPL3;
+original copyright/license notice is preserved in LICENSE. The exact paper
+repository and source qualifications are identified in maintainer provenance.
+
+This package explicitly implements the eight-node elastic acquisition operator,
+surface fit, displacement elimination and contour stress reconstruction locally.
+No original finite-element/domain reconstruction library is required at runtime.
+
+The source Gauss-to-node postprocessor fails independently known linear-stress
+tests. The qualified method evaluates inverse shape interpolation in actual
+native quadrature order. Original deficient results remain separately identified.
+The proper second-anchor constraint fixes only the stress-invariant rigid gauge.
+
+The real observations are the author's published registered/averaged CMM record.
+The associated original raw-face dataset is CC-BY4.0; a separate redistribution
+grant for the repository's higher-precision processed MAT record is not explicit.
+The software GPL notice is not asserted to be a separate data license. Local
+research provenance is retained; no external publication/upload is performed.
+
+Only cut-face normal restoration stress is reconstructed. Interior relaxation
+stresses are diagnostics, not the original interior residual-stress tensor.
+The physical pre-cut release-sign calibration is not independently supplied.

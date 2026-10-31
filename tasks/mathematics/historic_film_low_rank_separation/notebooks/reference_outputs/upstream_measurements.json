@@ -1,0 +1,105 @@
+{
+  "seconds": 1052.4688039999455,
+  "iterations": 1657,
+  "shape": [
+    84,
+    240,
+    320
+  ],
+  "matrix_shape": [
+    76800,
+    84
+  ],
+  "color_channel_difference_max": 17,
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "cv2": "5.0.0",
+  "backend": {
+    "Compilers": {
+      "c": {
+        "name": "msvc",
+        "linker": "link",
+        "version": "19.44.35226",
+        "commands": "cl"
+      },
+      "cython": {
+        "name": "cython",
+        "linker": "cython",
+        "version": "3.2.4",
+        "commands": "cython"
+      },
+      "c++": {
+        "name": "msvc",
+        "linker": "link",
+        "version": "19.44.35226",
+        "commands": "cl"
+      }
+    },
+    "Machine Information": {
+      "host": {
+        "cpu": "x86_64",
+        "family": "x86_64",
+        "endian": "little",
+        "system": "windows"
+      },
+      "build": {
+        "cpu": "x86_64",
+        "family": "x86_64",
+        "endian": "little",
+        "system": "windows"
+      }
+    },
+    "Build Dependencies": {
+      "blas": {
+        "name": "scipy-openblas",
+        "found": true,
+        "version": "0.3.31.188.0",
+        "detection method": "pkgconfig",
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-6ukx7exl/cp311-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-6ukx7exl/cp311-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "openblas configuration": "OpenBLAS 0.3.31.188.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+      },
+      "lapack": {
+        "name": "scipy-openblas",
+        "found": true,
+        "version": "0.3.31.188.0",
+        "detection method": "pkgconfig",
+        "include directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-6ukx7exl/cp311-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/include",
+        "lib directory": "C:/Users/runneradmin/AppData/Local/Temp/cibw-run-6ukx7exl/cp311-win_amd64/build/venv/Lib/site-packages/scipy_openblas64/lib",
+        "openblas configuration": "OpenBLAS 0.3.31.188.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=24",
+        "pc file directory": "D:/a/numpy-release/numpy-release/.openblas"
+      }
+    },
+    "Python Information": {
+      "path": "C:\\Users\\runneradmin\\AppData\\Local\\Temp\\build-env-jxn7bo0g\\Scripts\\python.exe",
+      "version": "3.11"
+    },
+    "SIMD Extensions": {
+      "baseline": [
+        "X86_V2"
+      ],
+      "found": [
+        "X86_V3"
+      ]
+    }
+  },
+  "mu": 0.9481384165894786,
+  "lambda": 0.0036084391824351605,
+  "final_relative_primal": 9.999964969747064e-08,
+  "source": {
+    "tag": "rpca",
+    "repo": "https://github.com/dganguli/robust-pca",
+    "remote_verified_commit": "1d83ffacda8a4c14e4539b160cfea42066765729",
+    "zip_url": "https://codeload.github.com/dganguli/robust-pca/zip/1d83ffacda8a4c14e4539b160cfea42066765729",
+    "bytes": 322784,
+    "seconds": 4.2539890999905765,
+    "members": 13
+  },
+  "hashes": {
+    "leeds\\film.ogv": "acf20ff1bd614296c83546aee1ab6d2b9101945d14f2be76e29fe070651198ce",
+    "leeds\\rights.html": "f1d457c66f8104c74697cdd6e082294d140b30c298bd4bd690240a77897d683a",
+    "bound_film.npz": "33907c4e0568ac8a0b5c1888714b42d939f8340b413d8a71be43c626f0bc4ad0",
+    "upstream_film.npz": "52c1d1be28b26efe3cd4e9e54f8ff0a8400c165e25b31517de24331a8981a2f5"
+  }
+}

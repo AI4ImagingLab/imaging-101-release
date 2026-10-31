@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "thresholds": {
+    "weighted_mean_squared_residual": {
+      "comparison": "<=",
+      "boundary": 1.0327028555228954
+    }
+  },
+  "definition": "Mean squared original native data-minus-Gaussian model divided by offpulse per-channel RMS squared, over all10712providedgoodchannels and162timebins. No degrees-of-freedom subtraction; no fitted background or alignment; same8x4exposurequadrature as source. No identity comparison of6parameters. Boundary fixed from actually executed original bound fit with1e-6relative numerical allowance; independent finerquadrature errors0.000506noiseRMS."
+}

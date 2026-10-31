@@ -1,0 +1,18 @@
+Local mathematical extraction of the original FAIR-Unipd DSC-MRI toolbox,
+including its published SVD-family baselines and leakage-regression convention.
+Original authors/copyright and MIT license are preserved in LICENSE.
+
+Two independently diagnosed mathematical source defects are explicitly
+qualified: baseline column-major slice stride and the missing oSVD inverse-time
+factor. Other source conventions and negative estimates are retained. This is
+not a claim of unchanged reproduction or stable-spline implementation.
+
+The complete real GRE observations and external arterial curve were supplied
+in the original author repository. No separate data redistribution grant was
+identified. No independent Creative Commons grant or patient-truth accuracy is
+invented. This package is prepared for the user's authorized local research;
+public redistribution rights for original observations remain unresolved.
+
+Exact source revision, paper versions, modifications, failed and successful
+native executions, data hashes and private archive index are documented in
+test/validation.md. Full upstream source and papers remain private.

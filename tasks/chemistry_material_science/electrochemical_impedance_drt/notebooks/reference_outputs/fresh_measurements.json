@@ -1,0 +1,66 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "65383e4deeb9581bf3fffccc9d14a596ac69305b6deeb45d898c13f0d1c6ef33",
+  "solver_runtime_s": 0.0023652000818401575,
+  "experiments_runtime_s": 0.03440020000562072,
+  "upstream_relative_errors": {
+    "reconstruction": 3.781466348305186e-08,
+    "series_parameters": 4.484547975810474e-13,
+    "fitted_impedance": 1.1240218391688943e-10
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 3.781466348305186e-08,
+    "observation_relative_error": 0.0017682761892180742,
+    "regularization_scan": [
+      [
+        1e-05,
+        0.00170674933576291,
+        0.1956034749168365
+      ],
+      [
+        0.001,
+        0.002356519720803413,
+        0.059156193717579596
+      ],
+      [
+        0.1,
+        0.006214965411548076,
+        0.030221768268662647
+      ]
+    ],
+    "series_L_H_R_ohm": [
+      5.565693972469408e-07,
+      0.11304496970197184
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_relative_error": 3.781466348305186e-08,
+      "series_parameters_0_relative_error": 6.862926877696701e-12,
+      "series_parameters_1_relative_error": 4.4845479631354764e-13,
+      "fitted_impedance_relative_error": 1.1240218391688943e-10
+    },
+    "thresholds": {
+      "reconstruction_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "series_parameters_0_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "series_parameters_1_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      },
+      "fitted_impedance_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

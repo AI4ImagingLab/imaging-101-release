@@ -1,0 +1,33 @@
+{
+  "baseline": [
+    {
+      "method": "Original 250-step I-CLASS phase kernel; independently corrected S18/spatial output, sigma=0.01",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "reference_type": "Attainable coherence lower bound already frozen from independent original run; no image truth or phase reference",
+  "alignment": "No comparison-image registration; source position and global correction piston are implicit observation gauges",
+  "thresholds": {
+    "image_consistency": {
+      "comparison": "<=",
+      "boundary": 0.0002
+    },
+    "mtf_consistency": {
+      "comparison": "<=",
+      "boundary": 2e-05
+    },
+    "covariance_coherence": {
+      "comparison": ">=",
+      "boundary": 6.906686629445275
+    }
+  },
+  "consistency_definition": "L2 relative image/MTF error using public observations and submitted OTF correction; covariance coherent-diagonal energy divided by squared total camera power",
+  "tolerance_note": "Nonzero float32 numerical tolerances; covariance boundary is frozen from the reproduced upstream kernel before final scoring.",
+  "upstream_observation_metrics": {
+    "image_consistency": 2.9947565569239924e-07,
+    "mtf_consistency": 1.0295304752839855e-06,
+    "covariance_coherence": 7.270196452047658
+  },
+  "evaluation_semantics": "Observation-defined image/MTF consistency plus coherent-covariance accumulation, independent of finite phase iterations or image-reference matching"
+}

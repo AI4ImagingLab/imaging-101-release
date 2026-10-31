@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "Author RUScal full fit on measured 4140 frequencies; method reference, no physical truth",
+      "weighted_rms_percent": 0.0774871
+    }
+  ],
+  "moduli_absolute_boundary_GPa": 0.002,
+  "frequency_absolute_boundary_MHz": 3e-06,
+  "observation_rms_percent_boundary": 0.08523581,
+  "metric_definitions": {
+    "moduli_absolute_error": "independent per component absolute difference in GPa",
+    "frequency_absolute_error": "maximum absolute error across all76 ordered theoretical frequencies, MHz",
+    "observation_rms_percent": "100*sqrt(sum(w*(fobs/fpred-1)^2)/count_nonzero(w)); correspondences recovered from monotone minimum-cost matching"
+  },
+  "reference_precision": "Native rusio prints six decimals Mbar; fitted native frequencies print seven decimals MHz. Nonzero boundaries exceed printing precision and validated continuous numerical variation, without image metrics on two scalar moduli."
+}

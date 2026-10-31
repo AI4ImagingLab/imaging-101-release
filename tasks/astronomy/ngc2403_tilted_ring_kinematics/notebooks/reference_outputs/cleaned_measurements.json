@@ -1,0 +1,31 @@
+{
+  "role": "Fresh active cleaned-code reconstruction and independent standalone scoring; not truth",
+  "reconstruction_seconds": 758.7620079999906,
+  "metrics": {
+    "rotation_range_nrmse": 5.751376769671087e-08,
+    "dispersion_range_nrmse": 0.0,
+    "position_angle_wrapped_rms_deg": 0.0,
+    "full_cube_rms_Jy_beam": 0.004572889593277305
+  },
+  "thresholds": {
+    "rotation_range_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.017034759657074735
+    },
+    "dispersion_range_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.10383335124662954
+    },
+    "position_angle_wrapped_rms_deg": {
+      "comparison": "<=",
+      "boundary": 0.3988151550292969
+    },
+    "full_cube_rms_Jy_beam": {
+      "comparison": "<=",
+      "boundary": 0.005076774190082738
+    }
+  },
+  "seed": -1,
+  "source": "public raw_data.npz only",
+  "environment": "runtime_environment.json"
+}

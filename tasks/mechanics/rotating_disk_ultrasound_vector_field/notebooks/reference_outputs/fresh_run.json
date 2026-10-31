@@ -1,0 +1,244 @@
+{
+  "environment": {
+    "sys_executable": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+    "python": "3.11.11",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "backend": "module://matplotlib_inline.backend_inline",
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "raw_sha256": "67e1e754a8e93e7f02ba35c3fa55f869b2a48c520d228e1d96d3e3d5b584ae38",
+  "full_reconstruction_seconds": 3.2178455000102986,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "vx_ncc": 1.0,
+      "vx_nrmse": 4.9102137563055166e-15,
+      "vz_ncc": 1.0,
+      "vz_nrmse": 1.034358962900707e-15,
+      "weighted_phasor_rms": 0.05201278063077122,
+      "outside_support_maxabs": 0.0
+    },
+    "thresholds": {
+      "vx_ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999999999956
+      },
+      "vx_nrmse": {
+        "comparison": "<=",
+        "boundary": 3.1279966911092165e-08
+      },
+      "vz_ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999999999956
+      },
+      "vz_nrmse": {
+        "comparison": "<=",
+        "boundary": 3.449385143851913e-08
+      },
+      "weighted_phasor_rms": {
+        "comparison": "<=",
+        "boundary": 0.057214058693848345
+      },
+      "outside_support_maxabs": {
+        "comparison": "<=",
+        "boundary": 1e-12
+      }
+    },
+    "errors": []
+  },
+  "selected_history": [
+    {
+      "robust_step": 1,
+      "iterations": 100,
+      "relative_change": 0.0022206293909106094,
+      "converged": false
+    },
+    {
+      "robust_step": 2,
+      "iterations": 43,
+      "relative_change": 0.0009977235547358643,
+      "converged": true
+    },
+    {
+      "robust_step": 3,
+      "iterations": 12,
+      "relative_change": 0.0009915145713361665,
+      "converged": true
+    }
+  ],
+  "reference_role": "Independent conditional author-method output, not measured true velocity",
+  "comparison_measurements": {
+    "Raw two-angle": {
+      "weighted_phasor_rms": 2.1720548095889983e-16,
+      "rms_from_raw_vector_mps": 0.0
+    },
+    "Nonrobust 10\u2074": {
+      "weighted_phasor_rms": 0.05327762392130917,
+      "rms_from_raw_vector_mps": 0.05205415229986599
+    },
+    "Robust 10\u00b3": {
+      "weighted_phasor_rms": 0.03882822583087129,
+      "rms_from_raw_vector_mps": 0.04554438171664312
+    },
+    "Selected robust 10\u2074": {
+      "weighted_phasor_rms": 0.05201278063077122,
+      "rms_from_raw_vector_mps": 0.05547287940963447
+    },
+    "Robust 10\u2075": {
+      "weighted_phasor_rms": 0.07225702895451473,
+      "rms_from_raw_vector_mps": 0.06296793744792119
+    }
+  },
+  "lag_histories": {
+    "1": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.0022206293909106094,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 43,
+        "relative_change": 0.0009977235547358643,
+        "converged": true
+      },
+      {
+        "robust_step": 3,
+        "iterations": 12,
+        "relative_change": 0.0009915145713361665,
+        "converged": true
+      }
+    ],
+    "2": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.002838371490462132,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 100,
+        "relative_change": 0.008889834079010908,
+        "converged": false
+      },
+      {
+        "robust_step": 3,
+        "iterations": 100,
+        "relative_change": 0.0023175386763491976,
+        "converged": false
+      }
+    ],
+    "4": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.0015965110225169574,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 73,
+        "relative_change": 0.0009976561992324766,
+        "converged": true
+      },
+      {
+        "robust_step": 3,
+        "iterations": 100,
+        "relative_change": 0.001161557454606104,
+        "converged": false
+      }
+    ]
+  },
+  "window_histories": {
+    "1": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.002227772611655131,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 45,
+        "relative_change": 0.000987537585651049,
+        "converged": true
+      },
+      {
+        "robust_step": 3,
+        "iterations": 15,
+        "relative_change": 0.0009781356994513473,
+        "converged": true
+      }
+    ],
+    "5": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.0022258901876247954,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 44,
+        "relative_change": 0.0009993616532930915,
+        "converged": true
+      },
+      {
+        "robust_step": 3,
+        "iterations": 14,
+        "relative_change": 0.0009891311438918742,
+        "converged": true
+      }
+    ],
+    "11": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.0022206293909106094,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 43,
+        "relative_change": 0.0009977235547358643,
+        "converged": true
+      },
+      {
+        "robust_step": 3,
+        "iterations": 12,
+        "relative_change": 0.0009915145713361665,
+        "converged": true
+      }
+    ],
+    "21": [
+      {
+        "robust_step": 1,
+        "iterations": 100,
+        "relative_change": 0.002204504292686163,
+        "converged": false
+      },
+      {
+        "robust_step": 2,
+        "iterations": 43,
+        "relative_change": 0.0009861886331572402,
+        "converged": true
+      },
+      {
+        "robust_step": 3,
+        "iterations": 8,
+        "relative_change": 0.0009763746637003015,
+        "converged": true
+      }
+    ]
+  }
+}

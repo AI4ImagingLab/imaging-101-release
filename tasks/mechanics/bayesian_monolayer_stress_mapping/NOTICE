@@ -1,0 +1,1 @@
+BISM numerical mathematics adapted from Vincent Nier and Philippe Marcq original BISM.m, GPL-3.0. Copyright and license retained in LICENSE. Author-provided finite-element traction and exact stress example distributed in the same GPL-3.0 repository; manual identifies simulation and units. Source version, adaptations and provenance are in maintainer test/validation.md.

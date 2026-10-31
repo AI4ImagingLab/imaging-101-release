@@ -1,0 +1,1 @@
+Numerical adaptation: XPSinv by Matthew Ozon, Konstantin Tumashevich and Nønne L. Prisle (2022), CC BY 4.0. Acquisition observations/calibration from PROPHESY v0.3.0, Zenodo 8207701, CC BY 4.0. Changes: Julia-to-NumPy extraction, diagonal-covariance proximal specialization, bounded diagnostic storage, all-depth free-boundary selected configuration.

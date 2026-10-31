@@ -1,0 +1,37 @@
+{
+  "vase": {
+    "seconds": 1.256058500148356,
+    "shape": [
+      168,
+      168
+    ],
+    "valid_normals": 28224,
+    "iterations": 43,
+    "final_energy": 111.51781323101733,
+    "original_gauge": -1.2522947604595145,
+    "range": 36.141761955484725,
+    "boundary": "missing one-sided differences are zero rows; alln RHS entries retained like source"
+  },
+  "tent": {
+    "seconds": 0.7516731999348849,
+    "shape": [
+      128,
+      128
+    ],
+    "valid_normals": 16384,
+    "iterations": 70,
+    "final_energy": 84.94356960895826,
+    "original_gauge": -2.5131629296345994,
+    "range": 37.29010216539854,
+    "boundary": "missing one-sided differences are zero rows; alln RHS entries retained like source"
+  },
+  "runtime_seconds": 2.202841999940574,
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "exit_status": 0,
+  "source_commit": "93ad6d5b2fdc4d1eeafaaa4c4ae1251a039ec216",
+  "hashes": {
+    "bound_author_fields.npz": "9d0c655500b64269539b14af41549529aca77c325cc71d13e37b312d043e9dfb",
+    "upstream_fields.npz": "7b18be24252ad5f9c80c443b806a00559f7d143fcaf8abdd0622cbc385d052d9"
+  }
+}

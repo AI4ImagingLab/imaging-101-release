@@ -1,0 +1,1 @@
+Explicit local extraction of multiphonon numerical algorithms. Copyright(c)2017 ORNL NDAV; Jiao Lin and contributors. MIT License; see LICENSE. No histogram/Mantid/domain solver is required in the cleaned runtime. The original data and numeric source versions are documented privately in test/validation.md.

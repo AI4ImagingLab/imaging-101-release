@@ -1,0 +1,15 @@
+Acoustic measurement and calibration data: Ennes Sarradj (2021),
+Microphone array data for basic examples in Acoular,
+https://doi.org/10.5281/zenodo.5809069
+Creative Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+The original example_data.h5 has MD5 a4c926bf05d02a7fad55c8c208645863,
+matching the deposited record. Measurements are converted losslessly to NPZ;
+all 25600 samples and 56 channels are retained. Calibration and coordinates
+are numeric conversions of the deposited instrument files. The time record
+is 0.5 s at its actual stored sample frequency, despite the dataset's one-second
+description. No source-power truth is implied by the measurement release.
+
+The extracted numerical implementation is adapted from the Acoular Development
+Team's BSD-3-Clause source; the full software terms are preserved in LICENSE.

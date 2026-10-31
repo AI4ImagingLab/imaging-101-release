@@ -1,0 +1,13 @@
+# Shipped interfaces and execution flow
+
+`preprocessing.load_data(path)` loads NPZ with allow_pickle=False and returns unbatched copies: measurements float64(64,1600) V; lead_field float64(64,789) V/(A m); positions float64(263,3) m; electrodes float64(64,3) m; times float64(1600) s. `average_reference(measurements)` subtracts the channel mean. The nominal solver builds the equivalent projection explicitly.
+
+`physics_model.projection(channels=64)` returns P=I−11ᵀ/channels. `forward(currents,lead_field)` accepts real(node,3,time) current moments in A m and returns average-reference electrode potentials(channel,time) in V. `adjoint(potentials,lead_field)` evaluates GᵀP and restores(node,3,time) order. No domain reconstruction library is used.
+
+`solvers.reconstruct(data,lambda2=LAMBDA2)` defaults to LAMBDA2=1/9 and NOISE_STD=1e-5 V, validates positive regularization, and returns(outputs,stages). Outputs contains reconstruction float64(1,263,3,1600) A m. Stages contains kernel float64(789,64) A m/V, normalized singular_values float64(64), scalar trace_scale, and projection float64(64,64). Whitening, trace normalization, SVD and inverse singular-value filtering are explicit. There are no file writes or stochastic steps.
+
+`main.main()` resolves the task root from its file, loads data/raw_data.npz, calls the nominal solver, creates output/, and writes output/reconstruction.npz. Run with python -m src.main. Importing main never changes a plotting backend.
+
+`visualization.run_experiments(data,upstream)` actively computes the nominal result and five regularization settings; it returns current arrays, observed/predicted potentials, power, singular values, sensitivity measurements and metrics. `make_figures(data,e)` returns three Matplotlib figure groups. `export(figures,e,directory)` explicitly saves private PNG/SVG/PDF plus numeric NPZ/JSON. The notebook actively runs the same functions and loads upstream arrays only for comparison.
+
+test/fixtures/oracle_stages.npz contains independently captured MNE kernel, projection, whitener, source covariance and singular values, all consumed by parity tests. The oracle source is never imported by runtime/tests/notebook. evaluation/baseline_reference.npz contains the independently reproduced standard-method field, not physical truth. The standalone Judge validates the exact required shape/dtype and finite values before scoring. It resolves hidden paths relative to its own file, keeps caller-relative CLI paths, writes UTF-8 JSON and returns0/1/2. Tests cover every malformed/overflow/quality/evaluator/report-write case, foreign cwd, original parity, projected adjointness and ridge stationarity.

@@ -1,0 +1,326 @@
+{
+  "role": "fresh cleaned run, not truth",
+  "runtime_seconds": 0.004138899967074394,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "eedf_relative_l2": 0.0,
+      "energy_max_abs": 0.0,
+      "parameter_max_relative": 1.8891314354156382e-16,
+      "normalization_error": 2.220446049250313e-16
+    },
+    "thresholds": {
+      "eedf_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-07
+      },
+      "energy_max_abs": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      },
+      "parameter_max_relative": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "normalization_error": {
+        "comparison": "<=",
+        "boundary": 1e-07
+      }
+    },
+    "errors": []
+  },
+  "fit_ablation": [
+    [
+      "First window",
+      2.320833441149439,
+      0.00042703907017933667,
+      0.055171165476270156
+    ],
+    [
+      "Native refined window",
+      2.410218469433933,
+      0.00036726772369264585,
+      0.047449026969430874
+    ]
+  ],
+  "noise_records": [
+    {
+      "noise_fraction": 0.0,
+      "repeat": 0,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 1,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 2,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 3,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 4,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 5,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 6,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0,
+      "repeat": 7,
+      "T_e": 2.410218469433933,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.0,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 0,
+      "T_e": 2.410178124208285,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.021101941411710325,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 1,
+      "T_e": 2.4102025611413675,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.02874490528281898,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 2,
+      "T_e": 2.4102468711290763,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.02126165718860813,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 3,
+      "T_e": 2.410145180190376,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.02209450320970807,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 4,
+      "T_e": 2.410195325610487,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.02051075560017532,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 5,
+      "T_e": 2.4101835612955513,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.026019042335513637,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 6,
+      "T_e": 2.4101958051662398,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.02725240302064186,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 1e-05,
+      "repeat": 7,
+      "T_e": 2.410290886006195,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.030778919674672153,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 0,
+      "T_e": 2.425126037584804,
+      "V_P": 2.2726192129813256,
+      "eedf_difference": 0.10794294532204061,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 1,
+      "T_e": 2.4104865044727877,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.14124525183732067,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 2,
+      "T_e": 2.410065185432056,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.1363115944630759,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 3,
+      "T_e": 2.4252425520671697,
+      "V_P": 2.2726192129813256,
+      "eedf_difference": 0.11066373960791659,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 4,
+      "T_e": 2.4102809785919934,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.1200419400158036,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 5,
+      "T_e": 2.39594057398866,
+      "V_P": 2.0293453317515286,
+      "eedf_difference": 0.10717449706435342,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 6,
+      "T_e": 2.4109514215530314,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.11231335123989784,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 5e-05,
+      "repeat": 7,
+      "T_e": 2.4252644314584195,
+      "V_P": 2.2726192129813256,
+      "eedf_difference": 0.12322962064012373,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 0,
+      "T_e": 2.4254715347313507,
+      "V_P": 2.2726192129813256,
+      "eedf_difference": 0.25341925192155973,
+      "negative_fraction": 0.015384615384615385
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 1,
+      "T_e": 2.425550522729297,
+      "V_P": 2.2726192129813256,
+      "eedf_difference": 0.22301066371988496,
+      "negative_fraction": 0.015384615384615385
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 2,
+      "T_e": 2.3951092251668586,
+      "V_P": 2.0293453317515286,
+      "eedf_difference": 0.20973924998892585,
+      "negative_fraction": 0.015873015873015872
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 3,
+      "T_e": 2.4246918997695954,
+      "V_P": 2.2726192129813256,
+      "eedf_difference": 0.2248872235250665,
+      "negative_fraction": 0.015384615384615385
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 4,
+      "T_e": 2.4100220523998797,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.2702011530449471,
+      "negative_fraction": 0.0625
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 5,
+      "T_e": 2.4096904825002783,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.18349520292335839,
+      "negative_fraction": 0.0
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 6,
+      "T_e": 2.4116758155899958,
+      "V_P": 2.150982272366427,
+      "eedf_difference": 0.20102440229354063,
+      "negative_fraction": 0.015625
+    },
+    {
+      "noise_fraction": 0.0001,
+      "repeat": 7,
+      "T_e": 2.3968874330803325,
+      "V_P": 2.0293453317515286,
+      "eedf_difference": 0.2257559142877356,
+      "negative_fraction": 0.0
+    }
+  ],
+  "noise_failures": [],
+  "sampling_ablation": [
+    {
+      "stride": 1,
+      "samples": 304,
+      "temperature_eV": 2.410218469433933,
+      "negative_fraction": 0.0
+    },
+    {
+      "stride": 2,
+      "samples": 152,
+      "temperature_eV": 2.439813019393585,
+      "negative_fraction": 0.0
+    },
+    {
+      "stride": 3,
+      "samples": 102,
+      "temperature_eV": 2.410093825027838,
+      "negative_fraction": 0.0
+    }
+  ]
+}

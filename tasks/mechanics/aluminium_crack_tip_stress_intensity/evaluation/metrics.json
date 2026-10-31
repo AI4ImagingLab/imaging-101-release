@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Original direct Williams fit of full measured nodemap; no independent stress truth",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0,
+      "stress_intensity_ncc_vs_ref": 1.0,
+      "stress_intensity_nrmse_vs_ref": 0.0
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.999999,
+  "reconstruction_nrmse_boundary": 1e-06,
+  "stress_intensity_ncc_boundary": 0.999999,
+  "stress_intensity_nrmse_boundary": 1e-06,
+  "reference_role": "published-method baseline; agreement is not proof of physical accuracy",
+  "threshold_rationale": "Independent full original/local maximum stress discrepancy 1.53e-12 MPa and intensity discrepancy 3.2e-14 MPa sqrt(m). Bounds allow float32 serialization while rejecting 1% scale errors.",
+  "nrmse_definition": "RMS error divided by max(reference)-min(reference), separately for each entire declared array."
+}

@@ -1,0 +1,9 @@
+{
+  "evaluation_version": 1,
+  "reference_type": "independent upstream method result; no physical ground truth",
+  "parameter_relative_max_boundary": 0.0001,
+  "curve_relative_l2_boundary": 1e-06,
+  "model_consistency_relative_l2_boundary": 1e-10,
+  "observation_sse_boundary": 0.003,
+  "definition": "Parameter differences divided by absolute reference components. All three inferred physical parameters and every modeled lag are evaluated; no alignment."
+}

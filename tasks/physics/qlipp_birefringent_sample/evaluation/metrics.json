@@ -1,0 +1,60 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original execution on exact bound real observations",
+      "relative_l2_vs_ref": 0.0
+    }
+  ],
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        3,
+        16,
+        128,
+        256
+      ],
+      "dtype": "float32",
+      "metric": "relative_l2",
+      "boundary": 2e-05
+    },
+    "orientation": {
+      "shape": [
+        1,
+        3,
+        16,
+        128,
+        256
+      ],
+      "dtype": "float32",
+      "metric": "angular_rmse",
+      "boundary": 0.0001
+    },
+    "transmittance": {
+      "shape": [
+        1,
+        3,
+        16,
+        128,
+        256
+      ],
+      "dtype": "float32",
+      "metric": "relative_l2",
+      "boundary": 2e-05
+    },
+    "depolarization": {
+      "shape": [
+        1,
+        3,
+        16,
+        128,
+        256
+      ],
+      "dtype": "float32",
+      "metric": "relative_l2",
+      "boundary": 2e-05
+    }
+  },
+  "metric_definition": "Relative L2 for each required quantity. Orientation: sqrt(sum(sin(reference retardance)^2 * wrapped_delta^2)/sum(sin(reference retardance)^2)); wrapped_delta=atan2(sin(2 delta),cos(2 delta))/2, radians. No crop or rescaling.",
+  "provenance": "See test/validation.md for original-run and numerical precision evidence."
+}

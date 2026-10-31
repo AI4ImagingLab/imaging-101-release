@@ -1,0 +1,15 @@
+{
+  "command": [
+    "wsl",
+    "env",
+    "OMP_NUM_THREADS=1",
+    "OPENBLAS_NUM_THREADS=1",
+    "MKL_NUM_THREADS=1",
+    "octave",
+    "--no-gui",
+    "--quiet",
+    "/mnt/d/yan1/agent/AutoSkill/imaging-101-maintainer/research_batch7_20261022/groups/astro_earth_mech/ultrasound/original_matlab.m"
+  ],
+  "returncode": 0,
+  "runtime_seconds": 20.72989509999752
+}

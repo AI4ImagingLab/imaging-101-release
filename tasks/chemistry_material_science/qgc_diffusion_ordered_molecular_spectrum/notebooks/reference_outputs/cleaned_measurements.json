@@ -1,0 +1,28 @@
+{
+  "full_runtime_s": 240.49992610001937,
+  "metrics": {
+    "maximum_regularizer_budget_ratio": 1.0,
+    "maximum_observation_ball_ratio": 1.0000000006169065,
+    "maximum_negative_relative_amplitude": 1.8165957778083546e-11
+  },
+  "ablation_records": [
+    {
+      "lambda": 0.0,
+      "runtime_s": 6.570807799929753,
+      "last_iteration": 199999,
+      "residual_ratio": 1.0000000040625412
+    },
+    {
+      "lambda": 0.1,
+      "runtime_s": 18.128019500058144,
+      "last_iteration": 199999,
+      "residual_ratio": 1.0000000000301712
+    },
+    {
+      "lambda": 1.0,
+      "runtime_s": 16.75922859995626,
+      "last_iteration": 199999,
+      "residual_ratio": 0.9995498460912906
+    }
+  ]
+}

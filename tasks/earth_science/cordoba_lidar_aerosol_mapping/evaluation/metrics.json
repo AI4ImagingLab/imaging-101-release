@@ -1,0 +1,18 @@
+{
+  "backscatter_ncc_boundary": 0.99999999,
+  "backscatter_nrmse_boundary": 1e-07,
+  "extinction_ncc_boundary": 0.99999999,
+  "extinction_nrmse_boundary": 1e-07,
+  "backscatter_return_rms_boundary": 0.11957340421452838,
+  "extinction_return_rms_boundary": 0.11957340421452838,
+  "baseline": [
+    {
+      "method": "Original C++Fernald source,real66profiles",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "relative_return_rms": 0.10870309474048033
+    }
+  ],
+  "boundary_provenance": "Numerical map tolerance frozen1e-7before extraction,checked independent original and I/O-instrumented rerun identical; independent physical return error bounded1.1times original smoothing/noise residual.",
+  "return_rms_definition": "RMS normalized elastic-return residual divided by RMS observed relative return,all66times and759heightbins; beta or alpha/50supplies aerosol beta;known molecular extinction/backscatter and50sr prior;no gain fitting."
+}

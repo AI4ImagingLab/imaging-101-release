@@ -1,0 +1,273 @@
+{
+  "baseline": [
+    {
+      "method": "Full native3-mode GPLFM versus underlying author-synthetic10DOFtruth",
+      "per_quantity": {
+        "modal_force": {
+          "full": {
+            "ncc": 0.9003823038657186,
+            "nrmse_dynamic_range": 0.047375856200483804,
+            "relative_l2": 0.4626219179765535
+          },
+          "per_channel": [
+            {
+              "ncc": 0.9784700624509908,
+              "nrmse_dynamic_range": 0.03319834667533517,
+              "relative_l2": 0.20703303438313123
+            },
+            {
+              "ncc": 0.7476978701724031,
+              "nrmse_dynamic_range": 0.12139147381163494,
+              "relative_l2": 0.7893459222226933
+            },
+            {
+              "ncc": 0.5337207570440574,
+              "nrmse_dynamic_range": 0.22486498554152268,
+              "relative_l2": 1.3056424071854573
+            }
+          ]
+        },
+        "displacement": {
+          "full": {
+            "ncc": 0.9961394279919228,
+            "nrmse_dynamic_range": 0.010869892690760927,
+            "relative_l2": 0.08784527357865077
+          },
+          "per_channel": [
+            {
+              "ncc": 0.9942037813992269,
+              "nrmse_dynamic_range": 0.017972755084524165,
+              "relative_l2": 0.10751872659373436
+            },
+            {
+              "ncc": 0.9948730340131159,
+              "nrmse_dynamic_range": 0.016953805073443892,
+              "relative_l2": 0.10113652348208377
+            },
+            {
+              "ncc": 0.9953976010287973,
+              "nrmse_dynamic_range": 0.016110785668987923,
+              "relative_l2": 0.09585147316580842
+            },
+            {
+              "ncc": 0.9957830065528234,
+              "nrmse_dynamic_range": 0.015463497260237213,
+              "relative_l2": 0.09177043930206687
+            },
+            {
+              "ncc": 0.9960406141957726,
+              "nrmse_dynamic_range": 0.015020830733756155,
+              "relative_l2": 0.08893603334285644
+            },
+            {
+              "ncc": 0.9962046229131931,
+              "nrmse_dynamic_range": 0.014736353575821298,
+              "relative_l2": 0.08708455719791207
+            },
+            {
+              "ncc": 0.9962935700840628,
+              "nrmse_dynamic_range": 0.014585070798708504,
+              "relative_l2": 0.08606899614627354
+            },
+            {
+              "ncc": 0.9963066658590757,
+              "nrmse_dynamic_range": 0.014577372332013864,
+              "relative_l2": 0.08593163457459414
+            },
+            {
+              "ncc": 0.9962602516439696,
+              "nrmse_dynamic_range": 0.014684380616054723,
+              "relative_l2": 0.08648875204347854
+            },
+            {
+              "ncc": 0.9961869271026034,
+              "nrmse_dynamic_range": 0.014839385081001839,
+              "relative_l2": 0.08735044523228601
+            }
+          ]
+        },
+        "velocity": {
+          "full": {
+            "ncc": 0.9999523264184814,
+            "nrmse_dynamic_range": 0.0012198958747377674,
+            "relative_l2": 0.009764473347429081
+          },
+          "per_channel": [
+            {
+              "ncc": 0.9990958701300721,
+              "nrmse_dynamic_range": 0.007288951991154873,
+              "relative_l2": 0.0425254229395715
+            },
+            {
+              "ncc": 0.9998352358885367,
+              "nrmse_dynamic_range": 0.0031215865299339778,
+              "relative_l2": 0.018153002305847793
+            },
+            {
+              "ncc": 0.9999453858976382,
+              "nrmse_dynamic_range": 0.0017996391270200143,
+              "relative_l2": 0.010468918852807742
+            },
+            {
+              "ncc": 0.9999394530556236,
+              "nrmse_dynamic_range": 0.0018853719994215742,
+              "relative_l2": 0.011015110058789508
+            },
+            {
+              "ncc": 0.9999657643878873,
+              "nrmse_dynamic_range": 0.001411980533450351,
+              "relative_l2": 0.008275497433717355
+            },
+            {
+              "ncc": 0.9999803206798348,
+              "nrmse_dynamic_range": 0.0010684932828780955,
+              "relative_l2": 0.006275464503038154
+            },
+            {
+              "ncc": 0.9999710859081439,
+              "nrmse_dynamic_range": 0.0012945193137333594,
+              "relative_l2": 0.007605767924189103
+            },
+            {
+              "ncc": 0.999975708366579,
+              "nrmse_dynamic_range": 0.001188210712539895,
+              "relative_l2": 0.0069701560173631655
+            },
+            {
+              "ncc": 0.9999817187244748,
+              "nrmse_dynamic_range": 0.0010351346357492619,
+              "relative_l2": 0.00604702701577846
+            },
+            {
+              "ncc": 0.999902468674984,
+              "nrmse_dynamic_range": 0.002404917868717402,
+              "relative_l2": 0.013968189341134175
+            }
+          ]
+        },
+        "acc": {
+          "full": {
+            "ncc": 0.9993833605886467,
+            "nrmse_dynamic_range": 0.004422546424634022,
+            "relative_l2": 0.03511315344107479
+          },
+          "per_channel": [
+            {
+              "ncc": 0.9839166078728879,
+              "nrmse_dynamic_range": 0.026776506935771795,
+              "relative_l2": 0.17941296196043593
+            },
+            {
+              "ncc": 0.996972966047436,
+              "nrmse_dynamic_range": 0.012536125245827326,
+              "relative_l2": 0.07776600195705731
+            },
+            {
+              "ncc": 0.9994090309611081,
+              "nrmse_dynamic_range": 0.005833328145341618,
+              "relative_l2": 0.03465149780330837
+            },
+            {
+              "ncc": 0.9990042528377698,
+              "nrmse_dynamic_range": 0.007432757999943947,
+              "relative_l2": 0.04481832380506011
+            },
+            {
+              "ncc": 0.9994912221224777,
+              "nrmse_dynamic_range": 0.005129707377117344,
+              "relative_l2": 0.031928202172127024
+            },
+            {
+              "ncc": 0.9998223317567912,
+              "nrmse_dynamic_range": 0.003001871501271417,
+              "relative_l2": 0.018879728062845175
+            },
+            {
+              "ncc": 0.9995057624477047,
+              "nrmse_dynamic_range": 0.005071898383648831,
+              "relative_l2": 0.03146814672196996
+            },
+            {
+              "ncc": 0.9996743101991349,
+              "nrmse_dynamic_range": 0.00421531956611714,
+              "relative_l2": 0.025520632448255153
+            },
+            {
+              "ncc": 0.9999151135749779,
+              "nrmse_dynamic_range": 0.0022105063868880876,
+              "relative_l2": 0.013041924390791073
+            },
+            {
+              "ncc": 0.9991279843078087,
+              "nrmse_dynamic_range": 0.007237773438130413,
+              "relative_l2": 0.04175289273907306
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "reconstruction_floor_01_ncc_boundary": 0.8947834032593043,
+  "reconstruction_floor_01_nrmse_boundary": 0.019770030592976582,
+  "reconstruction_floor_02_ncc_boundary": 0.8953857306118043,
+  "reconstruction_floor_02_nrmse_boundary": 0.018649185580788284,
+  "reconstruction_floor_03_ncc_boundary": 0.8958578409259176,
+  "reconstruction_floor_03_nrmse_boundary": 0.017721864235886717,
+  "reconstruction_floor_04_ncc_boundary": 0.8962047058975411,
+  "reconstruction_floor_04_nrmse_boundary": 0.017009846986260936,
+  "reconstruction_floor_05_ncc_boundary": 0.8964365527761954,
+  "reconstruction_floor_05_nrmse_boundary": 0.01652291380713177,
+  "reconstruction_floor_06_ncc_boundary": 0.8965841606218738,
+  "reconstruction_floor_06_nrmse_boundary": 0.01620998893340343,
+  "reconstruction_floor_07_ncc_boundary": 0.8966642130756566,
+  "reconstruction_floor_07_nrmse_boundary": 0.016043577878579355,
+  "reconstruction_floor_08_ncc_boundary": 0.8966759992731681,
+  "reconstruction_floor_08_nrmse_boundary": 0.016035109565215252,
+  "reconstruction_floor_09_ncc_boundary": 0.8966342264795727,
+  "reconstruction_floor_09_nrmse_boundary": 0.016152818677660198,
+  "reconstruction_floor_10_ncc_boundary": 0.896568234392343,
+  "reconstruction_floor_10_nrmse_boundary": 0.016323323589102025,
+  "velocity_floor_01_ncc_boundary": 0.8991862831170648,
+  "velocity_floor_01_nrmse_boundary": 0.00801784719027036,
+  "velocity_floor_02_ncc_boundary": 0.8998517122996831,
+  "velocity_floor_02_nrmse_boundary": 0.0034337451829273757,
+  "velocity_floor_03_ncc_boundary": 0.8999508473078743,
+  "velocity_floor_03_nrmse_boundary": 0.001979603039722016,
+  "velocity_floor_04_ncc_boundary": 0.8999455077500612,
+  "velocity_floor_04_nrmse_boundary": 0.0020739091993637318,
+  "velocity_floor_05_ncc_boundary": 0.8999691879490986,
+  "velocity_floor_05_nrmse_boundary": 0.001553178586795386,
+  "velocity_floor_06_ncc_boundary": 0.8999822886118514,
+  "velocity_floor_06_nrmse_boundary": 0.0011753426111659052,
+  "velocity_floor_07_ncc_boundary": 0.8999739773173295,
+  "velocity_floor_07_nrmse_boundary": 0.0014239712451066956,
+  "velocity_floor_08_ncc_boundary": 0.8999781375299212,
+  "velocity_floor_08_nrmse_boundary": 0.0013070317837938846,
+  "velocity_floor_09_ncc_boundary": 0.8999835468520274,
+  "velocity_floor_09_nrmse_boundary": 0.0011386480993241881,
+  "velocity_floor_10_ncc_boundary": 0.8999122218074856,
+  "velocity_floor_10_nrmse_boundary": 0.0026454096555891425,
+  "acceleration_floor_01_ncc_boundary": 0.8855249470855991,
+  "acceleration_floor_01_nrmse_boundary": 0.029454157629348977,
+  "acceleration_floor_02_ncc_boundary": 0.8972756694426924,
+  "acceleration_floor_02_nrmse_boundary": 0.01378973777041006,
+  "acceleration_floor_03_ncc_boundary": 0.8994681278649973,
+  "acceleration_floor_03_nrmse_boundary": 0.00641666095987578,
+  "acceleration_floor_04_ncc_boundary": 0.8991038275539929,
+  "acceleration_floor_04_nrmse_boundary": 0.008176033799938342,
+  "acceleration_floor_05_ncc_boundary": 0.8995420999102299,
+  "acceleration_floor_05_nrmse_boundary": 0.005642678114829079,
+  "acceleration_floor_06_ncc_boundary": 0.8998400985811121,
+  "acceleration_floor_06_nrmse_boundary": 0.003302058651398559,
+  "acceleration_floor_07_ncc_boundary": 0.8995551862029343,
+  "acceleration_floor_07_nrmse_boundary": 0.005579088222013714,
+  "acceleration_floor_08_ncc_boundary": 0.8997068791792214,
+  "acceleration_floor_08_nrmse_boundary": 0.004636851522728854,
+  "acceleration_floor_09_ncc_boundary": 0.8999236022174801,
+  "acceleration_floor_09_nrmse_boundary": 0.0024315570255768965,
+  "acceleration_floor_10_ncc_boundary": 0.8992151858770279,
+  "acceleration_floor_10_nrmse_boundary": 0.007961550781943456,
+  "metric_scope": "Every floor separately for displacement,velocity,acceleration; all60metrics mustpass; all100001times",
+  "nrmse_definition": "RMS error divided by the dynamic range of the corresponding complete reference floor history. No mean subtraction, alignment, scaling, temporal interpolation or crop.",
+  "threshold_rationale": "Frozen beforelocalextraction: NCC>=.9times nativeNCC andNRMSE<=1.1times nativeNRMSE for each actualtrue-response floor history. Forces are nuisance diagnostics, not submittedoutputs."
+}

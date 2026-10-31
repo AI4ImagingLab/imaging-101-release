@@ -1,0 +1,12 @@
+This local implementation adapts the mathematical statistical-equilibrium,
+extinction and crossed-diagnostic algorithms of PyNeb by Valentina Luridiana,
+Christophe Morisset and Richard A. Shaw. Original source version1.1.32 matches
+the verified repository revision recorded in test/validation.md.
+PyNeb is distributed under GNU GPL version3; see LICENSE.
+Atomic radiative and effective collision data preserve the selected original
+model values and their scientific source identifiers, listed in README and
+test/validation.md. Original atomic text files with source citations are
+retained in the private provenance archive.
+Local adaptation removes the domain framework, file-format dependencies,
+unrelated physical processes and other ions, while explicitly implementing
+all mathematical stages required for the selected six-ion problem.

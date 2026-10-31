@@ -1,0 +1,36 @@
+{
+  "baseline": [
+    {
+      "method": "Original renz0.2.1 dir.MM, complete observations, normalized units",
+      "Km_max_relative_error": 0.0,
+      "Vmax_max_relative_error": 0.0,
+      "fitted_rate_max_absolute_error": 0.0
+    }
+  ],
+  "thresholds": {
+    "Km_max_relative_error": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "Vmax_max_relative_error": {
+      "comparison": "<=",
+      "boundary": 0.002
+    },
+    "fitted_rate_max_absolute_error": {
+      "comparison": "<=",
+      "boundary": 0.1
+    },
+    "output_forward_consistency_max_absolute_error": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    }
+  },
+  "definitions": {
+    "Km_max_relative_error": "max(abs(K/Kref-1)) across eight groups",
+    "Vmax_max_relative_error": "max(abs(V/Vref-1)) across eight groups",
+    "fitted_rate_max_absolute_error": "max absolute rate error in micromolar/min across all80 observations",
+    "output_forward_consistency_max_absolute_error": "max abs(fitted-V*S/(K+S)) in micromolar/min"
+  },
+  "reference_type": "Independent original method result, not biological ground truth",
+  "rationale": "Frozen before local implementation. Parameter0.2% and curve0.1micromolar/min are small relative to observational scatter; independent tighter upstream parity is separately mandatory. No rescaling/masking/alignment."
+}

@@ -1,0 +1,64 @@
+{
+  "fresh_runtime_seconds": 0.0955178000003798,
+  "data_sha256": "9abfacdf1d27a926b75f33c30295c7e060c8e36666a31c427f3db4bba453c29f",
+  "metrics_vs_original": {
+    "ncc": 1.0,
+    "dynamic_range_nrmse": 0.0,
+    "max_abs": 0.0
+  },
+  "mean_efficiency": 0.13277778198383228,
+  "median_efficiency": 0.14446839690208435,
+  "minimum_efficiency": -0.8073168396949768,
+  "maximum_efficiency": 0.5578547716140747,
+  "negative_pixels": 4446,
+  "supported_pixels": 29261,
+  "gamma_delta_epsilon_alpha": [
+    0.9940000176429749,
+    0.014000000432133675,
+    0.014999999664723873,
+    0.01600000075995922
+  ],
+  "smoothing_experiments": [
+    {
+      "sigma_pixel": 0.0,
+      "nonfinite": 0,
+      "minimum": -160.9727020263672,
+      "maximum": 119.11613464355469,
+      "median": 0.14649082720279694,
+      "outside_display": 1685
+    },
+    {
+      "sigma_pixel": 0.5,
+      "nonfinite": 0,
+      "minimum": -3.8475489616394043,
+      "maximum": 0.8494090437889099,
+      "median": 0.14620040357112885,
+      "outside_display": 294
+    },
+    {
+      "sigma_pixel": 1.0,
+      "nonfinite": 0,
+      "minimum": -0.8073168396949768,
+      "maximum": 0.5578547716140747,
+      "median": 0.14446839690208435,
+      "outside_display": 0
+    },
+    {
+      "sigma_pixel": 1.5,
+      "nonfinite": 0,
+      "minimum": -0.4410852789878845,
+      "maximum": 0.4401628077030182,
+      "median": 0.1447770595550537,
+      "outside_display": 0
+    },
+    {
+      "sigma_pixel": 2.0,
+      "nonfinite": 0,
+      "minimum": -0.304759681224823,
+      "maximum": 0.3985021114349365,
+      "median": 0.14584872126579285,
+      "outside_display": 0
+    }
+  ],
+  "figures": 12
+}

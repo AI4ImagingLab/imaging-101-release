@@ -1,0 +1,80 @@
+{
+  "raw_sha256": "c6321c7748aea4871dd27fd865f19c955391e9116f7a1a863c80c0c7b6940d0b",
+  "composition_rmse_per_sample": [
+    2.189442500957721,
+    1.7545711551069494,
+    0.9150269850301332,
+    1.027834481648999,
+    1.2197164028303196,
+    1.3922455955517805,
+    1.6625255561945511,
+    1.943888075053019
+  ],
+  "composition_rmse_boundary": [
+    2.4083867510534933,
+    1.9300282706176446,
+    1.0065296835331468,
+    1.130617929813899,
+    1.3416880431133515,
+    1.5314701551069587,
+    1.8287781118140063,
+    2.138276882558321
+  ],
+  "observed_rwp": [
+    0.11932184493172561,
+    0.12416478597492109,
+    0.11414594483334103,
+    0.13715226151308793,
+    0.12240299427931615,
+    0.1424898971915081,
+    0.12788136286330282,
+    0.12437149654451829
+  ],
+  "observed_rwp_boundary": [
+    0.1312540294248982,
+    0.1365812645724132,
+    0.12556053931667516,
+    0.15086748766439673,
+    0.13464329370724779,
+    0.1567388869106589,
+    0.14066949914963311,
+    0.13680864619897012
+  ],
+  "baseline_max_absolute_fraction_error": 4.9617,
+  "shift_absolute_boundary": 0.001,
+  "fitted_nrmse_boundary": 0.001,
+  "fraction_scale_consistency_boundary": 0.005,
+  "baseline": [
+    {
+      "method": "Original PowdR BFGS/Rwp, known20wt% internal standard",
+      "composition_rmse_per_sample": [
+        2.189442500957721,
+        1.7545711551069494,
+        0.9150269850301332,
+        1.027834481648999,
+        1.2197164028303196,
+        1.3922455955517805,
+        1.6625255561945511,
+        1.943888075053019
+      ],
+      "observed_rwp": [
+        0.11932184493172561,
+        0.12416478597492109,
+        0.11414594483334103,
+        0.13715226151308793,
+        0.12240299427931615,
+        0.1424898971915081,
+        0.12788136286330282,
+        0.12437149654451829
+      ]
+    }
+  ],
+  "definitions": {
+    "composition_rmse": "RMS wt% error over six unknown phases, separately for each mixture; actual weighed truth",
+    "fitted_nrmse": "RMS modeled-count difference / dynamic range of independent native fitted profile, per mixture",
+    "shift_error": "Absolute degrees relative to native correlation registration",
+    "observation_rwp": "sqrt(sum((fitted-measured)^2/measured)/sum(measured)), per mixture on original axis",
+    "fraction_consistency": "Relative L2 difference of submitted profile and model implied by submitted fractions/shifts, after one positive nuisance intensity scale is fitted to submitted profile; no alignment of outputs"
+  },
+  "reference_policy": "Actual weighed ground_truth is authoritative for composition only. Method baseline supplies shifts/fitted because no independently measured truth exists for these quantities."
+}

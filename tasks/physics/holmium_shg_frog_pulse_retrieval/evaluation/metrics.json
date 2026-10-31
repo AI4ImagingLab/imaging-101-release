@@ -1,0 +1,34 @@
+{
+  "baseline": [
+    {
+      "method": "Original COPRA1000 on real processed Regen,seed1234",
+      "trace_R": 0.002252565543858924,
+      "complex_relative_l2_vs_ref": 0.0,
+      "coherent_overlap_vs_ref": 1.0
+    }
+  ],
+  "thresholds": {
+    "complex_relative_l2": {
+      "comparison": "<=",
+      "boundary": 0.30556698849660524
+    },
+    "coherent_overlap": {
+      "comparison": ">=",
+      "boundary": 0.9533144077705578
+    },
+    "trace_R": {
+      "comparison": "<=",
+      "boundary": 0.0024743633399606463
+    },
+    "energy_relative_error": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    }
+  },
+  "complex_relative_l2_definition": "Full complex L2 difference/reference L2 after global phase/continuous periodic translation/optional conjugate-time-reversal; no masks or amplitude fit",
+  "coherent_overlap_definition": "Absolute Hermitian normalized inner product; complex cosine, no mean subtraction",
+  "trace_R_definition": "RMS measured-minus-gain*predicted SHG intensity / measured maximum; actual offgrid delays, fitted positive gain",
+  "energy_relative_error_definition": "abs(dt*sum(abs(E)^2)-1)",
+  "reference_type": "validated method result, not physical truth",
+  "threshold_provenance": "Independent original3seeds,2widths,3long continuations; test/validation.md"
+}

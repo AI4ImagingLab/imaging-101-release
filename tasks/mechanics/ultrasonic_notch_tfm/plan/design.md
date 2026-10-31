@@ -1,0 +1,17 @@
+# Shipped interfaces and flow
+
+All task paths below are relative to the task workspace. `python -m src.main` calls `run(data_path='data/raw_data.npz',output_path='output/reconstruction.npz')`. It loads only public observations, actively reconstructs them, creates the output parent and writes one compressed NPZ. `run` returns the same float64(1,251,201) array it writes. No reference arrays, notebook caches or upstream package are imported.
+
+`preprocessing.load_data(path)` returns a dictionary of batch-unwrapped NPZ arrays using allow_pickle=False: traces float64(2080,750), tx/rx uint32(2080), time float64(750)s and positions float64(64,3)m. `analytic_filter(traces)` accepts real(number_pairs,750) samples and returns complex128 analytic samples of the same shape. Constants DT=4e-8s and SOUND_SPEED=6300m/s match README metadata.
+
+`physics_model.reconstruction_grid()` returns x float64(201)m and z float64(251)m. `travel_times(positions,x,z,speed=6300.)` returns float64(number_grid_points,number_elements)s in row-major depth,lateral order. `reciprocity_weights(tx,rx)` returns float64(number_pairs) weights1 or2.
+
+`solvers.delay_and_sum(filtered,tx,rx,times,t0=0.,dt=DT,chunk=256)` returns complex128(number_grid_points). It processes256 image points per chunk to bound memory. It has no file side effects. `reconstruct(data,speed=6300.,channel_step=1,pulse_echo=False)` filters the selected traces, computes travel times, focuses and returns float64(251,201) magnitude. Notebook optional arguments implement the measured acquisition/model comparisons, not different standard defaults.
+
+`visualization.agreement(x,r)` returns NCC and dynamic-range NRMSE, independently checked against known arrays and Judge metrics. `image_panel(ax,image,title,reference_max=None)` draws a dB image on mm axes and returns an image artist. `acquisition_figure(data,filtered)`, `comparison_figure(fresh,upstream)`, and `sensitivity_figure(results,reference)` return Matplotlib figures without saving files or changing backends. No library calls matplotlib.use.
+
+The notebook actively calls run, loads `notebooks/reference_outputs/upstream.npz` for explicitly labelled comparison, computes all three additional reconstructions and displays three evidence-bearing figures plus measured metrics. It writes `fresh_measurements.npz`, whose named arrays are consumed for maintainer figure export and source-data tracing. It imports no upstream solver.
+
+`evaluation/judge.py` has an independent `agreement` routine, `evaluate(prediction,asset_dir=ASSET_DIR)` returning(report,exitcode), and CLI main. Hidden paths resolve from the judge location, prediction/report paths from caller cwd. `metrics.json` declares the exact shape/dtype. All malformed inputs return code2 with empty metrics; below-threshold valid predictions return1; a pass returns0. A report-write error returns2 with stderr diagnostic. Only named declared arrays are evaluated; no submission code executes.
+
+`test/fixtures/upstream.npz` freezes original raw inputs, filtered traces, grid vectors, complex TFM and envelope for independent stage/pipeline parity. Unit tests check metrics and strict Judge failures; comparing tests check unchanged input arrays, filter/grid/full-output parity and analytical path-length/reciprocity/boundary cases. No private oracle imports occur in normal tests. Existing observations are reused, so no synthetic data generator is shipped.

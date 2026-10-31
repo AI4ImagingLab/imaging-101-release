@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "independently executed original SCI Johnston/Tate MFS+CRESO",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9999999999,
+  "nrmse_boundary": 1e-07,
+  "max_abs_error_boundary": 1e-05,
+  "rationale": "Frozen before independent local implementation. Repeated original runs deterministic identical selected lambda/epicardial values; nonzero float64 numerical tolerance well above rounding, much below native potential resolution1e-6. Reference is method output not physicaltruth. No amplitude/phase/offset alignment."
+}

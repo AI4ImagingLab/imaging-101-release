@@ -1,0 +1,13 @@
+{
+  "weighted_sse_boundary": 5661.294967552445,
+  "curve_360_relative_boundary": 1e-08,
+  "curve_197_relative_boundary": 1e-08,
+  "baseline": [
+    {
+      "method": "Corrected original full 500-live nested inference; best sampled point, not proven optimum",
+      "weighted_sse": 5660.728894662979
+    }
+  ],
+  "metric_definition": "J=sum((prediction-y)/sigma)^2 over all 3470 cells; curve relative error uses submitted parameters own public forward, denominator ||forward||2. No alignment, hidden parameter identity or posterior sample matching.",
+  "provenance": "Frozen before local implementation: source best sampled J times 1.0001; this is an optimization quality budget, not statistical confidence. Curves use deterministic float64 numerical consistency tolerance."
+}

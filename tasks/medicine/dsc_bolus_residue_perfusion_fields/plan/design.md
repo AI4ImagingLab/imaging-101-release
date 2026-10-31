@@ -1,0 +1,31 @@
+# Shipped interfaces and actual execution
+
+## Data and standard path
+
+Runtime subset is NumPy2.4.6,SciPy1.17.1,Matplotlib3.11.1; upstream Octave/image/compatibility functions and PDF tools are private oracle-only dependencies. No upstream/domain package or cross-task import is used by the cleaned task. Standard entry point is `python -m src.main`, from the task workspace. It reads data/raw_data.npz and writes output/reconstruction.npz; defaults are caller-relative. Importing main has no plotting/backend side effect.
+
+`src.main.reconstruct(raw_path='data/raw_data.npz',output_path='output/reconstruction.npz',comparisons=False)` returns `(submission,diagnostics)` after active inversion. Set output_path=None for no disk output; comparisons=True additionally computes complete sSVD/cSVD for the notebook. Submission arrays are float64, batch-first: reconstruction(1,22,128,128,160), relative_flow/relative_volume/transit_time(1,22,128,128). Diagnostics contain newly computed methods, concentration, baseline, baseline_counts, volume regression stages, support, AIF, original signal and elapsed seconds. It does not load references.
+
+## Local modules
+
+`preprocessing.signal_to_concentration(signal,support,te=.025)` accepts signal(22,128,128,80) numeric finite intensities in ADU and bool support(22,128,128). It returns concentration of the same4Dshape(float64,s^-1), baseline(22,128,128,float64,ADU) and baseline counts(22,int64). It validates dimensions/positivity and preserves conservative baseline/empty-slice conventions. Source public inputs have int16 intensities; mathematical unit cases may use floating intensities.
+
+`physics_model.convolution_matrix(arterial_input,circulant=True)` accepts a finite1Darray of length80 in s^-1 and returns160×160circular or80×80causal float64 matrix before multiplication by TR. Mathematical tests use smaller sizes. `forward(residue,arterial_input,tr=1.55,circulant=True)` returns the first80measurement bins for N×160(orN×80)residue. `adjoint(observations,arterial_input,tr=1.55,circulant=True)` applies the explicit transpose. These functions build the declared matrix locally, never from fixtures.
+
+`solvers.deconvolve(concentration,arterial_input,method='osvd',tr=1.55,oi_limit=.035,chunk_size=4096)` accepts finite N×80curves, method svd/csvd/osvd and positive TR. It returns residual(N,80or160), map(N), oscillation(N) and cutoff(N), all float64. Residual/map units are s^-1; OI and cutoff dimensionless. Non-oSVD oscillation arrays are diagnostic zeros because those methods do not use OI, not invented reconstructed comparator fields. Standard primary output is oSVD only. `oscillation_index(residue)` computes last-axis source index with signed peak.
+
+`solvers.leakage_volume(concentration,arterial_input,support,bolus,tr=1.55)` accepts complete spatial-time concentration/support and22slice baseline counts. Returns float64 spatial cbv,cbv_lc,K1,K2,K1cv,K2cv, a boolean spatial nonenhancing mask and mean_non_enhancing(80) in s^-1. Spatial fields are zero outside the fixed support. Regression uses all89588supported curves and the complete original22counts; it does not use anatomy truth or reconstruction-based support. K2cv/CV gate is source estimator logic, not a Judge pixel exclusion.
+
+`generate_data.perturb_concentration(concentration,relative_sigma=.01,seed=124)` generates only explicitly labelled noise diagnostics in proxy units; it returns N×80float64, not a replacement raw dataset. `visualization.image_panel(ax,image,title,unit='1',signed=False,limit=None)` returns a Matplotlib image artist with native physical row/column extents. `export_figure(fig,directory,name,numeric,caption)` writes PNG/SVG/PDF, plotted NPZ and hash/caption JSON; its directory is provided by the private notebook environment. No library selects a backend.
+
+## Hidden evaluator, references and tests
+
+`evaluation/judge.py` imports only standard library and NumPy. It independently builds temporal convolution/calibrated tissue curves from public inputs, validates exact declared keys/shapes/dtypes/finiteness and outside-support zeros, and scores each entire array. `score_arrays(estimate,reference)` computes independently known cosine/range-NRMSE in bounded chunks. `_forward_error(residue,raw_path)` computes complete supported-observation relative L2; it never imports solver code. Actual ground_truth.npz takes precedence if present; currently baseline_reference.npz is a qualified method result, not truth. A malformed actual-truth file is an error, with no fallback.
+
+CLI is `python evaluation/judge.py --prediction output/reconstruction.npz --report output/judge_report.json`. Hidden paths are relative to the evaluator; submitted/report paths are relative to the caller. UTF-8report status/pass/metrics/thresholds/errors and native0/1/2pass/fail/error are explicit. Invalid inputs yield empty metrics; report-write failure prints stderr and returns2. Output parent directories are created.
+
+The stage fixture upstream_stages.npz contains32deterministically input-index-selected supported coordinates, captured S0/concentration/baseline counts, native source matrices, all three method residues/maps and primary OI, leakage stages and transit values. Tests consume all these arrays. All quantities came from qualified native source before local implementation; no cleaned-generated parity fixture exists. Full primary reference is consumed by pipeline/strict Judge; upstream_maps.npz is consumed by active notebook original comparisons. Complete source outputs/logs are archived privately, not duplicated under the task.
+
+## Notebook execution
+
+Notebook follows problem,data,physics,method,results,conclusion. Its first full solve calls reconstruct(comparisons=True), evaluates the freshly written result and generates12actual scientific groups. Frozen source arrays are loaded only for identified comparisons. Supplemental observed/model/residual maps and explicitly nonlinear full-range symmetric-log displays accompany the unchanged linear maps. For bounded memory it retains fixed curves/maps and releases complete residual arrays after computing full-observation metrics; this changes neither reconstruction nor scored output. Export destination uses IMAGING_FIGURE_DIR supplied privately; no root-level wrappers, standalone metadata JSON, source PDFs or checkout is shipped.

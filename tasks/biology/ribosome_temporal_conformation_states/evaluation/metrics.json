@@ -1,0 +1,26 @@
+{
+  "frozen_before_local_implementation": true,
+  "observation_loglikelihood_per_frame_boundary": 1.0067846856737876,
+  "decoder_agreement_boundary": 0.995,
+  "baseline": [
+    {
+      "method": "Independent unmodified public consensus VB core, fixed200updates, coherent nativeViterbi withposteriorstart, all590nativeL1-L9traces"
+    }
+  ],
+  "reference_role": "Validated published-method result, not independently measured molecular states",
+  "metric_definitions": {
+    "path_agreement": "fraction identical on all 64281 native valid frames after one consistent ensemble label permutation",
+    "mean_max_abs": "maximum absolute apparent-ratio mean difference",
+    "variance_max_abs": "maximum absolute apparent-ratio-squared variance difference",
+    "transition_max_abs": "maximum absolute probability per frame difference",
+    "initial_max_abs": "maximum absolute sequence-start probability difference",
+    "population_max_abs": "maximum absolute posterior frame occupancy difference",
+    "observation_loglikelihood_per_frame": "sum independent sequence Gaussian-HMM log likelihood / 64281",
+    "decoder_agreement": "fraction identical to independent joint Viterbi decoding under submitted start/transition/emission quantities"
+  },
+  "tolerance_rationale": "Frozen before extraction; repeated original100/200 fixed points differ below 7e-15; 1e-5 parameter limits and 0.995 path fraction allow numerical rounding while requiring every output and likelihood consistency. Not physical state accuracy.",
+  "canonicalization": "Sort estimated emission means ascending, apply same permutation to paths, all state vectors, and both transition axes. No per-trace alignment.",
+  "benchmark_semantics_version": 2,
+  "mean_logposterior_deficit_boundary": 1e-08,
+  "definition": "Point-parameter HMM joint log posterior with the public Normal-Gamma and uniform Dirichlet priors, all independent sequences, compared one-sided to the attained standard value within1e-8 per observed frame. This is not claimed to equal the historical variational ELBO. Original measured likelihood and own-model Viterbi checks retained. Population is checked against own-model forward-backward posterior occupancy to max(1e-6,1.1 times attained standard discrepancy). No parameter/path-array reference identity."
+}

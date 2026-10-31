@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "Original PyCCAPT Geiser reconstruction on the exact selected real event acquisition; no physical truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999999,
+  "nrmse_boundary": 1e-10,
+  "reference_provenance": "Original unchanged PyCCAPT reconstruction.py at69512f6fda75ed12519a36cff6e15437e072800f, fixed geometry/field parameters independent of stored reconstructed positions",
+  "tolerance_rationale": "Nonzero float64 numerical tolerance checked against independent repeats, unit conversions and analytic detector reprojection; see validation.md"
+}

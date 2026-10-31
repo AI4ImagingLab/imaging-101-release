@@ -1,0 +1,78 @@
+Local thin-film optical mathematics adapted from pyElli revision4a8787654477355167df74bbf0b6003e8fc35a4d by Marius J. Mueller, Sangam Chatterjee and Florian Dobener, GPL-3.0. The full upstream GPL-3.0 license is retained in LICENSE. The acquisition is author-provided real Sentech TiO2 ellipsometry; source authors describe the fixed oxide values as from a separate substrate fit, whose original observation is not supplied. No independent material truth or full calibration provenance is invented. Separate measurement redistribution terms were not identified; local private research staging does not assert an additional data grant.
+
+Silicon literature calibration is adapted from the Aspnes–Studna entry of refractiveindex.info-database revision991323d19f5bc993d6de1a65a2f1f5dd4c387897 (CC0-1.0). Public-domain database terms: https://creativecommons.org/publicdomain/zero/1.0/ . Retain the original Aspnes–Studna1983 citation in README. No whole database is shipped.
+
+The explicit two-sided bound transform follows lmfit1.3.4 (BSD-3-Clause). Original notice follows:
+
+BSD-3-Clause
+
+Copyright 2025 Matthew Newville, The University of Chicago
+               Renee Otten, Brandeis University
+               Till Stensitzki, Freie Universitat Berlin
+               A. R. J. Nelson, Australian Nuclear Science and Technology Organisation
+               Antonino Ingargiola, University of California, Los Angeles
+               Daniel B. Allen, Johns Hopkins University
+               Michal Rawlik, Eidgenossische Technische Hochschule, Zurich
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in the
+  documentation and/or other materials provided with the distribution.
+
+  3. Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from this
+  software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+
+Some code has been taken from the scipy library whose licence is below.
+
+Copyright (c) 2001, 2002 Enthought, Inc.
+All rights reserved.
+
+Copyright (c) 2003-2019 SciPy Developers.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+  a. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  b. Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+  c. Neither the name of Enthought nor the names of the SciPy Developers
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.
+
+Some code has been taken from the AMPGO library of Andrea Gavana, which was
+released under a MIT license.

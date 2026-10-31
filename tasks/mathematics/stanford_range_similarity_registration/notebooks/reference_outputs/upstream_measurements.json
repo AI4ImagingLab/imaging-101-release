@@ -1,0 +1,61 @@
+{
+  "runtime_seconds": 6.899564699968323,
+  "exit_status": 0,
+  "python": "3.11.11",
+  "numpy": "2.4.6",
+  "native_shapes": [
+    [
+      40256,
+      3
+    ],
+    [
+      40097,
+      3
+    ]
+  ],
+  "fit_shapes": [
+    [
+      1007,
+      3
+    ],
+    [
+      1003,
+      3
+    ]
+  ],
+  "iterations": 189,
+  "scale": 1.0017118207054996,
+  "rotation": [
+    [
+      0.8328343999771579,
+      0.008288889224269711,
+      -0.5534601670672552
+    ],
+    [
+      -0.014463727872249265,
+      0.9998723392977047,
+      -0.006790116594986744
+    ],
+    [
+      0.5533332294293595,
+      0.013660139924750615,
+      0.832847967990864
+    ]
+  ],
+  "translation_m": [
+    -0.05176252505433021,
+    -0.0005082306047206053,
+    -0.011729759212884681
+  ],
+  "nearest_rms_before_m": 0.03316395509691875,
+  "nearest_rms_after_m": 0.002229618030776222,
+  "median_after_m": 0.00045564724508830376,
+  "initialization": "identity rotation, unit scale, zero translation in common normalized frame; no pose from bun.conf",
+  "source_commit": "e5ca02d2501fb4b633c1664de939c336ffa2349e",
+  "hashes": {
+    "bun000.ply": "7d48f9fdf917311de680d074edce8aff25a4b9bfd87be9301822dace811209fb",
+    "bun045.ply": "150f17a7c1043312a611bfff156c5933723bea903df4b4b3c2194854d1e9f155",
+    "bound_native.npz": "dcdd12be01b2e4d74ea21f1887e2a346e4d056bc2700453b88dfedfedb64f9c9",
+    "upstream_native.npz": "bedeb70466e33db6dcc9289a0c703a5028d07568094dea9b173d40c92cda891b"
+  }
+}

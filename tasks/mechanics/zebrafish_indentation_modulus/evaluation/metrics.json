@@ -1,0 +1,6 @@
+{
+  "maximum_curve_loss_excess_boundary": 1e-06,
+  "definition": "At every acquisition, minimum over constant baseline b of mean(w^2*(F-b-contact_force(E,c))^2) divided by measured approach force dynamic range squared. w=min(abs(z-c)/(2e-6m),1). Compare to attainable standard parameters under this same profiled physical objective.",
+  "reference_type": "Attainable conditional contact-law fit, not measured modulus/contact truth",
+  "tolerance_provenance": "Declared extra normalized force-MSE1e-6 per approach; equivalent0.1% range RMS fit budget, not calibrated noise."
+}

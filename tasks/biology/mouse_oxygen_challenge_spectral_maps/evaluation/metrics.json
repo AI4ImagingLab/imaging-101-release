@@ -1,0 +1,22 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced author linear spectral unmixing and apparentSO2, not actual oxygenation truth",
+      "Hb_ncc": 1.0,
+      "Hb_nrmse": 0.0,
+      "HbO2_ncc": 1.0,
+      "HbO2_nrmse": 0.0,
+      "saturation_ncc": 1.0,
+      "saturation_nrmse": 0.0,
+      "spectral_relative_residual": 0.10271870169357335,
+      "capture_float32_denominator_residual": 0.1027187060944717
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-07,
+  "spectral_relative_residual_boundary": 0.10374589315541642,
+  "reference_kind": "Independent standard-method reproduction; no actual Hb or oxygenation truth",
+  "threshold_rationale": "Original independent reruns equal; nonzero1e-7 dynamicrangeNRMSE tolerance for numerical portability plus1.01original spectral relative residual. Every Hb/HbO2/saturation field is scored over all76cycles/fixed1955pixels.",
+  "spectral_relative_residual_definition": "L2norm(sum_c coefficient_c*spectrum_c-observed_image)/L2norm(observed_image), all76cycles/10wavelengths and fixed authorROI support.",
+  "residual_precision": "All final evaluation/presentation norms use float64; preimplementation capture denominator used float32 norm, changing R by4.4e-9. Frozen boundary unchanged."
+}

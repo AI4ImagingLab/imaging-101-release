@@ -1,0 +1,7 @@
+# Shipped interfaces
+
+CLI python -m src.main invokes run(data_path='data/raw_data.npz',output_path='output/reconstruction.npz'). load_data(path) returns5(N,3)float64 arrays. prepare(traces,half_window=.5) returns measured/monotone traces, beta(5),initial_temperature(5),selected conversion tables and advanced boundary tables(82,5). polynomial_derivative(t,y,half_window=.5) returns native sampled derivative. No file writes occur in these functions.
+
+physics_model functions senum_yang(energy,temperature),temperature_integral(energy,lower,upper),interval_integrals(energy,row,data,mode='time'),ratio_objective(integrals),ratio_variance(integrals),centered_log_residual(energy,data) implement explicit general numerical formulas. Integrals use minutes or K before ramp division, ratios dimensionless.
+
+solvers.linear_energy returns energy, signed original error and intercept rows; integral_energy(data,advanced=True,mode='time',with_errors=True) returns two rows including identified original uncertainty, or energy only. reconstruct(data,comparisons=False) returns batch-firstreconstruction(1,81); comparisons=True also freshly computes Fr/OFW/KAS/Vy/aVy/time-temperature/classicKAS arrays. main writes only required solver result. Notebook calls same modules actively and reads original fixtures solely for comparisons. Judge is independent of src and consumes hidden reference plus frozen observed-time boundary tables. visualization functions return figures without backend mutation.

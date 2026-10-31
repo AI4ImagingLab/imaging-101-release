@@ -1,0 +1,3 @@
+Mathematical adaptation of CARD/CARDspa by Ying Ma, Xiang Zhou, Jing Fu and contributors, GPL-3.0; complete license preserved in LICENSE. Exact source revision and adaptations are in maintainer validation. Cross-phi scoring includes an explicitly qualified determinant normalization correction from supplementary Eq9.
+
+Real sample data: Moncada et al., Nature Biotechnology2020, DOI10.1038/s41587-019-0392-8, GSE111672. CARD authors provide the derivative sample files for scientific reproduction. The code license is not asserted to license experimental data. A separate derivative-data redistribution license was not located; unrestricted public redistribution rights remain unspecified.

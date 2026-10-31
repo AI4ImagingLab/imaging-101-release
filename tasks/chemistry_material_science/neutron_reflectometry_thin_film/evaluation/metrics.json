@@ -1,0 +1,12 @@
+{
+  "profile_nrmse_boundary": 0.00002,
+  "parameter_error_boundary": 0.0002,
+  "log_chisqr_boundary": 930.0,
+  "nrmse_definition": "RMS profile error divided by reference profile dynamic range",
+  "parameter_error_definition": "maximum absolute parameter difference divided by documented allowable parameter range",
+  "log_chisqr_definition": "sum squared residuals in log10 reflectivity with propagated sigma_R/(R ln10)",
+  "baseline": [
+    {"method": "exact refnx source CPU pure Python DE seed 2718", "log_chisqr": 919.5863753458957},
+    {"method": "independent upstream DE rerun seed 31415", "profile_nrmse_vs_ref": 2.170614302658779e-6, "log_chisqr": 919.5863760002351}
+  ]
+}

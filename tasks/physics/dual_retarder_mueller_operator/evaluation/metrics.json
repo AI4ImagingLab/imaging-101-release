@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced native Katsu24-angle author-synthetic case versus actual synthetic truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 8.43086159919128e-16
+    }
+  ],
+  "ncc_boundary": 0.999999999,
+  "nrmse_boundary": 1e-10,
+  "observation_relative_l2_boundary": 1e-10,
+  "metric_definitions": {
+    "observation_relative_l2": "L2 norm of predicted-minus-observed calibrated intensity divided by observed intensity L2 norm"
+  },
+  "threshold_provenance": "Pre-extraction conditioning-aware nonzero tolerance for noiseless native recovery, not mechanical scaling of machine-roundoff baseline. Full author16-angle rank-deficient comparison is preserved separately. See test/validation.md."
+}

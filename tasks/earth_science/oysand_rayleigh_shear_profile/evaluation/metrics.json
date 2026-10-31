@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "independently reproduced original CPSO seed24713",
+      "weighted_dispersion_rms": 0.11813111766049578
+    }
+  ],
+  "definition": "Seven absolute physical-parameter errors and RMS((predicted-observed)/supplied uncertainty), all 30 periods. No actual geological truth is available.",
+  "boundary_provenance": "1.1 times maximum independent original departure over five additional seeds24714-24718; dispersion includes the bound reference run.",
+  "velocity_1_absolute_error_boundary": 4.703581208343819,
+  "velocity_2_absolute_error_boundary": 3.414198331353353,
+  "velocity_3_absolute_error_boundary": 1.020170840213126,
+  "velocity_4_absolute_error_boundary": 6.182011976619635,
+  "thickness_1_absolute_error_boundary": 0.16412663952910225,
+  "thickness_2_absolute_error_boundary": 0.042135013501581,
+  "thickness_3_absolute_error_boundary": 2.826536203988916,
+  "weighted_dispersion_rms_boundary": 0.12994422942654538
+}

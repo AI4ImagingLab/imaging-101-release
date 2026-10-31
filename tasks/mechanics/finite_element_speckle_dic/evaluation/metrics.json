@@ -1,0 +1,12 @@
+{
+  "baseline": [
+    {
+      "method": "Original muDIC Q4 on the bound pair",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "displacement_rmse_pixels_boundary": 1e-05,
+  "metric_definition": "sqrt(mean((pred-ref)**2)) across all nodes and both displacement components, no alignment",
+  "provenance": "Independent original upstream double rerun maximum absolute difference 0; a conservative nonzero 1e-5 pixel tolerance was fixed before local extraction. Precision stability and full provenance in test/validation.md."
+}

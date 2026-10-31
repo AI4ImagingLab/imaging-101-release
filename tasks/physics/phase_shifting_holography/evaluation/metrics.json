@@ -1,0 +1,6 @@
+{
+  "gauge_relative_l2_boundary": 1e-06,
+  "definition": "Relative complex L2 error to measured mean-removed four-frame quadrature times one unit linear phase with fixed half-array origin. Adjacent weighted cross-product phases estimate the plane without object-pixel division. Frequencies modulo 2pi radians/pixel.",
+  "reference_type": "Public measured quadrature and phase-ramp gauge; no physical truth or finite-search output matching",
+  "threshold_provenance": "Declared relative complex-field numerical tolerance; float32/float64 controls and alternate gauge tests recorded in validation."
+}

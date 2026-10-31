@@ -1,0 +1,77 @@
+{
+  "environment": {
+    "sys_executable": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+    "python": "3.11.11",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "backend": "inline",
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "fresh_active_seconds": 235.20280880000792,
+  "full_field_metrics": {
+    "ncc_vs_ref": 1.0,
+    "nrmse_vs_ref": 2.3209289832828493e-16
+  },
+  "diagnostic_parity": {
+    "coefficients_max_abs": 3.934630399271555e-13,
+    "predicted_pixels_max_abs": 4.9404924595819466e-15,
+    "residual_history_max_abs": 6.224354365258478e-12
+  },
+  "sensitivity": {
+    "perp 2.0": {
+      "lengths_Mpc_over_h": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "slice_nrmse_vs_selected": 0.028555351340921575,
+      "weighted_data_rms": 1.2536418306581503,
+      "updates": 19,
+      "system_residual": 0.000891363268451103,
+      "runtime_seconds": 7.877721700002439
+    },
+    "perp 3.0": {
+      "lengths_Mpc_over_h": [
+        3.0,
+        3.0,
+        2.0
+      ],
+      "slice_nrmse_vs_selected": 0.0243657732470259,
+      "weighted_data_rms": 1.2851392032287559,
+      "updates": 24,
+      "system_residual": 0.0007953635138472886,
+      "runtime_seconds": 16.513169099998777
+    },
+    "parallel 1.5": {
+      "lengths_Mpc_over_h": [
+        2.5,
+        2.5,
+        1.5
+      ],
+      "slice_nrmse_vs_selected": 0.02117761322620972,
+      "weighted_data_rms": 1.259719361703042,
+      "updates": 19,
+      "system_residual": 0.0007151217087214508,
+      "runtime_seconds": 8.95489729999099
+    },
+    "parallel 2.5": {
+      "lengths_Mpc_over_h": [
+        2.5,
+        2.5,
+        2.5
+      ],
+      "slice_nrmse_vs_selected": 0.017898120719165585,
+      "weighted_data_rms": 1.279883062125403,
+      "updates": 24,
+      "system_residual": 0.0008808498383625432,
+      "runtime_seconds": 15.083281200000783
+    }
+  },
+  "data_sha256": "36ce5c1aab6e6b601dbfc99ee1dbddc609291f32c0054ae645108e402e1a1a76",
+  "status": "Fresh complete-volume reconstruction passed independent Judge; comparisons are computed, reference is not truth."
+}

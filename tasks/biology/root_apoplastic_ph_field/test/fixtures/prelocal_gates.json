@@ -1,0 +1,470 @@
+{
+  "timestamp_utc": "2026-10-21T21:39:20.812809+00:00",
+  "frozen_before_local": true,
+  "output_npz_sha256": "415ad2a877f0b276fbfbe958d750193e8bf87b73cc47d6a2fa0365405c6d1818",
+  "native_target_count": 43,
+  "target_shape": [
+    43,
+    1024,
+    1024
+  ],
+  "valid_pixels_per_image": [
+    22848,
+    33788,
+    34029,
+    23889,
+    29541,
+    22944,
+    41862,
+    52572,
+    34231,
+    51808,
+    33371,
+    44377,
+    20040,
+    30911,
+    18939,
+    35920,
+    18314,
+    48104,
+    28029,
+    28949,
+    32290,
+    29001,
+    32995,
+    35995,
+    16012,
+    18573,
+    19517,
+    26648,
+    27313,
+    27194,
+    35310,
+    27848,
+    34198,
+    28678,
+    41327,
+    38418,
+    38608,
+    27026,
+    29933,
+    14597,
+    40885,
+    41562,
+    28037
+  ],
+  "output_range_per_image": [
+    [
+      2.8652701377868652,
+      6.19511079788208
+    ],
+    [
+      4.898459434509277,
+      6.180678367614746
+    ],
+    [
+      4.835371017456055,
+      6.072072982788086
+    ],
+    [
+      4.374103546142578,
+      6.131214618682861
+    ],
+    [
+      5.190321922302246,
+      6.181585311889648
+    ],
+    [
+      5.560314178466797,
+      6.646782398223877
+    ],
+    [
+      5.0361714363098145,
+      6.573537826538086
+    ],
+    [
+      5.452123165130615,
+      7.48479700088501
+    ],
+    [
+      5.398841381072998,
+      6.8738226890563965
+    ],
+    [
+      5.5835652351379395,
+      7.200796127319336
+    ],
+    [
+      5.104658603668213,
+      6.372936248779297
+    ],
+    [
+      5.35526704788208,
+      6.758666038513184
+    ],
+    [
+      5.453693866729736,
+      9.556730270385742
+    ],
+    [
+      4.776907920837402,
+      6.127277374267578
+    ],
+    [
+      4.06090784072876,
+      6.0391621589660645
+    ],
+    [
+      5.300887107849121,
+      6.516578674316406
+    ],
+    [
+      5.1956305503845215,
+      6.380031108856201
+    ],
+    [
+      5.892262935638428,
+      9.556730270385742
+    ],
+    [
+      5.348503112792969,
+      6.731675148010254
+    ],
+    [
+      5.665024280548096,
+      9.556730270385742
+    ],
+    [
+      5.344090461730957,
+      6.901309013366699
+    ],
+    [
+      5.479945659637451,
+      9.556730270385742
+    ],
+    [
+      5.4554924964904785,
+      6.709098815917969
+    ],
+    [
+      5.46991491317749,
+      6.522916793823242
+    ],
+    [
+      2.8652701377868652,
+      6.039886951446533
+    ],
+    [
+      2.8652701377868652,
+      5.832495212554932
+    ],
+    [
+      2.8652701377868652,
+      5.746685981750488
+    ],
+    [
+      2.8652701377868652,
+      5.89194393157959
+    ],
+    [
+      2.8652701377868652,
+      6.017222881317139
+    ],
+    [
+      2.8652701377868652,
+      5.841715335845947
+    ],
+    [
+      2.8652701377868652,
+      6.009478569030762
+    ],
+    [
+      5.27089786529541,
+      9.556730270385742
+    ],
+    [
+      5.656871795654297,
+      9.556730270385742
+    ],
+    [
+      5.392640113830566,
+      6.22982120513916
+    ],
+    [
+      5.251534461975098,
+      6.2450056076049805
+    ],
+    [
+      5.392047882080078,
+      6.84281063079834
+    ],
+    [
+      5.3983073234558105,
+      6.33376407623291
+    ],
+    [
+      5.3202738761901855,
+      6.541067123413086
+    ],
+    [
+      5.02806282043457,
+      6.157833576202393
+    ],
+    [
+      4.9010233879089355,
+      6.038753986358643
+    ],
+    [
+      5.120803356170654,
+      6.232728004455566
+    ],
+    [
+      5.230302333831787,
+      6.276372909545898
+    ],
+    [
+      4.850149154663086,
+      6.131835460662842
+    ]
+  ],
+  "nextafter_float32_nrmse_max": 5.695746871895818e-07,
+  "thresholds": {
+    "per_image_ncc_min": 0.999999,
+    "per_image_dynamic_nrmse_max": 1e-06
+  },
+  "input_mean_parity_max_abs": 0.0,
+  "physical_gate": {
+    "monotone_501_known_pH_points": true,
+    "independent_forward_original_inverse_max_abs": 2.220446049250313e-16,
+    "asymptotes": [
+      -0.0295,
+      1.1171
+    ],
+    "note": "Saturation and out-of-calibration pixels remain visible, not excluded."
+  },
+  "calibration": {
+    "yOrigin": 0.0,
+    "xOrigin": 0.0,
+    "unit": "micron",
+    "pixelDepth": 1.0,
+    "pixelHeight": 0.18037518037518038,
+    "pixelWidth": 0.18037518037518038
+  },
+  "index": [
+    {
+      "group": "control",
+      "input": "control_00.tif",
+      "output": "pH_control_00.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_01.tif",
+      "output": "pH_control_01.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_02.tif",
+      "output": "pH_control_02.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_03.tif",
+      "output": "pH_control_03.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_04.tif",
+      "output": "pH_control_04.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_05.tif",
+      "output": "pH_control_05.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_06.tif",
+      "output": "pH_control_06.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_07.tif",
+      "output": "pH_control_07.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_08.tif",
+      "output": "pH_control_08.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_09.tif",
+      "output": "pH_control_09.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_10.tif",
+      "output": "pH_control_10.tif"
+    },
+    {
+      "group": "control",
+      "input": "control_11.tif",
+      "output": "pH_control_11.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_00.tif",
+      "output": "pH_DCCD_00.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_01.tif",
+      "output": "pH_DCCD_01.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_02.tif",
+      "output": "pH_DCCD_02.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_03.tif",
+      "output": "pH_DCCD_03.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_04.tif",
+      "output": "pH_DCCD_04.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_05.tif",
+      "output": "pH_DCCD_05.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_06.tif",
+      "output": "pH_DCCD_06.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_07.tif",
+      "output": "pH_DCCD_07.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_08.tif",
+      "output": "pH_DCCD_08.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_09.tif",
+      "output": "pH_DCCD_09.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_10.tif",
+      "output": "pH_DCCD_10.tif"
+    },
+    {
+      "group": "DCCD",
+      "input": "DCCD_11.tif",
+      "output": "pH_DCCD_11.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_00.tif",
+      "output": "pH_FC_00.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_01.tif",
+      "output": "pH_FC_01.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_02.tif",
+      "output": "pH_FC_02.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_03.tif",
+      "output": "pH_FC_03.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_04.tif",
+      "output": "pH_FC_04.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_05.tif",
+      "output": "pH_FC_05.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_06.tif",
+      "output": "pH_FC_06.tif"
+    },
+    {
+      "group": "FC",
+      "input": "FC_07.tif",
+      "output": "pH_FC_07.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_00.tif",
+      "output": "pH_IAA_00.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_01.tif",
+      "output": "pH_IAA_01.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_02.tif",
+      "output": "pH_IAA_02.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_03.tif",
+      "output": "pH_IAA_03.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_04.tif",
+      "output": "pH_IAA_04.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_05.tif",
+      "output": "pH_IAA_05.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_06.tif",
+      "output": "pH_IAA_06.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_07.tif",
+      "output": "pH_IAA_07.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_08.tif",
+      "output": "pH_IAA_08.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_09.tif",
+      "output": "pH_IAA_09.tif"
+    },
+    {
+      "group": "IAA",
+      "input": "IAA_10.tif",
+      "output": "pH_IAA_10.tif"
+    }
+  ]
+}

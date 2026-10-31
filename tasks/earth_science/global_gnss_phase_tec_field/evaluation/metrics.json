@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Independent qualified original author full-day method reference; not physical truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "forward_weighted_rms_TECu": 1.4973517806628645
+    }
+  ],
+  "ncc_boundary": 0.999999999999,
+  "nrmse_boundary": 2.9645042444036815e-08,
+  "forward_weighted_rms_boundary": 1.5272988162761219,
+  "metric_scope": "Every hour is separately scored using its own complete71x72map reference range; worst hour must pass. No alignment.",
+  "reference_type": "conditional standard method, no actual field truth available",
+  "tolerance_provenance": "Independent complete native runs are identical;1.5x measured float32 coefficient serialization roundtrip max per-hour map NRMSE. Frozen before local extraction.",
+  "forward_definition": "sqrt(sum(w*(predicted slantTEC difference-observed difference)^2)/sum(w));w=sin(el)^2sin(elref)^2/(sin(el)^2+sin(elref)^2), all504358rays; TEcu",
+  "evaluation_order": "Full-field metrics first; full-ray consistency computed for field-passing candidates only."
+}

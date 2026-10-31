@@ -1,0 +1,4 @@
+Local reconstruction adapts AccPbFRET: Copyright (C) 2008 - 2022 AccPbFRET developers. Authors include Janos Roszik, Janos Szollosi and Gyorgy Vereb. GPL version3 or later; the complete license is provided in LICENSE. This program is distributed without any warranty, including merchantability or fitness for a particular purpose.
+The finite Gaussian kernel conventions follow the public-domain ImageJ1.54p program.
+Real SK-BR-3 example observations are from Additional file1 of Roszik et al., BMC Bioinformatics9:346(2008), doi:10.1186/1471-2105-9-346. Copyright2008 Roszik et al.; licensee BioMed Central Ltd. The article and supplied supplementary work are distributed under Creative Commons Attribution2.0: https://creativecommons.org/licenses/by/2.0/. Attribution must be retained.
+No true molecular-efficiency field was measured independently; the hidden method reference is not biological ground truth.

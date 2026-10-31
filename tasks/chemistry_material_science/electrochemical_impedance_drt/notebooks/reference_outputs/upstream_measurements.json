@@ -1,0 +1,25 @@
+{
+  "identity": "Reproduced unmodified upstream on exact bound observations",
+  "capture": {
+    "parameters": {
+      "rbf_type": "PWL",
+      "lambda": 0.001,
+      "induct_used": 1,
+      "der_used": "1st order"
+    },
+    "runtime_s": 1.282458100002259,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "data_sha256": "65383e4deeb9581bf3fffccc9d14a596ac69305b6deeb45d898c13f0d1c6ef33",
+    "stage_tolerance": {
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "inverse_tolerance_before_extraction": {
+      "relative_l2": 1e-05
+    },
+    "exit_status": 0
+  },
+  "reference_role": "Standard-method result, not physical truth",
+  "result_asset": "evaluation/baseline_reference.npz"
+}

@@ -1,0 +1,7 @@
+Mathematical implementation adapted from original source by Andreas Habring and Martin Holler, under GPL-3.0-or-later, see LICENSE. Original copyright retained.
+Copyright (C) 2021 Andreas Habring, Martin Holler. This program is free software under GNU GPL version3 or any later version, without any warranty; see the preserved complete LICENSE.
+The author-supplied fish photograph is “Pomocanthus imperator facing right”, Albert kok, CC BY-SA4.0:
+https://commons.wikimedia.org/wiki/File:Pomocanthus_imperator_facing_right.jpg
+https://creativecommons.org/licenses/by-sa/4.0/
+The author's downsampled RGB-to-luminance and fixed-mask adaptation is retained. Photo-derived data and comparisons remain attributed under CC BY-SA4.0; this notice does not replace the separately applicable code license.
+

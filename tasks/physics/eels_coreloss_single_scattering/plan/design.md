@@ -1,0 +1,11 @@
+# Shipped interfaces and execution
+
+`python -m src.main` calls `run(task_root=None)` using the task directory by default. It reads `data/raw_data.npz`, reconstructs fresh, creates output/, and writes `output/reconstruction.npz` with float64 reconstruction shape(1,844). It returns the diagnostic dictionary and changes no plotting backend.
+
+`preprocessing.load_observations(path)` validates four batch-first fields, float64 originalcounts and nominal energygrids, returns independent one-dimensional2048countvectors `(low,core)`. `solvers.reconstruct(low_loss_counts,core_loss_counts)` delegates to local `physics_model.solve(low,core)`, never to an upstreamdomainlibrary. All physicalmath lives locally.
+
+`physics_model.index(energy,offset)` returns nearest .2eV channel; `powerlaw(y,x,lo,hi)` returns scalar(A,r); `extend(y,x,window)` returns extendedcounts and energies, bothfloat64 lengthn+100; `taper(y)` returns a fresh taperedvector; `solve(low,core)` returns dictionaryfields background(2048), background_A/r(scalars), edge(844), core_extended/core_tapered(944), low_extended/low_tapered(2148), threshold/fwhm/I0(scalars), reconstruction(844), low_axis/core_axis(2048), full_reconstruction/gaussian(3000), nfft(integer3000). Energies/FWHM areeV, countsandtails arecounts/channel, Gaussian1/eV, reconstructioncounts/eV. It never mutates observations.
+
+`visualization.show_observations(low,core,stages)` returns a threepanel Matplotlibfigure (referencepeak,corecontinuum,resolution); `show_results(stages,reference)` returns a threepanel figure(fullspectrumthreegroups,upstreamdifference,white-linedetail). The notebookcallsreconstructfresh and uses independentlycaptured referencearrays only for comparisons. The reference loader is not partof the reconstructionpath.
+
+`evaluation/judge.py` is standalone, imports only NumPy/stdlib, and reads metrics/reference relative to itself. `evaluate(prediction,asset_root=None)` returns(report,exitcode). CLI --prediction and --report paths are caller-relative. It rejects malformedarrays before scoring and returns0pass,1validfail,2invalidinput/evaluator/reportfailure. It never imports src or submittedcode. Bothdeclaredmetrics mustpass. Test-only asset_root supports deliberate unavailableasset cases.

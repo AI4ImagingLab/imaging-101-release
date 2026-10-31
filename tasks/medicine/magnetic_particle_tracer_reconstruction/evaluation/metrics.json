@@ -1,0 +1,6 @@
+{
+  "benchmark_semantics_version": 2,
+  "objective_ratio_boundary": 1.0000000001,
+  "definition": "[||Sx-u||^2 + lambda ||x||^2] / same objective of independently validated standard output; x real nonnegative, lambda=0.001 ||S||F. S is independent-background corrected calibration, u is 1000-cycle foreground mean minus background mean.",
+  "tolerance_provenance": "One-sided attained convex objective bound; 1e-10 relative slack covers floating-point accumulation and is fixed before candidate testing. Reference coordinates are not an accuracy target."
+}

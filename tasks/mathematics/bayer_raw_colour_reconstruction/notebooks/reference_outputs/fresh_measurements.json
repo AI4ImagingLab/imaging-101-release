@@ -1,0 +1,24 @@
+{
+  "fresh_malvar_vs_original": {
+    "ncc": 0.9999999999999999,
+    "nrmse": 0.0
+  },
+  "fresh_bilinear_vs_original": {
+    "ncc": 1.0,
+    "nrmse": 0.0
+  },
+  "fresh_malvar_seconds": 0.27235490000020945,
+  "fresh_bilinear_seconds": 0.14273880000109784,
+  "sample_consistency_max_abs": 0.0,
+  "shape": [
+    2128,
+    2840,
+    3
+  ],
+  "negative_output_fraction": 0.00022249726428747927,
+  "above_white_output_fraction": 0.0,
+  "reference_type": "independently run original method, not physical RGB truth",
+  "observation_sha256": "679a9799560eecb6e4dabd167a78547c92aba8c7c5a0c279e477c39b0b27fd03",
+  "solver_sha256": "90a734c6fccfafa9610a0f8327a16df2cb4921977fcf269ebf7a59e90b33c264",
+  "environment": "cleaned_environment.json in indexed private archive"
+}

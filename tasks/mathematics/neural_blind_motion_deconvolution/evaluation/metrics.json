@@ -1,0 +1,41 @@
+{
+  "baseline": [
+    {
+      "method": "Historical original run with cuDNN-only determinism; quality-threshold source, not final parity oracle",
+      "shift_row": -9,
+      "shift_column": 10,
+      "forward_nrmse": 0.008502817858528754,
+      "ncc_vs_ref": 0.9918410391059359,
+      "nrmse_vs_ref": 0.029215276490004403
+    },
+    {
+      "method": "Reproduced original complete method with full Torch deterministic algorithms; final parity oracle",
+      "shift_row": -10,
+      "shift_column": 15,
+      "forward_nrmse": 0.008693088412780653,
+      "ncc_vs_ref": 0.9918829592143033,
+      "nrmse_vs_ref": 0.02933090843188145
+    },
+    {
+      "method": "identity blurred observation; same alignment and interior",
+      "shift_row": 0,
+      "shift_column": 0,
+      "ncc_vs_ref": 0.9816475547294945,
+      "nrmse_vs_ref": 0.041142400423377426
+    }
+  ],
+  "ncc_boundary": 0.8926569351953423,
+  "nrmse_boundary": 0.03213680413900485,
+  "forward_nrmse_boundary": 0.00935309964438163,
+  "kernel_mass_error_boundary": 1e-05,
+  "kernel_negative_mass_boundary": 1e-08,
+  "alignment": {
+    "type": "integer translation chosen by demeaned FFT cross-correlation",
+    "max_shift": 25,
+    "interior_margin": 50,
+    "photometric_rescaling": false,
+    "forward_alignment": false
+  },
+  "metric_provenance": "Numerical boundaries retained unchanged from frozen_acceptance.json, the independent original run before cleaned full execution. Final deterministic oracle is separately identified; do not relabel the investigated nondeterministic run as parity evidence.",
+  "forward_definition": "RMS(valid correlation(reconstruction,kernel)-observation[25:-25,25:-25]) / ptp(observation[25:-25,25:-25]); no padding, rescaling, or alignment"
+}

@@ -1,0 +1,37 @@
+{
+  "identity": "Reproduced unmodified upstream on exact bound observations",
+  "capture": {
+    "parameters": {
+      "sample_frequency": 51200.0,
+      "sound_speed": 346.04,
+      "block_size": 128,
+      "n_iter": 100,
+      "grid_increment": 0.05,
+      "band_centre": 4000,
+      "band_divisor": 3,
+      "invalid_channels": [
+        1,
+        7
+      ],
+      "selected_frequency_indices": [
+        9,
+        10,
+        11
+      ]
+    },
+    "runtime_s": 4.677237499970943,
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "data_sha256": "d55199c7206cf337527a3f2234b159b43e2b3ea0c6a5e6db1b42d2674f5f3203",
+    "stage_tolerance": {
+      "rtol": 1e-10,
+      "atol": 1e-12
+    },
+    "inverse_tolerance_before_extraction": {
+      "relative_l2": 1e-05
+    },
+    "exit_status": 0
+  },
+  "reference_role": "Standard-method result, not physical truth",
+  "result_asset": "evaluation/baseline_reference.npz"
+}

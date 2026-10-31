@@ -1,0 +1,7 @@
+INTERNAL RESEARCH TASK; EXTERNAL REDISTRIBUTION PERMISSION NOT VERIFIED
+
+Mathematical method: Yong Wang and Yoram Rudy, Application of the Method of Fundamental Solutions to Potential-based Inverse Electrocardiography, Annals of Biomedical Engineering34,1272-1288(2006), DOI10.1007/s10439-006-9131-7.
+
+Original validation program: Peter Johnston(December2016), adapted by Jess Tate(January2017), SCIInstitute Forward/Inverse Toolkit. Selected normal-displaced virtual-source variant and complete CRESO network settings are attributed to those authors. The retrieved project had no explicit license grant at root or in the selected files. No claim of open-source permission, permissive data licensing or applicability of another project's license is made. Original source remains private and is not included. Local source is independently written from the mathematical equations, not copied, renamed or wrapped upstream code.
+
+The supplied ASCII geometry/measurement arrays originate from the same public author demonstration. The sample identity and voltage calibration are unspecified. Authorization for their external redistribution has not been verified. This package is for local internal numerical evaluation only; obtain/verify applicable source/data permission before external distribution. Preserve author attribution and copyright; this notice does not grant rights to upstream materials.

@@ -1,0 +1,58 @@
+{
+  "baseline": [
+    {
+      "method": "Independently executed unmodified upstream selected method on exact bundled observations",
+      "reference_agreement": 1.0
+    }
+  ],
+  "metric_definition": "For each declared group: norm(estimate-reference,2)/norm(reference,2). Complex arrays use the Hermitian Euclidean norm; no phase, scale, shift, crop or magnitude alignment. Mixed-unit parameter components are evaluated separately.",
+  "relative_error_boundary": 1e-05,
+  "output_schema": {
+    "reconstruction": {
+      "shape": [
+        1,
+        107
+      ],
+      "dtype": "float64"
+    },
+    "series_parameters": {
+      "shape": [
+        1,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "fitted_impedance": {
+      "shape": [
+        1,
+        107
+      ],
+      "dtype": "complex128"
+    }
+  },
+  "metric_groups": [
+    {
+      "key": "reconstruction",
+      "name": "reconstruction_relative_error",
+      "boundary": 1e-05
+    },
+    {
+      "key": "series_parameters",
+      "component": 0,
+      "name": "series_parameters_0_relative_error",
+      "boundary": 1e-05
+    },
+    {
+      "key": "series_parameters",
+      "component": 1,
+      "name": "series_parameters_1_relative_error",
+      "boundary": 1e-05
+    },
+    {
+      "key": "fitted_impedance",
+      "name": "fitted_impedance_relative_error",
+      "boundary": 1e-05
+    }
+  ],
+  "threshold_provenance": "Fixed 1e-5 inverse-parity tolerance recorded before local extraction; independent upstream/high-precision reruns and fresh cleaned parity verify a nonzero numerical tolerance. No reference is physical ground truth."
+}

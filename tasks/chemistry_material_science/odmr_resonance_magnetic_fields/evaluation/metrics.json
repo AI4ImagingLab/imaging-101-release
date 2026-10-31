@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "Synchronization-qualified author constrained LM, 10000 cap; real data, no measured field truth",
+      "B_RMSE_uT": 5.629461573582625e-06,
+      "B_max_absolute_error_uT": 0.00213623046875,
+      "D_RMSE_GHz": 0.0,
+      "D_max_absolute_error_GHz": 0.0
+    }
+  ],
+  "B_rmse_boundary": 0.02,
+  "B_max_abs_boundary": 0.2,
+  "D_rmse_boundary": 2e-07,
+  "D_max_abs_boundary": 1e-06,
+  "reference_type": "standard-method reference, not physical truth",
+  "metric_definition": "Each full channel separately: RMSE=sqrt(mean((estimate-reference)^2)); maximum absolute error=max(abs(estimate-reference)); no masks/alignment/rescaling."
+}

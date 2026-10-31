@@ -1,0 +1,19 @@
+{
+  "baseline": [
+    {
+      "method": "Fresh independent upstream Octave SLPRU, author measured ROI; method reference only",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "observation_relative_error": 0.33461260886103705
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 2e-05,
+  "observation_relative_error_boundary": 0.3680738697471408,
+  "observation_definition": "Interior L2 residual / observation L2 after one nonnegative global gain fit alpha=max(0,<Ma,y>/<Ma,Ma>); no spatial alignment.",
+  "provenance": "Upstream original run; numeric agreement tolerances pre-frozen in private frozen_acceptance.json before extraction. No physical truth available.",
+  "evaluation_version": "2.0-scale-profiled-convex-spectral-objective",
+  "regularized_objective_per_datum_boundary": 0.07310834324578482,
+  "objective_definition": "Normalize interior digital intensities Y/255 by their global RMS to B (24x784). Minimize generalized KL(B||MU)+.1 nuclear_norm(U)+.1 sum_rows norm(U_row), U>=0. Submitted max-one field represents U up to one nonnegative scalar, profiled analytically as sum(B)/(sum(Ma)+.1*(nuclear_norm(a)+sum_row_norm(a))). Divide total objective by B.size. This is a v2 convex global-field conditional target, not equivalence to the v1 finite reweighted local SLPRU mapping.",
+  "objective_bound_provenance": "Feasible standard-output objective plus 1e-8 per-datum floating tolerance. Both the unchanged observation error limit and physical output constraints remain mandatory."
+}

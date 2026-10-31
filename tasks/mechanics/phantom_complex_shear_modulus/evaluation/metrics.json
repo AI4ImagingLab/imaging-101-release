@@ -1,0 +1,28 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced author polar AHI, quadratic9x9 smoothing, 80/100Hz; no measured modulus truth",
+      "storage_ncc": 1.0,
+      "storage_nrmse": 0.0,
+      "loss_ncc": 1.0,
+      "loss_nrmse": 0.0,
+      "relative_helmholtz_residual": 0.2501509233855453,
+      "frequency_Hz": 80.0
+    },
+    {
+      "method": "Reproduced author polar AHI, quadratic9x9 smoothing, 80/100Hz; no measured modulus truth",
+      "storage_ncc": 1.0,
+      "storage_nrmse": 0.0,
+      "loss_ncc": 1.0,
+      "loss_nrmse": 0.0,
+      "relative_helmholtz_residual": 0.2736138916494486,
+      "frequency_Hz": 100.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-07,
+  "relative_helmholtz_residual_boundary": 0.2763500305659431,
+  "metric_definition": "Cosine NCC and dynamic-range NRMSE separately on real storage and imaginary loss components at each frequency, on fixed support. Every component/frequency must pass.",
+  "reference_kind": "Independent standard-method reproduction, not ground truth",
+  "threshold_rationale": "Original independent reruns bitwise equal; nonzero1e-7 NRMSE portability tolerance plus1.01 times largest original vector Helmholtz residual."
+}

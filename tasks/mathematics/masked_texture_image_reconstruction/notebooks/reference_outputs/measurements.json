@@ -1,0 +1,38 @@
+{
+  "original_runs": {
+    "1": {
+      "runtime_seconds": 66.90746590000344,
+      "ncc": 0.9808253247141678,
+      "dynamic_range_nrmse": 0.09280369578642164,
+      "observed_max_error": 0.0,
+      "sig": 35.35533905932737,
+      "tau": 0.0035355339059327377,
+      "objective_last": 5010.980864310988
+    },
+    "2": {
+      "runtime_seconds": 198.89896460000455,
+      "ncc": 0.9809076136103239,
+      "dynamic_range_nrmse": 0.09255324552920033,
+      "observed_max_error": 0.0,
+      "sig": 29.65351654086267,
+      "tau": 0.002965351654086267,
+      "objective_last": 4875.397951294002
+    },
+    "3": {
+      "runtime_seconds": 325.5428324999957,
+      "ncc": 0.981611715945808,
+      "dynamic_range_nrmse": 0.09061963136115529,
+      "observed_max_error": 0.0,
+      "sig": 27.966956260976858,
+      "tau": 0.0027966956260976855,
+      "objective_last": 4670.803742172511
+    }
+  },
+  "source_revision": "4f51b7d41fa21103f0627b7182148ac1e28f9c65",
+  "source_data": "full240x320fish photograph and original fixed binary mask",
+  "iterations": 8000,
+  "normalization": "RGB/255 then .3R+.59G+.11B",
+  "metrics": "NCC without centering; dynamic-range NRMSE; no hidden alignment",
+  "historical_paper_report": "2021arXiv v2 Table3.1 TGV fish inpainting PSNR20.73dB/SSIM.76, different historical stopping/configuration; not this run",
+  "selected_scope": "published TGV comparator, not proposed generative network or whole-paper multialgorithm reproduction"
+}

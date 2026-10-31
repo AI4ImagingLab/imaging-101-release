@@ -1,0 +1,17 @@
+Selected algorithm code: MIT, Copyright(c)2025 ZacharyVarley.
+Exact original MIT notice retained in LICENSE.
+
+Real data: Håkon Wiik Ånes, Jarle Hjelen, Antonius T.J.van Helvoort and Knut
+Marthinsen, Electron backscatter patterns from Nickel acquired with varying
+camera gain, DOI10.5281/zenodo.7498632, CC BY4.0.
+https://creativecommons.org/licenses/by/4.0/
+Changes: selected native rows50:90,columns60:110 from gain0dB scan; exact uint8
+detector values repackaged in batch-first NPZ without scan resampling.
+
+Independent calibration: nickel20keV small master pattern distributed with
+kikuchipy, simulated with EMsoft EMMCOpenCL/EMEBSDMaster, CC BY4.0 as stated by
+the data-provider documentation. Native square-Lambert north/south uint8 arrays
+repackaged unchanged in NPZ. No reconstruction/domain library is included.
+Attribution: https://kikuchipy.org/en/stable/reference/generated/kikuchipy.data.nickel_ebsd_master_pattern_small.html
+The paper text/figures are not redistributed or adapted into this task; new
+plots are made from the separately licensed data and local calculations.

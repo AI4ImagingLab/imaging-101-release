@@ -1,0 +1,192 @@
+{
+  "primary_reconstruction_and_io_seconds": 2.5231244000024162,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "ncc": 1.000000000000006,
+      "nrmse": 1.3890866529870287e-10,
+      "maximum_absolute": 4.598692537882698e-10,
+      "stationarity_relative": 5.067320257622532e-15,
+      "channel_mean_absolute": 1.8149759473118365e-10
+    },
+    "thresholds": {
+      "ncc": {
+        "comparison": ">=",
+        "boundary": 0.9999999
+      },
+      "nrmse": {
+        "comparison": "<=",
+        "boundary": 1e-07
+      },
+      "maximum_absolute": {
+        "comparison": "<=",
+        "boundary": 5e-07
+      },
+      "stationarity_relative": {
+        "comparison": "<=",
+        "boundary": 1e-08
+      },
+      "channel_mean_absolute": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      }
+    },
+    "errors": []
+  },
+  "retained_gradient_fractions": [
+    0.4593717849794239,
+    0.45865612139917694,
+    0.4577591306584362
+  ],
+  "thresholds": [
+    {
+      "h": 0.0,
+      "relative_change_from_observation": 4.507600640916152e-10,
+      "stationarity": 5.147179921329791e-15,
+      "additional_reconstruction_seconds": 0.6939591999980621,
+      "runtime_role": "pure reconstruction, excludes NPZ I/O",
+      "outside01_count": 112
+    },
+    {
+      "h": 0.015,
+      "relative_change_from_observation": 0.032226068338494965,
+      "stationarity": 5.126591886434448e-15,
+      "additional_reconstruction_seconds": 0.6976230000000214,
+      "runtime_role": "pure reconstruction, excludes NPZ I/O",
+      "outside01_count": 1096
+    },
+    {
+      "h": 0.033,
+      "relative_change_from_observation": 0.0553735023841153,
+      "stationarity": 5.066400130177316e-15,
+      "additional_reconstruction_seconds": null,
+      "runtime_role": "reused actively computed primary; not timed again",
+      "outside01_count": 1230
+    },
+    {
+      "h": 0.06,
+      "relative_change_from_observation": 0.08394081617182957,
+      "stationarity": 5.039927998342933e-15,
+      "additional_reconstruction_seconds": 0.6941647000057856,
+      "runtime_role": "pure reconstruction, excludes NPZ I/O",
+      "outside01_count": 1025
+    },
+    {
+      "h": 0.1,
+      "relative_change_from_observation": 0.12603678264169646,
+      "stationarity": 5.288666299029318e-15,
+      "additional_reconstruction_seconds": 0.7311363000044366,
+      "runtime_role": "pure reconstruction, excludes NPZ I/O",
+      "outside01_count": 595
+    }
+  ],
+  "epsilon": [
+    {
+      "epsilon": 1e-10,
+      "source_max_absolute": 6.164500021554886e-09,
+      "channel_mean_error": 2.012605193613126e-09,
+      "stationarity": 5.18201676134207e-15
+    },
+    {
+      "epsilon": 1e-08,
+      "source_max_absolute": 4.598692537882698e-10,
+      "channel_mean_error": 1.8149759473118365e-10,
+      "stationarity": 5.066400130177316e-15
+    },
+    {
+      "epsilon": 1e-06,
+      "source_max_absolute": 9.573897230552575e-12,
+      "channel_mean_error": 2.2304380564719395e-13,
+      "stationarity": 5.1001306553990194e-15
+    },
+    {
+      "epsilon": 0.0001,
+      "source_max_absolute": 1.609823385706477e-13,
+      "channel_mean_error": 2.481348460037225e-14,
+      "stationarity": 5.256542893858847e-15
+    }
+  ],
+  "synthetic": [
+    {
+      "case": "Strong scene edges",
+      "gradient_relative_l2": 0.11181677950781345,
+      "mean_convention_rmse": 0.02096156529121688,
+      "absolute_transmitted_component_rmse": 0.061541209766477235
+    },
+    {
+      "case": "Weak scene edges",
+      "gradient_relative_l2": 0.9805447724783908,
+      "mean_convention_rmse": 0.024189104940284305,
+      "absolute_transmitted_component_rmse": 0.06271400234585635
+    }
+  ],
+  "supplementary_real": {
+    "building": {
+      "native_shape": [
+        1440,
+        1080,
+        3
+      ],
+      "seconds": 0.7025412999937544,
+      "source_max_absolute": 3.023644667976555e-10,
+      "stationarity": 7.192631620415914e-15,
+      "output_range": [
+        -0.045585139485330474,
+        1.0432145971203537
+      ]
+    },
+    "conference_room": {
+      "native_shape": [
+        1080,
+        1440,
+        3
+      ],
+      "seconds": 0.6926524000009522,
+      "source_max_absolute": 1.8636198140242755e-10,
+      "stationarity": 1.0053959488761132e-14,
+      "output_range": [
+        -0.10247117765534805,
+        1.0592357204436684
+      ]
+    },
+    "Dog-In-Window": {
+      "native_shape": [
+        667,
+        1000,
+        3
+      ],
+      "seconds": 0.2760095999983605,
+      "source_max_absolute": 3.843503848521834e-10,
+      "stationarity": 3.723453744359103e-15,
+      "output_range": [
+        -0.2867224393922414,
+        1.1351438448692943
+      ]
+    }
+  },
+  "gaussian_stress": [
+    {
+      "sigma": 0.0,
+      "relative_field_change": 0.0,
+      "same_observation_stationarity": 5.066400130177316e-15
+    },
+    {
+      "sigma": 0.005,
+      "relative_field_change": 0.012021045019452987,
+      "same_observation_stationarity": 4.86493672802602e-15
+    },
+    {
+      "sigma": 0.02,
+      "relative_field_change": 0.058797431663391936,
+      "same_observation_stationarity": 2.8209455361834304e-15
+    },
+    {
+      "sigma": 0.05,
+      "relative_field_change": 0.10621784921281197,
+      "same_observation_stationarity": 1.404787930606884e-15
+    }
+  ],
+  "review_seconds": 90.27146569998877,
+  "truth_status": "No independent actual real-scene transmission truth. Original baseline is labeled conditional method reference."
+}

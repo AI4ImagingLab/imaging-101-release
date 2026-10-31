@@ -1,0 +1,40 @@
+{
+  "relative_entropy_KL_boundary": 0.3381082948469032,
+  "normalization_abs_error_boundary": 1e-06,
+  "negative_probability_max_boundary": 1e-12,
+  "whitening_max_abs_error_boundary": 1e-05,
+  "profile_00_relative_l2_boundary": 0.026591262080207435,
+  "profile_01_relative_l2_boundary": 0.02844506149649671,
+  "profile_02_relative_l2_boundary": 0.018434185187322615,
+  "profile_03_relative_l2_boundary": 0.04025462873101504,
+  "profile_04_relative_l2_boundary": 0.027660589424938535,
+  "profile_05_relative_l2_boundary": 0.013654587954066176,
+  "profile_06_relative_l2_boundary": 0.0336181817804809,
+  "profile_07_relative_l2_boundary": 0.024701584356907547,
+  "profile_08_relative_l2_boundary": 0.026476045698105286,
+  "profile_09_relative_l2_boundary": 0.030282517003045205,
+  "profile_10_relative_l2_boundary": 0.02843132972019683,
+  "profile_11_relative_l2_boundary": 0.02053178642008002,
+  "profile_12_relative_l2_boundary": 0.037817523082168805,
+  "profile_13_relative_l2_boundary": 0.03739204205315514,
+  "profile_14_relative_l2_boundary": 0.014327218326556366,
+  "profile_15_relative_l2_boundary": 0.04814514228495083,
+  "profile_16_relative_l2_boundary": 0.018381331368848182,
+  "profile_17_relative_l2_boundary": 0.02633789514374982,
+  "profile_18_relative_l2_boundary": 0.017210314777749293,
+  "profile_19_relative_l2_boundary": 0.060767767261188405,
+  "profile_20_relative_l2_boundary": 0.03430500540870789,
+  "profile_21_relative_l2_boundary": 0.028060177656767955,
+  "profile_22_relative_l2_boundary": 0.020072433153777422,
+  "profile_23_relative_l2_boundary": 0.026829248297179618,
+  "evaluation_version": 1,
+  "selected_source": "V2 corrected eigenmode/emittance pairing",
+  "baseline": [
+    {
+      "method": "Complete original V2 5epochs/24profiles/1m samples",
+      "relative_entropy_KL": 0.30737117713354833
+    }
+  ],
+  "comparison": "Every required scalar metric <= declared bound; no reference identity",
+  "truth_status": "No independently measured4D density truth"
+}

@@ -1,0 +1,10 @@
+{
+  "baseline": [{"method": "Unmodified author source, normalized floating RGB, Octave 8.4 image 2.14, exact native pumpkins observations; self-comparison is consistency only", "reconstruction_ncc": 1.0, "reconstruction_nrmse": 0.0, "transmission_ncc": 1.0, "transmission_nrmse": 0.0}],
+  "reconstruction_ncc_boundary": 0.999999,
+  "reconstruction_nrmse_boundary": 0.0001,
+  "transmission_ncc_boundary": 0.9999999999,
+  "transmission_nrmse_boundary": 0.00000001,
+  "reference_type": "independently executed standard-method result, not physical truth",
+  "threshold_rationale": "Fixed source-consistency tolerances: float64 sparse-solve roundoff and uint8 rounding. Source and cleaned image match exactly; measured transmission max absolute difference 1.96e-13. Nonzero bounds permit numerical solver variation, do not assert scene accuracy.",
+  "nrmse_definition": "For each required output separately, sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)); no alignment or scale fitting. NCC is flattened cosine similarity without mean subtraction."
+}

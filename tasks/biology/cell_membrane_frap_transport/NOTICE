@@ -1,0 +1,19 @@
+HiFRAP method adaptations and author-supplied experimental data:
+Enrico Lorenzetti, Celia Municio-Diaz, Nicolas Minc, Arezki Boudaoud,
+Antoine Fruleux, 2025. Original repository license statement:
+
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+
+By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License ("Public License").
+
+You can find the full license text here: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+Changes: local extraction of the selected 1D pure-diffusion mathematics;
+explicit NumPy ImageJ-equivalent sampling; NPZ interfaces; standalone Judge;
+tests, documentation and active scientific review notebook. Exact upstream
+revision and source locations are documented in test/validation.md.
+
+ImageJ 1.54f sampling and downsampling routines are public domain, by
+Wayne Rasband and contributors; downsampling algorithm by Michael Schmid.
+Only explicit mathematical formulas are adapted; no ImageJ code is imported
+or needed by the cleaned runtime.

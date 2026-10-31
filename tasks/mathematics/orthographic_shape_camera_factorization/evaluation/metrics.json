@@ -1,0 +1,19 @@
+{
+  "baseline": [
+    {
+      "method": "Original author rigid helper on all51frames491tracks; no3Dgroundtruth",
+      "projection_rmse_pixel": 2.30846
+    }
+  ],
+  "reconstruction_ncc_boundary": 0.999999,
+  "reconstruction_nrmse_boundary": 1e-06,
+  "cameras_ncc_boundary": 0.999999,
+  "cameras_nrmse_boundary": 1e-06,
+  "translations_ncc_boundary": 0.999999,
+  "translations_nrmse_boundary": 1e-06,
+  "projection_rmse_boundary": 2.54,
+  "alignment": "One global orthogonal3x3matrix including reflection fitted from allshape coordinates and jointly applied to shape and camera rows. No translation or scale fitting.",
+  "nrmse_definition": "RMS error divided by each complete reference array dynamic range, after declared joint orthogonal gauge.",
+  "reference_role": "reproduced standard-method baseline; notphysical3Dtruth",
+  "threshold_rationale": "Full original/local gauge-aligned discrepancies<2e-12pixel,<4e-15camera;1e-6allowsfloat32 while rejecting1%gain. Forward RMS bound1.1timesnative2.30846pixel rounded2.54."
+}

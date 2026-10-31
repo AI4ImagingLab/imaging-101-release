@@ -1,0 +1,14 @@
+{
+  "baseline": [
+    {
+      "method": "Original author notch autofit full real native sweep",
+      "observation_relative_rms": 0.00879655899647674
+    }
+  ],
+  "frequency_relative_error_boundary": 1e-07,
+  "quality_factor_relative_error_boundary": 0.0001,
+  "complex_response_relative_l2_error_boundary": 1e-05,
+  "observation_relative_rms_boundary": 0.009676214896124415,
+  "reference": "Original method reference; no physical truth exists",
+  "provenance": "Bound before local extraction, original repeat captured separately; observation bound 1.1 times original residual, frozen without consulting cleaned scores"
+}

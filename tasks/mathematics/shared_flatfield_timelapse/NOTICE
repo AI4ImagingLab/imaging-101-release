@@ -1,0 +1,10 @@
+Mathematical implementation adapted from BaSiCPy 2.0, peng-lab/BaSiCPy,
+commit bbb6d9aa994e3c3233efc5967d7ea5e49b269a29.
+Copyright 2022 BaSiCPy developing collaboration group. MIT notice in LICENSE.
+
+Existing observations: Tingying Peng, “Datasets for Background and Shading
+Correction of Optical Microscopy Images by BaSiCPy,” Zenodo record 6334810,
+2022, DOI 10.5281/zenodo.6334810, CC BY 4.0.
+Only the original Uncorrected brightfield images were converted to NPZ.
+Image values were not modified. No supplied corrected images were used as
+observations, calibration, ground truth or reference reconstruction.

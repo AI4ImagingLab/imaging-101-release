@@ -1,0 +1,11 @@
+{
+  "baseline": [
+    {
+      "method": "closure-only RML on gain-corrupted observations",
+      "ncc_vs_ref": 0.6044211252031645,
+      "nrmse_vs_ref": 0.13842136408688988
+    }
+  ],
+  "ncc_boundary": 0.5439790126828481,
+  "nrmse_boundary": 0.15226350049557887
+}

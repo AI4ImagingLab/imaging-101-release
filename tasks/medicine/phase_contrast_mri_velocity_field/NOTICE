@@ -1,0 +1,8 @@
+Local direct phase-contrast reconstruction adapts Open4DFlow analysis code.
+Copyright2025 Marta Maggioni. Distributed under GPL-3.0-or-later; see LICENSE.
+Real volunteer observations originate from the authors' CC0-1.0 deposit,
+DOI10.5281/zenodo.20085845. Complex encoding images were reconstructed
+independently from that deposit using the author's full original acquisition
+pipeline; they are MRI observations for the selected velocity inverse.
+BART is used only in a private acquisition-verification environment and is
+not a cleaned-runtime dependency. No BART or upstream domain solver is shipped.

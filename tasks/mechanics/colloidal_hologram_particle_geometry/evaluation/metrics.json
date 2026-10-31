@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "thresholds": {
+    "particle_1_cauchy": {
+      "comparison": "<=",
+      "boundary": 1.342
+    },
+    "particle_2_cauchy": {
+      "comparison": "<=",
+      "boundary": 1.161
+    }
+  },
+  "definition": "mean log(1+((predicted-normalized observation)/0.05)^2) on declared valid ROI pixels",
+  "provenance": "Independent upstream full-mask robust run; finite numerical budget <0.0011 in mean Cauchy cost; accepted better solutions need not match parameters."
+}

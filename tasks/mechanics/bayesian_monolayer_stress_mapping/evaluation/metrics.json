@@ -1,0 +1,28 @@
+{
+  "baseline": [
+    {
+      "method": "Original BISM fixed Lambda1e-6 exact bundled author FEM observations",
+      "xx_ncc": 0.9677131820689027,
+      "xx_nrmse": 0.03219874255481042,
+      "yy_ncc": 0.9892072481335106,
+      "yy_nrmse": 0.01911766208899771,
+      "xy_ncc": 0.9801887227794714,
+      "xy_nrmse": 0.038151619423284135
+    }
+  ],
+  "reference": "Author exact FEM stress; full tensor components scored individually, no alignment or scaling",
+  "xx_ncc_boundary": 0.8709418638620124,
+  "xx_nrmse_boundary": 0.035418616810291466,
+  "yy_ncc_boundary": 0.8902865233201596,
+  "yy_nrmse_boundary": 0.02102942829789748,
+  "xy_ncc_boundary": 0.8821698505015243,
+  "xy_nrmse_boundary": 0.04196678136561255,
+  "metric_comparisons": {
+    "xx_ncc": ">=",
+    "xx_nrmse": "<=",
+    "yy_ncc": ">=",
+    "yy_nrmse": "<=",
+    "xy_ncc": ">=",
+    "xy_nrmse": "<="
+  }
+}

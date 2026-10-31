@@ -1,0 +1,37 @@
+{
+  "fresh": {
+    "iterations": 1657,
+    "converged": true,
+    "relative_primal": 9.999964969725234e-08,
+    "lambda": 0.0036084391824351605,
+    "rank_1e_6": 24,
+    "sparse_fraction_1e_3": 0.3727411954365079,
+    "low_energy": 799490.9311395669,
+    "sparse_energy": 10000.705500756354,
+    "seconds": 401.76239290018566
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_relative_l2": 2.1566921112162632e-13,
+      "sparse_component_relative_l2": 1.8938888051669213e-12,
+      "additive_consistency_relative": 9.999964969725261e-08
+    },
+    "thresholds": {
+      "reconstruction_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "sparse_component_relative_l2": {
+        "comparison": "<=",
+        "boundary": 1e-06
+      },
+      "additive_consistency_relative": {
+        "comparison": "<=",
+        "boundary": 1.1e-07
+      }
+    },
+    "errors": []
+  }
+}

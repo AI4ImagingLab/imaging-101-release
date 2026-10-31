@@ -1,0 +1,10 @@
+Local elastic inversion adapted from pyTFM (Andreas Bauer and contributors),
+GNU General Public License version 3. See LICENSE.
+Bauer et al. (2021), DOI 10.1371/journal.pcbi.1008364.
+
+Experimental bead images and derived displacement observations:
+Andreas Bauer, pyTFM_data release R, DOI 10.5281/zenodo.4047040.
+Creative Commons Attribution-ShareAlike 4.0 International:
+https://creativecommons.org/licenses/by-sa/4.0/ . The supplied displacement
+is derived through PIV, row-order canonicalization and NPZ storage; it remains
+under CC BY-SA 4.0. No original image or traction truth is presented as input.

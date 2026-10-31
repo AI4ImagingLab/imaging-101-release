@@ -1,0 +1,61 @@
+{
+  "baseline": [
+    {
+      "method": "Independent reproduced MintPy selected method; self-reference is not physical ground truth",
+      "quantity": "reconstruction",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    },
+    {
+      "method": "Independent reproduced MintPy selected method; self-reference is not physical ground truth",
+      "quantity": "dem_error",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    },
+    {
+      "method": "Independent reproduced MintPy selected method; self-reference is not physical ground truth",
+      "quantity": "deformation_parameters",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    },
+    {
+      "method": "Independent reproduced MintPy selected method; self-reference is not physical ground truth",
+      "quantity": "temporal_coherence",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    },
+    {
+      "method": "Independent reproduced MintPy selected method; self-reference is not physical ground truth",
+      "quantity": "network_timeseries",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "mask_definition": "Every original interferogram has a strictly positive connected-component label at this pixel; fixed public analysis_mask, 159762pixels. All98dates and all5deformation coefficient maps evaluated; noalignment/crop/scaling.",
+  "threshold_provenance": "Set before first cleaned full-pipeline result. Integer closure repair is independently bitwise identical. SVD/float32 port uses nonzero dynamic-range NRMSE tolerance1e-5 and NCC>=0.99999, intended for numerical reproducibility. Independent oracle rerun tests bound-pixel numerical repeatability. These are reference-agreement boundaries, not measurement-accuracy claims.",
+  "observation_coherence_definition": "mean_p |sum_e exp(i[(phi_e(p)-phi_e(ref))+4pi/lambda(d_j(p)-d_i(p))])| /288 onpublicanalysis_mask",
+  "observation_coherence_boundary": 0.984080196,
+  "units": {
+    "reconstruction": "m",
+    "network_timeseries": "m",
+    "dem_error": "m",
+    "deformation_parameters": [
+      "m",
+      "m/year",
+      "m/year^2",
+      "m",
+      "m"
+    ],
+    "temporal_coherence": "1"
+  },
+  "reconstruction_ncc_boundary": 0.99999,
+  "reconstruction_nrmse_boundary": 1e-05,
+  "dem_error_ncc_boundary": 0.99999,
+  "dem_error_nrmse_boundary": 1e-05,
+  "deformation_parameters_ncc_boundary": 0.99999,
+  "deformation_parameters_nrmse_boundary": 1e-05,
+  "temporal_coherence_ncc_boundary": 0.99999,
+  "temporal_coherence_nrmse_boundary": 1e-05,
+  "network_timeseries_ncc_boundary": 0.99999,
+  "network_timeseries_nrmse_boundary": 1e-05
+}

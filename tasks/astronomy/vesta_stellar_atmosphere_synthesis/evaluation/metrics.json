@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Completed original2026 source full16 walkers,100burn+1000production",
+      "parameter_standardized_max": 0.0,
+      "spectrum_nrmse": 0.0,
+      "masked_weighted_rmse": 0.6598067974847945
+    }
+  ],
+  "parameter_standardized_max_boundary": 3.0,
+  "spectrum_nrmse_boundary": 0.001,
+  "masked_weighted_rmse_boundary": 0.7257874772332741,
+  "parameter_definition": "Maximum absolute difference per[Teff K,logg cgs dex,MH dex,vsini km/s] divided by independent original full-posterior standard deviation.",
+  "nrmse_definition": "RMS error over all52570 complete modelled spectral-window flux samples divided by dynamic range of independently reproduced original spectrum; no alignment or scaling.",
+  "observation_definition": "RMS over all3643 selected Fe-mask entries, retaining original mask concatenation, of(predicted spectrum minus measured flux)/original independently estimated run-time noise map. This is standard-method weighting, not independent instrument variance.",
+  "reference_type": "Validated independently reproduced standard method; no physical ground truth",
+  "tolerance_provenance": "Parameter3sigma and weightedRMSE1.1ratio preselected in stepar_binding_frozen.json before local inverse; full-spectrum nonzero0.001dynamic tolerance fixed here before local inverse based on source posterior measurement scale, to be checked against independent source rerun, never tuned to cleaned output."
+}

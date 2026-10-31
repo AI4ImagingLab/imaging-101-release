@@ -1,0 +1,10 @@
+{
+  "evaluation_version": 1,
+  "objective_boundary": [
+    0.004642426117226444,
+    0.007264271807644887
+  ],
+  "forward_relative_l2_boundary": 1e-10,
+  "reference_type": "Independent upstream method result; no molecular ground truth",
+  "objective_definition": "Squared field-correlation residual plus1000 mass/endpoint soft constraints plus0.1 squared index-curvature norm, per replicate."
+}

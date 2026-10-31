@@ -1,0 +1,41 @@
+Local method extraction and numerical compatibility
+
+GSAS-II source copyright2010 UChicago Argonne LLC, operator of Argonne
+National Laboratory. Complete custom open-source license is preserved in
+LICENSE. Mathematical extraction by benchmark maintainers2026: explicit
+indexed geometry, P21 orbit bookkeeping, double-threshold sign flips, FFT
+updates, source origin heuristic and independent evaluator. No GSAS-II
+reconstruction library is imported by the runtime or normal tests.
+
+The original NumPy1.26 method ran unchanged. A separate private NumPy2.4
+oracle copy changed only reshape(...,newshape=steps) to the equivalent
+positional shape argument in the postprocessing origin routine. No physical
+equation or numerical operation changed; this is explicitly qualified.
+
+P21 equivalent-reflection bookkeeping derives also from GENHKL. Original
+authorship and copyright notice follows verbatim:
+
+
+!Written by:            Allen C. Larson      and Robert B. Von Dreele
+!                  MS-H805
+!                  Los Alamos National Laboratory
+!                  Los Alamos, NM  87545
+
+!                  Copyright, 1984-2000, The Regents of the University of California.
+
+!      This software was produced under a U.S. Government contract (W-7405-ENG-36) by the Los Alamos
+!      National Laboratory, which is operated by the University of California for the U.S. Department of
+!      Energy. The U.S. Government is licensed to use, reproduce, and distribute this software. Permission
+!      is granted to the public to copy and use this software without charge, provided that this notice
+!      and any statement of authorship are reproduced on all copies. Neither the Government nor the
+!      University makes any warranty, express or implied, or assumes any liability or responsibility for
+!      the use of this software. 
+
+
+Existing real measurements are from the author's licensed tutorial repository.
+The supplied FCF has a model-based global intensity scale; benchmark input
+uses only measured-RMS-normalized Fo-squared and its uncertainties, removing
+that absolute multiplicative calibration. Calculated amplitudes/phases,
+F000 and atom coordinates are not released as solver input or used by the
+reconstruction. A separate external-data redistribution grant was not
+identified; this local research package makes no broader data-license claim.

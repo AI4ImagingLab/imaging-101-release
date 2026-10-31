@@ -1,0 +1,21 @@
+numpy==2.4.6
+scipy==1.17.1
+torch==2.9.1+cu128
+matplotlib==3.11.1
+cupy-cuda12x==13.6.0
+# CuPy only compiles the explicit general scalar-CSR CUDA kernel; no sparse solver APIs.
+# Validated general numerical backend exception for the reference method:
+# Linux/WSL2 Ubuntu 24.04, Python3 standard library, NVIDIA CUDA for sparse products.
+# Ubuntu package libopenblas0-pthread=0.3.26+ds-1ubuntu0.1 (amd64).
+# Package SHA256: 7dc3b4384c02aecb87eb8b70fa26c5843a08af242f4638aa4b36922bdc4f5b04
+# libopenblasp-r0.3.26.so SHA256:
+# bfc7492adbf84a8f567720a9e1fae2afc18f3d817da233e7f4d453683485308e
+# libblas.so.3 SHA256:
+# 8ba4a98f44d763c2e648755ef452025919e28633339f23ff605044de3483a25d
+# IMAGING_BLAS_LIBRARY_PATH is the Linux directory containing these generic libraries.
+# IMAGING_WSL_DISTRO optionally selects the Windows WSL distribution.
+# Generic worker selects four BLAS threads independently of the parent Python setting.
+# Scalar power additionally uses the validated Ubuntu glibc 2.39 libm.
+# /usr/lib/x86_64-linux-gnu/libm.so.6 SHA256:
+# 1b87a1a50b496cfead2b0ad134c2ff536705c82608db240c7e8aa48d6c0e4217
+# No upstream reconstruction or Octave package is needed by the cleaned runtime.

@@ -1,0 +1,50 @@
+{
+  "raw_data_sha256": "871f3426a6fbdaaa9a1721b604780cabdf737c12d7bb38fd19ff3041d53a2bad",
+  "source_commit": "4a8787654477355167df74bbf0b6003e8fc35a4d",
+  "data_type": "real",
+  "points": 926,
+  "reported_angle_deg": 70.06,
+  "selected_source_model_angle_deg": 70.0,
+  "reference_type": "Independently executed original method; no actual material truth",
+  "kernel_executable": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+  "active_fit_seconds": 0.027572099992539734,
+  "standard_nfev": 32,
+  "fresh_metrics": {
+    "relative_complex_rho_rms": 0.012221012668514107,
+    "psi_rms_deg": 0.22605185267059896,
+    "circular_delta_rms_deg": 0.6932280901902916
+  },
+  "fresh_parameters": [
+    2.2297355731425625,
+    461.6893396285377,
+    189.77957481174963,
+    24.84463961969663
+  ],
+  "source_parameter_absolute_difference": [
+    1.1479528438940179e-10,
+    5.64898073207587e-07,
+    6.959890015423298e-07,
+    5.995204332975845e-11
+  ],
+  "actual_multistart_objectives": [
+    0.041605770387414004,
+    0.04160576846971807,
+    0.0416057712957327,
+    0.0416057713122769
+  ],
+  "actual_multistart_nfev": [
+    32,
+    147,
+    36,
+    41
+  ],
+  "actual_multistart_success": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "fresh_scaled_condition": 2713.3445321194095,
+  "canonical_main_output": "output/reconstruction.npz",
+  "source_fit_used_as_truth": false
+}

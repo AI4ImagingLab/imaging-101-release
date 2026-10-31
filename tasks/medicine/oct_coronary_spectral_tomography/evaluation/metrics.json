@@ -1,0 +1,11 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original CBORT heterodyne2channel reconstruction",
+      "relative_l2": 0.0
+    }
+  ],
+  "relative_l2_boundary": 2e-05,
+  "metric_definition": "Euclidean norm of complex difference divided by Euclidean reference norm; both polarization channels and all pixels, no fitting or phase alignment",
+  "reference": "independent standard-method result, no actual anatomical truth"
+}

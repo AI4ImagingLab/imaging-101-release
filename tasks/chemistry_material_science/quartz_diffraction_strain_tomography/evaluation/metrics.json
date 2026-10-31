@@ -1,0 +1,86 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified default GPU source",
+      "components": [
+        {
+          "component": "xx",
+          "ncc_vs_truth": 0.9945090874868632,
+          "nrmse_vs_truth": 0.027696695887618427
+        },
+        {
+          "component": "yy",
+          "ncc_vs_truth": 0.9994812540614239,
+          "nrmse_vs_truth": 0.02086168740875186
+        },
+        {
+          "component": "zz",
+          "ncc_vs_truth": 0.9988073722996328,
+          "nrmse_vs_truth": 0.01156943158995734
+        },
+        {
+          "component": "xy",
+          "ncc_vs_truth": 0.9994986699886677,
+          "nrmse_vs_truth": 0.015361086089400882
+        },
+        {
+          "component": "xz",
+          "ncc_vs_truth": 0.9995300531571522,
+          "nrmse_vs_truth": 0.013242919147424367
+        },
+        {
+          "component": "yz",
+          "ncc_vs_truth": 0.9996332889571847,
+          "nrmse_vs_truth": 0.010074325813576411
+        }
+      ]
+    },
+    {
+      "method": "Source with matched RBF Jacobian transpose only",
+      "components": [
+        {
+          "component": "xx",
+          "ncc_vs_truth": 0.9942767320349338,
+          "nrmse_vs_truth": 0.028540341078467844
+        },
+        {
+          "component": "yy",
+          "ncc_vs_truth": 0.9995032889644007,
+          "nrmse_vs_truth": 0.020471019164044413
+        },
+        {
+          "component": "zz",
+          "ncc_vs_truth": 0.9988109658254865,
+          "nrmse_vs_truth": 0.011578087609279947
+        },
+        {
+          "component": "xy",
+          "ncc_vs_truth": 0.9995421944206313,
+          "nrmse_vs_truth": 0.014986728126204545
+        },
+        {
+          "component": "xz",
+          "ncc_vs_truth": 0.9995133239857824,
+          "nrmse_vs_truth": 0.013357775303162896
+        },
+        {
+          "component": "yz",
+          "ncc_vs_truth": 0.9996194891411622,
+          "nrmse_vs_truth": 0.010293266718433615
+        }
+      ]
+    }
+  ],
+  "xx_ncc_boundary": 0.8948490588314405,
+  "xx_nrmse_boundary": 0.03139437518631463,
+  "yy_ncc_boundary": 0.8995529600679606,
+  "yy_nrmse_boundary": 0.022518121080448858,
+  "zz_ncc_boundary": 0.8989298692429378,
+  "zz_nrmse_boundary": 0.012735896370207942,
+  "xy_ncc_boundary": 0.8995879749785682,
+  "xy_nrmse_boundary": 0.016485400938825,
+  "xz_ncc_boundary": 0.8995619915872042,
+  "xz_nrmse_boundary": 0.014693552833479187,
+  "yz_ncc_boundary": 0.8996575402270459,
+  "yz_nrmse_boundary": 0.011322593390276978
+}

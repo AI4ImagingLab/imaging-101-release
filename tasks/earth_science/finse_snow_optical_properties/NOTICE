@@ -1,0 +1,1 @@
+Local explicit forward-emulator inversion adapted from openosmia/snowlaps, GPL-3.0. Original independently SNICAR-trained forward-response weights are known calibration, not an inverse network or Finse target labels. See hidden validation for source revision and paper.

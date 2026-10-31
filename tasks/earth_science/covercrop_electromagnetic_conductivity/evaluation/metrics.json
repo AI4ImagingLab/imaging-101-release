@@ -1,0 +1,12 @@
+{
+  "baseline": [
+    {
+      "method": "Fresh bounded L2 EMagPy extraction against independently reproduced upstream result",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.99999,
+  "nrmse_boundary": 0.0005,
+  "provenance": "Independent deterministic oracle repeated; numerical port tolerance, not physical accuracy."
+}

@@ -1,0 +1,70 @@
+{
+  "baseline": [
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261029,
+      "angle": 0,
+      "observation_rms": 0.00667488628150614
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261030,
+      "angle": 0,
+      "observation_rms": 0.006674771378836741
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261029,
+      "angle": 45,
+      "observation_rms": 0.004083595017754296
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261030,
+      "angle": 45,
+      "observation_rms": 0.004083595003937576
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261029,
+      "angle": 90,
+      "observation_rms": 0.0060414741939012195
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261030,
+      "angle": 90,
+      "observation_rms": 0.006038076534979549
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261031,
+      "angle": 0,
+      "observation_rms": 0.00667476992222522
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261031,
+      "angle": 45,
+      "observation_rms": 0.004083595014756805
+    },
+    {
+      "method": "Author forward with original-supported DE family in identifiable normalized-angle gauge",
+      "seed": 20261031,
+      "angle": 90,
+      "observation_rms": 0.006038076272301809
+    }
+  ],
+  "magnetic_field_relative_error_boundary": 0.001,
+  "temperature_absolute_error_boundary": 0.02,
+  "polarization_absolute_error_boundary": 0.01,
+  "spectral_rmse_boundary": 0.0001,
+  "observation_rmse_boundaries": {
+    "0": 0.007342374909656755,
+    "45": 0.004491954519529726,
+    "90": 0.006645621613291342
+  },
+  "reference": "Finite three independently observed original optimizer outcomes; not actual truth or physical confidence interval",
+  "old_single_seed_response_gate": "FAILED and superseded: original90deg source-source RMS0.0002546317>1e-4",
+  "definitions": "For each condition at least one complete paired original outcome must satisfy all physical parameter boundaries and full-native spectral RMS1e-4 simultaneously. Observation RMS independently must satisfy unchanged1.1primary bound. No amplitude, frequency, sign or angle alignment."
+}

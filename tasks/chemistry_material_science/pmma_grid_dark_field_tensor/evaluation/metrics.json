@@ -1,0 +1,30 @@
+{
+  "baseline": [
+    {
+      "method": "Original signed unconstrained DiDaFi second-moment estimate with original flat normalization; no actual moment truth",
+      "component_ncc_vs_ref": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "component_nrmse_vs_ref": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "transmission_ncc_vs_ref": 1.0,
+      "transmission_nrmse_vs_ref": 0.0,
+      "mode_residual": 0.06614234195266891
+    }
+  ],
+  "mode_residual_boundary": 0.0668037653721956,
+  "mode_residual_definition": "Relative L2 mismatch of predicted Gaussian Fourier attenuation and the identified correlation-amplitude ratios, including the DC transmission mode",
+  "cxx_ncc_boundary": 0.999999,
+  "cxx_nrmse_boundary": 1e-05,
+  "cyy_ncc_boundary": 0.999999,
+  "cyy_nrmse_boundary": 1e-05,
+  "cxy_ncc_boundary": 0.999999,
+  "cxy_nrmse_boundary": 1e-05,
+  "transmission_ncc_boundary": 0.999999,
+  "transmission_nrmse_boundary": 1e-05
+}

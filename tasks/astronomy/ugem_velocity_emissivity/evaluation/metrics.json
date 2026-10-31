@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Original Spruit fullprecision method result on all28realUGem spectra; commonwidth.03930 approximation",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 7.691681073121665e-06,
+  "forward_range_rms_boundary": 0.08521206616956807,
+  "metric_scope": "All144x144 signed field, no alignment/rescaling or weak-tail masking; forwardall28x477 samples including zero-likelihood-weight eclipse phases",
+  "precision_provenance": "Original file precision+independent repeat captured before local;1.5xmax measured rangeNRMSE. Reference is method result, not truth.",
+  "zero_estimate_cosine": 0.0
+}

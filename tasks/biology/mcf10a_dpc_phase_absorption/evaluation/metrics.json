@@ -1,0 +1,29 @@
+{
+  "outputs": {
+    "reconstruction": {
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 2e-05
+    },
+    "absorption": {
+      "shape": [
+        1,
+        512,
+        512
+      ],
+      "dtype": "float64",
+      "relative_l2_boundary": 2e-05
+    }
+  },
+  "baseline": [
+    {
+      "method": "Independent reproduced original implementation",
+      "relative_l2": 0.0
+    }
+  ],
+  "definition": "Per required array Euclidean error/reference norm, full grid, no crop/rescale/alignment. References are standard-method results, not measured physical truth."
+}

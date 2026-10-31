@@ -1,0 +1,25 @@
+# Shipped interfaces and execution flow
+
+All runtime mathematics is local NumPy/SciPy. No PlasmaPy, Astropy, domain fit wrappers, upstream archives, hidden references, or cross-task modules are imported by the source. Inputs are public NPZ arrays and explicit acquisition constants. Every callable below executes the corresponding validated native stage.
+
+`src.preprocessing.unique_characteristic(bias,current)` accepts finite matching 1-D numerical V/A arrays, averages duplicates, and returns sorted 1-D float64 arrays. `load_data(path='data/raw_data.npz')` requires both full `(1,304)` inputs and returns their 1-D characteristic. Module constants define length, diameter and exposed area in SI.
+
+`src.physics_model.linear_inverse_temperature(voltage,x0,y0,temperature)` returns natural log current, using V and eV. `ion_current(voltage,fit)` takes two squared-mA polynomial coefficients and returns A. `electron_current(voltage,fit)` evaluates the natural exponential for three log-fit parameters and returns A. This helper does not apply the original visualization-only NaN mask above maximum observed current. The notebook limits comparisons to the physical retarding region.
+
+`distribution_current(voltage,energy,probability,plasma_potential,density,area)` takes 1-D V, positive ascending eV, matching per-eV density, V, m^-3 and m². It returns a 1-D A array by explicit isotropic collection-kernel quadrature over the supplied support. Its documented consumer is the independent Maxwellian acquisition test. It adds no missing tail and supplies no solver input or reference.
+
+`normalized_eedf(bias,current,plasma_potential,floating_potential)` uses V/A arrays and returns `(energy,p,first,second)`: energy and probability are 1-D descending eV and inverse eV over strict retarding support; derivatives cover the complete sweep in A/V and A/V². A zero or nonfinite normalization raises ValueError. Signed curvature is preserved.
+
+`densities(ion_saturation,electron_saturation,temperature,ion_slope,area,ion_mass=HELIUM_ION_MASS)` uses signed A, eV, mA²/V, m², kg and returns `(ne,ni,ni_oml)` in m^-3. Its electron and charge constants are explicit. Ion mass defaults to the validated upstream He-4+ value.
+
+`src.solvers.fit_temperature(bias,electron)` filters positive current, fits natural log using native curve_fit defaults, and returns `(fit,covariance)` with 3-vector and 3×3 matrix. The redundant intercept covariance is a numerical fit diagnostic, not a physical confidence interval.
+
+`reconstruct(bias,current,area=PROBE_AREA_M2)` returns `(output,diagnostics)`. Output contains real float64 `(1,64)` reconstruction/energy and eight `(1,1)` scalars listed in README. Diagnostics contain sorted full bias/current, two ion coefficients, full ion/electron curves, 3-vector final/first fit coefficients, scalar first temperature, full-sweep boolean first/refined masks, derivatives and covariance. It writes no files and never loads a reference. Perturbation experiments can produce a different energy support length because characteristic potentials are recovered from their own observations; only the unperturbed benchmark submission has the fixed declared shape.
+
+`src.main.run(data_path='data/raw_data.npz',output_path='output/reconstruction.npz')` calls load_data then reconstruct, creates the output parent and writes the declared NPZ. It returns `(output,diagnostics,elapsed_seconds)`. `python -m src.main` invokes this standard path and prints timing. Importing main does not choose or change a Matplotlib backend.
+
+`src.visualization` provides the notebook overview, distribution comparison, fit residual and sensitivity plotting helpers. Plotting functions take arrays or computed records; they never load or compute benchmark answers. Their figures label measurement, original method and fresh recovery explicitly.
+
+`evaluation/judge.py` imports only standard library and NumPy. Hidden paths resolve from its own directory; CLI prediction/report paths resolve from caller CWD. NPZ loading rejects missing arrays, incorrect exact shapes, non-float64/complex/object arrays and nonfinite values with empty measured metrics. It reads only the standard-method reference and metric definitions, computes every required comparison and returns 0/1/2 for pass/fail/error. It creates report parents; report-write failure produces stderr and exit 2. It does not execute reconstruction.
+
+The active notebook imports cleaned main/physics/solver/visualization functions and freshly reconstructs the full public characteristic. Original outputs are loaded only from `notebooks/reference_outputs/upstream.npz` for labeled comparisons. Frozen fixtures under `test/fixtures/upstream.npz` are independently captured by the private oracle and consumed by stage/pipeline parity tests. Neither fixture nor original result supplies a local inverse input. The notebook's fresh metrics JSON is an identified measurement artifact, not truth. There is no synthetic generation module because no new benchmark observations are generated.

@@ -1,0 +1,27 @@
+{
+  "revision": "e8cbb1e1ce5007c0f2b65d9b7ce2a4962915f8cc",
+  "runtime_seconds": 3.2530316999182105,
+  "repeat_max_abs": 0.0,
+  "float32_nrmse": 6.6583485927655845e-09,
+  "selected": [
+    513.6666666666666,
+    467.6666666666667
+  ],
+  "score": 156192,
+  "shape": [
+    4,
+    1024,
+    1024
+  ],
+  "dtype": "uint8",
+  "source_hashes": {
+    "I0_Fresnel_Lens.bmp": "e68cf0d4bb3b24b4528b4b050e0c144af6094608b307fec775952668c06f677b",
+    "I1_Fresnel_Lens.bmp": "2c3a799b50cba14761da923428d6363a24e19ab4dfe99334824b22918215582e",
+    "I2_Fresnel_Lens.bmp": "96cff1e2f5f872fa9599d92d6a70cd0340ac3ad37a72227fa572e7e82f2912fd",
+    "I3_Fresnel_Lens.bmp": "d0db25effd5c91672a15ce140fa92569aeaa855f1c9a80c08e7d40f2978c10e4"
+  },
+  "raw_sha256": "6f1044c71141990dfa8ac03ed7bf6c5f336725f88f97b5fe6b23f00bc6994ea8",
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "platform": "Windows-10-10.0.26200-SP0"
+}

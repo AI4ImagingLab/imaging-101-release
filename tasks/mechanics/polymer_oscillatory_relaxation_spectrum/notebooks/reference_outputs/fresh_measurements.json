@@ -1,0 +1,65 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "21f8a6d80f834e2ae2cc2c27523087af884b093d7a71ef3a5f342ebb0f9ce6d6",
+  "solver_runtime_s": 0.4193484999705106,
+  "experiments_runtime_s": 2.4738032000605017,
+  "upstream_relative_errors": {
+    "reconstruction": 0.0,
+    "maxwell_modes": 0.0,
+    "fitted_moduli": 0.0
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 0.0,
+    "continuous_relative_residual_norm": 0.314077459094319,
+    "discrete_relative_residual_norm": 0.15646932770257801,
+    "lambda_selected": 3.362042204095548,
+    "discrete_mode_count": 13,
+    "lambda_factor_mode_count_relative_residual": [
+      [
+        0.1,
+        13,
+        0.2174782613621821
+      ],
+      [
+        1,
+        13,
+        0.314077459094319
+      ],
+      [
+        10,
+        13,
+        0.633551283161425
+      ]
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "continuous_relative_sse": 0.09864465031114371,
+      "discrete_relative_sse": 0.024482650511696756,
+      "log_spectrum_curvature": 0.05120424452543555,
+      "forward_identity_relative": 7.653491827346522e-17
+    },
+    "thresholds": {
+      "continuous_relative_sse": {
+        "comparison": "<=",
+        "boundary": 0.0986446513975902
+      },
+      "discrete_relative_sse": {
+        "comparison": "<=",
+        "boundary": 0.02448265085652326
+      },
+      "log_spectrum_curvature": {
+        "comparison": "<=",
+        "boundary": 0.051204245137478
+      },
+      "forward_identity_relative": {
+        "comparison": "<=",
+        "boundary": 1e-10
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

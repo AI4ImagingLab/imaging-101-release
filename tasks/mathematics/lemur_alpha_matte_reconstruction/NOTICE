@@ -1,0 +1,3 @@
+Local mathematical extraction from PyMatting, original contributors copyright preserved in LICENSE.
+Real Lemur photograph by Mathias Appel, https://www.flickr.com/photos/mathiasappel/25419442300/ , CC0-1.0. Original manual trimap supplied in the PyMatting MIT research archive.
+Original algorithm: Levin, Lischinski and Weiss, CVPR2006; modern reference implementation: Germer et al., JOSS2020. No upstream package is imported.

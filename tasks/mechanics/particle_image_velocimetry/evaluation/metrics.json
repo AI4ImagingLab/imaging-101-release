@@ -1,0 +1,10 @@
+{
+  "baseline": [{"method": "Independent original OpenPIV run on packaged observations", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0, "confidence_relative_l2": 0.0}],
+  "ncc_boundary": 0.99999999,
+  "nrmse_boundary": 1e-8,
+  "confidence_relative_l2_boundary": 1e-8,
+  "reference_kind": "standard-method baseline; independent physical ground truth unavailable",
+  "threshold_provenance": "Fixed before local extraction: independent upstream reruns were bitwise identical; nonzero float64 numerical tolerances are checked against frozen independent stage fixtures and known translations.",
+  "confidence_relative_l2_definition": "norm(predicted confidence - reference confidence) / norm(reference confidence)",
+  "nrmse_definition": "sqrt(mean((prediction-reference)^2))/(max(reference)-min(reference)), jointly over both signed velocity components"
+}

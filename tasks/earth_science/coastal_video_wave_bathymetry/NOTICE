@@ -1,0 +1,13 @@
+The local mathematical implementation is adapted from UBathy by Gonzalo
+Simarro and Daniel Calvete, source revision
+9f4fbdcc7e0c5aec47a2f6bfaf3f567c8c00f251, under GNU Affero General Public
+License version 3. See LICENSE for the complete terms. The source copyright
+and attribution are retained in the local modules and private validation record.
+
+Existing observations, acquisition geometry and independent survey originate
+from the authors' UBathy model and input-data deposit:
+Simarro, G. and Calvete, D. (2022), UBathy model and input data,
+DOI: 10.5281/zenodo.7360216, Creative Commons Attribution 4.0 International.
+The observations describe Castelldefels Beach video on 1 August 2020;
+the independent survey was collected on 31 July 2020 by Barcelona Port Authority.
+No claim is made that a method reconstruction is independent ground truth.

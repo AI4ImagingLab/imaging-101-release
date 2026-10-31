@@ -1,0 +1,11 @@
+{
+  "baseline": [{"method": "Exact complete author closed-form CDT on real letter_t; no measured voxel truth", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.99999,
+  "nrmse_boundary": 0.0002,
+  "max_error_range_boundary": 0.0025,
+  "negative_count_boundary": 0,
+  "tail_nonzero_count_boundary": 0,
+  "max_error_range_definition": "maximum absolute voxel error divided by reference dynamic range, without alignment or rescaling",
+  "reference_kind": "Reproduced standard-method result, not actual truth",
+  "provenance": "Criteria frozen before local extraction from independent full original repeats and alternate general FFT backend; see test/validation.md"
+}

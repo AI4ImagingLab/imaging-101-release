@@ -1,0 +1,50 @@
+{
+  "identity": "fresh cleaned notebook reconstruction and actively recomputed comparisons",
+  "raw_data_sha256": "d55199c7206cf337527a3f2234b159b43e2b3ea0c6a5e6db1b42d2674f5f3203",
+  "solver_runtime_s": 0.3646299000829458,
+  "experiments_runtime_s": 3.1438762999605387,
+  "upstream_relative_errors": {
+    "reconstruction": 9.037926868168362e-10
+  },
+  "scientific_measurements": {
+    "upstream_relative_error": 9.037926868168362e-10,
+    "das_sum_Pa2": 0.000498664513456107,
+    "damas_sum_Pa2": 0.00016376417491529414,
+    "iteration_total_peak_Pa2": [
+      [
+        1,
+        0.00010511242634044538,
+        2.882280636053904e-05
+      ],
+      [
+        10,
+        0.00016376311901973288,
+        3.9665608238442055e-05
+      ],
+      [
+        100,
+        0.00016376417491529414,
+        3.966540483205771e-05
+      ]
+    ],
+    "peak_xy_m": [
+      -0.25,
+      -0.1
+    ]
+  },
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "reconstruction_relative_error": 9.037926868168362e-10
+    },
+    "thresholds": {
+      "reconstruction_relative_error": {
+        "comparison": "<=",
+        "boundary": 1e-05
+      }
+    },
+    "errors": []
+  },
+  "historical_paper_numbers_used": false
+}

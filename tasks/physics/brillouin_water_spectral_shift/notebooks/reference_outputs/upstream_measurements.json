@@ -1,0 +1,488 @@
+{
+  "runtime_s": 1.9328745999373496,
+  "keys": [
+    "1",
+    "2"
+  ],
+  "image_keys": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "setup": "{'key': 'S0', 'name': '780 nm @ Biotec R340', 'pixel_size': 6.5e-06, 'lambda0': 7.8024e-07, 'f0': 384231080180457.3, 'focal_length': 0.2, 'vipa': <bmlab.models.setup.VIPA object at 0x0000017F0DC51E90>, 'calibration': <bmlab.models.setup.Calibration object at 0x0000017F0C02F010>, 'VIPA_PARAMS': (np.float64(2.0541673288775438e-10), np.float64(-1.4340168844473087e-11), np.float64(-1.766363178091953e-09)), 'temperature': 295.15}",
+  "raw": {
+    "images": [
+      [
+        1,
+        10,
+        2,
+        400,
+        400
+      ],
+      "uint16"
+    ],
+    "calibration_images": [
+      [
+        1,
+        2,
+        10,
+        400,
+        400
+      ],
+      "uint16"
+    ],
+    "calibration_time": [
+      [
+        1,
+        2
+      ],
+      "float64"
+    ],
+    "measurement_time": [
+      [
+        1,
+        10
+      ],
+      "float64"
+    ],
+    "exposure": [
+      [
+        1,
+        10
+      ],
+      "float64"
+    ]
+  },
+  "stages": {
+    "points_1": [
+      [
+        6,
+        2
+      ],
+      "int64",
+      0
+    ],
+    "arc_1": [
+      [
+        500,
+        5,
+        2
+      ],
+      "float64",
+      0
+    ],
+    "calibration_spectra_1": [
+      [
+        10,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "vipa_1": [
+      [
+        10,
+        4
+      ],
+      "float64",
+      0
+    ],
+    "calibration_frequency_1": [
+      [
+        10,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "regions_1": [
+      [
+        4,
+        2
+      ],
+      "int64",
+      0
+    ],
+    "calibration_peak_positions_1": [
+      [
+        10,
+        6
+      ],
+      "float64",
+      0
+    ],
+    "points_2": [
+      [
+        6,
+        2
+      ],
+      "int64",
+      0
+    ],
+    "arc_2": [
+      [
+        500,
+        5,
+        2
+      ],
+      "float64",
+      0
+    ],
+    "calibration_spectra_2": [
+      [
+        10,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "vipa_2": [
+      [
+        10,
+        4
+      ],
+      "float64",
+      0
+    ],
+    "calibration_frequency_2": [
+      [
+        10,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "regions_2": [
+      [
+        4,
+        2
+      ],
+      "int64",
+      0
+    ],
+    "calibration_peak_positions_2": [
+      [
+        10,
+        6
+      ],
+      "float64",
+      0
+    ],
+    "spectra_0": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_0": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_1": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_1": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_2": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_2": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_3": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_3": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_4": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_4": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_5": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_5": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_6": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_6": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_7": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_7": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_8": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_8": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "spectra_9": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "frequency_9": [
+      [
+        2,
+        500
+      ],
+      "float64",
+      0
+    ],
+    "result_brillouin_peak_fwhm_f": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_brillouin_peak_intensity": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_brillouin_peak_offset": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_brillouin_peak_position_f": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_brillouin_shift_f": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_intensity": [
+      [
+        10,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_rayleigh_peak_fwhm_f": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_rayleigh_peak_intensity": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_rayleigh_peak_offset": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_rayleigh_peak_position_f": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_rayleigh_shift": [
+      [
+        10,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "float64",
+      0
+    ],
+    "result_time": [
+      [
+        10,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "float64",
+      0
+    ]
+  },
+  "method": "Original unmodified bmlab Controller.evaluate",
+  "source_commit": "ced2f11689d8f0165ba4e647fc4c451700c39fc4",
+  "raw_data_sha256": "161b8f1acedbed5a7183ef93be1469b791bd9e3e6f69795205b9b9f244f7e47d",
+  "private_archive": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research_batch3_20261020\\material_mechanics\\brillouin",
+  "method_result": "Standard-method reference, actual truth unavailable"
+}

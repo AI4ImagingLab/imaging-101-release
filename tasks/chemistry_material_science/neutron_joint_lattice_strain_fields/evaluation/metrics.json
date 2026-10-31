@@ -1,0 +1,29 @@
+{
+  "baseline": [
+    {
+      "method": "qualified original Eq19 Newton; fixed coordinate scaling, cutoff1e-12, native1798rays/all4fields",
+      "metrics": {
+        "strain_xx_ncc": 0.9982810831500728,
+        "strain_xx_nrmse": 0.011808554935685493,
+        "strain_xy_ncc": 0.9999934603424672,
+        "strain_xy_nrmse": 0.05051723191321239,
+        "strain_yy_ncc": 0.9981729990577528,
+        "strain_yy_nrmse": 0.012109930573207035,
+        "lattice_spacing_ncc": 0.9999999983446702,
+        "lattice_spacing_nrmse": 0.014767794957623587
+      }
+    }
+  ],
+  "boundaries": {
+    "strain_xx_ncc": 0.8984529748350656,
+    "strain_xx_nrmse": 0.012989410429254044,
+    "strain_xy_ncc": 0.8999941143082205,
+    "strain_xy_nrmse": 0.055568955104533635,
+    "strain_yy_ncc": 0.8983556991519775,
+    "strain_yy_nrmse": 0.01332092363052774,
+    "lattice_spacing_ncc": 0.8999999985102032,
+    "lattice_spacing_nrmse": 0.016244574453385948
+  },
+  "reference": "actual independent author simulation truth",
+  "nrmse_definition": "RMS error divided by dynamic range of each true physical field; all40x40pixels separately; no alignment"
+}

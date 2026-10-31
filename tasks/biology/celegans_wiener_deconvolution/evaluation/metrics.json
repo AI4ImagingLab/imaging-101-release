@@ -1,0 +1,7 @@
+{
+  "baseline": [{"method": "Independent reproduced upstream SDeconv 2D SWiener, beta=0.005, reflection pad=13", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 0.000002,
+  "reference_provenance": "Upstream CPU float32 run on exact packaged observation; not biological truth",
+  "tolerance_provenance": "Exact CPU repetition max absolute difference 0; float32 vs mixed-double NRMSE 4.9049516436171566e-8; conservative 2e-6 cross-backend numerical tolerance fixed before local extraction. Both boundaries required."
+}

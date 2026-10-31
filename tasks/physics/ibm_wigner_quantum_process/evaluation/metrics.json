@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced original weighted-droplet iteration on all measured directions",
+      "phase_aligned_process_rmse": 0.0,
+      "unitarity_error": 1.1171619781271875e-16
+    }
+  ],
+  "unitarity_error_boundary": 1e-06,
+  "phase_aligned_process_rmse_definition": "sqrt(mean(abs(exp(-i arg(vdot(reference,prediction)))*prediction-reference)^2)); complex matrix entries, dimensionless",
+  "unitarity_error_definition": "Frobenius norm of U.conj().T @ U - identity",
+  "reference_role": "Validated original method result, not physical truth",
+  "provenance": "Current v2: Ideal expectation-model Lebedev-weighted complex MSE versus attainable standard fit, plus physical unitarity; no iterative-projection matrix identity Numeric objective budgets are predeclared acceptance tolerances, not measured physical uncertainty.",
+  "complex_mse_excess_boundary": 1e-06,
+  "evaluation_semantics": "Ideal expectation-model Lebedev-weighted complex MSE versus attainable standard fit, plus physical unitarity; no iterative-projection matrix identity",
+  "reference_type": "Attainable expectation-model fit, not independently measured quantum gate truth",
+  "semantic_version": "v2",
+  "baseline_role": "Historical v1 numerical/stage comparison and attainable source observation fit; self-agreement values are not current acceptance criteria.",
+  "historical_v1_provenance": "Frozen in private wigner_frozen_acceptance.json before local extraction. Numerical tolerance covers complex64 roundoff; all mandatory upstream stages have tighter independent tolerances."
+}

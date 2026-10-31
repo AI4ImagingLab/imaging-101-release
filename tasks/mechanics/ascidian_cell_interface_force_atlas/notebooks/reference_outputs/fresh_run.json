@@ -1,0 +1,120 @@
+{
+  "environment": {
+    "sys_executable": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+    "python": "3.11.11",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1",
+    "backend": "module://matplotlib_inline.backend_inline",
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "raw_sha256": "c54a51f98112b4dca8b60c8fec07a12ea101759b3c9f1b4e5d62c25b068e2369",
+  "reconstruction_seconds": 14.465342900002724,
+  "judge_status": "pass",
+  "metrics": {
+    "tensions_ncc": 1.0000000000000002,
+    "tensions_nrmse": 8.015325328981584e-16,
+    "pressures_ncc": 1.0000000000000002,
+    "pressures_nrmse": 7.351816260942865e-16,
+    "pressure_normal_equations_relative_l2": 1.4073086993879775e-13,
+    "mean_tension_absolute_error": 0.0,
+    "medium_pressure_absolute": 0.0
+  },
+  "original_comparison_maxabs": {
+    "young_dupre": {
+      "tensions": 4.1744385725905886e-14,
+      "pressures": 1.7694179454963432e-16
+    },
+    "projection": {
+      "tensions": 4.529709940470639e-14,
+      "pressures": 4.0245584642661925e-16
+    },
+    "lami": {
+      "tensions": 5.1514348342607263e-14,
+      "pressures": 1.8041124150158794e-16
+    },
+    "inverse_lami": {
+      "tensions": 5.1514348342607263e-14,
+      "pressures": 2.7755575615628914e-16
+    },
+    "log_lami": {
+      "tensions": 8.43769498715119e-15,
+      "pressures": 1.3877787807814457e-16
+    },
+    "variational_operator": {
+      "tensions": 1.8207657603852567e-13,
+      "pressures": 6.808789643208968e-16
+    },
+    "variational_gram": {
+      "tensions": 4.3720582709738665e-13,
+      "pressures": 4.9057979900624105e-15
+    },
+    "laplace": {
+      "pressures": 1.6653345369377348e-16
+    },
+    "laplace_weighted_curvature": {
+      "pressures": 1.734723475976807e-16
+    }
+  },
+  "perturbation_runs": [
+    {
+      "sigma": 0.1,
+      "seed": 210,
+      "runtime_seconds": 14.36076550000871,
+      "nonpositive_tensions": 0
+    },
+    {
+      "sigma": 0.25,
+      "seed": 211,
+      "runtime_seconds": 14.359214600000996,
+      "nonpositive_tensions": 0
+    },
+    {
+      "sigma": 0.5,
+      "seed": 212,
+      "runtime_seconds": 14.358003599991207,
+      "nonpositive_tensions": 0
+    }
+  ],
+  "precision_runs": [
+    {
+      "label": "gelsd float64",
+      "tensions_nrmse": 0.0,
+      "pressures_nrmse": 7.642089500998734e-17
+    },
+    {
+      "label": "gelsd float32",
+      "tensions_nrmse": 3.2075971744560826e-07,
+      "pressures_nrmse": 3.486062180404539e-07
+    },
+    {
+      "label": "gelss float64",
+      "tensions_nrmse": 8.775353191691507e-16,
+      "pressures_nrmse": 1.192282401326306e-15
+    },
+    {
+      "label": "gelss float32",
+      "tensions_nrmse": 4.769238432981546e-07,
+      "pressures_nrmse": 4.6327052664136064e-07
+    },
+    {
+      "label": "gelsy float64",
+      "tensions_nrmse": 6.253411640047726e-16,
+      "pressures_nrmse": 6.297334566356363e-16
+    },
+    {
+      "label": "gelsy float32",
+      "tensions_nrmse": 6.298808475455018e-08,
+      "pressures_nrmse": 7.616805052707595e-08
+    }
+  ],
+  "coordinate_scales": [
+    0.5,
+    2.0
+  ],
+  "reference_role": "independent author-method result, not biological force truth"
+}

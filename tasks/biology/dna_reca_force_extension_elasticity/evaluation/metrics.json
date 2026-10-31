@@ -1,0 +1,24 @@
+{
+  "boundaries": {
+    "persistence_length": 0.001,
+    "stretch_modulus": 0.05,
+    "contour_lengths": 1e-05,
+    "predicted_force_control": 0.0001,
+    "predicted_force_reca": 0.0001,
+    "observation_rmse_control": 0.3685444590628584,
+    "observation_rmse_reca": 0.3550107462234118
+  },
+  "definition": "max absolute errors in declared physical units; observation RMSE in pN over public force<=30pN mask",
+  "baseline_observation_rmse": {
+    "control": 0.3350404173298712,
+    "reca": 0.3227370420212834
+  },
+  "rationale": "Frozen before local extraction: deterministic repeated upstream optimum, conservative nonzero float64 tolerance for original solver arithmetic; observation limits 1.1 times original measured residual.",
+  "persistence_length_boundary": 0.001,
+  "stretch_modulus_boundary": 0.05,
+  "contour_lengths_boundary": 1e-05,
+  "predicted_force_control_boundary": 0.0001,
+  "predicted_force_reca_boundary": 0.0001,
+  "observation_rmse_control_boundary": 0.3685444590628584,
+  "observation_rmse_reca_boundary": 0.3550107462234118
+}

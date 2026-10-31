@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Fresh independent upstream PSD MLE with tracking error",
+      "parameter_relative_error": 0.0,
+      "normalized_residual_rms": 1.1521665482799415
+    }
+  ],
+  "parameter_relative_error_boundary": 0.0001,
+  "normalized_residual_rms_boundary": 1.2673832031079357,
+  "definitions": {
+    "parameter_relative_error": "max abs(pred-ref)/abs(ref), all three parameters",
+    "normalized_residual_rms": "sqrt(mean(((observed PSD - predicted PSD)/(observed PSD/sqrt(35)))**2))"
+  },
+  "threshold_provenance": "Private tweezer_frozen_acceptance.json frozen before local extraction; independent exact repeat zero difference."
+}

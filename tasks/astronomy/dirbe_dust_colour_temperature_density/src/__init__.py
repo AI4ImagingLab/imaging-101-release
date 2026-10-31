@@ -1,0 +1,1 @@
+"""Local optically thin dust colour imaging."""

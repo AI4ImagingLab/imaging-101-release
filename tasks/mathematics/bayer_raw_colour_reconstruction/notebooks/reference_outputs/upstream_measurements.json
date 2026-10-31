@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "exit_code": 0,
+  "runtime_seconds": 28.504455399997823,
+  "source_commit": "7bff324983fb77b41444fda3bf922e354d386d1c",
+  "raw_dng_sha256": "15acc0208610b7b78d2a8ae4da09db94d71ec2bbb7e36dc5a440c9295cda2975",
+  "bound_observations_sha256": "679a9799560eecb6e4dabd167a78547c92aba8c7c5a0c279e477c39b0b27fd03",
+  "shape": [
+    2128,
+    2840
+  ],
+  "pattern": "RGGB",
+  "black_levels": [
+    31.0,
+    31.0,
+    31.0,
+    31.0
+  ],
+  "white_level": 1023,
+  "white_balance": [
+    1.5269999504089355,
+    0.9600000381469727,
+    1.6759999990463257,
+    0.0
+  ],
+  "rawpy": "0.27.1",
+  "numpy": "2.4.6",
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "sizes": {
+    "raw_height": 2136,
+    "raw_width": 2888,
+    "height": 2128,
+    "width": 2840,
+    "top_margin": 8,
+    "left_margin": 44,
+    "iheight": 2128,
+    "iwidth": 2840,
+    "flip": 0
+  },
+  "dtype_native": "uint16",
+  "dtype_computation": "float64",
+  "seed": "none; deterministic",
+  "repeat_max_abs": 0,
+  "reference_not_truth": true,
+  "data_license": "CC0-1.0",
+  "source_license": "BSD-3-Clause",
+  "source_metadata_erratum": "Original docstring accidentally lists One Microsoft Way address as fourth author; actual ICASSP2004 paper has Malvar, He, Cutler only."
+}

@@ -1,0 +1,23 @@
+{
+  "baseline": [
+    {
+      "method": "Independent unchanged original 400000-update nonlinear method on exact observations",
+      "Bx_ncc": 0.9998954769866142,
+      "Bx_nrmse": 0.0034684819218189743,
+      "By_ncc": 0.9998972142030368,
+      "By_nrmse": 0.0034326363521011683
+    }
+  ],
+  "Bx_ncc_boundary": 0.8999059292879528,
+  "Bx_nrmse_boundary": 0.003815330114000872,
+  "By_ncc_boundary": 0.8999074927827331,
+  "By_nrmse_boundary": 0.0037758999873112853,
+  "reference": "actual author-supplied simulated magnetic field",
+  "scope": "both components, all200x200 pixels; no alignment/crop/scale fit",
+  "metric_direction": {
+    "Bx_ncc": "greater_equal",
+    "Bx_nrmse": "less_equal",
+    "By_ncc": "greater_equal",
+    "By_nrmse": "less_equal"
+  }
+}

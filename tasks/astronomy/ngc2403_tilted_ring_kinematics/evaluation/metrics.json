@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Independent qualified original,complete41rings and1395000 observed voxels",
+      "rotation_range_nrmse": 0.0,
+      "dispersion_range_nrmse": 0.0,
+      "position_angle_wrapped_rms_deg": 0.0,
+      "full_cube_rms_Jy_beam": 0.004572891456210505
+    }
+  ],
+  "rotation_range_nrmse_boundary": 0.017034759657074735,
+  "dispersion_range_nrmse_boundary": 0.10383335124662954,
+  "position_angle_wrapped_rms_deg_boundary": 0.3988151550292969,
+  "full_cube_rms_Jy_beam_boundary": 0.005076774190082738,
+  "reference_role": "Qualified published-method estimate; no independent galaxy truth",
+  "nrmse_definition": "For rotation and dispersion separately: sqrt(mean((estimate-reference)^2))/(max(reference)-min(reference)); no cross-quantity range or scaling",
+  "angle_definition": "RMS of degree differences wrapped to[-180,180), equivalence under whole360-degree turns",
+  "observation_consistency": "Full-cube RMS in Jy/beam against all1395000 native observed voxels; evaluated for every otherwise passing profile submission, no output mask or fitted gain",
+  "tolerance_provenance": "Source-only freeze before cleaned extraction:1.5times worst independent source-seed field discrepancy;1.1times worst original full-cube RMS. Same-seed self-comparison is not the tolerance basis"
+}

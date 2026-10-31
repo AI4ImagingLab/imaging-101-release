@@ -1,0 +1,14 @@
+{
+  "baseline": [
+    {
+      "method": "Released eXSpy0.3.2 Fourier ratio with valid paired-alignment list API",
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "nrmse_boundary": 1e-05,
+  "relative_integral_error_boundary": 1e-05,
+  "reference_status": "Validated method result; no experimental unbroadened truth",
+  "nrmse_definition": "RMS error divided by reference max-minus-min; full844 acquired channels",
+  "integral_definition": "abs(sum(pred)-sum(ref))/abs(sum(ref)); equal0.2eV factors cancel",
+  "provenance": "Formal criteria frozen before local extraction in maintainer eels_formal_criteria.json"
+}

@@ -1,0 +1,11 @@
+Code adaptations retain the MIT2023 TU Berlin RIP notice in LICENSE.
+Observations are a calibrated subset of the real Event-Camera Dataset by the
+Robotics and Perception Group, University of Zurich (2016), distributed under
+Creative Commons Attribution-NonCommercial-ShareAlike3.0:
+https://creativecommons.org/licenses/by-nc-sa/3.0/
+Source and attribution: https://rpg.ifi.uzh.ch/davis_data.html
+Changes: select the boxes_rotation window beginning19.5seconds, apply independent
+camera undistortion, reject coordinates outside the interior calibrated sensor,
+convert to batched NPZ, and supply the matching independent IMU angular velocity
+and rectified camera matrix. No new synthetic observations or target images.
+These observation derivatives retain CC BY-NC-SA3.0; the code remains MIT.

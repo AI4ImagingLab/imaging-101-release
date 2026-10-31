@@ -1,0 +1,56 @@
+{
+  "baseline": [
+    {
+      "run": "primary",
+      "parameters": [
+        555.49,
+        0.0372,
+        0.2248,
+        0.147
+      ],
+      "age_ncc": 0.9988448437488566,
+      "age_nrmse": 0.03724698397612326,
+      "age_rmse_year": 2.234819038567396,
+      "age_max_standardized_error": 1.4767196680068908,
+      "observation_chi": 0.5846476186104412
+    },
+    {
+      "run": "_20261030",
+      "parameters": [
+        593.03,
+        0.0372,
+        0.2343,
+        0.252
+      ],
+      "age_ncc": 0.9991359990495531,
+      "age_nrmse": 0.05867849110447577,
+      "age_rmse_year": 3.520709466268546,
+      "age_max_standardized_error": 2.2533252931350085,
+      "observation_chi": 0.5201539778672771
+    }
+  ],
+  "thresholds": {
+    "age_ncc": {
+      "comparison": ">=",
+      "boundary": 0.898960359373971
+    },
+    "age_nrmse": {
+      "comparison": "<=",
+      "boundary": 0.06454634021492335
+    },
+    "observation_chi": {
+      "comparison": "<=",
+      "boundary": 0.6431123804714854
+    },
+    "age_rate_relative_consistency": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    },
+    "decay_relative_consistency": {
+      "comparison": "<=",
+      "boundary": 1e-08
+    }
+  },
+  "nrmse_definition": "RMS age error divided by max-minus-min independent measured varve age (65-5 yr).",
+  "reference_provenance": "Independent varve ages, 2007 collection surface zero; SAR/A0 are evaluated through coupled physical and measurement consistency, not mislabeled truth."
+}

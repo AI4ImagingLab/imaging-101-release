@@ -1,0 +1,52 @@
+{
+  "baseline": [
+    {
+      "method": "Independent Qopen run on all 25 event-frequency inversions",
+      "reconstruction_max_abs_log_ratio": 0.0,
+      "source_energy_max_abs_log_ratio": 0.0,
+      "site_amplification_max_abs_log_ratio": 0.0
+    }
+  ],
+  "reconstruction_max_abs_log_ratio_boundary": 0.005,
+  "source_energy_max_abs_log_ratio_boundary": 0.005,
+  "site_amplification_max_abs_log_ratio_boundary": 0.005,
+  "forward_log_error_boundary": [
+    [
+      1.0774229486035374,
+      0.8227113437984052,
+      0.706865589432143,
+      0.589071579854914,
+      0.5191946399678624
+    ],
+    [
+      0.7506886938302149,
+      0.7642055870165055,
+      0.8117413792605191,
+      0.7014539383196734,
+      0.535175023431221
+    ],
+    [
+      0.8922780241895563,
+      0.7913198643883587,
+      0.7577202498194001,
+      0.5802054893995183,
+      0.5649884827303312
+    ],
+    [
+      0.9040762439488111,
+      0.7838824529804814,
+      0.7002970827749728,
+      0.6073805889580414,
+      0.5429175180513929
+    ],
+    [
+      0.9690164730866729,
+      0.8097201846788626,
+      0.9225517823633762,
+      0.7456123462618158,
+      0.7157802266997529
+    ]
+  ],
+  "metric_definition": "Maximum absolute natural log of positive estimate/reference; no alignment. Site gauge is geometric mean 1 over valid slots. Forward weighted log-energy residual uses coda unit weights, bulk sample-count weight and N-S-1 denominator.",
+  "threshold_provenance": "Tightened within frozen preimplementation 0.02 log-ratio bound; original double-precision repeat and float32-output sensitivity independently measured in private stability record. Forward limits are 1.05 times native error plus 0.001, fixed before Judge."
+}

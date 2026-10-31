@@ -1,0 +1,20 @@
+{
+  "runtime_s": 62.87582660000771,
+  "metrics": {
+    "a_absolute_error": 5.9154456616070106e-08,
+    "b_absolute_error": 5.91544567114799e-08,
+    "Dc_absolute_error_m": 1.8854648993674427e-11,
+    "state_maximum_absolute_error_s": 6.284882990748031e-05,
+    "velocity_relative_l2_error": 2.632131246866252e-06,
+    "friction_maximum_absolute_error": 6.905400062873213e-08,
+    "observed_friction_RMS": 0.0008989523443077488
+  },
+  "nfev": 10,
+  "objective": 4616.35875028417,
+  "parameters": [
+    0.011310258519226884,
+    0.0112113451868179,
+    3.012554045351328e-06
+  ],
+  "lower_mass_friction_max_difference": 8.434326403961023e-08
+}

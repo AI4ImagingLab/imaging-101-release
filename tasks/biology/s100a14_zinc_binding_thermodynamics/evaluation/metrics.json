@@ -1,0 +1,20 @@
+{
+  "metric_definition": "maximum absolute error per output in its declared unit; no alignment",
+  "boundaries": {
+    "enthalpy": 0.2,
+    "association_constant": 0.5,
+    "effective_site_factor": 2e-05,
+    "dilution_slope": 2.0,
+    "dilution_offset": 0.002,
+    "predicted_heats": 0.005,
+    "observation_rmse": 0.55
+  },
+  "rationale": "Before extraction: original 5-start ML dispersion under .4 slope units and .0002 offsets; fivefold numerical margin. Observation RMSE original sqrt(2*957.1665/78)*.1=.4954 microcal; .55 is fixed for fidelity to measured curves.",
+  "enthalpy_boundary": 0.2,
+  "association_constant_boundary": 0.5,
+  "effective_site_factor_boundary": 2e-05,
+  "dilution_slope_boundary": 2.0,
+  "dilution_offset_boundary": 0.002,
+  "predicted_heats_boundary": 0.005,
+  "observation_rmse_boundary": 0.55
+}

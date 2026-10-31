@@ -1,0 +1,17 @@
+{
+  "baseline": [
+    {
+      "method": "Original PTS GreyBody.fit, exact bound real DIRBE radiances",
+      "reconstruction_ncc_vs_ref": 1.0,
+      "reconstruction_nrmse_vs_ref": 0.0,
+      "surface_density_ncc_vs_ref": 1.0,
+      "surface_density_nrmse_vs_ref": 0.0
+    }
+  ],
+  "reference_kind": "standard-method apparent fields; no physical truth",
+  "nrmse_definition": "RMS error / reference dynamic range, each quantity separately",
+  "reconstruction_ncc_boundary": 0.999999,
+  "reconstruction_nrmse_boundary": 1e-05,
+  "surface_density_ncc_boundary": 0.999999,
+  "surface_density_nrmse_boundary": 1e-05
+}

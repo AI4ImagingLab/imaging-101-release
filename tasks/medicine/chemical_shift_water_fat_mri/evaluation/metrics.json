@@ -1,0 +1,10 @@
+{
+  "semantic_version": "v2",
+  "graph_energy_excess_boundary": 1e-06,
+  "profiled_echo_sse_excess_boundary": 1e-06,
+  "amplitude_consistency_boundary": 1e-06,
+  "fraction_consistency_boundary": 0.0001,
+  "metric_definition": "Finest-lattice source-defined curvature-weighted circular MRF and final-rate complex variable-projection SSE, each divided by full observed complex signal norm squared. Independently profiled coefficients determine submitted amplitudes; fraction consistency is absolute percentage points.",
+  "tolerance_provenance": "Predeclared 1e-6 normalized objective allowances and numerical coefficient/fraction tolerances; not measured noise or true fat-fraction accuracy.",
+  "reference_role": "Attainable discrete conditional field/decay fit, not biological truth."
+}

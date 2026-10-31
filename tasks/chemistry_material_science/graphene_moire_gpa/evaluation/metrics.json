@@ -1,0 +1,25 @@
+{
+  "baseline": [
+    {
+      "method": "Independently reproduced pyGPA adaptive wavefront fit",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "output_contract": {
+    "reconstruction": {
+      "shape": [
+        1,
+        2,
+        512,
+        512
+      ],
+      "dtype": "float64"
+    }
+  },
+  "threshold_provenance": "Numerical stationarity budget 1e-3; existing ten-step estimate has residual 2.294369237466319e-4; independently evaluated converged control has 9.187447443762273e-10, zero has 1 and reversed displacement has 1.999995723415685. This v2 contract replaces finite-implementation array agreement with an explicitly defined derived-observation inverse; no displacement truth is claimed.",
+  "evaluation_version": "2.0-weighted-gradient-stationarity",
+  "stationarity_max_boundary": 0.001,
+  "mean_displacement_nm_boundary": 1e-08,
+  "metric_definition": "For each component in pixels compute ||D^T W(Du-g)||_2 / ||D^T Wg||_2; take component maximum. Gauge is maximum absolute component mean in nm."
+}

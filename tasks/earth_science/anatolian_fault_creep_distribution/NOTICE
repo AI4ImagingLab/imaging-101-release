@@ -1,0 +1,20 @@
+This task contains explicit mathematical adaptations from CSI (Classic Slip
+Inversion), revision074ca028697b488fdb036e67d799787b374ddbb9, distributed
+under the GNU General Public License version3. Preserve that license for
+derived code. The original source repository and exact files are indexed in
+the maintainer validation record.
+
+CSI copyright: Romain Jolivet and contributors. The triangular displacement
+equations translate Brendan J. Meade's2007 MATLAB implementation; that author
+implementation is described in its supplement as MIT/X Windows licensed.
+The selected CSI translation and adaptations are distributed under GPLv3.
+
+Real radar/GNSS velocity and geometry files are existing author-distributed
+tutorial data. Their repository does not provide a separate explicit data
+license. This local research package does not assign those observations a
+new license or claim that the code license resolves their redistribution
+rights. The paper's own license is separate from data and code rights.
+
+The empirical basin coefficient has corrected unit labeling kPa/year. Its
+fixed basis geometry violates the small-cavity Mogi approximation and must
+not be interpreted as measured geological pressure truth.

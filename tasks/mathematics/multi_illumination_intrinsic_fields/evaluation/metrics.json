@@ -1,0 +1,40 @@
+{
+  "baseline": [
+    {
+      "method": "Actual original parameter-free Weiss, full dinosaur, measured independent references",
+      "results": {
+        "shading": {
+          "cosine": 0.9269957097564983,
+          "global_scaled_range_nrmse": 0.24253690596100402,
+          "global_positive_scale": 1.801145913628275,
+          "source_local_mse": 0.019291004265482182
+        },
+        "reflectance": {
+          "cosine": 0.9080132103504273,
+          "global_scaled_range_nrmse": 0.2776305865797885,
+          "global_positive_scale": 116.68546133130151,
+          "source_local_mse": 0.03638280151366605
+        },
+        "source_combined_lmse": 0.027836902889574112,
+        "relative_product_residual": 4.281615964044764e-17,
+        "all_finite": true,
+        "seconds": 1.3457621999987168
+      }
+    }
+  ],
+  "shading": {
+    "ncc_boundary": 0.8342961387808484,
+    "nrmse_boundary": 0.26679059655710446,
+    "source_lmse_boundary": 0.021220104692030402
+  },
+  "reflectance": {
+    "ncc_boundary": 0.8172118893153846,
+    "nrmse_boundary": 0.3053936452377674,
+    "source_lmse_boundary": 0.040021081665032654
+  },
+  "product_relative_l2_boundary": 1e-10,
+  "gauge_absolute_log_mean_boundary": 1e-10,
+  "outside_absolute_boundary": 0.0,
+  "nrmse_definition": "RMS error after a single optimal positive scale per submitted field on the public foreground, divided by the dynamic range of its independent measured reference. Scalar a=max(0,dot(x,y)/dot(x,x)).",
+  "source_lmse_definition": "Author 20x20 windows, step10, scalar per window if sum(x*x*mask)>1e-5 else zero, summed squared residual divided by summed reference squared intensity. Each field evaluated separately."
+}

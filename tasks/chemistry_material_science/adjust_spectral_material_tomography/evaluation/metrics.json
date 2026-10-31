@@ -1,0 +1,21 @@
+{
+  "status": "boundaries frozen before fresh full; independent source baseline validation pending",
+  "baseline": [],
+  "nrmse_definition": "RMS error divided by reference dynamic range, independently for each aligned component and each required output array",
+  "alignment": "One Hungarian permutation from component spectral cosine distance; apply the same permutation to all quantities; no scaling or spatial alignment",
+  "numerical_agreement_rationale": "Nonzero1e-6 dynamic-range error and1e-6 cosine deficit preserve strict method-reference agreement. Independent original CPU100 and cleaned orderedGPU100 trajectories are bitwise equal at every captured checkpoint; independent ordered scalar products and full128-channel SIRT reruns are bitwise equal. These are reproducibility tolerances, not chemical truth accuracy.",
+  "forward_relative_l2_definition": "L2 optical-depth residual divided by L2 public observation norm, all257detectors and65selected energies at fixedviews0,50,...,550; selected float32 line discretization, no fitted gain",
+  "forward_boundary_provenance": "Frozen1.1 times independently measured prior corrected source0.15461163941112 before fresh full; historical CUDA backend differs from selected ordered backend",
+  "weight_row_boundary_rationale": "Original alternating feasibility discrepancy<1e-6; four-entry row-sum error bounded by2 times its Euclidean norm; remaining feasibility quantities have independent1e-10 roundoff tolerances",
+  "weight_row_sum_error_boundary": 2e-06,
+  "nonnegative_violation_boundary": 1e-10,
+  "abundance_sum_violation_boundary": 1e-10,
+  "weight_column_sum_violation_boundary": 1e-10,
+  "forward_relative_l2_boundary": 0.17007280335223202,
+  "benchmark_semantics_version": 2,
+  "dictionary_relative_l2_boundary": 1e-06,
+  "full_objective_ratio_boundary": 1.00000001,
+  "definition": "Feasible abundance/dictionary constraints plus F=RT consistency and all600-view/all65-energy squared optical-depth objective no worse than the validated attained standard objective, up to1e-8 relative numerical slack. Original12-view observation bound retained. No component-array identity is an accuracy target.",
+  "basis_provenance": "spectral_dictionary is the independent original100-step public-data self-calibration T, verified against the fresh full bound-data pipeline bitwise. It is the explicitly public observation-derived functional, not independently measured quartz truth and not an unknown target-derived calibration.",
+  "reference_provenance": "Independent original corrected ADJUST1000 returned BEST from oracle_ordered_corrected1000.mat; source MAT and bound raw SHA verified against archived proof; distinct from fresh cleaned output."
+}

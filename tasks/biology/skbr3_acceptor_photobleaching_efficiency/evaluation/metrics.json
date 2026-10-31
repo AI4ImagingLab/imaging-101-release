@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified AccPbFRET fully corrected real field, identical independent original rerun",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999999,
+  "nrmse_boundary": 5e-07,
+  "max_abs_boundary": 1e-06,
+  "factor_max_abs_boundary": 1e-07,
+  "reference_kind": "conditional standard-method reference; not actual molecular efficiency truth",
+  "scoring_support": "fixed public observation_mask; exact zero exterior; four correction factors also independently required",
+  "tolerance_evidence": "Frozen before extraction; independent paper float64 vs original E maxabs1.6363538635211228e-7 RMS3.1928162724044874e-8; original known physical E error2.1335773044139916e-7. Native independent repeats bitwise."
+}

@@ -1,0 +1,45 @@
+{
+  "code_revision": "ea42846816273fd63381bdf6b7cc968ad2fcac29",
+  "paper": "https://doi.org/10.21105/joss.01808",
+  "data": "https://doi.org/10.14470/TR560404",
+  "license": "waveforms CC BY 4.0; rf MIT",
+  "start": "2011-03-11T05:56:29.992872Z",
+  "sampling_rate": 20.0,
+  "shape": [
+    3,
+    4801
+  ],
+  "back_azimuth": 33.06338963947741,
+  "sensitivity": [
+    603178500.0,
+    622695000.0,
+    596668500.0
+  ],
+  "coordinates": {
+    "latitude": 49.6646,
+    "longitude": 6.1526,
+    "elevation": 295.0,
+    "local_depth": 80.0
+  },
+  "normalized_response_mismatch": 0.03134198925637777,
+  "calibration": "Complete StationXML response removed by ObsPy, VEL, pre_filt=(.02,.03,2,4)Hz, water_level=60dB, zero_mean=True,taper=True,taper_fraction=.05; exact calibrated velocity arrays bound before cleaned extraction.",
+  "iterative_iterations": [
+    2,
+    400,
+    400
+  ],
+  "repeat_maxabs": 0.0,
+  "imaginary_max": 1.0212315830033434e-16,
+  "runtime_seconds": 0.3118304000236094,
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "os": "Windows-10-10.0.26200-SP0",
+  "nfft": 4860,
+  "normalization": 62.1720481261239,
+  "sha256": {
+    "GE_WLF_Tohoku.mseed": "c632aec0aa8de697d4cdbcd88ce745c72cc91daeaa5688a0925f46e242b5b29d",
+    "GE_WLF_station.xml": "256136d826bfbec694ab9cb7f101ddaf65c3215c2d7da5db4805ffc9edab3d86",
+    "rf_oracle.npz": "17f8ca9dfdbb82d6c7ae9fe8e5d59a019405933570b3c41bca47b561d0d67dda"
+  }
+}

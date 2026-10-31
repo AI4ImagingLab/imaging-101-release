@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Fresh local full tensor, native8station data; upstream standard-method reference",
+      "tensor_relative_error": 9.577455412606526e-16,
+      "variance_reduction": 74.46893184453872,
+      "depth_error_km": 0.0
+    }
+  ],
+  "tensor_relative_error_boundary": 1e-08,
+  "depth_error_km_boundary": 0.0,
+  "variance_reduction_boundary": 74.46,
+  "definitions": {
+    "tensor_relative_error": "Frobenius norm of tensor difference divided by reference Frobenius norm; Nm throughout",
+    "variance_reduction": "100*(1-sum_sct w_s*(d-y)^2/sum_sct w_s*d^2), w_s=distance_s/min(distance)",
+    "depth_error_km": "absolute source-depth difference in km"
+  },
+  "reference_role": "Standard-method reconstruction, not measured source truth; no target accuracy claim",
+  "tolerance_provenance": "Independent upstream Gauss-Jordan versus local LAPACK solve differences below1e-15 relative.1e-8 permits eight significant digits with safety margin; observation consistency also required."
+}

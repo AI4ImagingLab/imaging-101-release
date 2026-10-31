@@ -1,0 +1,10 @@
+{
+  "source": "fresh actively executed cleaned modules",
+  "runtime_seconds": 0.017172600026242435,
+  "metrics": {
+    "ncc": 1.0000000000000002,
+    "nrmse": 1.2492783498676524e-16,
+    "confidence_relative_l2": 1.720426629754245e-16
+  },
+  "data_sha256": "6672b96a7c6b0f392f2962b3eb42e3d1ebbac838f3ee7118df3b3d021a337b69"
+}

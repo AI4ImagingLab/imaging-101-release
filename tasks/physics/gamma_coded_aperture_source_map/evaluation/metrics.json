@@ -1,0 +1,13 @@
+{
+  "baseline": [
+    {
+      "method": "Original author MURA decoding on bound experimental acquisition; method reference, not physical truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 5e-06,
+  "reference_provenance": "independently executed upstream code0dcd63a70636395b25f85d28571237c502faf06f on author experimental x00y00z50 full256x256 detector image; no physical truth",
+  "tolerance_rationale": "float32 numerical agreement; independent original/cleaned reruns and float64 FFT sensitivity are recorded in test/validation.md"
+}

@@ -1,0 +1,40 @@
+{
+  "runtime_s": 16.016381099936552,
+  "metrics": {
+    "isomer_shift_mm_per_s": 8.826720635290997e-06,
+    "quadrupole_splitting_mm_per_s": 6.593085029482637e-06,
+    "FWHM_mm_per_s": 1.6098837655992293e-05,
+    "optical_thickness_maximum_absolute_error": 3.0800365808797414e-06,
+    "baseline_maximum_absolute_error": 2.412874455792746e-09,
+    "transmission_maximum_absolute_error": 1.394953333955229e-07,
+    "parameter_spectrum_self_consistency": 2.220446049250313e-16,
+    "observed_transmission_RMS_sample_0": 0.0004290597167192639,
+    "observed_transmission_RMS_sample_1": 0.0007378654469319979,
+    "observed_transmission_RMS_sample_2": 0.0008636805153424504,
+    "observed_transmission_RMS_sample_3": 0.0008072713183138712
+  },
+  "four_component_sse": [
+    9.425522714174206e-05,
+    0.00027875605390139237,
+    0.00038192334468208674,
+    0.00033366373446257436
+  ],
+  "fresh_three_component": [
+    {
+      "sse": 0.00012713187529979342,
+      "bic": -7705.710226394771
+    },
+    {
+      "sse": 0.00040386376608664526,
+      "bic": -7113.913658053519
+    },
+    {
+      "sse": 0.0006296893934408264,
+      "bic": -6886.50933775226
+    },
+    {
+      "sse": 0.0005333648249543734,
+      "bic": -6971.51209329414
+    }
+  ]
+}

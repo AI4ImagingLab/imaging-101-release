@@ -1,0 +1,28 @@
+{
+  "baseline": [
+    {
+      "method": "Independent HDR Toolbox original run on seven bound Canon JPEG exposures, midpoint-gauged response; standard-method reference, no physical truth",
+      "ncc_vs_ref": 1.0,
+      "radiance_log_rmse": 0.0,
+      "response_log_rmse": 0.0,
+      "forward_weighted_adu_rmse": 7.035289421164854
+    }
+  ],
+  "gauge_max_error_boundary": 1e-08,
+  "forward_weighted_adu_rmse_boundary": 7.105642315376502,
+  "metric_definitions": {
+    "radiance_log_rmse": "sqrt(mean(log(estimate/reference)^2)) over all positive RGB irradiance entries, no alignment",
+    "response_log_rmse": "sqrt(mean(log(estimate/reference)^2)) over all256x3 positive response entries",
+    "gauge_max_error": "max(abs(response[128,:]-1))",
+    "forward_weighted_adu_rmse": "sqrt(sum(w*(predicted_code-observed_code)^2)/sum(w)), w=min(z,255-z) on observed8<=z<=247, else0; inverse monotone response lookup with saturation clipping; all exposures/channels"
+  },
+  "threshold_provenance": "Frozen before local extraction from independent bit-identical upstream repeat; nonzero5e-5 log tolerance allows float32 exposure accumulation across numerical backends, versus frozen stage tolerance3e-6. Observation boundary is1.01times measured upstream residual. Agreement is reproducibility, not independent physical accuracy.",
+  "historical_v1_thresholds": {
+    "ncc_boundary": 0.999999,
+    "radiance_log_rmse_boundary": 5e-05,
+    "response_log_rmse_boundary": 5e-05
+  },
+  "evaluation_version": "2.0-smooth-monotone-response-photometry-class",
+  "response_log_curvature_boundary": 0.0017575872742814458,
+  "response_log_curvature_definition": "Sum of squared interior second differences of log inverse response over256codes and3channels; no code-step normalization. Independent feasible standard curvature plus relative1e-8 numerical allowance."
+}

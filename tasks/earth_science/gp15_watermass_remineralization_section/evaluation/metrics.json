@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "thresholds": {
+    "maximum_normalized_objective_excess": {
+      "comparison": "<=",
+      "boundary": 1e-05
+    },
+    "maximum_simplex_error": {
+      "comparison": "<=",
+      "boundary": 1e-07
+    },
+    "minimum_fraction": {
+      "comparison": ">=",
+      "boundary": -1e-10
+    },
+    "minimum_remineralization": {
+      "comparison": ">=",
+      "boundary": -1e-10
+    }
+  },
+  "definition": "Each sample weighted tracer residual squared plus squared watermass usage priors; no fraction identity scoring. Maximum over all576samples of (cost-reference_cost)/max(1,reference_cost)."
+}

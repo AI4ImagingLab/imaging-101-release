@@ -1,0 +1,40 @@
+{
+  "baseline": [
+    {
+      "method": "Published constrained inverse with independently executed original elastic forward; explicit correction of source force-balance defect",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 0.0001,
+  "output_contract": {
+    "reconstruction": {
+      "shape": [
+        1,
+        181,
+        181
+      ],
+      "dtype": "float64"
+    },
+    "forces": {
+      "shape": [
+        1,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "contact_directions": {
+      "shape": [
+        1,
+        4
+      ],
+      "dtype": "float64"
+    }
+  },
+  "threshold_provenance": "Before local corrected implementation, success criteria fixed in private photoelastic_corrected_success_criteria.md: exact static balance<1e-9N, map NRMSE1e-4 and parameter relative1e-3; local vs independently executed original-forward constrained oracle map NRMSE2.0844e-8, force error<1.2e-7N, direction error<7.5e-6rad. Reference agreement is not physical truth.",
+  "net_force_fraction_boundary": 1e-06,
+  "torque_fraction_boundary": 1e-06,
+  "fit_mask_definition": "Only optical fitting uses radius0.96R, as published PeGS2; all stress pixels and every force/direction are evaluated with no scoring crop.",
+  "mechanical_definition": "net_force_fraction=norm(sum_j(Fcos(beta-alpha),-Fsin(beta-alpha)))/sumF; torque_fraction=abs(sum(Fsin(alpha)))/sumF. Both dimensionless; zero total force is assigned1 and fails."
+}

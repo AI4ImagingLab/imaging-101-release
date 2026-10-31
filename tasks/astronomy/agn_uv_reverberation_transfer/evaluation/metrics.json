@@ -1,0 +1,21 @@
+{
+  "baseline": [
+    {
+      "method": "Converged original three-start MAP; no physical GT",
+      "observation_wrms": [
+        1.398843254204846,
+        0.7275772237178486,
+        0.6844215356227668
+      ]
+    }
+  ],
+  "profile_rmse_boundary": 0.01,
+  "transfer_scaled_error_boundary": 0.005,
+  "continuum_log_error_boundary": 0.005,
+  "observation_wrms_boundary": [
+    1.4787854169150882,
+    0.7739560849037411,
+    0.7286426124039052
+  ],
+  "metric_definition": "Profile RMS evaluated separately per channel in native flux units; transfer absolute errors divided by [10day,10day,1scale]; continuum maximum absolute log ratio; observed WRMS via declared linear interpolation on600epochs."
+}

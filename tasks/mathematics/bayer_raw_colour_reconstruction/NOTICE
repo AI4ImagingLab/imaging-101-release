@@ -1,0 +1,5 @@
+Derived mathematical implementation: Copyright 2015 Colour Developers, BSD-3-Clause (LICENSE).
+Reference method: H. S. Malvar, L.-W. He, R. Cutler, ICASSP 2004.
+Observed Canon PowerShot A540 CHDK sensor image: raw.pixls.us sample1272, CC0-1.0.
+No original RGB target is known. Hidden arrays are independently executed method references.
+Raw decoding was performed privately; released runtime has no raw decoder or domain solver.

@@ -1,0 +1,29 @@
+{
+  "baseline": [
+    {
+      "method": "Independent upstream full-resolution mixed-reflection HfPol, Octave sparse QR",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-07,
+  "reference_role": "standard-method baseline; no independent measured ground truth",
+  "evaluation_mask": "public data/raw_data.npz mask; no spatial alignment or scale adjustment",
+  "tolerance_provenance": "Two independently executed upstream calls are identical. Local normal-equation solve versus upstream sparse QR has relative L2 2.1e-11 and max absolute height error 3.6e-10 pixel. Boundary also admits validated float32 quantization.",
+  "output_keys": {
+    "reconstruction": {
+      "shape": [
+        1,
+        457,
+        235
+      ],
+      "dtype": [
+        "float32",
+        "float64"
+      ],
+      "units": "pixel",
+      "background": "exact zero"
+    }
+  }
+}

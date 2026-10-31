@@ -1,0 +1,96 @@
+{
+  "frozen_before_local_implementation": true,
+  "timestamp_utc": "2026-10-21T21:16:06Z",
+  "upstream_npz_sha256": "7bc2c38467f19f1ec2e89530f1c6f566c4778921d244669c30bc303aaafe9450",
+  "independent_polynomial_checks": [
+    {
+      "shape": 0,
+      "radius": 1,
+      "polynomial_laplacian_moment_error_max": 4.440892098500626e-16
+    },
+    {
+      "shape": 0,
+      "radius": 2,
+      "polynomial_laplacian_moment_error_max": 8.881784197001252e-16
+    },
+    {
+      "shape": 0,
+      "radius": 3,
+      "polynomial_laplacian_moment_error_max": 6.38378239159465e-16
+    },
+    {
+      "shape": 0,
+      "radius": 4,
+      "polynomial_laplacian_moment_error_max": 5.273559366969494e-16
+    },
+    {
+      "shape": 0,
+      "radius": 5,
+      "polynomial_laplacian_moment_error_max": 4.440892098500626e-16
+    },
+    {
+      "shape": 1,
+      "radius": 1,
+      "polynomial_laplacian_moment_error_max": 4.440892098500626e-16
+    },
+    {
+      "shape": 1,
+      "radius": 2,
+      "polynomial_laplacian_moment_error_max": 6.661338147750939e-16
+    },
+    {
+      "shape": 1,
+      "radius": 3,
+      "polynomial_laplacian_moment_error_max": 1.3322676295501878e-15
+    },
+    {
+      "shape": 1,
+      "radius": 4,
+      "polynomial_laplacian_moment_error_max": 8.881784197001252e-16
+    },
+    {
+      "shape": 1,
+      "radius": 5,
+      "polynomial_laplacian_moment_error_max": 1.3322676295501878e-15
+    },
+    {
+      "shape": 2,
+      "radius": 1,
+      "polynomial_laplacian_moment_error_max": 4.440892098500626e-16
+    },
+    {
+      "shape": 2,
+      "radius": 2,
+      "polynomial_laplacian_moment_error_max": 8.881784197001252e-16
+    },
+    {
+      "shape": 2,
+      "radius": 3,
+      "polynomial_laplacian_moment_error_max": 3.1086244689504383e-15
+    },
+    {
+      "shape": 2,
+      "radius": 4,
+      "polynomial_laplacian_moment_error_max": 4.6629367034256575e-15
+    },
+    {
+      "shape": 2,
+      "radius": 5,
+      "polynomial_laplacian_moment_error_max": 1.8207657603852567e-14
+    }
+  ],
+  "mean_of_repeat_vs_reconstruct_mean_max_abs": 2.220446049250313e-15,
+  "phase_primary_mask_voxels": 859,
+  "primary_mean": 0.5784451209428565,
+  "primary_std": 0.0098449492618512,
+  "primary_range": 0.07660927272394746,
+  "negative_fraction": 0.0,
+  "float32_one_ulp_dynamic_nrmse_envelope": 8.136333964421884e-07,
+  "fixed_acceptance": {
+    "ncc_boundary": 0.999999,
+    "nrmse_boundary": 1e-06,
+    "stage_rtol": 5e-10,
+    "stage_atol": 2e-11
+  },
+  "metric_note": "Standard dynamic-range NRMSE; nonzero1e-6 accommodates measuredfloat32oneULP envelope, not bitwise0error rationale. Constantnominal values are nottruth. Referenceagreementnotphysicalaccuracy."
+}

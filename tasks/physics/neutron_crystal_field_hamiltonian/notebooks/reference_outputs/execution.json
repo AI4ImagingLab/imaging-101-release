@@ -1,0 +1,36 @@
+{
+  "runtime_seconds": 211.59693690005224,
+  "stages": [
+    {
+      "success": true,
+      "status": 0,
+      "nfev": 1243,
+      "loss": 19667.554205966146,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "success": true,
+      "status": 0,
+      "nfev": 3702,
+      "loss": 16710.585251101544,
+      "message": "Optimization terminated successfully."
+    },
+    {
+      "success": true,
+      "status": 0,
+      "nfev": 5494,
+      "loss": 15535.070138658511,
+      "message": "Optimization terminated successfully."
+    }
+  ],
+  "selection": {
+    "observed_moment_1T": [
+      5.292504548058218,
+      2.441947025238985
+    ],
+    "model_contrast_1T": [
+      1.5680144694474003,
+      -3.984599497566471
+    ]
+  }
+}

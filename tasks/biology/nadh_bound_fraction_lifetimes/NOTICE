@@ -1,0 +1,2 @@
+Local graphical algorithm adapted from PhasorPy0.12 (MIT); complete upstream copyright/license in LICENSE.
+Data: copyright 2024 Janet Sorrells, CC BY4.0, https://creativecommons.org/licenses/by/4.0/ . Original datasets: https://doi.org/10.6084/m9.figshare.28075163.v1 and https://doi.org/10.6084/m9.figshare.28072340.v2 . Values preserved, axes transposed and batch dimension added, TIFF converted to NPZ. No endorsement implied.

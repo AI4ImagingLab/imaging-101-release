@@ -1,0 +1,49 @@
+{
+  "code_url": "https://github.com/dotTHzTAG/thzpy/tree/17634ed0e4e39b0398c26b30445441c9f0b8a20a",
+  "paper": "https://doi.org/10.1007/s10762-025-01070-8",
+  "data": "https://doi.org/10.17863/CAM.120263.2",
+  "code_license": "LGPL3",
+  "data_license": "CC BY4.0",
+  "raw_shape": [
+    3,
+    3008,
+    2
+  ],
+  "raw_dtype": "float64",
+  "window_shape": [
+    3,
+    2,
+    1025
+  ],
+  "frequency_shape": [
+    1256
+  ],
+  "frequency_first": 0.20141601708893048,
+  "frequency_last": 2.4993896666035464,
+  "frequency_spacing": 0.0018310547008084654,
+  "sample_thickness_mm": 2.65,
+  "reference_thickness_mm": 2.56,
+  "settings": {
+    "min_frequency": 0.2,
+    "max_frequency": 2.5,
+    "upsampling": 3,
+    "peak_snr": 0.3,
+    "fit_range": 0.2,
+    "all_optical_constants": true
+  },
+  "negative_absorption_counts": [
+    276,
+    157
+  ],
+  "repeat_maxabs": 0.0,
+  "runtime_seconds": 0.025229600025340915,
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "os": "Windows-10-10.0.26200-SP0",
+  "hashes": {
+    "LM05_PE95_publ.thz": "80a4bfb6c6b209dad342db63d20d32d2a4784c525a3d7ed27868c10127d36b98",
+    "abscoeff_thzpy_publ.py": "989fe950cdd02725bc4839907f2bbd2b17db0db42ddfdb6e5c1f354dee4bd259",
+    "thzpy.zip": "bf6e5423be5829392f28b0b2843bb7a399704740c5c013b431b9d075984dc09e",
+    "thz_oracle.npz": "2cade8e633b922c4d89e1de1f78142b5ed474ef9b3230596671e0293d639b739"
+  }
+}

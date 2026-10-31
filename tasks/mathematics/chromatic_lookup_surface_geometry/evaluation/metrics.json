@@ -1,0 +1,20 @@
+{
+  "baseline": [
+    {
+      "method": "Qualified original CPU array-sqrt interface; author rank25 full-ray decoder",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "maximum_absolute_error_mm_boundary": 0.001,
+  "comparison_scope": "Each of the three complete observation-derived supports independently; sentinel minus1 exact outside; no fitted scale/registration or residual clipping",
+  "numerical_tolerance_provenance": "Independent complete original repeats are bitwise including index/depth/loss. Nonzero floor bounded by float32 depth representation: observed max-spacing6.103515625e-5mm; maximum absolute tolerance0.001mm is16.384 source ULP, and DR-NRMSE1e-6 remains stricter on distributed error. Fixed before any cleaned method implementation.",
+  "observation_rms_boundaries": [
+    0.07743929173549902,
+    0.07735535361821792,
+    0.07748206427663368
+  ],
+  "observation_rms_definition": "RMS over supported per-pixel Euclidean RGB residuals, normalized ratios; nearest calibrated axial depth maps submission to dictionary index, earliest tie; forward color evaluated independently in float64. All three frames score separately."
+}

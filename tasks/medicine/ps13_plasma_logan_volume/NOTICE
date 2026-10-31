@@ -1,0 +1,3 @@
+Selected inverse mathematics adapted from dynamicpet, copyright its authors, MIT license retained in LICENSE. Source revision and changes are documented in test/validation.md.
+
+Observations: OpenNeuro ds004868 v1.0.1, [11C]PS13 human baseline PET and arterial blood data. Dataset DOI 10.18112/openneuro.ds004868.v1.0.1. The distributed dataset LICENSE is the CC0 1.0 Universal public-domain dedication and dataset_description.json also declares CC0. The native central slice and measured parent-plasma calibration are repackaged without spatial resampling. No patient-identifying metadata are included. Original dataset license and metadata are archived privately.

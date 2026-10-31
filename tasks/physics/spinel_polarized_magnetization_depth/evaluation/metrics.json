@@ -1,0 +1,18 @@
+{
+  "baseline": [
+    {
+      "method": "Independent native Refl1D dead-layer fit with joint beam broadening",
+      "parameter_range_error": 0.0,
+      "nuclear_profile_nrmse": 0.0,
+      "magnetic_profile_nrmse": 0.0,
+      "reduced_chi_square": 1.4722735348803906
+    }
+  ],
+  "parameter_range_error_boundary": 0.0005,
+  "nuclear_profile_nrmse_boundary": 0.002,
+  "magnetic_profile_nrmse_boundary": 0.002,
+  "profile_parameter_consistency_boundary": 0.0001,
+  "reduced_chi_square_boundary": 1.5458872116244102,
+  "metric_definition": "Parameter maximum absolute difference divided by each declared physical bound range. Separate nuclear/magnetic RMS errors normalized by the respective reference dynamic ranges. Consistency is maximum per-channel dynamic-range-normalized profile deviation from declared model. Chi-square uses all168 measured standard errors and159 degrees of freedom.",
+  "provenance": "Native repeated parameter solution stable; preimplementation parameter tolerance0.001 tightened to0.0005. Nonzero profile tolerances require both profile channels and physical consistency; no rescaling/alignment."
+}

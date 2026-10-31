@@ -1,0 +1,22 @@
+{
+  "baseline": [
+    {
+      "method": "Unmodified napari-polcam None, offset 0, complete deposited T-cell stack",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "observation_residual": 0.016804278834125018
+    }
+  ],
+  "ncc_boundary": 0.9999999999,
+  "nrmse_boundary": 1e-10,
+  "angular_rmse_boundary": 1e-10,
+  "observation_residual_boundary": 0.018484706717537523,
+  "angular_definition": "sqrt(sum((S1_ref^2+S2_ref^2)*wrap_pi(angle-angle_ref)^2)/sum(S1_ref^2+S2_ref^2)); wrap_pi(d)=atan2(sin(2d),cos(2d))/2",
+  "comparison": {
+    "ncc": ">=",
+    "nrmse": "<=",
+    "angular_rmse": "<=",
+    "observation_residual": "<="
+  },
+  "provenance": "Boundary frozen after upstream full run and before local implementation. Deterministic linear formulas; nonzero tolerance for float64 arithmetic, not a claim of biological accuracy."
+}

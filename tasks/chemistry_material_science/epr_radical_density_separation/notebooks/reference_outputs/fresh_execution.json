@@ -1,0 +1,145 @@
+{
+  "task": "epr_radical_density_separation",
+  "data_type": "author_defined_simulated",
+  "source_commit": "2543bae3e1b75dc55f371d773b5a9b758fc51524",
+  "raw_sha256": "82da9130909870ab68dfef33e6ac29fd996116e5cbd683d01ffaefc0e04feb80",
+  "actual_kernel_executable": "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+  "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "matplotlib": "3.11.1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "source_role": "Independently run unchanged author mathematics, explicit float64/eps1e-12 configuration",
+  "fresh_role": "Full local direct-Fourier/FFT/CP2016 computation in this notebook",
+  "cli": {
+    "command": [
+      "D:\\yan1\\agent\\AutoSkill\\imaging-101-maintainer\\research-runtime\\Scripts\\python.exe",
+      "-m",
+      "src.main"
+    ],
+    "returncode": 0,
+    "seconds": 3.3569462000159547,
+    "stdout": "{\"seconds\": 3.213064600015059, \"iterations\": 1334, \"relative_update\": 9.97124147312974e-06, \"shape\": [1, 2, 100, 100]}\n",
+    "stderr": "",
+    "shell": false,
+    "raw_sha256": "82da9130909870ab68dfef33e6ac29fd996116e5cbd683d01ffaefc0e04feb80"
+  },
+  "judge_returncode": 0,
+  "original_fresh_relative_l2": 1.2976111194192469e-12,
+  "fresh_metrics": [
+    [
+      0.9798557718619909,
+      0.04729885151879676,
+      0.07027345870399855
+    ],
+    [
+      0.9877817607040029,
+      0.05565058790797031,
+      0.010668133625782217
+    ]
+  ],
+  "method_names": [
+    "Signed TV (primary)",
+    "Nonnegative TV",
+    "Weak TV",
+    "Strong TV",
+    "Ignore source coupling",
+    "Normalized backprojection"
+  ],
+  "method_metrics": [
+    [
+      [
+        0.9798557718619909,
+        0.04729885151879676,
+        0.07027345870399855
+      ],
+      [
+        0.9877817607040029,
+        0.05565058790797031,
+        0.010668133625782217
+      ]
+    ],
+    [
+      [
+        0.9829722079162794,
+        0.04379132042638318,
+        0.31763436579607146
+      ],
+      [
+        0.9899824377444624,
+        0.05127666010574091,
+        0.10846319689185882
+      ]
+    ],
+    [
+      [
+        0.9302552980680229,
+        0.09119817474836857,
+        0.07376316141050318
+      ],
+      [
+        0.9154419245492312,
+        0.1553603496978997,
+        0.0038013908792905284
+      ]
+    ],
+    [
+      [
+        0.9898288062550121,
+        0.03357297999187779,
+        0.04829967297641909
+      ],
+      [
+        0.9953488444710539,
+        0.046254092885733955,
+        0.08761510468925378
+      ]
+    ],
+    [
+      [
+        0.9171592591092835,
+        0.12135701302558015,
+        0.34328869772247705
+      ],
+      [
+        0.8303665273406666,
+        0.27970230706694804,
+        0.5541123615766798
+      ]
+    ],
+    [
+      [
+        0.8690421058121016,
+        3.8555507616104863,
+        1.0092425155716287
+      ],
+      [
+        -0.5574825944740255,
+        1.702855854147612,
+        0.12854030501089328
+      ]
+    ]
+  ],
+  "physics_names": [
+    "Point shift",
+    "Adjoint dot",
+    "Toeplitz normal",
+    "TV adjoint",
+    "Objective derivative"
+  ],
+  "physics_errors": [
+    1.137508054892877e-15,
+    5.655970751581712e-15,
+    1.4700427794544644e-15,
+    2.7715806788429764e-16,
+    2.814521412434138e-10
+  ],
+  "review_seconds": 46.28624000001582,
+  "notebook_seconds_so_far": 77.09436999997706,
+  "reconstruction_sha256": "8636963f0449716624e38e69d10aee0e2c9e75275787eff7d5804177be675f5e",
+  "comparison_roles": {
+    "source": "Independent exact-bound original float64 run before local",
+    "fresh": "Computed here through local modules",
+    "truth": "Analytical author-defined physical fields",
+    "positive": "Fresh native optional constraint; failed TAM amount gate preserved"
+  }
+}

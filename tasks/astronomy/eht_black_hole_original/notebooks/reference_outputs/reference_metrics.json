@@ -1,0 +1,26 @@
+{
+  "Vis RML (cal)": {
+    "nrmse": 0.034,
+    "ncc": 0.9669
+  },
+  "Amp+CP (cal)": {
+    "nrmse": 0.0904,
+    "ncc": 0.763
+  },
+  "Closure-only (cal)": {
+    "nrmse": 0.1056,
+    "ncc": 0.7523
+  },
+  "Vis RML (corrupt)": {
+    "nrmse": 0.8672,
+    "ncc": 0.0001
+  },
+  "Amp+CP (corrupt)": {
+    "nrmse": 0.3751,
+    "ncc": 0.2999
+  },
+  "Closure-only (corrupt)": {
+    "nrmse": 0.1384,
+    "ncc": 0.6044
+  }
+}

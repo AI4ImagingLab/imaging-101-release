@@ -1,0 +1,30 @@
+{
+  "baseline": [
+    {
+      "method": "Reproduced unchanged original ZDIpy magnetic maximum-entropy reconstruction",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "nrmse_definition": "RMS spatial error divided by reference dynamic range, independently per required component.",
+  "reference_kind": "No actual surface truth. Only target-independent local line profiles/geometry calibration loaded; no reconstructed map comparison.",
+  "observation_metric": "mean squared standardized residual over all 16 by 89 measured samples; diagonal variance assumption",
+  "observation_chi2_per_sample_boundary": 1.002,
+  "metric_comparisons": {
+    "entropy_cost": "<=",
+    "harmonic_relative_error": "<=",
+    "observation_chi2_per_sample": "<="
+  },
+  "historical_v1_thresholds": {
+    "radial_ncc_boundary": 0.999999999,
+    "radial_nrmse_boundary": 1e-07,
+    "colatitudinal_ncc_boundary": 0.999999999,
+    "colatitudinal_nrmse_boundary": 1e-07,
+    "azimuthal_ncc_boundary": 0.999999999,
+    "azimuthal_nrmse_boundary": 1e-07
+  },
+  "entropy_cost_boundary": 12657.736914129822,
+  "harmonic_relative_error_boundary": 1e-10,
+  "evaluation_version": "2.0-signed-harmonic-entropy-class",
+  "entropy_definition": "Negative signed entropy sum l[a asinh(a/(2m))-sqrt(a?+4m?)+2m] over real and imaginary alpha/beta/gamma, m=100G, l1..15. Coefficients inferred independently from submitted physical field; invisible imaginary m0 is fixed zero."
+}

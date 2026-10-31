@@ -1,0 +1,13 @@
+{
+  "parameter_relative_error_boundary": 1e-05,
+  "modal_residual_rms_boundary": 0.1613221901832689,
+  "baseline": [
+    {
+      "method": "Original SMU modal dynamic residual, best of12 Octave lsqnonlin starts",
+      "parameter_relative_error": 0,
+      "modal_residual_rms": 0.14665653653024444
+    }
+  ],
+  "metric_definition": "max absolute componentwise relative error across stiffness and latent modes; RMS of eight dynamic modal residuals in lbf/in",
+  "reference_kind": "method result, no physical ground truth"
+}

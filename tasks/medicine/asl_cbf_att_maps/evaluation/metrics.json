@@ -1,0 +1,37 @@
+{
+  "baseline": [
+    {
+      "method": "ASLtk multi-delay Buxton fit, unmodified upstream raw parameters with explicit unit conversion",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0,
+      "signal_relative_l2": 0.6146257649104445
+    }
+  ],
+  "ncc_boundary": 0.999999,
+  "nrmse_boundary": 1e-06,
+  "thresholds": {
+    "reconstruction_ncc": {
+      "comparison": ">=",
+      "boundary": 0.999999
+    },
+    "arterial_transit_time_ncc": {
+      "comparison": ">=",
+      "boundary": 0.999999
+    },
+    "reconstruction_nrmse": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "arterial_transit_time_nrmse": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    },
+    "signal_relative_l2": {
+      "comparison": "<=",
+      "boundary": 0.620772022559549
+    }
+  },
+  "reference_kind": "standard-method output; no physical truth",
+  "signal_relative_l2_definition": "L2 norm of predicted-minus-observed magnetization divided by observation L2 norm, over all acquired delays and fixed brain mask",
+  "numeric_tolerance_provenance": "Independent full upstream reruns identical; nonzero 1e-6 dynamic-range tolerance covers float32 parameter storage and independent backend roundoff; all arrays compared without alignment."
+}

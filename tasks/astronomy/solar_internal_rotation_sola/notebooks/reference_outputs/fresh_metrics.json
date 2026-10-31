@@ -1,0 +1,85 @@
+{
+  "role": "fresh cleaned measurements; original method reference is not truth",
+  "runtime_seconds": 28.7951832000399,
+  "judge": {
+    "status": "pass",
+    "passed": true,
+    "metrics": {
+      "rotation_max_abs_nHz": 6.9802183588763e-08,
+      "observation_weighted_rms": 1.1936132279167608
+    },
+    "thresholds": {
+      "rotation_max_abs_nHz": {
+        "comparison": "<=",
+        "boundary": 0.001
+      },
+      "observation_weighted_rms": {
+        "comparison": "<=",
+        "boundary": 1.2
+      }
+    },
+    "errors": []
+  },
+  "adjoint_relative_error": 1.036931671369147e-15,
+  "max_field_original_difference_nHz": 0.017236849722223724,
+  "max_error_original_difference_nHz": 3.161512226101948e-05,
+  "ablation": [
+    {
+      "label": "iterations: k=250, mu=3, dr=0.06",
+      "iterations": 250,
+      "tradeoff": 3.0,
+      "width": 0.06,
+      "field_relative_change": 0.019548672303057565,
+      "weighted_rms": 1.2328926123560198,
+      "mean_formal_error": 0.4952570750609725
+    },
+    {
+      "label": "iterations: k=500, mu=3, dr=0.06",
+      "iterations": 500,
+      "tradeoff": 3.0,
+      "width": 0.06,
+      "field_relative_change": 0.000566085818889542,
+      "weighted_rms": 1.1950739028774668,
+      "mean_formal_error": 0.8712307785451446
+    },
+    {
+      "label": "tradeoff: k=1500, mu=0.3, dr=0.06",
+      "iterations": 1500,
+      "tradeoff": 0.3,
+      "width": 0.06,
+      "field_relative_change": 0.01055481842352083,
+      "weighted_rms": 1.2050177528030344,
+      "mean_formal_error": 2.146358994769728
+    },
+    {
+      "label": "tradeoff: k=1500, mu=30, dr=0.06",
+      "iterations": 1500,
+      "tradeoff": 30.0,
+      "width": 0.06,
+      "field_relative_change": 0.01753995358307862,
+      "weighted_rms": 1.2140343742196902,
+      "mean_formal_error": 0.3837539999273898
+    },
+    {
+      "label": "width: k=1500, mu=3, dr=0.03",
+      "iterations": 1500,
+      "tradeoff": 3.0,
+      "width": 0.03,
+      "field_relative_change": 0.006809870652770713,
+      "weighted_rms": 1.1559156067352354,
+      "mean_formal_error": 1.3725067482887219
+    },
+    {
+      "label": "width: k=1500, mu=3, dr=0.12",
+      "iterations": 1500,
+      "tradeoff": 3.0,
+      "width": 0.12,
+      "field_relative_change": 0.005156741909514678,
+      "weighted_rms": 1.2372102754501684,
+      "mean_formal_error": 0.6461666959585133
+    }
+  ],
+  "noise_replicates": 32,
+  "empirical_over_formal_mean": 0.9847538844224539,
+  "notebook_compute_seconds": 43.63797839998733
+}

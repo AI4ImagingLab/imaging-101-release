@@ -1,0 +1,19 @@
+{
+  "baseline": [{"method": "Independently executed selected CaImAn release pipeline on complete real Sue movie", "ncc_vs_ref": 1.0, "nrmse_vs_ref": 0.0}],
+  "detection_f1_boundary": 0.95,
+  "spatial_ncc_boundary": 0.98,
+  "spatial_nrmse_boundary": 0.015,
+  "fluorescence_ncc_boundary": 0.98,
+  "fluorescence_nrmse_boundary": 0.025,
+  "innovations_ncc_boundary": 0.95,
+  "innovations_nrmse_boundary": 0.025,
+  "dff_ncc_boundary": 0.98,
+  "dff_nrmse_boundary": 0.025,
+  "background_ncc_boundary": 0.99,
+  "background_nrmse_boundary": 0.025,
+  "motion_max_error_boundary": 0.11,
+  "zero_estimate_policy": "Zero temporal or background estimates have NCC=0 and ordinary dynamic-range NRMSE, and fail with exit code 1; zero spatial columns violate the declared gauge. Zero-norm or constant hidden references are evaluator errors.",
+  "alignment": "Unit spatial L2 gauge; fixed maximum-total-spatial-cosine Hungarian assignment; only cosine>=0.7 counts as matched; unmatched sources penalized by detection F1. Background evaluated through sum of rank-2 products, preserving general factorization ambiguity.",
+  "threshold_provenance": "NCC, detection F1, matching and motion criteria fixed before complete local pipeline assessment. NRMSE boundaries added at packaging after developmental diagnostics and before final CLI/notebook judging, then checked on independent reruns; they are not presented as a preregistered experiment. 0.11 pixel allows one original 0.1-pixel registration quantum. Stage parity tests separately require much tighter agreement. References are method results, not neuronal truth.",
+  "metric_definitions": "NCC is flattened cosine, without mean subtraction. NRMSE is RMS divided by reference dynamic range. Source metrics use all matched source arrays, detection F1=2*matches/(K+Kref). Background metrics use full rank-2 product in float64 and accumulated blocks. No intensity rescaling, cropping, temporal shift, or magnitude conversion."
+}

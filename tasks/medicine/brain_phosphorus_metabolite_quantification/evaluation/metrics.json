@@ -1,0 +1,25 @@
+{
+  "baseline": [
+    {
+      "method": "Independent nativepyAMARES LM-initializedTRR with explicitprecisionrefinement usingpublicfit_kws; all16Lorentzianresonances and37freeparameters",
+      "amplitude_ncc_vs_ref": 1.0,
+      "amplitude_nrmse_vs_ref": 0.0
+    }
+  ],
+  "amplitude_ncc_boundary": 0.999999999,
+  "amplitude_nrmse_boundary": 1e-06,
+  "frequency_max_abs_hz_boundary": 0.001,
+  "linewidth_max_abs_hz_boundary": 0.001,
+  "phase_periodic_abs_rad_boundary": 1e-05,
+  "observation_relative_l2_boundary": 0.19,
+  "reference_role": "Independently executed standard-method result; exact generating truth not identified for the author-released syntheticFID",
+  "metric_definitions": {
+    "amplitude_ncc": "Standard flattened cosine similarity, no mean subtraction",
+    "amplitude_nrmse": "RMS amplitude error divided by reference amplitude dynamic range",
+    "frequency_max_abs_hz": "Maximum absolute difference over all16frequencies inHz",
+    "linewidth_max_abs_hz": "Maximum absolute difference over all16Lorentzian FWHMlinewidths inHz",
+    "phase_periodic_abs_rad": "Absolute principal angle of exp(i*(predicted-reference commonphase)); no fitted alignment",
+    "observation_relative_l2": "Complex L2 norm of fitted-minus-acquiredFID divided by acquiredFIDL2 norm; uncentered, no rescale"
+  },
+  "tolerance_rationale": "Unchangednonzero numericalboundaries, nowvalidated BEFORElocalprecisionchange against threeindependent originalAPIinitializations convergingtothesamephysicalLSoptimum: amplitudedynamicNRMSE<=1e-8, maxfrequencydifference<=1.03e-6Hz, maxlinewidthdifference<=8.52e-5Hz, phasedifference<=1.95e-9rad. Defaultsourceprecisionfailedpublicsufficiencygateandissuperseded, notrelabeledconverged. No boundarywidened."
+}

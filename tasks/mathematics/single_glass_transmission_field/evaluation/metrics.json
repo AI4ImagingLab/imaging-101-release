@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Original published convex reflection suppression, full real train2 photograph; standard-method reference, no independent transmission truth",
+      "ncc_vs_ref": 1.0,
+      "nrmse_vs_ref": 0.0
+    }
+  ],
+  "ncc_boundary": 0.9999999,
+  "nrmse_boundary": 1e-07,
+  "maximum_absolute_boundary": 5e-07,
+  "stationarity_relative_boundary": 1e-08,
+  "channel_mean_absolute_boundary": 1e-06,
+  "reference_kind": "baseline_reference, NOT ground truth",
+  "metric_provenance": "Nonzero numerical tolerances frozen after independent repeats and dense/Neumann cosine physics cases, before local inverse. Additional stationarity and channel mean constraints use only observed calibration and acquisition-independent operators."
+}

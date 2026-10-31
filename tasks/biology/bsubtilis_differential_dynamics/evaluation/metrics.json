@@ -1,0 +1,24 @@
+{
+  "baseline": [
+    {
+      "method": "Independent original fastddm 0.3.15, complete paired native movies",
+      "speed_um_s": [
+        9.25986768437256,
+        27.98801674661428
+      ],
+      "direct_observation_relative_l2": [
+        0.009520924174246272,
+        0.005833046605801141
+      ]
+    }
+  ],
+  "parameter_relative_l2_boundary": 0.001,
+  "speed_relative_error_boundary": 0.001,
+  "observation_relative_l2_boundary": 0.02,
+  "metric_definition": "For each condition and each parameter separately: L2 estimate-reference / L2 reference. Speed: abs(estimate/reference-1). Direct consistency: L2 predicted-observed structure functions / L2 observed, all 39 q bins and nine fixed lags. No alignment, scaling, cropping or offset fitting.",
+  "reference_kind": "standard-method estimate, not physical truth",
+  "evaluation_version": "2.0-direct-difference-model-class",
+  "speed_identity_relative_error_boundary": 1e-06,
+  "exponent_identity_error_boundary": 1e-10,
+  "v2_definition": "Accept all positive A/Gamma/speed and beta>=1 compressed-exponential fields satisfying original direct-nine-delay relative L2<=.02 independently per recording. Recording1 beta=1.35. Speed equals exp(mean(log(Gamma/q))) to relative1e-6. No hidden parameter-map comparison."
+}

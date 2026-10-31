@@ -1,0 +1,15 @@
+{
+  "baseline": [
+    {
+      "method": "Physically corrected original source, t0 charge reference, six-uniform-start original LM; explicit correction and extension, no truth",
+      "objective": 4.949217144795996
+    }
+  ],
+  "rates_absolute_boundary": 2e-05,
+  "rates_relative_boundary": 0.002,
+  "concentration_nrmse_boundary": 0.002,
+  "charge_nrmse_boundary": 0.002,
+  "rates_comparison": "abs(estimate-reference) <= 2e-5 h^-1 + 0.002*abs(reference), individually for all 11 rates; numerical method agreement only",
+  "nrmse_definition": "RMSE divided by reference range, independently for each species or cumulative charge",
+  "rationale": "Original nonzero numerical boundaries retained. Independent corrected-original multi-initialization/profile diagnostics validate weak near-zero kD22 and improved observed-data objective; no threshold relaxation."
+}

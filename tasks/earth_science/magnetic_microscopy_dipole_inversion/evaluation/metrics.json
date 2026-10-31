@@ -1,0 +1,9 @@
+{
+  "baseline": [{"method": "Independent upstream full real-data method; reference agreement only", "position_rmse_um": 0.0, "moment_relative_l2": 0.0}],
+  "position_rmse_um_boundary": 1e-7,
+  "moment_relative_l2_boundary": 1e-7,
+  "metric_definitions": {"position_rmse_um": "sqrt(mean((matched_xyz-estimated_xyz)^2)), micrometres", "moment_relative_l2": "L2 norm of matched vector-moment differences divided by reference moment L2 norm"},
+  "alignment": "Minimum-sum-squared-location assignment of 75 sources. No spatial transformation, vector rotation, crop or scale fit.",
+  "reference_type": "Published standard-method output; not physical ground truth",
+  "tolerance_provenance": "Fixed after independent oracle capture and before cleaned scoring. Conservative float64 FFT/normal-equation rerun tolerance; see test/validation.md."
+}

@@ -1,0 +1,8 @@
+{
+  "semantic_version": "v2",
+  "profile_nll_excess_boundary": 1e-06,
+  "mixture_relation_error_boundary": 2e-06,
+  "reference_role": "Attainable profiled conditional CAR fit; not independently measured proportions",
+  "metric_definition": "Negative complete CAR/inverse-gamma log posterior after exact nuisance profiling, divided by genes*spots; maximum over the seven declared phi values. Positive excess means worse fit.",
+  "tolerance_provenance": "Predeclared dimensionless 1e-6 per gene-spot logposterior budget; not measured sequencing noise. Both all-type outputs are checked."
+}

@@ -1,0 +1,31 @@
+{
+  "upstream_objective": "quartic spectral residual, nonlinear VIPA sum-of-squares",
+  "calibration_rms_MHz": 21.071759476417814,
+  "calibration_max_abs_MHz": 44.3132555,
+  "mean_shift_GHz": 5.024793697447883,
+  "frame_and_region_std_MHz": 12.887793064388088,
+  "variant_rms_change_MHz": {
+    "width1": 5.819042494907294,
+    "width3": 3.7938210724885524,
+    "first_calibration": 2.483319369982709,
+    "L2_peaks": 4.168502477453227
+  },
+  "reconstruction_runtime_s": 1.0778878999408334,
+  "experiment_runtime_s": 4.980475600110367,
+  "raw_data_sha256": "161b8f1acedbed5a7183ef93be1469b791bd9e3e6f69795205b9b9f244f7e47d",
+  "upstream_relative_errors": {
+    "reconstruction": 0.0,
+    "peak_parameters": 0.0,
+    "frequency_axis": 0.0,
+    "extracted_spectra": 0.0,
+    "calibration_frequency": 0.0,
+    "calibration_arcs": 0.0,
+    "calibration_parameters": 0.0
+  },
+  "method": "Fresh local camera-to-shift method and separately labeled variants",
+  "environment": {
+    "python": "3.11.11 (main, Mar 17 2025, 21:01:29) [MSC v.1943 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "platform": "Windows-10-10.0.26200-SP0"
+  }
+}
