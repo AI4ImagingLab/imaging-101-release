@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "thresholds": {
+    "mean_absolute_spectral_error": {
+      "comparison": "<=",
+      "boundary": 0.0056507617144896235
+    },
+    "worst_spectrum_absolute_error": {
+      "comparison": "<=",
+      "boundary": 0.00938475045158639
+    },
+    "forward_consistency_max": {
+      "comparison": "<=",
+      "boundary": 2e-06
+    }
+  },
+  "definition": "Per-spectrum mean absolute difference over100native-selected355..1345nm bands; mean and maximum acrossall180spectra. Supplied212bandoutput must agree with every submittedphysicalparameter via known12layerresponse. No physical-property truth exists. Nonzero bounds from independentfloat32forwardparity2.4e-7max, accumulatednetworkroundoff; sourcefinalmodel freshlyevaluatedagainstoriginalfloat64observations, notsourcepreupdateMAE."
+}

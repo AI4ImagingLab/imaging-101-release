@@ -1,0 +1,26 @@
+The spherical orbit, disk integration, and conjunction routines are adapted
+from the ellc binary star model, Copyright (C) 2016 Pierre Maxted.
+Relevant maintained Python interfaces are Copyright (C) 2017 Pierre Maxted;
+the upstream source also records compatibility modifications by ZhiXiang Zhang.
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License in
+LICENSE for more details.
+
+The cleaned NumPy implementation extracts the selected spherical numerical
+branch, with explicitly documented V2 light travel corrections, instead of
+bundling the original general stellar-shape framework or compiled library.
+The task-specific initializer, ensemble updates, tests, and review materials
+are supplied under the same license.
+
+The real J0113+31 observations are the original example's copies of tables
+5–10 accompanying Gómez Maqueo Chew et al., Astronomy & Astrophysics 572,
+A50 (2014), DOI 10.1051/0004-6361/201424265. Their authors and publication
+retain the observational attribution; the benchmark does not assert ownership
+of the original astronomical measurements. The package preserves full supplied
+decimal observation values, with the separate source likelihood precision
+convention explicitly documented.

@@ -1,0 +1,8 @@
+{
+  "evaluation_version": 2,
+  "objective_boundary": 1.0361689959301181,
+  "forward_observation_normalized_l2_boundary": 1e-09,
+  "reference_type": "Original conditional method result, not actual residue truth",
+  "objective_definition": "mean over all63x7 corrected-uptake residual squares + 2e-4 mean over all145 nearest-neighbor absolute differences in the full146-entry auxiliary/physical field",
+  "correction": "actual uptake forward explicitly includes measured labeling fraction0.9; source unit adapter parity verified"
+}

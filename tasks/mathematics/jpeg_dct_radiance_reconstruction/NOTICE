@@ -1,0 +1,12 @@
+Selected mathematics and optimizer adapted from jpeg2png v1.01, Victor VdE,
+revision 04054a2ee78b08cfbe69c71f84f9d84c0aedd9f3, licensed GPL-3.0-or-later.
+The complete GPL license is preserved in LICENSE.
+
+The encoded observation is the SpaceX DSCOVR/Falcon 9 launch photograph,
+released into the public domain according to the scikit-image data.rocket
+documentation. Original JPEG coefficient integers and quantization tables are
+preserved without recompression. No endorsement by SpaceX is implied.
+
+No Ooura DCT source is distributed here. The cleaned implementation uses
+general SciPy orthonormal DCT primitives, and their arithmetic differences
+from the upstream float32 Ooura implementation are explicitly validated.

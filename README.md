@@ -2,10 +2,10 @@
 
 A benchmark for Agents solving scientific inverse problems from observations.
 
-The repository contains **299 tasks across eight domains** in
+The repository contains **320 tasks across eight domains** in
 `tasks/<domain>/<task_name>/`. The original 59 task contents are preserved.
-The later 240 have undergone the [public-input audit](docs/BENCHMARK_AUDIT.md):
-**219 are ready for the local benchmark; 21 remain blocked**.
+The later 261 have undergone the [public-input audit](docs/BENCHMARK_AUDIT.md):
+**240 are ready for the local benchmark; 21 remain blocked**.
 The [task registry](docs/task_registry.json) records each task's status and path.
 
 The evaluated Agent receives only `README.md`, `data/raw_data.npz`, task

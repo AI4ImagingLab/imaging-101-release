@@ -1,12 +1,8 @@
 # Public-input benchmark audit
 
-Scope: all 299 task directories have been relocated into eight domain folders.
-The original 59 task contents were excluded from repairs and preserved. The
-remaining 240 underwent task-specific public-contract and evaluator review.
-Here public means available to the evaluated Agent, not authorization to publish
-or relicense the underlying datasets.
+Scope:320 task directories in eight domain folders. The original59 contents remain protected. The prior240 later tasks retain their existing audit; Batch13 adds21 independently validated inverse tasks. Public means available to the evaluated Agent, not authorization to publish or relicense datasets.
 
-Current status: **219 ready**, **21 blocked**, **59 legacy-exempt**.
+Current status: **240 ready**, **21 blocked**, **59 legacy-exempt**.
 
 Ready tasks supply observation/calibration definitions, physical parameters,
 units, coordinate conventions, unknowns, and every required NPZ output. They
@@ -20,14 +16,14 @@ legacy-exempt rather than being silently certified by this audit.
 
 | Domain | Total | Original preserved | Ready | Blocked |
 | --- | ---: | ---: | ---: | ---: |
-| astronomy | 39 | 9 | 27 | 3 |
-| physics | 38 | 7 | 30 | 1 |
-| biology | 38 | 9 | 25 | 4 |
-| mathematics | 27 | 0 | 24 | 3 |
-| chemistry_material_science | 37 | 3 | 31 | 3 |
-| mechanics | 32 | 1 | 30 | 1 |
-| medicine | 53 | 23 | 28 | 2 |
-| earth_science | 35 | 7 | 24 | 4 |
+| astronomy | 41 | 9 | 29 | 3 |
+| physics | 41 | 7 | 33 | 1 |
+| biology | 40 | 9 | 27 | 4 |
+| mathematics | 30 | 0 | 27 | 3 |
+| chemistry_material_science | 40 | 3 | 34 | 3 |
+| mechanics | 35 | 1 | 33 | 1 |
+| medicine | 55 | 23 | 30 | 2 |
+| earth_science | 38 | 7 | 27 | 4 |
 
 Verification evidence:
 
@@ -99,3 +95,8 @@ score `output/reconstruction.npz` on the trusted maintainer host. Source, plans,
 notebooks, test fixtures, evaluation references and existing outputs stay private.
 Existing task-specific local-research and external redistribution limitations
 remain in their notices and provenance; scientific readiness is not a license grant.
+
+
+## Batch13 addition
+
+All21 new packages passed independent parent source/physics, public-contract, full reconstruction, standalone Judge and active notebook review. Their integrated release exports and trusted CLI evaluations passed separately. The private [batch report](../../imaging-101-maintainer/research_batch13_20261030/report/REPORT.md) and [acceptance ledger](../../imaging-101-maintainer/research_batch13_20261030/release_postflight.json) retain actual commands, numeric evidence and limitations. All prior299tasks/7494protected files remain unchanged. An unbound legacy placeholder remains unverified rather than being assigned an invented scientific definition. This is not21blindAgenttrials or a new certification of old blocked tasks.

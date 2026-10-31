@@ -1,0 +1,14 @@
+{
+  "evaluation_version": 1,
+  "objective_boundary": [
+    998.6355536550473,
+    1077.5777890931993,
+    1076.7197227016702,
+    1068.805109303599,
+    1080.0811730058638,
+    1078.3196181547135
+  ],
+  "forward_observation_normalized_l2_boundary": 1e-09,
+  "reference_type": "Original DQuickLTFit method reference on real measurements; not actual material truth",
+  "objective_definition": "Sum of squared(y-model)/sqrt(y+1) on binned indices33..946 plus1e8*(sum Gaussian weights-1)^2, original callback endpoint convention"
+}

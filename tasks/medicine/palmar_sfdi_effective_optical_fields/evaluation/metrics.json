@@ -1,0 +1,13 @@
+{
+  "evaluation_version": 2,
+  "pixel_objective_ratio_boundary": 1.02,
+  "pixel_objective_absolute_floor": 1e-10,
+  "forward_relative_l2_boundary": 1e-09,
+  "reference_type": "Independently executed classical conditional diffusion inversion, no physical optical ground truth",
+  "metric_definition": "Every cell SSE across selected two low frequencies0and0.1cycles/mm must be <=1.02*reference-model SSE+1e-10; reported reflectance must match the submitted optical fields with global relativeL2<=1e-9.",
+  "selected_frequency_indices": [
+    0,
+    1
+  ],
+  "selection_reason": "Published diffusion frequency regime, not residual-based selection; all cells retained, all5raw channels public; higher3channels diagnostic only"
+}

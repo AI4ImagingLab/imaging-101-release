@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "thresholds": {
+    "HEI_rmse_mm": {
+      "comparison": "<=",
+      "boundary": 9.911441708925652
+    },
+    "HEI_p90_mm": {
+      "comparison": "<=",
+      "boundary": 13.707711875202772
+    },
+    "HEI_maximum_mm": {
+      "comparison": "<=",
+      "boundary": 23.928403343978424
+    },
+    "ANG_rmse_mm": {
+      "comparison": "<=",
+      "boundary": 10.541506998768554
+    },
+    "ANG_p90_mm": {
+      "comparison": "<=",
+      "boundary": 15.741940386879428
+    },
+    "ANG_maximum_mm": {
+      "comparison": "<=",
+      "boundary": 25.001972910340207
+    },
+    "TEM_rmse_mm": {
+      "comparison": "<=",
+      "boundary": 11.10287618632908
+    },
+    "TEM_p90_mm": {
+      "comparison": "<=",
+      "boundary": 16.211352519758943
+    },
+    "TEM_maximum_mm": {
+      "comparison": "<=",
+      "boundary": 24.360532441734772
+    }
+  },
+  "definition": "Percondition physical Euclidean error over all35independenttestpoints:RMSEsqrt(mean(distance\u00b2)),empirical90percentlinearquantile,andmaximum. Everycase/allx-ycoordinates evaluated against authorcontrolledlocationGT;allboundaries1.1timesactualsourcebaselineerror. No coordinatealignment/scale/permutation/optimizeridentity."
+}

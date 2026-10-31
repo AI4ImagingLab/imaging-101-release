@@ -1,0 +1,15 @@
+The reference-code mathematical extraction is adapted from fitting-qens,
+commit 8f9fcd3b949a869e77b50a3af261269fdc76473f, Copyright (c) 2026
+@scams-research, MIT License retained in LICENSE. The standalone evaluator is
+an independent implementation of the documented equations.
+
+Measurements: Harry Richardson and Andrew McCluskey, Dataset for "Lost in
+Translation: Simulation-Informed Bayesian Inference for Quasi-Elastic Neutron
+Scattering", 2026, Zenodo record 18836632, version-specific DOI
+10.5281/zenodo.18836632, licensed Creative Commons Attribution 4.0 International
+(https://creativecommons.org/licenses/by/4.0/). Six native NXSPE measurement
+datasets were converted losslessly to NPZ with exact missingness masks and fixed
+analysis coordinate/index arrays. No upstream posterior caches are included.
+This is a versioned scientific adaptation; the empirical reference is a moving
+260 K sample and reconstructed quantities are conditional model estimates.
+The source-code and dataset creators do not endorse this benchmark.

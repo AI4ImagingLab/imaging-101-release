@@ -7,7 +7,7 @@ are `mathematics`, `physics`, `chemistry_material_science`, `astronomy`,
 
 The original 59 task contents are preserved as legacy tasks. Their presence in
 the catalogue does not imply that missing assets or old evaluation contracts
-have been repaired. The later 240 tasks are the scope of the public-contract
+have been repaired. The later 261 tasks are the scope of the public-contract
 audit; consult the per-task readiness registry rather than assuming that the
 number of directories equals the number of independently certified tasks.
 

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "thresholds": {
+    "p_mean_absolute_residual_s": {
+      "comparison": "<=",
+      "boundary": 0.020105228534259747
+    },
+    "s_mean_absolute_residual_s": {
+      "comparison": "<=",
+      "boundary": 0.017063631931293555
+    },
+    "maximum_component_centroid_offset_km": {
+      "comparison": "<=",
+      "boundary": 5e-05
+    },
+    "maximum_component_mean_origin_correction_s": {
+      "comparison": "<=",
+      "boundary": 1e-06
+    }
+  },
+  "definition": "P and S mean absolute full physical DD residual over all publicCC>=.6/catalogstationrange<=80km observations; componentcatalogcentroid conditionalanchoring prior and zero-mean origin corrections on full public observed-pair graph. Spatial translation is not a true gauge with fixed stations. No hidden clustering identity.",
+  "baseline": [
+    {
+      "method": "Actual full original GrowClust",
+      "p_mean_absolute_residual_s": 0.020100228534259745,
+      "s_mean_absolute_residual_s": 0.017058631931293554,
+      "maximum_component_centroid_offset_km": 3.1974978912962984e-06,
+      "maximum_component_mean_origin_correction_s": 5.2709589924728664e-08
+    }
+  ]
+}

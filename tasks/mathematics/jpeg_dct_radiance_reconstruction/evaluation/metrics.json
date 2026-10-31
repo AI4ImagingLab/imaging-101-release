@@ -1,0 +1,15 @@
+{
+  "evaluation_version": 1,
+  "baseline": [
+    {
+      "method": "Original jpeg2png v1.01 native w=0, 2000 updates",
+      "objective": 1069561.9721799737,
+      "evaluation_precision": "float64 standalone evaluator",
+      "original_mixed_arithmetic_diagnostic_objective": 1069561.9791301962
+    }
+  ],
+  "objective_boundary": 1069668.9353281092,
+  "coefficient_violation_boundary": 0.001,
+  "definition": "Joint TV/sqrt(3) plus alpha/2 times squared normalized DCT residual, alpha=0.001*2*255*sqrt(2); all padded output samples are included.",
+  "reference_identity_scored": false
+}

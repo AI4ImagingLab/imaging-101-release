@@ -1,0 +1,26 @@
+{
+  "evaluation_version": "pose-v1.0",
+  "baseline": [
+    {
+      "method": "Full selected GCL with Yu LP, trim/fill and five refinements; independently reproduced with documented numerical compatibility and exact cold continuation",
+      "provenance": "reproduced_upstream_on_exact_bound_observations",
+      "joint_piece_accuracy": 1.0,
+      "oriented_neighbor_accuracy": 1.0
+    }
+  ],
+  "metric_definitions": {
+    "joint_piece_accuracy": "Mean exact coordinate AND physical quarter-turn agreement for each public-index tile after the common alignment.",
+    "oriented_neighbor_accuracy": "Fraction of all actual target-grid nearest-neighbor pairs with exact directed displacement and correct physical orientation of both endpoints after the same alignment. Count every true seam once."
+  },
+  "diagnostic_metrics": [
+    "position_accuracy",
+    "orientation_accuracy",
+    "neighbor_accuracy"
+  ],
+  "alignment": "One common global C4 acts on both coordinates and cumulative quarter turns; exists one k for which all required metrics pass. No independent per-metric alignment.",
+  "threshold_rationale": "Require at least95% complete fragment poses and95% physically oriented true neighboring relationships, independently chosen before cleaned code. Both source baselines are1. This task-specific discrete recovery standard permits different inverse algorithms and full global C4 equivalence. It does not demand arbitrary solver trajectories or parameter identity.",
+  "reference_role": "Actual known forward-acquisition fragment positions and cumulative inverse quarter turns; not a method reconstruction.",
+  "observation_sha256": "04609aea0476b71683ab7e51a744b22a9448f4f81a61e8e5aaa3c60cdfc8c84c",
+  "joint_piece_accuracy_boundary": 0.95,
+  "oriented_neighbor_accuracy_boundary": 0.95
+}

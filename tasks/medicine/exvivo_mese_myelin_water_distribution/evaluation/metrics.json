@@ -1,0 +1,16 @@
+{
+  "baseline": [
+    {
+      "method": "Corrected V2 author RNNLS, exact full plane, native Octave8.4.0",
+      "objective_sum": 118.33721425358966,
+      "echo_sse_sum": 96.26406644624548
+    }
+  ],
+  "objective_sum_boundary": 118.3373325908039,
+  "scaled_duality_gap_boundary": 1e-06,
+  "derived_consistency_boundary": 1e-08,
+  "reference_type": "validated standard method; no actual truth",
+  "optimization_definition": "J=sum over2629voxels(||Ax-y||?+lambda||x||?); no1/2, normalization or binwidth; massesnotdensity",
+  "gap_definition": "max pervoxel [lambda||x+min(A^T(Ax-y),0)/lambda||?+2x^Tmax(A^T(Ax-y),0)]/max(Jvoxel,1e-6)",
+  "provenance": "thresholds independently frozen worker3/mwf_prefreeze_tolerances.json before local core"
+}

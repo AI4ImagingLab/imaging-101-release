@@ -1,0 +1,1 @@
+Forward scattering mathematics adapted from pylorenzmie, David G. Grier and contributors. GPL-3.0. Local modifications remove unrelated framework services and keep the homogeneous sphere CPU equations. Exact upstream revision and adaptations are recorded in test/validation.md.
