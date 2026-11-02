@@ -1,6 +1,6 @@
 # Provenance and validation ledger
 
-Status: **all worker completion gates passed; ready for independent parent acceptance**. Original/local native full runs,25 tests, standalone Judge, complete active notebook, six final scientific groups and provenance/inventory reviews are verified below.
+Historical status (2026-10-22): **all worker completion gates reported passed; ready for independent parent acceptance**. Original/local native full runs,25 tests, standalone Judge, complete active notebook, six final scientific groups and provenance/inventory reviews are verified below.
 
 ## Frozen physical binding and originality
 
@@ -128,3 +128,29 @@ Private `archive_index.json` records scientific/provenance files and hashes; `fi
 | README/both plans semantic/signature review | passed |
 | all six scientific groups and numeric sources | passed |
 | final inventory/legal notices/cache archive | passed |
+
+
+## Maintenance audit ? 2026-11-02
+
+Scope: all files in this task directory. The notebook maintenance/audit preamble was removed in full at the user's request. Scientific explanations and all six comparison groups remain. README conditional-estimator equations now reside in Method Hints; the public finite-PCG stopping parameter was removed. Solver mathematics, observations, frozen references, metrics and thresholds were not changed.
+
+The original notebook kernelspec named an unavailable `imaging_batch7` kernel. The first execution attempt failed before reconstruction. The notebook now uses portable `python3` metadata. For this audit, a temporary kernelspec outside the task explicitly points to the existing shared research-runtime Python 3.11.11; no packages were installed. Use `python -m nbconvert` to avoid `jupyter` resolving an ambient Anaconda subcommand.
+
+Static review covered the task inventory, all text, NPZ keys/shapes/dtypes, public URLs, README section boundaries/output contract, plans against source signatures/formulas, source import/call roles, standalone Judge and test consumers. Raw-data SHA256 remains `36ce5c1aab6e6b601dbfc99ee1dbddc609291f32c0054ae645108e402e1a1a76`; frozen stage-fixture SHA256 remains `6548c7d2e368245a47a94aaabc4afb88f6d9d18cf0816b210c73f6d38d676e30`.
+
+Existing residual compliance limitations: frozen upstream fixture keys use descriptive legacy names (`pixels`, `step1_x`, etc.) rather than the repository's `input_*`/`output_*` naming convention. The current metadata test binds the raw-data hash, grid geometry and noise floor but does not directly compare every README acquisition-table value to source constants; several acquisition values describe already-applied author preprocessing and have no runtime constant. These are recorded rather than claiming unconditional compliance. Frozen numerical assets were not renamed or regenerated during this documentation maintenance.
+
+The original upstream executable, paper/source authenticity and private archive contents were not independently revalidated in this maintenance run. Earlier evidence above is historical, not a claim of a new upstream execution. No evaluation semantics were changed.
+
+
+Current-run verification:
+
+- `python -m pytest test/ -v -p no:cacheprovider`: 25 passed, native exit 0 (before notebook rerun; pipeline checks at that point consumed the retained output).
+- `python -m nbconvert --to notebook --execute notebooks/clamato_lyman_alpha_flux_volume.ipynb --output clamato_lyman_alpha_flux_volume_executed.ipynb --output-dir output --ExecutePreprocessor.timeout=1200`: native exit 0 using the temporary shared-runtime python3 kernelspec. All seven code cells executed with six PNG scientific groups and no cell errors. Canonical notebook outputs were refreshed; the subsequently removed introductory markdown was synchronized without changing any executed code. Temporary executed notebook removed.
+- Fresh full-volume reconstruction time: 191.10072089999449 seconds; NCC 1.0; dynamic-range NRMSE 2.3209289832828493e-16. The notebook also computed all five diagnostic solves.
+- All task text files were scanned as UTF-8 with no Han characters. All Python/JSON parsed. README headings, public NPZ table and output contract, public URL scan and fixed raw/fixture hashes checked. Six figure groups were exported outside the task in the system temporary `clamato_review_20261102` directory; original/fresh parity and noise-ablation figures were visually inspected.
+- New canonical notebook SHA256: `aaa391a5ab4e84cebd1c77ff04518f48f34baaca2d6637320df62db7be30b421`. Earlier notebook hashes and final archive indices above belong to the historical release and do not describe these updated narrative/outputs.
+
+Windows emitted existing ZMQ selector and local IPython permission/transport warnings; the notebook nevertheless completed with native exit 0. No package installation or upstream executable rerun was performed.
+
+Post-refresh verification: `python -m pytest test/ -q -p no:cacheprovider` returned 0 with 25 passed; the exact standalone Judge CLI returned 0 on the fresh submission. Final recursive Han scan was empty; the maintenance/audit preamble and temporary executed notebook are absent.
