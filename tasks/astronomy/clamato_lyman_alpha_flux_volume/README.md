@@ -25,18 +25,6 @@ There are 64,332 observations from 240 background sources. Recover the field on 
 
 Save `output/reconstruction.npz` relative to the task workspace, with required key `reconstruction`, shape `(1, 60, 48, 876)`, real `float32` or `float64`, dimensionless flux contrast. Axes are batch, increasing right-ascension comoving coordinate, increasing declination comoving coordinate, and increasing line-of-sight comoving distance. Samples are cell centers at `(index + 0.5) × 0.5` Mpc/h on every spatial axis. Supply the direct map, before any extra visualization smoothing. No alignment, rescaling, cropping or masking is applied. Evaluation measures cosine NCC and dynamic-range-normalized RMS error over the complete field against a validated standard-method reconstruction. Reference agreement measures reproducibility of this conditional inverse, not physical truth.
 
-A correlated Gaussian prior leads to the Wiener conditional mean
-
-```math
-\mathbf m=K_{GD}(K_{DD}+N)^{-1}\mathbf d,
-\qquad N=\operatorname{diag}(\sigma_i^2),
-\qquad K(\mathbf a,\mathbf b)=0.05\,g(q),
-\qquad q=\frac{(a_x-b_x)^2+(a_y-b_y)^2}{2(2.5)^2}
-             +\frac{(a_z-b_z)^2}{2(2.0)^2}.
-```
-
-The vector $\mathbf m$ contains grid contrasts, $\mathbf d$ contains observed contrasts, $K_{DD}$ is the observation covariance and $K_{GD}$ is the grid-to-observation covariance. Coordinates and correlation lengths in $q$ are in Mpc/h. To define the selected discrete target, $g$ linearly interpolates $\exp(-q)$ at 200 equally spaced samples from 0 to 8 and is zero for $q\geq8$. This finite-support lookup approximates a Gaussian correlation; it is part of the selected method's discretization. The prior mean is zero and its variance is 0.05.
-
 ## Data Description
 
 Load `data/raw_data.npz` with `allow_pickle=False`.
@@ -71,7 +59,19 @@ The data are author-released processed measurements, not raw detector frames. Us
 
 ## Method Hints
 
-Noise whitening and a diagonal preconditioner make conjugate gradients suitable for the linear solve. The finite correlation support permits sparse or matrix-free products. The standard reconstruction stops at a whitened residual norm relative to its right-hand side of $10^{-3}$. More accurate solutions of the same conditional model are also meaningful. Additional Gaussian smoothing can help visualization, but should be reported separately and excluded from the submitted map.
+A correlated Gaussian prior leads to the Wiener conditional mean
+
+```math
+\mathbf m=K_{GD}(K_{DD}+N)^{-1}\mathbf d,
+\qquad N=\operatorname{diag}(\sigma_i^2),
+\qquad K(\mathbf a,\mathbf b)=0.05\,g(q),
+\qquad q=\frac{(a_x-b_x)^2+(a_y-b_y)^2}{2(2.5)^2}
+             +\frac{(a_z-b_z)^2}{2(2.0)^2}.
+```
+
+The vector $\mathbf m$ contains grid contrasts, $\mathbf d$ contains observed contrasts, $K_{DD}$ is the observation covariance and $K_{GD}$ is the grid-to-observation covariance. Coordinates and correlation lengths in $q$ are in Mpc/h. To define the selected discrete target, $g$ linearly interpolates $\exp(-q)$ at 200 equally spaced samples from 0 to 8 and is zero for $q\geq8$. This finite-support lookup approximates a Gaussian correlation; it is part of the selected method's discretization. The prior mean is zero and its variance is 0.05.
+
+Noise whitening and a diagonal preconditioner make conjugate gradients suitable for the linear solve. The finite correlation support permits sparse or matrix-free products. Solve the conditional system to numerical convergence. Additional Gaussian smoothing can help visualization, but should be reported separately and excluded from the submitted map.
 
 ## References
 

@@ -12,7 +12,7 @@
       "MKL_NUM_THREADS": "1"
     }
   },
-  "fresh_active_seconds": 235.20280880000792,
+  "fresh_active_seconds": 191.10072089999449,
   "full_field_metrics": {
     "ncc_vs_ref": 1.0,
     "nrmse_vs_ref": 2.3209289832828493e-16
@@ -33,7 +33,7 @@
       "weighted_data_rms": 1.2536418306581503,
       "updates": 19,
       "system_residual": 0.000891363268451103,
-      "runtime_seconds": 7.877721700002439
+      "runtime_seconds": 4.779558199996245
     },
     "perp 3.0": {
       "lengths_Mpc_over_h": [
@@ -45,7 +45,7 @@
       "weighted_data_rms": 1.2851392032287559,
       "updates": 24,
       "system_residual": 0.0007953635138472886,
-      "runtime_seconds": 16.513169099998777
+      "runtime_seconds": 9.819795599993085
     },
     "parallel 1.5": {
       "lengths_Mpc_over_h": [
@@ -57,7 +57,7 @@
       "weighted_data_rms": 1.259719361703042,
       "updates": 19,
       "system_residual": 0.0007151217087214508,
-      "runtime_seconds": 8.95489729999099
+      "runtime_seconds": 5.267142800003057
     },
     "parallel 2.5": {
       "lengths_Mpc_over_h": [
@@ -69,7 +69,7 @@
       "weighted_data_rms": 1.279883062125403,
       "updates": 24,
       "system_residual": 0.0008808498383625432,
-      "runtime_seconds": 15.083281200000783
+      "runtime_seconds": 8.878215800010366
     }
   },
   "data_sha256": "36ce5c1aab6e6b601dbfc99ee1dbddc609291f32c0054ae645108e402e1a1a76",
